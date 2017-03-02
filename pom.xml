@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.io7m.primogenitor</groupId>
+  <artifactId>com.io7m.primogenitor</artifactId>
+  <version>0.0.1</version>
+  <packaging>pom</packaging>
+
+  <name>com.io7m.primogenitor</name>
+  <description>The initial ancestor pom for io7m.com projects</description>
+  <url>http://www.io7m.com/</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+    <!-- Specify formatting of the maven.build.timestamp property. -->
+    <maven.build.timestamp.format>yyyy-MM-dd'T'HH:mm:ssZ</maven.build.timestamp.format>
+
+    <!-- The artifact that contains checkstyle rules for the project. -->
+    <io7m.checkstyle.artifact/>
+
+    <!-- The path to the checkstyle configuration inside the checkstyle package. -->
+    <io7m.checkstyle.path/>
+
+    <!-- The previous version of the API. Used to enforce semantic versioning. -->
+    <io7m.api.previousVersion/>
+  </properties>
+
+  <inceptionYear>2017</inceptionYear>
+
+  <licenses>
+    <license>
+      <name>ISC License</name>
+      <url>http://io7m.com/license/isc.txt</url>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>https://github.com/io7m/primogenitor</url>
+    <connection>scm:git:https://github.com/io7m/primogenitor</connection>
+    <developerConnection>scm:git:https://github.com/io7m/primogenitor</developerConnection>
+  </scm>
+
+  <developers>
+    <developer>
+      <id>io7m</id>
+      <name>io7m</name>
+      <email>code@io7m.com</email>
+      <url>http://io7m.com</url>
+    </developer>
+  </developers>
+
+  <issueManagement>
+    <url>http://github.com/io7m/primogenitor/issues</url>
+    <system>GitHub Issues</system>
+  </issueManagement>
+
+  <distributionManagement>
+    <site>
+      <id>GitHub</id>
+      <name>GitHub</name>
+      <url>http://io7m.github.io/primogenitor</url>
+    </site>
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
+  <ciManagement>
+    <system>Travis CI</system>
+    <url>https://travis-ci.org/io7m/primogenitor</url>
+  </ciManagement>
+
+  <prerequisites>
+    <maven>3.3.9</maven>
+  </prerequisites>
+
+  <dependencies>
+  </dependencies>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <!--
+          Well-known core plugins used everywhere.
+        -->
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.5.1</version>
+        </plugin>
+
+        <!--
+          Site plugin.
+          https://maven.apache.org/plugins/maven-site-plugin/
+        -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.6</version>
+        </plugin>
+
+        <!--
+          Surefire plugin.
+          https://maven.apache.org/surefire/maven-surefire-plugin/
+
+          Used to execute unit tests.
+        -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.19.1</version>
+          <configuration>
+            <redirectTestOutputToFile>true</redirectTestOutputToFile>
+          </configuration>
+        </plugin>
+
+        <!--
+          Assembly plugin.
+          https://maven.apache.org/plugins/maven-assembly-plugin/
+
+          Used to produce archives of documentation, code, etc.
+        -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+
+        <!--
+          Truezip plugin.
+          http://www.mojohaus.org/truezip/truezip-maven-plugin/
+
+          Used to pack and unpack zip files during the build.
+        -->
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>truezip-maven-plugin</artifactId>
+          <version>1.2</version>
+        </plugin>
+
+        <!--
+          Maven Shade plugin.
+          https://maven.apache.org/plugins/maven-shade-plugin/
+
+          Used to produce efficient onejars.
+        -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-shade-plugin</artifactId>
+          <version>2.4.3</version>
+        </plugin>
+
+        <!--
+          Build Helper plugin.
+          http://www.mojohaus.org/build-helper-maven-plugin/
+
+          Used to add source directories and other project-specific tasks.
+        -->
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>build-helper-maven-plugin</artifactId>
+          <version>1.12</version>
+        </plugin>
+
+        <!--
+          Enforcer plugin.
+          https://maven.apache.org/enforcer/maven-enforcer-plugin/
+
+          The plugin is preloaded with rules to ensure that
+          descendants of this project define the required properties.
+        -->
+        <plugin>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <version>1.4.1</version>
+          <dependencies>
+            <dependency>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>extra-enforcer-rules</artifactId>
+              <version>1.0-beta-6</version>
+            </dependency>
+            <dependency>
+              <groupId>org.scijava</groupId>
+              <artifactId>scijava-maven-plugin</artifactId>
+              <version>1.0.0</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+
+        <!--
+          Japicmp plugin.
+          https://siom79.github.io/japicmp/
+
+          The plugin is used to analyze the APIs of jar files to ensure
+          that semantic versioning rules are followed.
+        -->
+        <plugin>
+          <groupId>com.github.siom79.japicmp</groupId>
+          <artifactId>japicmp-maven-plugin</artifactId>
+          <version>0.9.4</version>
+        </plugin>
+
+        <!--
+          Build Number Maven plugin
+          http://www.mojohaus.org/buildnumber-maven-plugin/
+          This plugin embeds a build number in the JAR manifest.
+        -->
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>buildnumber-maven-plugin</artifactId>
+          <version>1.4</version>
+
+          <!-- Record SCM revision in manifest. -->
+          <executions>
+            <execution>
+              <phase>validate</phase>
+              <goals>
+                <goal>create</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <getRevisionOnlyOnce>true</getRevisionOnlyOnce>
+            <revisionOnScmFailure>UNKNOWN</revisionOnScmFailure>
+          </configuration>
+        </plugin>
+
+        <!--
+          Checkstyle plugin.
+          https://maven.apache.org/plugins/maven-checkstyle-plugin/
+
+          Each project must provide a module that contains checkstyle rules.
+         -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-checkstyle-plugin</artifactId>
+          <version>2.17</version>
+          <dependencies>
+            <dependency>
+              <groupId>${project.groupId}</groupId>
+              <artifactId>${io7m.checkstyle.artifact}</artifactId>
+              <version>${project.version}</version>
+            </dependency>
+          </dependencies>
+          <executions>
+            <execution>
+              <id>validate</id>
+              <phase>process-sources</phase>
+              <configuration>
+                <configLocation>${io7m.checkstyle.path}</configLocation>
+                <encoding>UTF-8</encoding>
+                <consoleOutput>true</consoleOutput>
+                <failsOnError>true</failsOnError>
+                <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
+              </configuration>
+              <goals>
+                <goal>check</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+
+        <!--
+          Source plugin.
+          https://maven.apache.org/plugins/maven-source-plugin/
+        -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>3.0.1</version>
+          <executions>
+            <execution>
+              <phase>package</phase>
+              <goals>
+                <goal>jar-no-fork</goal>
+                <goal>test-jar-no-fork</goal>
+              </goals>
+              <configuration>
+                <archive>
+                  <manifestEntries>
+                    <Specification-Title>${project.name}</Specification-Title>
+                    <Specification-Version>${project.version}</Specification-Version>
+                    <Specification-Vendor>io7m.com</Specification-Vendor>
+                    <Implementation-Title>${project.name}</Implementation-Title>
+                    <Implementation-Version>${project.version}</Implementation-Version>
+                    <Implementation-Vendor>io7m.com</Implementation-Vendor>
+                    <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
+                    <Implementation-Build>${buildNumber}</Implementation-Build>
+                    <Built-By>io7m</Built-By>
+                  </manifestEntries>
+                </archive>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
+        <!--
+          Jar plugin.
+          https://maven.apache.org/plugins/maven-jar-plugin/
+        -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+          <executions>
+
+            <!-- Produce jar file with custom manifest -->
+            <execution>
+              <id>default-jar</id>
+              <configuration>
+                <archive>
+                  <manifestEntries>
+                    <Specification-Title>${project.name}</Specification-Title>
+                    <Specification-Version>${project.version}</Specification-Version>
+                    <Specification-Vendor>io7m.com</Specification-Vendor>
+                    <Implementation-Title>${project.name}</Implementation-Title>
+                    <Implementation-Version>${project.version}</Implementation-Version>
+                    <Implementation-Vendor>io7m.com</Implementation-Vendor>
+                    <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
+                    <Implementation-Build>${buildNumber}</Implementation-Build>
+                    <Built-By>io7m</Built-By>
+                    <Sealed>true</Sealed>
+                  </manifestEntries>
+                </archive>
+              </configuration>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+
+            <!-- Produce jar file of tests -->
+            <execution>
+              <id>test-jar</id>
+              <goals>
+                <goal>test-jar</goal>
+              </goals>
+              <configuration>
+                <archive>
+                  <manifestEntries>
+                    <Specification-Title>${project.name}</Specification-Title>
+                    <Specification-Version>${project.version}</Specification-Version>
+                    <Specification-Vendor>io7m.com</Specification-Vendor>
+                    <Implementation-Title>${project.name}</Implementation-Title>
+                    <Implementation-Version>${project.version}</Implementation-Version>
+                    <Implementation-Vendor>io7m.com</Implementation-Vendor>
+                    <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
+                    <Implementation-Build>${buildNumber}</Implementation-Build>
+                    <Built-By>io7m</Built-By>
+                  </manifestEntries>
+                </archive>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
+        <!--
+          Bundle plugin.
+          https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html
+
+          Used to produce OSGi bundles.
+        -->
+        <plugin>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>maven-bundle-plugin</artifactId>
+          <version>3.2.0</version>
+          <extensions>true</extensions>
+          <configuration>
+            <instructions>
+              <Specification-Title>${project.name}</Specification-Title>
+              <Specification-Version>${project.version}</Specification-Version>
+              <Specification-Vendor>io7m.com</Specification-Vendor>
+              <Implementation-Title>${project.name}</Implementation-Title>
+              <Implementation-Version>${project.version}</Implementation-Version>
+              <Implementation-Vendor>io7m.com</Implementation-Vendor>
+              <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
+              <Implementation-Build>${buildNumber}</Implementation-Build>
+              <Built-By>io7m</Built-By>
+              <Sealed>true</Sealed>
+            </instructions>
+          </configuration>
+        </plugin>
+
+        <!--
+          Maven Javadoc plugin.
+          https://maven.apache.org/plugins/maven-javadoc-plugin/
+        -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>2.10.3</version>
+          <executions>
+            <execution>
+              <id>attach-javadocs</id>
+              <phase>package</phase>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+              <configuration>
+                <bottom><![CDATA[Copyright &#169; {currentYear} &lt;code@io7m.com&gt; http://io7m.com]]></bottom>
+                <archive>
+                  <manifestEntries>
+                    <Specification-Title>${project.name}</Specification-Title>
+                    <Specification-Version>${project.version}</Specification-Version>
+                    <Specification-Vendor>io7m.com</Specification-Vendor>
+                    <Implementation-Title>${project.name}</Implementation-Title>
+                    <Implementation-Version>${project.version}</Implementation-Version>
+                    <Implementation-Vendor>io7m.com</Implementation-Vendor>
+                    <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
+                    <Implementation-Build>${buildNumber}</Implementation-Build>
+                    <Built-By>io7m</Built-By>
+                  </manifestEntries>
+                </archive>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
+        <!--
+          Nexus staging plugin.
+          https://github.com/sonatype/nexus-maven-plugins/tree/master/staging/maven-plugin
+
+          This allows for deployment to Maven Central via the command line.
+        -->
+        <plugin>
+          <groupId>org.sonatype.plugins</groupId>
+          <artifactId>nexus-staging-maven-plugin</artifactId>
+          <version>1.6.8</version>
+          <extensions>true</extensions>
+          <configuration>
+            <serverId>sonatype-nexus-staging</serverId>
+            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+    <plugins>
+
+      <!-- Check desired rules during maven lifecycle. -->
+      <plugin>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>enforce-rules</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <!--
+                  Standard Rules
+                  http://maven.apache.org/enforcer/enforcer-rules/
+                -->
+                <requirePluginVersions>
+                  <message>Plugins need to be versioned!</message>
+                </requirePluginVersions>
+
+                <!--
+                  Extra Enforcer Rules
+                  org.codehaus.mojo:extra-enforcer-rules
+                  http://www.mojohaus.org/extra-enforcer-rules/
+                -->
+
+                <!--
+                  Ensure no two dependencies ship the same class.
+                -->
+                <banDuplicateClasses>
+                  <message>No Duplicate Classes Allowed!
+                    - For duplicate transitive dependencies, add dependency exclusions.
+                    - For duplications between direct dependencies, resolve or add ignored classes to this rule's configuration.
+                  </message>
+                  <findAllDuplicates>true</findAllDuplicates>
+                </banDuplicateClasses>
+
+                <!--
+                  Do not allow circular dependencies.
+                  Mostly impossible anyway, but... just in case.
+                -->
+                <banCircularDependencies />
+
+                <!--
+                  Require that the previous version number be correctly defined.
+                -->
+                <requireProperty>
+                  <property>io7m.api.previousVersion</property>
+                  <regex>[0-9]\.[0-9]\.[0-9](-[a-zA-Z0-9])?</regex>
+                </requireProperty>
+
+                <!--
+                  Require that the checkstyle artifact be correctly defined.
+                -->
+                <requireProperty>
+                  <property>io7m.checkstyle.artifact</property>
+                  <regex>[a-zA-Z0-9\-_\.]+</regex>
+                </requireProperty>
+
+                <!--
+                  Require that the checkstyle path be correctly defined.
+                -->
+                <requireProperty>
+                  <property>io7m.checkstyle.path</property>
+                  <regex>[a-zA-Z0-9/\-\._]+</regex>
+                </requireProperty>
+
+                <!--
+                  Require builds to be reproducible.
+                  This means no snapshot dependencies!
+                -->
+                <requireReproducibleBuilds implementation="org.scijava.maven.plugin.enforcer.RequireReproducibleBuilds"/>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Insert the build number into jar files -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>buildnumber-maven-plugin</artifactId>
+      </plugin>
+
+      <!-- Produce a source jar -->
+      <plugin>
+        <artifactId>maven-source-plugin</artifactId>
+      </plugin>
+
+      <!-- Produce a javadoc jar -->
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+      </plugin>
+
+      <!-- Produce an OSGi bundle -->
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+      </plugin>
+
+      <!-- Verify API compatibility -->
+      <plugin>
+        <groupId>com.github.siom79.japicmp</groupId>
+        <artifactId>japicmp-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>verify</phase>
+            <goals>
+              <goal>cmp</goal>
+            </goals>
+            <configuration>
+              <oldVersion>
+                <dependency>
+                  <groupId>${project.groupId}</groupId>
+                  <artifactId>${project.artifactId}</artifactId>
+                  <version>${io7m.api.previousVersion}</version>
+                  <type>jar</type>
+                </dependency>
+              </oldVersion>
+              <newVersion>
+                <file>
+                  <path>${project.build.directory}/${project.artifactId}-${project.version}.jar</path>
+                </file>
+              </newVersion>
+              <parameter>
+                <breakBuildOnModifications>false</breakBuildOnModifications>
+                <breakBuildOnBinaryIncompatibleModifications>true</breakBuildOnBinaryIncompatibleModifications>
+                <breakBuildOnSourceIncompatibleModifications>true</breakBuildOnSourceIncompatibleModifications>
+                <breakBuildBasedOnSemanticVersioning>true</breakBuildBasedOnSemanticVersioning>
+              </parameter>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <!-- Sign artifacts when deploying to io7m -->
+  <profiles>
+    <profile>
+      <id>io7m-deployment-private</id>
+      <activation>
+        <property>
+          <name>io7m.deployment</name>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.6</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+</project>
