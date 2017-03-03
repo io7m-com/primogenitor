@@ -64,7 +64,7 @@
     <site>
       <id>GitHub</id>
       <name>GitHub</name>
-      <url>http://io7m.github.io/primogenitor</url>
+      <url>https://github.com/io7m/primogenitor</url>
     </site>
     <repository>
       <id>sonatype-nexus-staging</id>
