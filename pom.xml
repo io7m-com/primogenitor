@@ -499,6 +499,9 @@
                     - For duplications between direct dependencies, resolve or add ignored classes to this rule's configuration.
                   </message>
                   <findAllDuplicates>true</findAllDuplicates>
+                  <ignoreClasses>
+                    <ignoreClass>org.junit.runner.*</ignoreClass>
+                  </ignoreClasses>
                 </banDuplicateClasses>
 
                 <!--
