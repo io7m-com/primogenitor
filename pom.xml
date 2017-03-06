@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -534,12 +534,22 @@
                   <regex>[a-zA-Z0-9/\-\._]+</regex>
                 </requireProperty>
 
+                <!-- Require inheriting POMs to populate key elements. -->
+                <requireElements implementation="org.scijava.maven.plugin.enforcer.RequireElements">
+                  <elements>
+                    <element>description</element>
+                    <element>name</element>
+                    <element>url</element>
+                  </elements>
+                </requireElements>
+
                 <!--
                   Require builds to be reproducible.
                   This means no snapshot dependencies!
                 -->
                 <requireReproducibleBuilds implementation="org.scijava.maven.plugin.enforcer.RequireReproducibleBuilds"/>
               </rules>
+              <fail>true</fail>
             </configuration>
           </execution>
         </executions>
