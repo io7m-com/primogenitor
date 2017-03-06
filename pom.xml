@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>0.0.2</version>
+  <version>0.0.3</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -515,7 +515,7 @@
                 -->
                 <requireProperty>
                   <property>io7m.api.previousVersion</property>
-                  <regex>[0-9]\.[0-9]\.[0-9](-[a-zA-Z0-9])?</regex>
+                  <regex>[0-9]\.[0-9]\.[0-9](-[a-zA-Z0-9]+)?</regex>
                 </requireProperty>
 
                 <!--
