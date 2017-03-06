@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>0.0.3</version>
+  <version>0.0.4</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -20,6 +20,9 @@
 
     <!-- Specify formatting of the maven.build.timestamp property. -->
     <maven.build.timestamp.format>yyyy-MM-dd'T'HH:mm:ssZ</maven.build.timestamp.format>
+
+    <!-- Specify timezone for buildnumber-maven-plugin timestamps. -->
+    <maven.buildNumber.timestampTimeZone>UTC</maven.buildNumber.timestampTimeZone>
 
     <!-- The artifact that contains checkstyle rules for the project. -->
     <io7m.checkstyle.artifact/>
@@ -313,6 +316,7 @@
                     <Implementation-Vendor>io7m.com</Implementation-Vendor>
                     <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
                     <Implementation-Build>${buildNumber}</Implementation-Build>
+                    <Implementation-Date>${maven.build.timestamp}</Implementation-Date>
                     <Built-By>io7m</Built-By>
                   </manifestEntries>
                 </archive>
@@ -345,6 +349,7 @@
                     <Implementation-Vendor>io7m.com</Implementation-Vendor>
                     <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
                     <Implementation-Build>${buildNumber}</Implementation-Build>
+                    <Implementation-Date>${maven.build.timestamp}</Implementation-Date>
                     <Built-By>io7m</Built-By>
                     <Sealed>true</Sealed>
                   </manifestEntries>
@@ -372,6 +377,7 @@
                     <Implementation-Vendor>io7m.com</Implementation-Vendor>
                     <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
                     <Implementation-Build>${buildNumber}</Implementation-Build>
+                    <Implementation-Date>${maven.build.timestamp}</Implementation-Date>
                     <Built-By>io7m</Built-By>
                   </manifestEntries>
                 </archive>
@@ -401,6 +407,7 @@
               <Implementation-Vendor>io7m.com</Implementation-Vendor>
               <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
               <Implementation-Build>${buildNumber}</Implementation-Build>
+              <Implementation-Date>${maven.build.timestamp}</Implementation-Date>
               <Built-By>io7m</Built-By>
               <Sealed>true</Sealed>
             </instructions>
@@ -434,6 +441,7 @@
                     <Implementation-Vendor>io7m.com</Implementation-Vendor>
                     <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
                     <Implementation-Build>${buildNumber}</Implementation-Build>
+                    <Implementation-Date>${maven.build.timestamp}</Implementation-Date>
                     <Built-By>io7m</Built-By>
                   </manifestEntries>
                 </archive>
