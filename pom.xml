@@ -534,12 +534,14 @@
                   <regex>[a-zA-Z0-9/\-\._]+</regex>
                 </requireProperty>
 
-                <!--
-                  Require that each project has a description.
-                -->
-                <requirePropertyDiverges>
-                  <property>project.description</property>
-                </requirePropertyDiverges>
+                <!-- Require inheriting POMs to populate key elements. -->
+                <requireElements implementation="org.scijava.maven.plugin.enforcer.RequireElements">
+                  <elements>
+                    <element>description</element>
+                    <element>name</element>
+                    <element>url</element>
+                  </elements>
+                </requireElements>
 
                 <!--
                   Require builds to be reproducible.
