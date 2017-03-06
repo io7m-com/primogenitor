@@ -11,6 +11,8 @@ addons:
     packages:
       - oracle-java8-installer
 
+install: true
+
 script:
   - mvn -Denforcer.skip=true clean verify
 
