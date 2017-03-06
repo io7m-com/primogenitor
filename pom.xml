@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>0.0.3</version>
+  <version>0.0.4</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -20,6 +20,9 @@
 
     <!-- Specify formatting of the maven.build.timestamp property. -->
     <maven.build.timestamp.format>yyyy-MM-dd'T'HH:mm:ssZ</maven.build.timestamp.format>
+
+    <!-- Specify timezone for buildnumber-maven-plugin timestamps. -->
+    <maven.buildNumber.timestampTimeZone>UTC</maven.buildNumber.timestampTimeZone>
 
     <!-- The artifact that contains checkstyle rules for the project. -->
     <io7m.checkstyle.artifact/>
@@ -81,8 +84,40 @@
     <maven>3.3.9</maven>
   </prerequisites>
 
-  <dependencies>
-  </dependencies>
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>2.9</version>
+        <configuration>
+          <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <configuration>
+          <validate>true</validate>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>2.19.1</version>
+      </plugin>
+      <plugin>
+        <groupId>com.io7m.changelog</groupId>
+        <artifactId>io7m-changelog-plugin</artifactId>
+        <version>3.0.3</version>
+        <configuration>
+          <file>README-CHANGES.xml</file>
+          <feedAuthorEmail>contact@io7m.com</feedAuthorEmail>
+          <feedAuthorName>io7m release robot</feedAuthorName>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
 
   <build>
     <pluginManagement>
@@ -313,6 +348,7 @@
                     <Implementation-Vendor>io7m.com</Implementation-Vendor>
                     <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
                     <Implementation-Build>${buildNumber}</Implementation-Build>
+                    <Implementation-Date>${maven.build.timestamp}</Implementation-Date>
                     <Built-By>io7m</Built-By>
                   </manifestEntries>
                 </archive>
@@ -345,6 +381,7 @@
                     <Implementation-Vendor>io7m.com</Implementation-Vendor>
                     <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
                     <Implementation-Build>${buildNumber}</Implementation-Build>
+                    <Implementation-Date>${maven.build.timestamp}</Implementation-Date>
                     <Built-By>io7m</Built-By>
                     <Sealed>true</Sealed>
                   </manifestEntries>
@@ -372,6 +409,7 @@
                     <Implementation-Vendor>io7m.com</Implementation-Vendor>
                     <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
                     <Implementation-Build>${buildNumber}</Implementation-Build>
+                    <Implementation-Date>${maven.build.timestamp}</Implementation-Date>
                     <Built-By>io7m</Built-By>
                   </manifestEntries>
                 </archive>
@@ -401,6 +439,7 @@
               <Implementation-Vendor>io7m.com</Implementation-Vendor>
               <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
               <Implementation-Build>${buildNumber}</Implementation-Build>
+              <Implementation-Date>${maven.build.timestamp}</Implementation-Date>
               <Built-By>io7m</Built-By>
               <Sealed>true</Sealed>
             </instructions>
@@ -434,6 +473,7 @@
                     <Implementation-Vendor>io7m.com</Implementation-Vendor>
                     <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
                     <Implementation-Build>${buildNumber}</Implementation-Build>
+                    <Implementation-Date>${maven.build.timestamp}</Implementation-Date>
                     <Built-By>io7m</Built-By>
                   </manifestEntries>
                 </archive>
