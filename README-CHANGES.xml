@@ -3,6 +3,17 @@
   <c:project>com.io7m.primogenitor</c:project>
 
   <c:release c:ticket-system="com.github.io7m.primogenitor">
+    <c:date>2017-03-08</c:date>
+    <c:version>0.0.6</c:version>
+
+    <c:item>
+      <c:date>2017-03-08</c:date>
+      <c:type-code-fix/>
+      <c:summary>Correctly execute both the JavaDoc and Surefire plugins.</c:summary>
+    </c:item>
+  </c:release>
+
+  <c:release c:ticket-system="com.github.io7m.primogenitor">
     <c:date>2017-03-03</c:date>
     <c:version>0.0.1</c:version>
 
