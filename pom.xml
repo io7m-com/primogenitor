@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>0.0.5</version>
+  <version>0.0.6</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -610,6 +610,11 @@
       </plugin>
 
       <!-- Produce a javadoc jar -->
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+      </plugin>
+
+      <!-- Run tests -->
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
       </plugin>
