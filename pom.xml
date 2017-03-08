@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>0.0.4</version>
+  <version>0.0.5</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -23,6 +23,9 @@
 
     <!-- Specify timezone for buildnumber-maven-plugin timestamps. -->
     <maven.buildNumber.timestampTimeZone>UTC</maven.buildNumber.timestampTimeZone>
+
+    <!-- The version of the japicmp plugin -->
+    <io7m.japicmp.version>0.9.4</io7m.japicmp.version>
 
     <!-- The artifact that contains checkstyle rules for the project. -->
     <io7m.checkstyle.artifact/>
@@ -259,7 +262,7 @@
         <plugin>
           <groupId>com.github.siom79.japicmp</groupId>
           <artifactId>japicmp-maven-plugin</artifactId>
-          <version>0.9.4</version>
+          <version>${io7m.japicmp.version}</version>
         </plugin>
 
         <!--
