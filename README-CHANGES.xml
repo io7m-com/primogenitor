@@ -12,6 +12,13 @@
       <c:ticket>8</c:ticket>
       <c:summary>Disable duplicate class enforcement.</c:summary>
     </c:item>
+
+    <c:item>
+      <c:date>2017-03-13</c:date>
+      <c:type-code-new/>
+      <c:ticket>7</c:ticket>
+      <c:summary>Enable dependency analysis.</c:summary>
+    </c:item>
   </c:release>
 
   <c:release c:ticket-system="com.github.io7m.primogenitor">

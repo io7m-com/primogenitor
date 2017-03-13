@@ -502,6 +502,21 @@
             <autoReleaseAfterClose>true</autoReleaseAfterClose>
           </configuration>
         </plugin>
+
+        <!--
+          Maven Dependency plugin.
+          https://maven.apache.org/plugins/maven-dependency-plugin/index.html
+
+          This allows for the analysis of dependencies to avoid conflicts,
+          display "used but undeclared" dependencies, unused dependencies,
+          and so on.
+        -->
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
       </plugins>
     </pluginManagement>
 
@@ -641,6 +656,26 @@
                 <breakBuildOnSourceIncompatibleModifications>true</breakBuildOnSourceIncompatibleModifications>
                 <breakBuildBasedOnSemanticVersioning>true</breakBuildBasedOnSemanticVersioning>
               </parameter>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Analyze dependencies -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>analyze</id>
+            <goals>
+              <goal>analyze-only</goal>
+            </goals>
+            <phase>
+              verify
+            </phase>
+            <configuration>
+              <failOnWarning>true</failOnWarning>
             </configuration>
           </execution>
         </executions>
