@@ -534,20 +534,6 @@
                 -->
 
                 <!--
-                  Ensure no two dependencies ship the same class.
-                -->
-                <banDuplicateClasses>
-                  <message>No Duplicate Classes Allowed!
-                    - For duplicate transitive dependencies, add dependency exclusions.
-                    - For duplications between direct dependencies, resolve or add ignored classes to this rule's configuration.
-                  </message>
-                  <findAllDuplicates>true</findAllDuplicates>
-                  <ignoreClasses>
-                    <ignoreClass>org.junit.runner.*</ignoreClass>
-                  </ignoreClasses>
-                </banDuplicateClasses>
-
-                <!--
                   Do not allow circular dependencies.
                   Mostly impossible anyway, but... just in case.
                 -->
