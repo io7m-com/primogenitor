@@ -144,12 +144,6 @@
               <path>${project.build.directory}/${project.artifactId}-${project.version}.jar</path>
             </file>
           </newVersion>
-          <parameter>
-            <breakBuildOnModifications>false</breakBuildOnModifications>
-            <breakBuildOnBinaryIncompatibleModifications>true</breakBuildOnBinaryIncompatibleModifications>
-            <breakBuildOnSourceIncompatibleModifications>true</breakBuildOnSourceIncompatibleModifications>
-            <breakBuildBasedOnSemanticVersioning>true</breakBuildBasedOnSemanticVersioning>
-          </parameter>
         </configuration>
       </plugin>
     </plugins>
