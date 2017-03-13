@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>0.0.6</version>
+  <version>0.0.7</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -117,6 +117,33 @@
           <file>README-CHANGES.xml</file>
           <feedAuthorEmail>contact@io7m.com</feedAuthorEmail>
           <feedAuthorName>io7m release robot</feedAuthorName>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.github.siom79.japicmp</groupId>
+        <artifactId>japicmp-maven-plugin</artifactId>
+        <version>${io7m.japicmp.version}</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>cmp-report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+        <configuration>
+          <oldVersion>
+            <dependency>
+              <groupId>${project.groupId}</groupId>
+              <artifactId>${project.artifactId}</artifactId>
+              <version>${io7m.api.previousVersion}</version>
+              <type>jar</type>
+            </dependency>
+          </oldVersion>
+          <newVersion>
+            <file>
+              <path>${project.build.directory}/${project.artifactId}-${project.version}.jar</path>
+            </file>
+          </newVersion>
         </configuration>
       </plugin>
     </plugins>
@@ -502,6 +529,21 @@
             <autoReleaseAfterClose>true</autoReleaseAfterClose>
           </configuration>
         </plugin>
+
+        <!--
+          Maven Dependency plugin.
+          https://maven.apache.org/plugins/maven-dependency-plugin/index.html
+
+          This allows for the analysis of dependencies to avoid conflicts,
+          display "used but undeclared" dependencies, unused dependencies,
+          and so on.
+        -->
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
       </plugins>
     </pluginManagement>
 
@@ -532,20 +574,6 @@
                   org.codehaus.mojo:extra-enforcer-rules
                   http://www.mojohaus.org/extra-enforcer-rules/
                 -->
-
-                <!--
-                  Ensure no two dependencies ship the same class.
-                -->
-                <banDuplicateClasses>
-                  <message>No Duplicate Classes Allowed!
-                    - For duplicate transitive dependencies, add dependency exclusions.
-                    - For duplications between direct dependencies, resolve or add ignored classes to this rule's configuration.
-                  </message>
-                  <findAllDuplicates>true</findAllDuplicates>
-                  <ignoreClasses>
-                    <ignoreClass>org.junit.runner.*</ignoreClass>
-                  </ignoreClasses>
-                </banDuplicateClasses>
 
                 <!--
                   Do not allow circular dependencies.
@@ -655,6 +683,26 @@
                 <breakBuildOnSourceIncompatibleModifications>true</breakBuildOnSourceIncompatibleModifications>
                 <breakBuildBasedOnSemanticVersioning>true</breakBuildBasedOnSemanticVersioning>
               </parameter>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Analyze dependencies -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>analyze</id>
+            <goals>
+              <goal>analyze-only</goal>
+            </goals>
+            <phase>
+              verify
+            </phase>
+            <configuration>
+              <failOnWarning>true</failOnWarning>
             </configuration>
           </execution>
         </executions>
