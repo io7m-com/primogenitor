@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>0.0.6</version>
+  <version>0.0.7</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -144,12 +144,6 @@
               <path>${project.build.directory}/${project.artifactId}-${project.version}.jar</path>
             </file>
           </newVersion>
-          <parameter>
-            <breakBuildOnModifications>false</breakBuildOnModifications>
-            <breakBuildOnBinaryIncompatibleModifications>true</breakBuildOnBinaryIncompatibleModifications>
-            <breakBuildOnSourceIncompatibleModifications>true</breakBuildOnSourceIncompatibleModifications>
-            <breakBuildBasedOnSemanticVersioning>true</breakBuildBasedOnSemanticVersioning>
-          </parameter>
         </configuration>
       </plugin>
     </plugins>
