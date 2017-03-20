@@ -3,6 +3,18 @@
   <c:project>com.io7m.primogenitor</c:project>
 
   <c:release c:ticket-system="com.github.io7m.primogenitor">
+    <c:date>2017-03-20</c:date>
+    <c:version>0.0.8</c:version>
+
+    <c:item>
+      <c:date>2017-03-20</c:date>
+      <c:type-code-fix/>
+      <c:ticket>11</c:ticket>
+      <c:summary>Do not show unmodified methods/classes in japicmp reports.</c:summary>
+    </c:item>
+  </c:release>
+
+  <c:release c:ticket-system="com.github.io7m.primogenitor">
     <c:date>2017-03-13</c:date>
     <c:version>0.0.7</c:version>
 
