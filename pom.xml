@@ -139,6 +139,10 @@
               <type>jar</type>
             </dependency>
           </oldVersion>
+          <parameter>
+            <onlyModified>true</onlyModified>
+            <breakBuildBasedOnSemanticVersioning>true</breakBuildBasedOnSemanticVersioning>
+          </parameter>
           <newVersion>
             <file>
               <path>${project.build.directory}/${project.artifactId}-${project.version}.jar</path>
@@ -678,6 +682,7 @@
                 </file>
               </newVersion>
               <parameter>
+                <onlyModified>true</onlyModified>
                 <breakBuildBasedOnSemanticVersioning>true</breakBuildBasedOnSemanticVersioning>
               </parameter>
             </configuration>
