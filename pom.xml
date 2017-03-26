@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>0.0.7</version>
+  <version>0.0.8</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -32,6 +32,12 @@
 
     <!-- The path to the checkstyle configuration inside the checkstyle package. -->
     <io7m.checkstyle.path/>
+
+    <!-- The previous groupId of the API. Used to enforce semantic versioning. -->
+    <io7m.api.previousGroupId>${project.groupId}</io7m.api.previousGroupId>
+
+    <!-- The previous artifactId of the API. Used to enforce semantic versioning. -->
+    <io7m.api.previousArtifactId>${project.artifactId}</io7m.api.previousArtifactId>
 
     <!-- The previous version of the API. Used to enforce semantic versioning. -->
     <io7m.api.previousVersion/>
@@ -133,15 +139,15 @@
         <configuration>
           <oldVersion>
             <dependency>
-              <groupId>${project.groupId}</groupId>
-              <artifactId>${project.artifactId}</artifactId>
+              <groupId>${io7m.api.previousGroupId}</groupId>
+              <artifactId>${io7m.api.previousArtifactId}</artifactId>
               <version>${io7m.api.previousVersion}</version>
               <type>jar</type>
             </dependency>
           </oldVersion>
           <parameter>
             <onlyModified>true</onlyModified>
-            <breakBuildBasedOnSemanticVersioning>true</breakBuildBasedOnSemanticVersioning>
+            <breakBuildBasedOnSemanticVersioning>false</breakBuildBasedOnSemanticVersioning>
           </parameter>
           <newVersion>
             <file>
@@ -670,8 +676,8 @@
             <configuration>
               <oldVersion>
                 <dependency>
-                  <groupId>${project.groupId}</groupId>
-                  <artifactId>${project.artifactId}</artifactId>
+                  <groupId>${io7m.api.previousGroupId}</groupId>
+                  <artifactId>${io7m.api.previousArtifactId}</artifactId>
                   <version>${io7m.api.previousVersion}</version>
                   <type>jar</type>
                 </dependency>
