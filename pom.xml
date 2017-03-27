@@ -480,6 +480,7 @@
               <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
               <Implementation-Build>${buildNumber}</Implementation-Build>
               <Implementation-Date>${maven.build.timestamp}</Implementation-Date>
+              <Bundle-DocURL>${project.url}</Bundle-DocURL>
               <Built-By>io7m</Built-By>
               <Sealed>true</Sealed>
             </instructions>
