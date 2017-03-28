@@ -41,6 +41,9 @@
 
     <!-- The previous version of the API. Used to enforce semantic versioning. -->
     <io7m.api.previousVersion/>
+
+    <!-- The default doclint configuration to use for JavaDoc (may be empty) -->
+    <io7m.javadoc.docLint>-Xdoclint:none</io7m.javadoc.docLint>
   </properties>
 
   <inceptionYear>2017</inceptionYear>
@@ -518,6 +521,7 @@
                     <Built-By>io7m</Built-By>
                   </manifestEntries>
                 </archive>
+                <additionalparam>${io7m.javadoc.docLint}</additionalparam>
               </configuration>
             </execution>
           </executions>
