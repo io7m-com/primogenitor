@@ -25,7 +25,7 @@
     <maven.buildNumber.timestampTimeZone>UTC</maven.buildNumber.timestampTimeZone>
 
     <!-- The version of the japicmp plugin -->
-    <io7m.japicmp.version>0.9.4</io7m.japicmp.version>
+    <io7m.japicmp.version>0.10.0</io7m.japicmp.version>
 
     <!-- The artifact that contains checkstyle rules for the project. -->
     <io7m.checkstyle.artifact/>
