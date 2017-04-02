@@ -9,6 +9,12 @@
     <c:item>
       <c:date>2017-04-02</c:date>
       <c:type-code-fix/>
+      <c:summary>Allow skipping japicmp via the io7m.api.japicmp.skip property.</c:summary>
+    </c:item>
+
+    <c:item>
+      <c:date>2017-04-02</c:date>
+      <c:type-code-fix/>
       <c:ticket>15</c:ticket>
       <c:summary>Ignore missing classes.</c:summary>
     </c:item>
