@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>0.0.7</version>
+  <version>1.0.0</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -25,7 +25,7 @@
     <maven.buildNumber.timestampTimeZone>UTC</maven.buildNumber.timestampTimeZone>
 
     <!-- The version of the japicmp plugin -->
-    <io7m.japicmp.version>0.9.4</io7m.japicmp.version>
+    <io7m.japicmp.version>0.10.0</io7m.japicmp.version>
 
     <!-- The artifact that contains checkstyle rules for the project. -->
     <io7m.checkstyle.artifact/>
@@ -33,8 +33,17 @@
     <!-- The path to the checkstyle configuration inside the checkstyle package. -->
     <io7m.checkstyle.path/>
 
+    <!-- The previous groupId of the API. Used to enforce semantic versioning. -->
+    <io7m.api.previousGroupId>${project.groupId}</io7m.api.previousGroupId>
+
+    <!-- The previous artifactId of the API. Used to enforce semantic versioning. -->
+    <io7m.api.previousArtifactId>${project.artifactId}</io7m.api.previousArtifactId>
+
     <!-- The previous version of the API. Used to enforce semantic versioning. -->
     <io7m.api.previousVersion/>
+
+    <!-- The default doclint configuration to use for JavaDoc (may be empty) -->
+    <io7m.javadoc.docLint>-Xdoclint:none</io7m.javadoc.docLint>
   </properties>
 
   <inceptionYear>2017</inceptionYear>
@@ -133,12 +142,16 @@
         <configuration>
           <oldVersion>
             <dependency>
-              <groupId>${project.groupId}</groupId>
-              <artifactId>${project.artifactId}</artifactId>
+              <groupId>${io7m.api.previousGroupId}</groupId>
+              <artifactId>${io7m.api.previousArtifactId}</artifactId>
               <version>${io7m.api.previousVersion}</version>
               <type>jar</type>
             </dependency>
           </oldVersion>
+          <parameter>
+            <onlyModified>true</onlyModified>
+            <breakBuildBasedOnSemanticVersioning>false</breakBuildBasedOnSemanticVersioning>
+          </parameter>
           <newVersion>
             <file>
               <path>${project.build.directory}/${project.artifactId}-${project.version}.jar</path>
@@ -470,6 +483,7 @@
               <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
               <Implementation-Build>${buildNumber}</Implementation-Build>
               <Implementation-Date>${maven.build.timestamp}</Implementation-Date>
+              <Bundle-DocURL>${project.url}</Bundle-DocURL>
               <Built-By>io7m</Built-By>
               <Sealed>true</Sealed>
             </instructions>
@@ -507,6 +521,7 @@
                     <Built-By>io7m</Built-By>
                   </manifestEntries>
                 </archive>
+                <additionalparam>${io7m.javadoc.docLint}</additionalparam>
               </configuration>
             </execution>
           </executions>
@@ -666,8 +681,8 @@
             <configuration>
               <oldVersion>
                 <dependency>
-                  <groupId>${project.groupId}</groupId>
-                  <artifactId>${project.artifactId}</artifactId>
+                  <groupId>${io7m.api.previousGroupId}</groupId>
+                  <artifactId>${io7m.api.previousArtifactId}</artifactId>
                   <version>${io7m.api.previousVersion}</version>
                   <type>jar</type>
                 </dependency>
@@ -678,9 +693,7 @@
                 </file>
               </newVersion>
               <parameter>
-                <breakBuildOnModifications>false</breakBuildOnModifications>
-                <breakBuildOnBinaryIncompatibleModifications>true</breakBuildOnBinaryIncompatibleModifications>
-                <breakBuildOnSourceIncompatibleModifications>true</breakBuildOnSourceIncompatibleModifications>
+                <onlyModified>true</onlyModified>
                 <breakBuildBasedOnSemanticVersioning>true</breakBuildBasedOnSemanticVersioning>
               </parameter>
             </configuration>

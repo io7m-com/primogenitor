@@ -3,6 +3,52 @@
   <c:project>com.io7m.primogenitor</c:project>
 
   <c:release c:ticket-system="com.github.io7m.primogenitor">
+    <c:date>2017-04-02</c:date>
+    <c:version>1.0.0</c:version>
+
+    <c:item>
+      <c:date>2017-04-02</c:date>
+      <c:type-code-fix/>
+      <c:ticket>9</c:ticket>
+      <c:summary>Use japicmp 0.10.0.</c:summary>
+    </c:item>
+
+    <c:item>
+      <c:date>2017-03-28</c:date>
+      <c:type-code-new/>
+      <c:ticket>14</c:ticket>
+      <c:summary>Control JavaDoc linting via properties.</c:summary>
+    </c:item>
+
+    <c:item>
+      <c:date>2017-03-27</c:date>
+      <c:type-code-new/>
+      <c:ticket>12</c:ticket>
+      <c:summary>Embed project URLs into OSGi manifests via Bundle-DocURL.</c:summary>
+    </c:item>
+
+    <c:item>
+      <c:date>2017-03-26</c:date>
+      <c:type-code-new/>
+      <c:ticket>13</c:ticket>
+      <c:summary>Add the ability to set the previous artifact and group ID for japicmp.</c:summary>
+    </c:item>
+
+    <c:item>
+      <c:date>2017-03-20</c:date>
+      <c:type-code-fix/>
+      <c:ticket>11</c:ticket>
+      <c:summary>Do not show unmodified methods/classes in japicmp reports.</c:summary>
+    </c:item>
+
+    <c:item>
+      <c:date>2017-03-14</c:date>
+      <c:type-code-fix/>
+      <c:summary>Only break builds on semantic versioning violations.</c:summary>
+    </c:item>
+  </c:release>
+
+  <c:release c:ticket-system="com.github.io7m.primogenitor">
     <c:date>2017-03-13</c:date>
     <c:version>0.0.7</c:version>
 
