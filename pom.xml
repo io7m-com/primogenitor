@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -41,6 +41,9 @@
 
     <!-- The previous version of the API. Used to enforce semantic versioning. -->
     <io7m.api.previousVersion/>
+
+    <!-- Set to true to skip japicmp for a module. -->
+    <io7m.api.japicmp.skip>false</io7m.api.japicmp.skip>
 
     <!-- The default doclint configuration to use for JavaDoc (may be empty) -->
     <io7m.javadoc.docLint>-Xdoclint:none</io7m.javadoc.docLint>
@@ -151,12 +154,14 @@
           <parameter>
             <onlyModified>true</onlyModified>
             <breakBuildBasedOnSemanticVersioning>false</breakBuildBasedOnSemanticVersioning>
+            <ignoreMissingClasses>true</ignoreMissingClasses>
           </parameter>
           <newVersion>
             <file>
               <path>${project.build.directory}/${project.artifactId}-${project.version}.jar</path>
             </file>
           </newVersion>
+          <skip>${io7m.api.japicmp.skip}</skip>
         </configuration>
       </plugin>
     </plugins>
@@ -695,7 +700,9 @@
               <parameter>
                 <onlyModified>true</onlyModified>
                 <breakBuildBasedOnSemanticVersioning>true</breakBuildBasedOnSemanticVersioning>
+                <ignoreMissingClasses>true</ignoreMissingClasses>
               </parameter>
+              <skip>${io7m.api.japicmp.skip}</skip>
             </configuration>
           </execution>
         </executions>
