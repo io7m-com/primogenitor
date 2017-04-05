@@ -3,6 +3,18 @@
   <c:project>com.io7m.primogenitor</c:project>
 
   <c:release c:ticket-system="com.github.io7m.primogenitor">
+    <c:date>2017-04-05</c:date>
+    <c:version>1.0.3</c:version>
+
+    <c:item>
+      <c:date>2017-04-05</c:date>
+      <c:type-code-fix/>
+      <c:ticket>17</c:ticket>
+      <c:summary>Add the Sonatype snapshots repository.</c:summary>
+    </c:item>
+  </c:release>
+
+  <c:release c:ticket-system="com.github.io7m.primogenitor">
     <c:date>2017-04-03</c:date>
     <c:version>1.0.2</c:version>
 
