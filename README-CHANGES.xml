@@ -4,7 +4,7 @@
 
   <c:release c:ticket-system="com.github.io7m.primogenitor">
     <c:date>2017-06-17</c:date>
-    <c:version>1.0.3</c:version>
+    <c:version>1.1.0</c:version>
 
     <c:item>
       <c:date>2017-04-05</c:date>
