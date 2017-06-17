@@ -3,7 +3,7 @@
   <c:project>com.io7m.primogenitor</c:project>
 
   <c:release c:ticket-system="com.github.io7m.primogenitor">
-    <c:date>2017-04-09</c:date>
+    <c:date>2017-06-17</c:date>
     <c:version>1.0.3</c:version>
 
     <c:item>
@@ -18,6 +18,12 @@
       <c:type-code-fix/>
       <c:ticket>18</c:ticket>
       <c:summary>Update to maven-bundle-plugin 3.3.0</c:summary>
+    </c:item>
+
+    <c:item>
+      <c:date>2017-06-17</c:date>
+      <c:type-code-new/>
+      <c:summary>Add explicit control over the groupId and version of the checkstyle rules artifact.</c:summary>
     </c:item>
   </c:release>
 

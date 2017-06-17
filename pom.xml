@@ -27,8 +27,14 @@
     <!-- The version of the japicmp plugin -->
     <io7m.japicmp.version>0.10.0</io7m.japicmp.version>
 
+    <!-- The groupId of the artifact that contains checkstyle rules for the project. -->
+    <io7m.checkstyle.groupId>${project.groupId}</io7m.checkstyle.groupId>
+
     <!-- The artifact that contains checkstyle rules for the project. -->
     <io7m.checkstyle.artifact/>
+
+    <!-- The version of the artifact that contains checkstyle rules for the project. -->
+    <io7m.checkstyle.version>${project.version}</io7m.checkstyle.version>
 
     <!-- The path to the checkstyle configuration inside the checkstyle package. -->
     <io7m.checkstyle.path/>
@@ -347,9 +353,9 @@
           <version>2.17</version>
           <dependencies>
             <dependency>
-              <groupId>${project.groupId}</groupId>
+              <groupId>${io7m.checkstyle.groupId}</groupId>
               <artifactId>${io7m.checkstyle.artifact}</artifactId>
-              <version>${project.version}</version>
+              <version>${io7m.checkstyle.version}</version>
             </dependency>
           </dependencies>
           <executions>
