@@ -3,6 +3,18 @@
   <c:project>com.io7m.primogenitor</c:project>
 
   <c:release c:ticket-system="com.github.io7m.primogenitor">
+    <c:date>2017-06-30</c:date>
+    <c:version>1.2.0</c:version>
+
+    <c:item>
+      <c:date>2017-06-30</c:date>
+      <c:type-code-new/>
+      <c:ticket>19</c:ticket>
+      <c:summary>Always provide a parsed version for each module.</c:summary>
+    </c:item>
+  </c:release>
+
+  <c:release c:ticket-system="com.github.io7m.primogenitor">
     <c:date>2017-06-17</c:date>
     <c:version>1.1.0</c:version>
 
