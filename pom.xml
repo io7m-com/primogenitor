@@ -587,7 +587,7 @@
               <goal>parse-version</goal>
             </goals>
             <configuration>
-              <propertyPrefix>${project.artifactId}.</propertyPrefix>
+              <propertyPrefix>${project.artifactId}</propertyPrefix>
             </configuration>
           </execution>
         </executions>
