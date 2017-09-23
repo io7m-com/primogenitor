@@ -351,6 +351,11 @@
               <artifactId>${io7m.checkstyle.artifact}</artifactId>
               <version>${io7m.checkstyle.version}</version>
             </dependency>
+            <dependency>
+              <groupId>com.puppycrawl.tools</groupId>
+              <artifactId>checkstyle</artifactId>
+              <version>8.2</version>
+            </dependency>
           </dependencies>
           <executions>
             <execution>
