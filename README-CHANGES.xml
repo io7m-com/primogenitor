@@ -3,6 +3,31 @@
   <c:project>com.io7m.primogenitor</c:project>
 
   <c:release c:ticket-system="com.github.io7m.primogenitor">
+    <c:date>2017-10-25</c:date>
+    <c:version>2.0.0</c:version>
+
+    <c:item>
+      <c:date>2017-10-25</c:date>
+      <c:type-code-change/>
+      <c:ticket>20</c:ticket>
+      <c:summary>Disable japicmp due to problems with JDK 9.</c:summary>
+    </c:item>
+
+    <c:item>
+      <c:date>2017-10-25</c:date>
+      <c:type-code-new/>
+      <c:ticket>21</c:ticket>
+      <c:summary>Enable reproducible builds for byte-for-byte identical jar files.</c:summary>
+    </c:item>
+
+    <c:item>
+      <c:date>2017-10-25</c:date>
+      <c:type-code-fix/>
+      <c:summary>Use a newer bndlib to handle JDK 9 bytecode.</c:summary>
+    </c:item>
+  </c:release>
+
+  <c:release c:ticket-system="com.github.io7m.primogenitor">
     <c:date>2017-06-30</c:date>
     <c:version>1.2.0</c:version>
 
