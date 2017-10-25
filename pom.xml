@@ -450,6 +450,7 @@
               <Bundle-DocURL>${project.url}</Bundle-DocURL>
               <Built-By>io7m</Built-By>
               <Sealed>true</Sealed>
+              <_removeheaders>Bnd-LastModified, Tool, Private-Package</_removeheaders>
             </instructions>
           </configuration>
           <!-- Use a newer version of bndlib that supports Java 9    -->
