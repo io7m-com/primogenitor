@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>2.0.0-beta0001</version>
+  <version>2.0.0-beta0002</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -662,6 +662,18 @@
       <plugin>
         <groupId>io.github.zlika</groupId>
         <artifactId>reproducible-build-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>reproducible-jar</id>
+            <phase>package</phase>
+            <goals>
+              <goal>strip-jar</goal>
+            </goals>
+            <configuration>
+              <overwrite>true</overwrite>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
 
       <!-- Analyze dependencies -->
