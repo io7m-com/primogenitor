@@ -497,6 +497,18 @@
           <artifactId>maven-dependency-plugin</artifactId>
           <version>3.0.2</version>
         </plugin>
+
+        <!--
+          Maven JaCoCo plugin.
+          http://www.jacoco.org/
+
+          This collects code coverage data for publication.
+        -->
+        <plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <version>0.7.9</version>
+        </plugin>
       </plugins>
     </pluginManagement>
 
