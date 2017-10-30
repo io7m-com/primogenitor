@@ -2,7 +2,7 @@ primogenitor
 ===
 
 [![Build Status](https://travis-ci.org/io7m/primogenitor.svg)](https://travis-ci.org/io7m/primogenitor)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.io7m.primogenitor/com.io7m.primogenitor/badge.png)](https://maven-badges.herokuapp.com/maven-central/com.io7m.primogenitor/com.io7m.primogenitor)
+[![Maven Central](https://img.shields.io/maven-central/v/com.io7m.primogenitor/com.io7m.primogenitor.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.io7m.primogenitor%22)
 
 The [io7m](http://io7m.com) root [POM](https://maven.apache.org/pom.html).
 
