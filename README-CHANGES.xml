@@ -25,6 +25,13 @@
       <c:type-code-fix/>
       <c:summary>Use a newer bndlib to handle JDK 9 bytecode.</c:summary>
     </c:item>
+
+    <c:item>
+      <c:date>2017-10-30</c:date>
+      <c:type-code-new/>
+      <c:ticket>23</c:ticket>
+      <c:summary>Enable JaCoCo code coverage.</c:summary>
+    </c:item>
   </c:release>
 
   <c:release c:ticket-system="com.github.io7m.primogenitor">
