@@ -567,6 +567,11 @@
                   <message>Plugins need to be versioned!</message>
                 </requirePluginVersions>
 
+                <!-- Require JDK 9+ -->
+                <requireJavaVersion>
+                  <version>[9,)</version>
+                </requireJavaVersion>
+
                 <!--
                   Extra Enforcer Rules
                   org.codehaus.mojo:extra-enforcer-rules
