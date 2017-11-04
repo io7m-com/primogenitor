@@ -540,7 +540,7 @@
               <id>minisite</id>
               <phase>site</phase>
               <goals>
-                <goal>site</goal>
+                <goal>generateSite</goal>
               </goals>
               <configuration>
                 <overviewFile>src/site/overview.xml</overviewFile>
