@@ -534,7 +534,7 @@
         <plugin>
           <groupId>com.io7m.minisite</groupId>
           <artifactId>com.io7m.minisite.maven_plugin</artifactId>
-          <version>0.0.2</version>
+          <version>0.0.3</version>
           <executions>
             <execution>
               <id>minisite</id>
@@ -548,6 +548,7 @@
                 <changelogFile>README-CHANGES.xml</changelogFile>
                 <changelogFeedEmail>contact@io7m.com</changelogFeedEmail>
                 <outputDirectory>${project.build.directory}/minisite</outputDirectory>
+                <resourcesDirectory>${project.basedir}/src/site/resources</resourcesDirectory>
               </configuration>
             </execution>
           </executions>
