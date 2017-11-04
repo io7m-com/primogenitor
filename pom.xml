@@ -534,7 +534,7 @@
         <plugin>
           <groupId>com.io7m.minisite</groupId>
           <artifactId>com.io7m.minisite.maven_plugin</artifactId>
-          <version>0.0.1</version>
+          <version>0.0.2</version>
           <executions>
             <execution>
               <id>minisite</id>
