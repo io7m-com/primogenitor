@@ -543,8 +543,8 @@
                 <goal>generateSite</goal>
               </goals>
               <configuration>
-                <overviewFile>src/site/overview.xml</overviewFile>
-                <featuresFile>src/site/features.xml</featuresFile>
+                <overviewFile>src/site/resources/overview.xml</overviewFile>
+                <featuresFile>src/site/resources/features.xml</featuresFile>
                 <changelogFile>README-CHANGES.xml</changelogFile>
                 <changelogFeedEmail>contact@io7m.com</changelogFeedEmail>
                 <outputDirectory>${project.build.outputDirectory}/minisite</outputDirectory>
