@@ -32,6 +32,12 @@
       <c:ticket>23</c:ticket>
       <c:summary>Enable JaCoCo code coverage.</c:summary>
     </c:item>
+
+    <c:item>
+      <c:date>2017-11-04</c:date>
+      <c:type-code-new/>
+      <c:summary>Disable the Maven site plugin and use com.io7m.minisite.</c:summary>
+    </c:item>
   </c:release>
 
   <c:release c:ticket-system="com.github.io7m.primogenitor">
