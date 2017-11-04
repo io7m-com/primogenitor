@@ -547,7 +547,7 @@
                 <featuresFile>src/site/resources/features.xml</featuresFile>
                 <changelogFile>README-CHANGES.xml</changelogFile>
                 <changelogFeedEmail>contact@io7m.com</changelogFeedEmail>
-                <outputDirectory>${project.build.outputDirectory}/minisite</outputDirectory>
+                <outputDirectory>${project.build.directory}/minisite</outputDirectory>
               </configuration>
             </execution>
           </executions>
