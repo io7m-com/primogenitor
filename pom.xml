@@ -30,6 +30,12 @@
     <!-- The path to the checkstyle configuration inside the checkstyle package. -->
     <io7m.checkstyle.path/>
 
+    <!-- The version of the checkstyle tools used -->
+    <io7m.checkstyle.tools.version>8.4</io7m.checkstyle.tools.version>
+
+    <!-- The version of Immutables.org used -->
+    <io7m.org.immutables.version>2.6.0.alpha0</io7m.org.immutables.version>
+
     <!-- The previous groupId of the API. Used to enforce semantic versioning. -->
     <io7m.api.previousGroupId>${project.groupId}</io7m.api.previousGroupId>
 
@@ -120,10 +126,27 @@
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.0.2</version>
         </plugin>
+
+        <!--
+          Compiler plugin.
+
+          https://maven.apache.org/plugins/maven-compiler-plugin/
+        -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.7.0</version>
+          <configuration>
+            <!-- Explicitly add an annotation processor for Immutables.org -->
+            <!-- This is required for Java 9 -->
+            <annotationProcessorPaths>
+              <dependency>
+                <groupId>org.immutables</groupId>
+                <artifactId>value</artifactId>
+                <version>${io7m.org.immutables.version}</version>
+              </dependency>
+            </annotationProcessorPaths>
+          </configuration>
         </plugin>
 
         <!--
@@ -267,7 +290,7 @@
             <dependency>
               <groupId>com.puppycrawl.tools</groupId>
               <artifactId>checkstyle</artifactId>
-              <version>8.4</version>
+              <version>${io7m.checkstyle.tools.version}</version>
             </dependency>
           </dependencies>
           <executions>
