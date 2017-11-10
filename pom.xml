@@ -502,6 +502,7 @@
           <configuration>
             <serverId>sonatype-nexus-staging</serverId>
             <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+            <description>${project.groupId}:${project.artifactId}:${project.version}</description>
             <autoReleaseAfterClose>true</autoReleaseAfterClose>
           </configuration>
         </plugin>
@@ -760,8 +761,8 @@
     </plugins>
   </build>
 
-  <!-- Sign artifacts when deploying to io7m -->
   <profiles>
+    <!-- Sign artifacts when deploying to io7m -->
     <profile>
       <id>io7m-deployment-private</id>
       <activation>
@@ -781,6 +782,34 @@
                 <phase>verify</phase>
                 <goals>
                   <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <!-- Enable the staging plugin for releases -->
+    <profile>
+      <id>io7m-release</id>
+      <activation>
+        <property>
+          <name>io7m.release</name>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.sonatype.plugins</groupId>
+            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <extensions>true</extensions>
+            <executions>
+              <execution>
+                <id>deploy-packages</id>
+                <phase>deploy</phase>
+                <goals>
+                  <goal>deploy</goal>
                 </goals>
               </execution>
             </executions>
