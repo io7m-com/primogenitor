@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>2.0.0-beta0011</version>
+  <version>2.0.0-beta0012</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -43,7 +43,7 @@
     <io7m.api.previousVersion/>
 
     <!-- The default doclint configuration to use for JavaDoc (may be empty) -->
-    <io7m.javadoc.docLint>-Xdoclint:none</io7m.javadoc.docLint>
+    <io7m.javadoc.docLint>-Xdoclint:all</io7m.javadoc.docLint>
   </properties>
 
   <inceptionYear>2017</inceptionYear>
