@@ -1,208 +1,167 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<c:changelog xmlns:c="http://schemas.io7m.com/changelog/2.0.0">
-  <c:project>com.io7m.primogenitor</c:project>
-
-  <c:release c:ticket-system="com.github.io7m.primogenitor">
-    <c:date>2017-10-25</c:date>
-    <c:version>2.0.0</c:version>
-
-    <c:item>
-      <c:date>2017-10-25</c:date>
-      <c:type-code-change/>
-      <c:ticket>20</c:ticket>
-      <c:summary>Disable japicmp due to problems with JDK 9.</c:summary>
-    </c:item>
-
-    <c:item>
-      <c:date>2017-10-25</c:date>
-      <c:type-code-new/>
-      <c:ticket>21</c:ticket>
-      <c:summary>Enable reproducible builds for byte-for-byte identical jar files.</c:summary>
-    </c:item>
-
-    <c:item>
-      <c:date>2017-10-25</c:date>
-      <c:type-code-fix/>
-      <c:summary>Use a newer bndlib to handle JDK 9 bytecode.</c:summary>
-    </c:item>
-
-    <c:item>
-      <c:date>2017-10-30</c:date>
-      <c:type-code-new/>
-      <c:ticket>23</c:ticket>
-      <c:summary>Enable JaCoCo code coverage.</c:summary>
-    </c:item>
-
-    <c:item>
-      <c:date>2017-11-04</c:date>
-      <c:type-code-new/>
-      <c:summary>Disable the Maven site plugin and use com.io7m.minisite.</c:summary>
-    </c:item>
-  </c:release>
-
-  <c:release c:ticket-system="com.github.io7m.primogenitor">
-    <c:date>2017-06-30</c:date>
-    <c:version>1.2.0</c:version>
-
-    <c:item>
-      <c:date>2017-06-30</c:date>
-      <c:type-code-new/>
-      <c:ticket>19</c:ticket>
-      <c:summary>Always provide a parsed version for each module.</c:summary>
-    </c:item>
-  </c:release>
-
-  <c:release c:ticket-system="com.github.io7m.primogenitor">
-    <c:date>2017-06-17</c:date>
-    <c:version>1.1.0</c:version>
-
-    <c:item>
-      <c:date>2017-04-05</c:date>
-      <c:type-code-fix/>
-      <c:ticket>17</c:ticket>
-      <c:summary>Add the Sonatype snapshots repository.</c:summary>
-    </c:item>
-
-    <c:item>
-      <c:date>2017-04-09</c:date>
-      <c:type-code-fix/>
-      <c:ticket>18</c:ticket>
-      <c:summary>Update to maven-bundle-plugin 3.3.0</c:summary>
-    </c:item>
-
-    <c:item>
-      <c:date>2017-06-17</c:date>
-      <c:type-code-new/>
-      <c:summary>Add explicit control over the groupId and version of the checkstyle rules artifact.</c:summary>
-    </c:item>
-  </c:release>
-
-  <c:release c:ticket-system="com.github.io7m.primogenitor">
-    <c:date>2017-04-03</c:date>
-    <c:version>1.0.2</c:version>
-
-    <c:item>
-      <c:date>2017-04-03</c:date>
-      <c:type-code-fix/>
-      <c:ticket>16</c:ticket>
-      <c:summary>Fix an excessively strong version pattern restriction.</c:summary>
-    </c:item>
-  </c:release>
-
-  <c:release c:ticket-system="com.github.io7m.primogenitor">
-    <c:date>2017-04-02</c:date>
-    <c:version>1.0.1</c:version>
-
-    <c:item>
-      <c:date>2017-04-02</c:date>
-      <c:type-code-fix/>
-      <c:summary>Allow skipping japicmp via the io7m.api.japicmp.skip property.</c:summary>
-    </c:item>
-
-    <c:item>
-      <c:date>2017-04-02</c:date>
-      <c:type-code-fix/>
-      <c:ticket>15</c:ticket>
-      <c:summary>Ignore missing classes.</c:summary>
-    </c:item>
-  </c:release>
-
-  <c:release c:ticket-system="com.github.io7m.primogenitor">
-    <c:date>2017-04-02</c:date>
-    <c:version>1.0.0</c:version>
-
-    <c:item>
-      <c:date>2017-04-02</c:date>
-      <c:type-code-fix/>
-      <c:ticket>9</c:ticket>
-      <c:summary>Use japicmp 0.10.0.</c:summary>
-    </c:item>
-
-    <c:item>
-      <c:date>2017-03-28</c:date>
-      <c:type-code-new/>
-      <c:ticket>14</c:ticket>
-      <c:summary>Control JavaDoc linting via properties.</c:summary>
-    </c:item>
-
-    <c:item>
-      <c:date>2017-03-27</c:date>
-      <c:type-code-new/>
-      <c:ticket>12</c:ticket>
-      <c:summary>Embed project URLs into OSGi manifests via Bundle-DocURL.</c:summary>
-    </c:item>
-
-    <c:item>
-      <c:date>2017-03-26</c:date>
-      <c:type-code-new/>
-      <c:ticket>13</c:ticket>
-      <c:summary>Add the ability to set the previous artifact and group ID for japicmp.</c:summary>
-    </c:item>
-
-    <c:item>
-      <c:date>2017-03-20</c:date>
-      <c:type-code-fix/>
-      <c:ticket>11</c:ticket>
-      <c:summary>Do not show unmodified methods/classes in japicmp reports.</c:summary>
-    </c:item>
-
-    <c:item>
-      <c:date>2017-03-14</c:date>
-      <c:type-code-fix/>
-      <c:summary>Only break builds on semantic versioning violations.</c:summary>
-    </c:item>
-  </c:release>
-
-  <c:release c:ticket-system="com.github.io7m.primogenitor">
-    <c:date>2017-03-13</c:date>
-    <c:version>0.0.7</c:version>
-
-    <c:item>
-      <c:date>2017-03-13</c:date>
-      <c:type-code-fix/>
-      <c:ticket>8</c:ticket>
-      <c:summary>Disable duplicate class enforcement.</c:summary>
-    </c:item>
-
-    <c:item>
-      <c:date>2017-03-13</c:date>
-      <c:type-code-new/>
-      <c:ticket>7</c:ticket>
-      <c:summary>Enable dependency analysis.</c:summary>
-    </c:item>
-
-    <c:item>
-      <c:date>2017-03-13</c:date>
-      <c:type-code-new/>
-      <c:ticket>6</c:ticket>
-      <c:summary>Enable japicmp reporting.</c:summary>
-    </c:item>
-  </c:release>
-
-  <c:release c:ticket-system="com.github.io7m.primogenitor">
-    <c:date>2017-03-08</c:date>
-    <c:version>0.0.6</c:version>
-
-    <c:item>
-      <c:date>2017-03-08</c:date>
-      <c:type-code-fix/>
-      <c:summary>Correctly execute both the JavaDoc and Surefire plugins.</c:summary>
-    </c:item>
-  </c:release>
-
-  <c:release c:ticket-system="com.github.io7m.primogenitor">
-    <c:date>2017-03-03</c:date>
-    <c:version>0.0.1</c:version>
-
-    <c:item>
-      <c:date>2017-03-03</c:date>
-      <c:type-code-new/>
-      <c:summary>Initial release.</c:summary>
-    </c:item>
-  </c:release>
-
-  <c:ticket-system xml:id="com.github.io7m.primogenitor">
-    <c:ticket-url>https://github.com/io7m/primogenitor/issues/</c:ticket-url>
-  </c:ticket-system>
-
+<c:changelog xmlns:c="urn:com.io7m.changelog:4.0" project="com.io7m.primogenitor">
+   <c:releases>
+      <c:release date="2017-10-25T00:00:00+00:00"
+                 version="2.0.0"
+                 ticket-system="com.github.io7m.primogenitor">
+         <c:changes>
+            <c:change date="2017-10-25T00:00:00+00:00"
+                      summary="Disable japicmp due to problems with JDK 9."
+                      compatible="false">
+               <c:tickets>
+                  <c:ticket id="20"/>
+               </c:tickets>
+            </c:change>
+            <c:change date="2017-10-25T00:00:00+00:00"
+                      summary="Enable reproducible builds for byte-for-byte identical jar files.">
+               <c:tickets>
+                  <c:ticket id="21"/>
+               </c:tickets>
+            </c:change>
+            <c:change date="2017-10-25T00:00:00+00:00"
+                      summary="Use a newer bndlib to handle JDK 9 bytecode."/>
+            <c:change date="2017-10-30T00:00:00+00:00" summary="Enable JaCoCo code coverage.">
+               <c:tickets>
+                  <c:ticket id="23"/>
+               </c:tickets>
+            </c:change>
+            <c:change date="2017-11-04T00:00:00+00:00"
+                      summary="Disable the Maven site plugin and use com.io7m.minisite."/>
+         </c:changes>
+      </c:release>
+      <c:release date="2017-06-30T00:00:00+00:00"
+                 version="1.2.0"
+                 ticket-system="com.github.io7m.primogenitor">
+         <c:changes>
+            <c:change date="2017-06-30T00:00:00+00:00"
+                      summary="Always provide a parsed version for each module.">
+               <c:tickets>
+                  <c:ticket id="19"/>
+               </c:tickets>
+            </c:change>
+         </c:changes>
+      </c:release>
+      <c:release date="2017-06-17T00:00:00+00:00"
+                 version="1.1.0"
+                 ticket-system="com.github.io7m.primogenitor">
+         <c:changes>
+            <c:change date="2017-04-05T00:00:00+00:00"
+                      summary="Add the Sonatype snapshots repository.">
+               <c:tickets>
+                  <c:ticket id="17"/>
+               </c:tickets>
+            </c:change>
+            <c:change date="2017-04-09T00:00:00+00:00"
+                      summary="Update to maven-bundle-plugin 3.3.0">
+               <c:tickets>
+                  <c:ticket id="18"/>
+               </c:tickets>
+            </c:change>
+            <c:change date="2017-06-17T00:00:00+00:00"
+                      summary="Add explicit control over the groupId and version of the checkstyle rules artifact."/>
+         </c:changes>
+      </c:release>
+      <c:release date="2017-04-03T00:00:00+00:00"
+                 version="1.0.2"
+                 ticket-system="com.github.io7m.primogenitor">
+         <c:changes>
+            <c:change date="2017-04-03T00:00:00+00:00"
+                      summary="Fix an excessively strong version pattern restriction.">
+               <c:tickets>
+                  <c:ticket id="16"/>
+               </c:tickets>
+            </c:change>
+         </c:changes>
+      </c:release>
+      <c:release date="2017-04-02T00:00:00+00:00"
+                 version="1.0.1"
+                 ticket-system="com.github.io7m.primogenitor">
+         <c:changes>
+            <c:change date="2017-04-02T00:00:00+00:00"
+                      summary="Allow skipping japicmp via the io7m.api.japicmp.skip property."/>
+            <c:change date="2017-04-02T00:00:00+00:00" summary="Ignore missing classes.">
+               <c:tickets>
+                  <c:ticket id="15"/>
+               </c:tickets>
+            </c:change>
+         </c:changes>
+      </c:release>
+      <c:release date="2017-04-02T00:00:00+00:00"
+                 version="1.0.0"
+                 ticket-system="com.github.io7m.primogenitor">
+         <c:changes>
+            <c:change date="2017-04-02T00:00:00+00:00" summary="Use japicmp 0.10.0.">
+               <c:tickets>
+                  <c:ticket id="9"/>
+               </c:tickets>
+            </c:change>
+            <c:change date="2017-03-28T00:00:00+00:00"
+                      summary="Control JavaDoc linting via properties.">
+               <c:tickets>
+                  <c:ticket id="14"/>
+               </c:tickets>
+            </c:change>
+            <c:change date="2017-03-27T00:00:00+00:00"
+                      summary="Embed project URLs into OSGi manifests via Bundle-DocURL.">
+               <c:tickets>
+                  <c:ticket id="12"/>
+               </c:tickets>
+            </c:change>
+            <c:change date="2017-03-26T00:00:00+00:00"
+                      summary="Add the ability to set the previous artifact and group ID for japicmp.">
+               <c:tickets>
+                  <c:ticket id="13"/>
+               </c:tickets>
+            </c:change>
+            <c:change date="2017-03-20T00:00:00+00:00"
+                      summary="Do not show unmodified methods/classes in japicmp reports.">
+               <c:tickets>
+                  <c:ticket id="11"/>
+               </c:tickets>
+            </c:change>
+            <c:change date="2017-03-14T00:00:00+00:00"
+                      summary="Only break builds on semantic versioning violations."/>
+         </c:changes>
+      </c:release>
+      <c:release date="2017-03-13T00:00:00+00:00"
+                 version="0.0.7"
+                 ticket-system="com.github.io7m.primogenitor">
+         <c:changes>
+            <c:change date="2017-03-13T00:00:00+00:00"
+                      summary="Disable duplicate class enforcement.">
+               <c:tickets>
+                  <c:ticket id="8"/>
+               </c:tickets>
+            </c:change>
+            <c:change date="2017-03-13T00:00:00+00:00" summary="Enable dependency analysis.">
+               <c:tickets>
+                  <c:ticket id="7"/>
+               </c:tickets>
+            </c:change>
+            <c:change date="2017-03-13T00:00:00+00:00" summary="Enable japicmp reporting.">
+               <c:tickets>
+                  <c:ticket id="6"/>
+               </c:tickets>
+            </c:change>
+         </c:changes>
+      </c:release>
+      <c:release date="2017-03-08T00:00:00+00:00"
+                 version="0.0.6"
+                 ticket-system="com.github.io7m.primogenitor">
+         <c:changes>
+            <c:change date="2017-03-08T00:00:00+00:00"
+                      summary="Correctly execute both the JavaDoc and Surefire plugins."/>
+         </c:changes>
+      </c:release>
+      <c:release date="2017-03-03T00:00:00+00:00"
+                 version="0.0.1"
+                 ticket-system="com.github.io7m.primogenitor">
+         <c:changes>
+            <c:change date="2017-03-03T00:00:00+00:00" summary="Initial release."/>
+         </c:changes>
+      </c:release>
+   </c:releases>
+   <c:ticket-systems>
+      <c:ticket-system id="com.github.io7m.primogenitor"
+                       url="https://github.com/io7m/primogenitor/issues/"/>
+   </c:ticket-systems>
 </c:changelog>
