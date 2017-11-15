@@ -529,6 +529,13 @@
               <id>jacoco-report</id>
               <phase>test</phase>
               <goals>
+                <goal>report</goal>
+              </goals>
+            </execution>
+            <execution>
+              <id>jacoco-report-aggregate</id>
+              <phase>test</phase>
+              <goals>
                 <goal>report-aggregate</goal>
               </goals>
             </execution>
