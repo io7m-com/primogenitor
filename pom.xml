@@ -616,6 +616,11 @@
                   <message>Plugins need to be versioned!</message>
                 </requirePluginVersions>
 
+                <!-- Require Maven 3.5.0+ -->
+                <requireMavenVersion>
+                  <version>[3.5.0,)</version>
+                </requireMavenVersion>
+
                 <!-- Require JDK 9+ -->
                 <requireJavaVersion>
                   <version>[9,)</version>
