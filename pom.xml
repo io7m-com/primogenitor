@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>2.0.0-beta0017</version>
+  <version>2.0.0-beta0018</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -47,6 +47,31 @@
 
     <!-- The Maven Dependency plugin does not yet support JDK 9 -->
     <mdep.analyze.skip>true</mdep.analyze.skip>
+
+    <!-- The versions of all plugins used -->
+    <io7m.maven-clean-plugin.version>3.0.0</io7m.maven-clean-plugin.version>
+    <io7m.maven-deploy-plugin.version>2.8.2</io7m.maven-deploy-plugin.version>
+    <io7m.maven-install-plugin.version>2.5.2</io7m.maven-install-plugin.version>
+    <io7m.maven-resources-plugin.version>3.0.2</io7m.maven-resources-plugin.version>
+    <io7m.maven-compiler-plugin.version>3.7.0</io7m.maven-compiler-plugin.version>
+    <io7m.maven-site-plugin.version>3.6</io7m.maven-site-plugin.version>
+    <io7m.maven-surefire-plugin.version>2.20.1</io7m.maven-surefire-plugin.version>
+    <io7m.maven-assembly-plugin.version>3.1.0</io7m.maven-assembly-plugin.version>
+    <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
+    <io7m.maven-shade-plugin.version>3.1.0</io7m.maven-shade-plugin.version>
+    <io7m.build-helper-maven-plugin.version>3.0.0</io7m.build-helper-maven-plugin.version>
+    <io7m.maven-enforcer-plugin.version>3.0.0-M1</io7m.maven-enforcer-plugin.version>
+    <io7m.maven-javadoc-plugin.version>3.0.0-M1</io7m.maven-javadoc-plugin.version>
+    <io7m.buildnumber-maven-plugin.version>1.4</io7m.buildnumber-maven-plugin.version>
+    <io7m.maven-checkstyle-plugin.version>2.17</io7m.maven-checkstyle-plugin.version>
+    <io7m.reproducible-build-maven-plugin.version>0.4</io7m.reproducible-build-maven-plugin.version>
+    <io7m.maven-source-plugin.version>3.0.1</io7m.maven-source-plugin.version>
+    <io7m.maven-jar-plugin.version>3.0.2</io7m.maven-jar-plugin.version>
+    <io7m.maven-bundle-plugin.version>3.3.0</io7m.maven-bundle-plugin.version>
+    <io7m.nexus-staging-maven-plugin.version>1.6.8</io7m.nexus-staging-maven-plugin.version>
+    <io7m.maven-dependency-plugin.version>3.0.2</io7m.maven-dependency-plugin.version>
+    <io7m.jacoco-maven-plugin.version>0.7.9</io7m.jacoco-maven-plugin.version>
+    <io7m.com.io7m.minisite.maven_plugin.version>0.0.9</io7m.com.io7m.minisite.maven_plugin.version>
   </properties>
 
   <inceptionYear>2017</inceptionYear>
@@ -109,22 +134,22 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-clean-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>${io7m.maven-clean-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>2.8.2</version>
+          <version>${io7m.maven-deploy-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-install-plugin</artifactId>
-          <version>2.5.2</version>
+          <version>${io7m.maven-install-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>3.0.2</version>
+          <version>${io7m.maven-resources-plugin.version}</version>
         </plugin>
 
         <!--
@@ -135,7 +160,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.7.0</version>
+          <version>${io7m.maven-compiler-plugin.version}</version>
         </plugin>
 
         <!--
@@ -145,7 +170,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
-          <version>3.6</version>
+          <version>${io7m.maven-site-plugin.version}</version>
         </plugin>
 
         <!--
@@ -157,7 +182,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.20.1</version>
+          <version>${io7m.maven-surefire-plugin.version}</version>
           <configuration>
             <redirectTestOutputToFile>true</redirectTestOutputToFile>
           </configuration>
@@ -172,7 +197,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>${io7m.maven-assembly-plugin.version}</version>
         </plugin>
 
         <!--
@@ -184,7 +209,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>truezip-maven-plugin</artifactId>
-          <version>1.2</version>
+          <version>${io7m.truezip-maven-plugin.version}</version>
         </plugin>
 
         <!--
@@ -196,7 +221,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-shade-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>${io7m.maven-shade-plugin.version}</version>
         </plugin>
 
         <!--
@@ -208,7 +233,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>build-helper-maven-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>${io7m.build-helper-maven-plugin.version}</version>
         </plugin>
 
         <!--
@@ -220,7 +245,7 @@
         -->
         <plugin>
           <artifactId>maven-enforcer-plugin</artifactId>
-          <version>3.0.0-M1</version>
+          <version>${io7m.maven-enforcer-plugin.version}</version>
           <dependencies>
             <dependency>
               <groupId>org.codehaus.mojo</groupId>
@@ -243,7 +268,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>buildnumber-maven-plugin</artifactId>
-          <version>1.4</version>
+          <version>${io7m.buildnumber-maven-plugin.version}</version>
 
           <!-- Record SCM revision in manifest. -->
           <executions>
@@ -269,7 +294,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>2.17</version>
+          <version>${io7m.maven-checkstyle-plugin.version}</version>
           <dependencies>
             <dependency>
               <groupId>${io7m.checkstyle.groupId}</groupId>
@@ -307,7 +332,7 @@
         <plugin>
           <groupId>io.github.zlika</groupId>
           <artifactId>reproducible-build-maven-plugin</artifactId>
-          <version>0.4</version>
+          <version>${io7m.reproducible-build-maven-plugin.version}</version>
         </plugin>
 
         <!--
@@ -317,7 +342,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
-          <version>3.0.1</version>
+          <version>${io7m.maven-source-plugin.version}</version>
           <executions>
             <execution>
               <phase>package</phase>
@@ -351,7 +376,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>3.0.2</version>
+          <version>${io7m.maven-jar-plugin.version}</version>
           <executions>
 
             <!-- Produce jar file with custom manifest -->
@@ -412,7 +437,7 @@
         <plugin>
           <groupId>org.apache.felix</groupId>
           <artifactId>maven-bundle-plugin</artifactId>
-          <version>3.3.0</version>
+          <version>${io7m.maven-bundle-plugin.version}</version>
           <extensions>true</extensions>
           <configuration>
             <instructions>
@@ -448,7 +473,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>3.0.0-M1</version>
+          <version>${io7m.maven-javadoc-plugin.version}</version>
           <executions>
             <execution>
               <id>attach-javadocs</id>
@@ -486,7 +511,7 @@
         <plugin>
           <groupId>org.sonatype.plugins</groupId>
           <artifactId>nexus-staging-maven-plugin</artifactId>
-          <version>1.6.8</version>
+          <version>${io7m.nexus-staging-maven-plugin.version}</version>
           <extensions>true</extensions>
           <configuration>
             <serverId>sonatype-nexus-staging</serverId>
@@ -508,7 +533,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
-          <version>3.0.2</version>
+          <version>${io7m.maven-dependency-plugin.version}</version>
         </plugin>
 
         <!--
@@ -520,7 +545,7 @@
         <plugin>
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
-          <version>0.7.9</version>
+          <version>${io7m.jacoco-maven-plugin.version}</version>
           <executions>
             <execution>
               <id>jacoco-agent</id>
@@ -554,7 +579,7 @@
         <plugin>
           <groupId>com.io7m.minisite</groupId>
           <artifactId>com.io7m.minisite.maven_plugin</artifactId>
-          <version>0.0.9</version>
+          <version>${io7m.com.io7m.minisite.maven_plugin.version}</version>
           <executions>
             <execution>
               <id>minisite</id>
