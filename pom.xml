@@ -31,7 +31,7 @@
     <io7m.checkstyle.path/>
 
     <!-- The version of the checkstyle tools used -->
-    <io7m.checkstyle.tools.version>8.4</io7m.checkstyle.tools.version>
+    <io7m.checkstyle.tools.version>8.5</io7m.checkstyle.tools.version>
 
     <!-- The previous groupId of the API. Used to enforce semantic versioning. -->
     <io7m.api.previousGroupId>${project.groupId}</io7m.api.previousGroupId>
