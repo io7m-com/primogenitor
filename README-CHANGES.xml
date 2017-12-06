@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<c:changelog xmlns:c="urn:com.io7m.changelog:4.0" project="com.io7m.primogenitor">
+<?xml version="1.0" encoding="UTF-8"?><c:changelog xmlns:c="urn:com.io7m.changelog:4.0" project="com.io7m.primogenitor">
   <c:releases>
     <c:release date="2017-03-03T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="0.0.1">
       <c:changes>
@@ -103,7 +102,7 @@
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2017-11-17T11:20:21+00:00" ticket-system="com.github.io7m.primogenitor" version="2.0.0">
+    <c:release date="2017-12-06T23:39:57+00:00" ticket-system="com.github.io7m.primogenitor" version="2.0.0">
       <c:changes>
         <c:change compatible="false" date="2017-10-25T00:00:00+00:00" summary="Disable japicmp due to problems with JDK 9.">
           <c:tickets>
@@ -127,11 +126,12 @@
             <c:ticket id="24"/>
           </c:tickets>
         </c:change>
-        <c:change date="2017-11-17T11:20:21+00:00" summary="Enable code coverage with JaCoCo">
+        <c:change date="2017-11-17T00:00:00+00:00" summary="Enable code coverage with JaCoCo">
           <c:tickets>
             <c:ticket id="23"/>
           </c:tickets>
         </c:change>
+        <c:change compatible="false" date="2017-12-06T23:39:57+00:00" summary="Disable dependency plugin due to problems with JDK 9"/>
       </c:changes>
     </c:release>
   </c:releases>
