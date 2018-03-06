@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>2.0.0</version>
+  <version>2.1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -72,6 +72,13 @@
     <io7m.nexus-staging-maven-plugin.version>1.6.8</io7m.nexus-staging-maven-plugin.version>
     <io7m.reproducible-build-maven-plugin.version>0.4</io7m.reproducible-build-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
+
+    <!-- Strings that appear in jars -->
+    <io7m.jar.vendor>io7m.com</io7m.jar.vendor>
+    <io7m.jar.built_by>io7m</io7m.jar.built_by>
+
+    <!-- Strings that appear in generated sites -->
+    <io7m.changelog.feed_email>contact@io7m.com</io7m.changelog.feed_email>
   </properties>
 
   <inceptionYear>2017</inceptionYear>
@@ -353,15 +360,15 @@
               <configuration>
                 <archive>
                   <manifestEntries>
-                    <Specification-Title>${project.name}</Specification-Title>
+                    <Specification-Title>${project.name} (Sources)</Specification-Title>
                     <Specification-Version>${project.version}</Specification-Version>
-                    <Specification-Vendor>io7m.com</Specification-Vendor>
-                    <Implementation-Title>${project.name}</Implementation-Title>
+                    <Specification-Vendor>${io7m.jar.vendor}</Specification-Vendor>
+                    <Implementation-Title>${project.name} (Sources)</Implementation-Title>
                     <Implementation-Version>${project.version}</Implementation-Version>
-                    <Implementation-Vendor>io7m.com</Implementation-Vendor>
+                    <Implementation-Vendor>${io7m.jar.vendor}</Implementation-Vendor>
                     <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
                     <Implementation-Build>${buildNumber}</Implementation-Build>
-                    <Built-By>io7m</Built-By>
+                    <Built-By>${io7m.jar.built_by}</Built-By>
                   </manifestEntries>
                 </archive>
               </configuration>
@@ -387,13 +394,13 @@
                   <manifestEntries>
                     <Specification-Title>${project.name}</Specification-Title>
                     <Specification-Version>${project.version}</Specification-Version>
-                    <Specification-Vendor>io7m.com</Specification-Vendor>
+                    <Specification-Vendor>${io7m.jar.vendor}</Specification-Vendor>
                     <Implementation-Title>${project.name}</Implementation-Title>
                     <Implementation-Version>${project.version}</Implementation-Version>
-                    <Implementation-Vendor>io7m.com</Implementation-Vendor>
+                    <Implementation-Vendor>${io7m.jar.vendor}</Implementation-Vendor>
                     <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
                     <Implementation-Build>${buildNumber}</Implementation-Build>
-                    <Built-By>io7m</Built-By>
+                    <Built-By>${io7m.jar.built_by}</Built-By>
                     <Sealed>true</Sealed>
                   </manifestEntries>
                 </archive>
@@ -412,15 +419,15 @@
               <configuration>
                 <archive>
                   <manifestEntries>
-                    <Specification-Title>${project.name}</Specification-Title>
+                    <Specification-Title>${project.name} (Tests)</Specification-Title>
                     <Specification-Version>${project.version}</Specification-Version>
-                    <Specification-Vendor>io7m.com</Specification-Vendor>
-                    <Implementation-Title>${project.name}</Implementation-Title>
+                    <Specification-Vendor>${io7m.jar.vendor}</Specification-Vendor>
+                    <Implementation-Title>${project.name} (Tests)</Implementation-Title>
                     <Implementation-Version>${project.version}</Implementation-Version>
-                    <Implementation-Vendor>io7m.com</Implementation-Vendor>
+                    <Implementation-Vendor>${io7m.jar.vendor}</Implementation-Vendor>
                     <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
                     <Implementation-Build>${buildNumber}</Implementation-Build>
-                    <Built-By>io7m</Built-By>
+                    <Built-By>${io7m.jar.built_by}</Built-By>
                   </manifestEntries>
                 </archive>
               </configuration>
@@ -443,14 +450,14 @@
             <instructions>
               <Specification-Title>${project.name}</Specification-Title>
               <Specification-Version>${project.version}</Specification-Version>
-              <Specification-Vendor>io7m.com</Specification-Vendor>
+              <Specification-Vendor>${io7m.jar.vendor}</Specification-Vendor>
               <Implementation-Title>${project.name}</Implementation-Title>
               <Implementation-Version>${project.version}</Implementation-Version>
-              <Implementation-Vendor>io7m.com</Implementation-Vendor>
+              <Implementation-Vendor>${io7m.jar.vendor}</Implementation-Vendor>
               <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
               <Implementation-Build>${buildNumber}</Implementation-Build>
               <Bundle-DocURL>${project.url}</Bundle-DocURL>
-              <Built-By>io7m</Built-By>
+              <Built-By>${io7m.jar.built_by}</Built-By>
               <Sealed>true</Sealed>
               <_removeheaders>Bnd-LastModified, Tool, Private-Package</_removeheaders>
             </instructions>
@@ -485,15 +492,15 @@
                 <bottom><![CDATA[Copyright &#169; {currentYear} &lt;code@io7m.com&gt; http://io7m.com]]></bottom>
                 <archive>
                   <manifestEntries>
-                    <Specification-Title>${project.name}</Specification-Title>
+                    <Specification-Title>${project.name} (JavaDoc)</Specification-Title>
                     <Specification-Version>${project.version}</Specification-Version>
-                    <Specification-Vendor>io7m.com</Specification-Vendor>
-                    <Implementation-Title>${project.name}</Implementation-Title>
+                    <Specification-Vendor>${io7m.jar.vendor}</Specification-Vendor>
+                    <Implementation-Title>${project.name} (JavaDoc)</Implementation-Title>
                     <Implementation-Version>${project.version}</Implementation-Version>
-                    <Implementation-Vendor>io7m.com</Implementation-Vendor>
+                    <Implementation-Vendor>${io7m.jar.vendor}</Implementation-Vendor>
                     <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
                     <Implementation-Build>${buildNumber}</Implementation-Build>
-                    <Built-By>io7m</Built-By>
+                    <Built-By>${io7m.jar.built_by}</Built-By>
                   </manifestEntries>
                 </archive>
                 <additionalparam>${io7m.javadoc.docLint}</additionalparam>
@@ -592,7 +599,7 @@
                 <overviewFile>src/site/resources/overview.xml</overviewFile>
                 <featuresFile>src/site/resources/features.xml</featuresFile>
                 <changelogFile>README-CHANGES.xml</changelogFile>
-                <changelogFeedEmail>contact@io7m.com</changelogFeedEmail>
+                <changelogFeedEmail>${io7m.changelog.feed_email}</changelogFeedEmail>
                 <outputDirectory>${project.build.directory}/minisite</outputDirectory>
                 <resourceDirectory>${project.basedir}/src/site/resources</resourceDirectory>
               </configuration>
