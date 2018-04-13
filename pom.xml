@@ -45,9 +45,6 @@
     <!-- The default doclint configuration to use for JavaDoc (may be empty) -->
     <io7m.javadoc.docLint>-Xdoclint:all</io7m.javadoc.docLint>
 
-    <!-- The Maven Dependency plugin does not yet support JDK 9 -->
-    <mdep.analyze.skip>true</mdep.analyze.skip>
-
     <!-- The versions of all plugins used -->
     <io7m.build-helper-maven-plugin.version>3.0.0</io7m.build-helper-maven-plugin.version>
     <io7m.buildnumber-maven-plugin.version>1.4</io7m.buildnumber-maven-plugin.version>
@@ -58,7 +55,7 @@
     <io7m.maven-checkstyle-plugin.version>2.17</io7m.maven-checkstyle-plugin.version>
     <io7m.maven-clean-plugin.version>3.0.0</io7m.maven-clean-plugin.version>
     <io7m.maven-compiler-plugin.version>3.7.0</io7m.maven-compiler-plugin.version>
-    <io7m.maven-dependency-plugin.version>3.0.2</io7m.maven-dependency-plugin.version>
+    <io7m.maven-dependency-plugin.version>3.1.0</io7m.maven-dependency-plugin.version>
     <io7m.maven-deploy-plugin.version>2.8.2</io7m.maven-deploy-plugin.version>
     <io7m.maven-enforcer-plugin.version>3.0.0-M1</io7m.maven-enforcer-plugin.version>
     <io7m.maven-install-plugin.version>2.5.2</io7m.maven-install-plugin.version>
