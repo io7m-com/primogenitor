@@ -1,8 +1,9 @@
 primogenitor
 ===
 
-[![Travis](https://img.shields.io/travis/io7m/primogenitor.png?style=flat-square)](https://travis-ci.org/io7m/primogenitor)
-[![Maven Central](https://img.shields.io/maven-central/v/com.io7m.primogenitor/com.io7m.primogenitor.png?style=flat-square)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.io7m.primogenitor%22)
+[![Build Status](https://img.shields.io/travis/io7m/primogenitor.svg?style=flat-square)](https://travis-ci.org/io7m/primogenitor)
+[![Maven Central](https://img.shields.io/maven-central/v/com.io7m.primogenitor/com.io7m.primogenitor.svg?style=flat-square)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.io7m.primogenitor%22)
+[![Maven Central (snapshot)](https://img.shields.io/nexus/s/https/oss.sonatype.org/com.io7m.primogenitor/com.io7m.primogenitor.svg?style=flat-square)](https://oss.sonatype.org/content/repositories/snapshots/com/io7m/primogenitor/)
 
 The [io7m](http://io7m.com) root [POM](https://maven.apache.org/pom.html).
 
