@@ -19,19 +19,19 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- The groupId of the artifact that contains checkstyle rules for the project. -->
-    <io7m.checkstyle.groupId>${project.groupId}</io7m.checkstyle.groupId>
+    <io7m.checkstyle.groupId>com.io7m.checkstyle_rules</io7m.checkstyle.groupId>
 
     <!-- The artifact that contains checkstyle rules for the project. -->
-    <io7m.checkstyle.artifact/>
+    <io7m.checkstyle.artifact>com.io7m.checkstyle_rules</io7m.checkstyle.artifact>
 
     <!-- The version of the artifact that contains checkstyle rules for the project. -->
-    <io7m.checkstyle.version>${project.version}</io7m.checkstyle.version>
+    <io7m.checkstyle.version>0.0.2</io7m.checkstyle.version>
 
     <!-- The path to the checkstyle configuration inside the checkstyle package. -->
-    <io7m.checkstyle.path/>
+    <io7m.checkstyle.path>com/io7m/checkstyle_rules/checkstyle.xml</io7m.checkstyle.path>
 
     <!-- The version of the checkstyle tools used -->
-    <io7m.checkstyle.tools.version>8.5</io7m.checkstyle.tools.version>
+    <io7m.checkstyle.tools.version>8.10</io7m.checkstyle.tools.version>
 
     <!-- The previous groupId of the API. Used to enforce semantic versioning. -->
     <io7m.api.previousGroupId>${project.groupId}</io7m.api.previousGroupId>
