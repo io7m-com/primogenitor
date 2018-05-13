@@ -17,7 +17,7 @@ pipeline {
             maven 'maven-3.5.3'
           }
           steps {
-            sh 'mvn -Denforcer.skip=true clean verify'
+            sh 'mvn -e -Denforcer.skip=true clean install'
           }
         }
         stage('macOS:openjdk-10-hotspot') {
@@ -27,7 +27,7 @@ pipeline {
             maven 'maven-3.5.3'
           }
           steps {
-            sh 'mvn -Denforcer.skip=true clean verify'
+            sh 'mvn -e -Denforcer.skip=true clean install'
           }
         }
 
@@ -38,7 +38,7 @@ pipeline {
             maven 'maven-3.5.3'
           }
           steps {
-            sh 'mvn -Denforcer.skip=true clean verify'
+            sh 'mvn -e -Denforcer.skip=true clean install'
           }
         }
         stage('linux:openjdk-10-hotspot') {
@@ -48,7 +48,7 @@ pipeline {
             maven 'maven-3.5.3'
           }
           steps {
-            sh 'mvn -Denforcer.skip=true clean verify'
+            sh 'mvn -e -Denforcer.skip=true clean install'
           }
         }
         stage('linux:openjdk-11-hotspot') {
@@ -58,7 +58,7 @@ pipeline {
             maven 'maven-3.5.3'
           }
           steps {
-            sh 'mvn -Denforcer.skip=true clean verify'
+            sh 'mvn -e -Denforcer.skip=true clean install'
           }
         }
       }
