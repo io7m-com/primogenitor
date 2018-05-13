@@ -49,7 +49,7 @@
     <io7m.build-helper-maven-plugin.version>3.0.0</io7m.build-helper-maven-plugin.version>
     <io7m.buildnumber-maven-plugin.version>1.4</io7m.buildnumber-maven-plugin.version>
     <io7m.com.io7m.minisite.maven_plugin.version>0.0.9</io7m.com.io7m.minisite.maven_plugin.version>
-    <io7m.jacoco-maven-plugin.version>0.7.9</io7m.jacoco-maven-plugin.version>
+    <io7m.jacoco-maven-plugin.version>0.8.1</io7m.jacoco-maven-plugin.version>
     <io7m.maven-assembly-plugin.version>3.1.0</io7m.maven-assembly-plugin.version>
     <io7m.maven-bundle-plugin.version>3.3.0</io7m.maven-bundle-plugin.version>
     <io7m.maven-checkstyle-plugin.version>2.17</io7m.maven-checkstyle-plugin.version>

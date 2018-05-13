@@ -139,18 +139,19 @@
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2018-05-13T08:36:36+00:00" ticket-system="com.github.io7m.primogenitor" version="2.1.0">
+    <c:release date="2018-05-13T08:46:03+00:00" ticket-system="com.github.io7m.primogenitor" version="2.1.0">
       <c:changes>
         <c:change date="2018-03-06T00:00:00+00:00" summary="Make most constants into properties that can be overridden.">
           <c:tickets>
             <c:ticket id="25"/>
           </c:tickets>
         </c:change>
-        <c:change date="2018-05-13T08:36:36+00:00" summary="Upgrade Maven Surefire to 2.21.0">
+        <c:change date="2018-05-13T00:00:00+00:00" summary="Upgrade Maven Surefire to 2.21.0">
           <c:tickets>
             <c:ticket id="26"/>
           </c:tickets>
         </c:change>
+        <c:change date="2018-05-13T08:46:03+00:00" summary="Upgrade JaCoCo plugin to 0.8.1"/>
       </c:changes>
     </c:release>
   </c:releases>
