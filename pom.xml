@@ -49,6 +49,7 @@
     <io7m.build-helper-maven-plugin.version>3.0.0</io7m.build-helper-maven-plugin.version>
     <io7m.buildnumber-maven-plugin.version>1.4</io7m.buildnumber-maven-plugin.version>
     <io7m.com.io7m.minisite.maven_plugin.version>0.0.9</io7m.com.io7m.minisite.maven_plugin.version>
+    <io7m.extra-enforcer-rules.version>1.0-beta-6</io7m.extra-enforcer-rules.version>
     <io7m.jacoco-maven-plugin.version>0.8.1</io7m.jacoco-maven-plugin.version>
     <io7m.maven-assembly-plugin.version>3.1.0</io7m.maven-assembly-plugin.version>
     <io7m.maven-bundle-plugin.version>3.5.0</io7m.maven-bundle-plugin.version>
@@ -58,6 +59,7 @@
     <io7m.maven-dependency-plugin.version>3.1.0</io7m.maven-dependency-plugin.version>
     <io7m.maven-deploy-plugin.version>2.8.2</io7m.maven-deploy-plugin.version>
     <io7m.maven-enforcer-plugin.version>3.0.0-M1</io7m.maven-enforcer-plugin.version>
+    <io7m.maven-gpg-plugin.version>1.6</io7m.maven-gpg-plugin.version>
     <io7m.maven-install-plugin.version>2.5.2</io7m.maven-install-plugin.version>
     <io7m.maven-jar-plugin.version>3.1.0</io7m.maven-jar-plugin.version>
     <io7m.maven-javadoc-plugin.version>3.0.0</io7m.maven-javadoc-plugin.version>
@@ -68,6 +70,7 @@
     <io7m.maven-surefire-plugin.version>2.21.0</io7m.maven-surefire-plugin.version>
     <io7m.nexus-staging-maven-plugin.version>1.6.8</io7m.nexus-staging-maven-plugin.version>
     <io7m.reproducible-build-maven-plugin.version>0.6</io7m.reproducible-build-maven-plugin.version>
+    <io7m.scijava-maven-plugin.version>1.0.0</io7m.scijava-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
 
     <!-- Strings that appear in jars -->
@@ -258,12 +261,12 @@
             <dependency>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>extra-enforcer-rules</artifactId>
-              <version>1.0-beta-6</version>
+              <version>${io7m.extra-enforcer-rules.version}</version>
             </dependency>
             <dependency>
               <groupId>org.scijava</groupId>
               <artifactId>scijava-maven-plugin</artifactId>
-              <version>1.0.0</version>
+              <version>${io7m.scijava-maven-plugin.version}</version>
             </dependency>
           </dependencies>
         </plugin>
@@ -812,7 +815,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
-            <version>1.6</version>
+            <version>${io7m.maven-gpg-plugin.version}</version>
             <executions>
               <execution>
                 <id>sign-artifacts</id>
