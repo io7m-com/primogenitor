@@ -139,7 +139,7 @@
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2018-05-13T08:53:45+00:00" ticket-system="com.github.io7m.primogenitor" version="2.1.0">
+    <c:release date="2018-05-13T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="2.1.0">
       <c:changes>
         <c:change date="2018-03-06T00:00:00+00:00" summary="Make most constants into properties that can be overridden.">
           <c:tickets>
@@ -152,9 +152,18 @@
           </c:tickets>
         </c:change>
         <c:change date="2018-05-13T00:00:00+00:00" summary="Upgrade JaCoCo plugin to 0.8.1"/>
-        <c:change date="2018-05-13T08:53:45+00:00" summary="Upgrade Checkstyle to 8.10 and use new io7m checkstyle_rules">
+        <c:change date="2018-05-13T00:00:00+00:00" summary="Upgrade Checkstyle to 8.10 and use new io7m checkstyle_rules">
           <c:tickets>
             <c:ticket id="30"/>
+          </c:tickets>
+        </c:change>
+      </c:changes>
+    </c:release>
+    <c:release date="2018-05-17T14:43:52+00:00" ticket-system="com.github.io7m.primogenitor" version="2.1.1">
+      <c:changes>
+        <c:change date="2018-05-17T14:43:52+00:00" summary="Add a workaround for MJAVADOC-524">
+          <c:tickets>
+            <c:ticket id="31"/>
           </c:tickets>
         </c:change>
       </c:changes>
