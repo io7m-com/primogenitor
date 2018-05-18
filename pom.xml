@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>2.1.1</version>
+  <version>3.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -79,6 +79,7 @@
 
     <!-- Strings that appear in generated sites -->
     <io7m.changelog.feed_email>contact@io7m.com</io7m.changelog.feed_email>
+    <io7m.bnd-maven-plugin.version>4.0.0</io7m.bnd-maven-plugin.version>
   </properties>
 
   <inceptionYear>2017</inceptionYear>
@@ -383,6 +384,35 @@
         </plugin>
 
         <!--
+          BND Maven plugin.
+          https://github.com/bndtools/bnd/tree/master/maven/bnd-maven-plugin
+
+          Used to produce manifests in OSGi bundles.
+        -->
+        <plugin>
+          <groupId>biz.aQute.bnd</groupId>
+          <artifactId>bnd-maven-plugin</artifactId>
+          <version>${io7m.bnd-maven-plugin.version}</version>
+          <configuration>
+            <bnd><![CDATA[
+              Specification-Title: ${project.name}
+              Specification-Version: ${project.version}
+              Specification-Vendor: ${io7m.jar.vendor}
+              Implementation-Title: ${project.name}
+              Implementation-Version: ${project.version}
+              Implementation-Vendor: ${io7m.jar.vendor}
+              Implementation-Vendor-Id: ${project.groupId}
+              Implementation-Build: ${buildNumber}
+              Bundle-DocURL: ${project.url}
+              Bundle-Name: ${project.name} ${project.version} - ${project.description}
+              Built-By: ${io7m.jar.built_by}
+              Sealed: true
+              -removeheaders: Bnd-LastModified, Tool, Private-Package
+]]></bnd>
+          </configuration>
+        </plugin>
+
+        <!--
           Jar plugin.
           https://maven.apache.org/plugins/maven-jar-plugin/
         -->
@@ -397,18 +427,7 @@
               <id>default-jar</id>
               <configuration>
                 <archive>
-                  <manifestEntries>
-                    <Specification-Title>${project.name}</Specification-Title>
-                    <Specification-Version>${project.version}</Specification-Version>
-                    <Specification-Vendor>${io7m.jar.vendor}</Specification-Vendor>
-                    <Implementation-Title>${project.name}</Implementation-Title>
-                    <Implementation-Version>${project.version}</Implementation-Version>
-                    <Implementation-Vendor>${io7m.jar.vendor}</Implementation-Vendor>
-                    <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
-                    <Implementation-Build>${buildNumber}</Implementation-Build>
-                    <Built-By>${io7m.jar.built_by}</Built-By>
-                    <Sealed>true</Sealed>
-                  </manifestEntries>
+                  <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
                 </archive>
               </configuration>
               <goals>
@@ -439,35 +458,6 @@
               </configuration>
             </execution>
           </executions>
-        </plugin>
-
-        <!--
-          Bundle plugin.
-          https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html
-
-          Used to produce OSGi bundles.
-        -->
-        <plugin>
-          <groupId>org.apache.felix</groupId>
-          <artifactId>maven-bundle-plugin</artifactId>
-          <version>${io7m.maven-bundle-plugin.version}</version>
-          <extensions>true</extensions>
-          <configuration>
-            <instructions>
-              <Specification-Title>${project.name}</Specification-Title>
-              <Specification-Version>${project.version}</Specification-Version>
-              <Specification-Vendor>${io7m.jar.vendor}</Specification-Vendor>
-              <Implementation-Title>${project.name}</Implementation-Title>
-              <Implementation-Version>${project.version}</Implementation-Version>
-              <Implementation-Vendor>${io7m.jar.vendor}</Implementation-Vendor>
-              <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
-              <Implementation-Build>${buildNumber}</Implementation-Build>
-              <Bundle-DocURL>${project.url}</Bundle-DocURL>
-              <Built-By>${io7m.jar.built_by}</Built-By>
-              <Sealed>true</Sealed>
-              <_removeheaders>Bnd-LastModified, Tool, Private-Package</_removeheaders>
-            </instructions>
-          </configuration>
         </plugin>
 
         <!--
@@ -722,6 +712,21 @@
         </executions>
       </plugin>
 
+      <!-- Produce a manifest for OSGi bundles -->
+      <plugin>
+        <groupId>biz.aQute.bnd</groupId>
+        <artifactId>bnd-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>generate-osgi-manifest</id>
+            <goals>
+              <goal>bnd-process</goal>
+            </goals>
+            <phase>process-classes</phase>
+          </execution>
+        </executions>
+      </plugin>
+
       <!-- Insert the build number into jar files -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
@@ -741,12 +746,6 @@
       <!-- Run tests -->
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
-      </plugin>
-
-      <!-- Produce an OSGi bundle -->
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
       </plugin>
 
       <!-- Process jar files for reproducible builds -->
