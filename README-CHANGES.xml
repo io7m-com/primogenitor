@@ -168,11 +168,21 @@
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2018-05-18T10:14:10+00:00" ticket-system="com.github.io7m.primogenitor" version="3.0.0">
+    <c:release date="2018-05-18T14:40:00+00:00" ticket-system="com.github.io7m.primogenitor" version="3.0.0">
       <c:changes>
-        <c:change compatible="false" date="2018-05-18T10:14:10+00:00" summary="Switch to bnd-maven-plugin instead of maven-bundle-plugin">
+        <c:change compatible="false" date="2018-05-18T00:00:00+00:00" summary="Switch to bnd-maven-plugin instead of maven-bundle-plugin">
           <c:tickets>
             <c:ticket id="27"/>
+          </c:tickets>
+        </c:change>
+        <c:change date="2018-05-18T00:00:00+00:00" summary="Add bnd-baseline-plugin for semantic versioning analysis">
+          <c:tickets>
+            <c:ticket id="27"/>
+          </c:tickets>
+        </c:change>
+        <c:change date="2018-05-18T14:40:00+00:00" summary="Add spotbugs-maven-plugin for bug analysis">
+          <c:tickets>
+            <c:ticket id="29"/>
           </c:tickets>
         </c:change>
       </c:changes>
