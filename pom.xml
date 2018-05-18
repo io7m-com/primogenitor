@@ -72,6 +72,15 @@
     <io7m.reproducible-build-maven-plugin.version>0.6</io7m.reproducible-build-maven-plugin.version>
     <io7m.scijava-maven-plugin.version>1.0.0</io7m.scijava-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
+    <io7m.bnd-maven-plugin.version>4.0.0</io7m.bnd-maven-plugin.version>
+    <io7m.bnd-baseline-maven-plugin.version>4.0.0</io7m.bnd-baseline-maven-plugin.version>
+
+    <!--
+      Temporarily disable baseline checks.
+
+      See: https://github.com/bndtools/bnd/issues/2451
+    -->
+    <bnd.baseline.skip>true</bnd.baseline.skip>
 
     <!-- Strings that appear in jars -->
     <io7m.jar.vendor>io7m.com</io7m.jar.vendor>
@@ -79,7 +88,6 @@
 
     <!-- Strings that appear in generated sites -->
     <io7m.changelog.feed_email>contact@io7m.com</io7m.changelog.feed_email>
-    <io7m.bnd-maven-plugin.version>4.0.0</io7m.bnd-maven-plugin.version>
   </properties>
 
   <inceptionYear>2017</inceptionYear>
@@ -413,6 +421,27 @@
         </plugin>
 
         <!--
+          BND Baseline Maven plugin.
+          https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin
+
+          Used to check that code obeys semantic versioning rules.
+        -->
+        <plugin>
+          <groupId>biz.aQute.bnd</groupId>
+          <artifactId>bnd-baseline-maven-plugin</artifactId>
+          <version>${io7m.bnd-baseline-maven-plugin.version}</version>
+          <configuration>
+            <base>
+              <groupId>${io7m.api.previousGroupId}</groupId>
+              <artifactId>${io7m.api.previousArtifactId}</artifactId>
+              <version>${io7m.api.previousVersion}</version>
+            </base>
+            <failOnMissing>true</failOnMissing>
+            <fullReport>true</fullReport>
+          </configuration>
+        </plugin>
+
+        <!--
           Jar plugin.
           https://maven.apache.org/plugins/maven-jar-plugin/
         -->
@@ -721,6 +750,21 @@
             <id>generate-osgi-manifest</id>
             <goals>
               <goal>bnd-process</goal>
+            </goals>
+            <phase>process-classes</phase>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Analyze semantic versioning -->
+      <plugin>
+        <groupId>biz.aQute.bnd</groupId>
+        <artifactId>bnd-baseline-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>analyze-semantic-versioning</id>
+            <goals>
+              <goal>baseline</goal>
             </goals>
             <phase>process-classes</phase>
           </execution>
