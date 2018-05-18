@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>3.0.0-beta0001</version>
+  <version>3.0.0-beta0002</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -434,7 +434,7 @@
               <goals>
                 <goal>baseline</goal>
               </goals>
-              <phase>process-classes</phase>
+              <phase>verify</phase>
               <configuration>
                 <base>
                   <groupId>${io7m.api.previousGroupId}</groupId>
@@ -458,6 +458,12 @@
           <groupId>com.github.spotbugs</groupId>
           <artifactId>spotbugs-maven-plugin</artifactId>
           <version>${io7m.spotbugs-maven-plugin.version}</version>
+          <configuration>
+            <fork>false</fork>
+            <effort>Max</effort>
+            <threshold>Low</threshold>
+            <xmlOutput>true</xmlOutput>
+          </configuration>
           <executions>
             <execution>
               <id>analyze-bugs</id>
@@ -465,12 +471,6 @@
                 <goal>check</goal>
               </goals>
               <phase>process-classes</phase>
-              <configuration>
-                <fork>false</fork>
-                <effort>Max</effort>
-                <threshold>Low</threshold>
-                <xmlOutput>true</xmlOutput>
-              </configuration>
             </execution>
           </executions>
         </plugin>
@@ -790,6 +790,24 @@
         </executions>
       </plugin>
 
+      <!-- Analyze dependencies -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>analyze</id>
+            <goals>
+              <goal>analyze-only</goal>
+            </goals>
+            <phase>process-classes</phase>
+            <configuration>
+              <failOnWarning>true</failOnWarning>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
       <!-- Insert the build number into jar files -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
@@ -824,24 +842,6 @@
             </goals>
             <configuration>
               <overwrite>true</overwrite>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
-      <!-- Analyze dependencies -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>analyze</id>
-            <goals>
-              <goal>analyze-only</goal>
-            </goals>
-            <phase>verify</phase>
-            <configuration>
-              <failOnWarning>true</failOnWarning>
             </configuration>
           </execution>
         </executions>
