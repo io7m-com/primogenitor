@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>2.1.1</version>
+  <version>3.0.0-beta0001</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -49,6 +49,7 @@
     <io7m.build-helper-maven-plugin.version>3.0.0</io7m.build-helper-maven-plugin.version>
     <io7m.buildnumber-maven-plugin.version>1.4</io7m.buildnumber-maven-plugin.version>
     <io7m.com.io7m.minisite.maven_plugin.version>0.0.9</io7m.com.io7m.minisite.maven_plugin.version>
+    <io7m.extra-enforcer-rules.version>1.0-beta-6</io7m.extra-enforcer-rules.version>
     <io7m.jacoco-maven-plugin.version>0.8.1</io7m.jacoco-maven-plugin.version>
     <io7m.maven-assembly-plugin.version>3.1.0</io7m.maven-assembly-plugin.version>
     <io7m.maven-bundle-plugin.version>3.5.0</io7m.maven-bundle-plugin.version>
@@ -58,6 +59,7 @@
     <io7m.maven-dependency-plugin.version>3.1.0</io7m.maven-dependency-plugin.version>
     <io7m.maven-deploy-plugin.version>2.8.2</io7m.maven-deploy-plugin.version>
     <io7m.maven-enforcer-plugin.version>3.0.0-M1</io7m.maven-enforcer-plugin.version>
+    <io7m.maven-gpg-plugin.version>1.6</io7m.maven-gpg-plugin.version>
     <io7m.maven-install-plugin.version>2.5.2</io7m.maven-install-plugin.version>
     <io7m.maven-jar-plugin.version>3.1.0</io7m.maven-jar-plugin.version>
     <io7m.maven-javadoc-plugin.version>3.0.0</io7m.maven-javadoc-plugin.version>
@@ -68,7 +70,11 @@
     <io7m.maven-surefire-plugin.version>2.21.0</io7m.maven-surefire-plugin.version>
     <io7m.nexus-staging-maven-plugin.version>1.6.8</io7m.nexus-staging-maven-plugin.version>
     <io7m.reproducible-build-maven-plugin.version>0.6</io7m.reproducible-build-maven-plugin.version>
+    <io7m.scijava-maven-plugin.version>1.0.0</io7m.scijava-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
+    <io7m.bnd-maven-plugin.version>4.0.0</io7m.bnd-maven-plugin.version>
+    <io7m.bnd-baseline-maven-plugin.version>4.0.0</io7m.bnd-baseline-maven-plugin.version>
+    <io7m.spotbugs-maven-plugin.version>3.1.3.1</io7m.spotbugs-maven-plugin.version>
 
     <!-- Strings that appear in jars -->
     <io7m.jar.vendor>io7m.com</io7m.jar.vendor>
@@ -258,12 +264,12 @@
             <dependency>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>extra-enforcer-rules</artifactId>
-              <version>1.0-beta-6</version>
+              <version>${io7m.extra-enforcer-rules.version}</version>
             </dependency>
             <dependency>
               <groupId>org.scijava</groupId>
               <artifactId>scijava-maven-plugin</artifactId>
-              <version>1.0.0</version>
+              <version>${io7m.scijava-maven-plugin.version}</version>
             </dependency>
           </dependencies>
         </plugin>
@@ -380,6 +386,96 @@
         </plugin>
 
         <!--
+          BND Maven plugin.
+          https://github.com/bndtools/bnd/tree/master/maven/bnd-maven-plugin
+
+          Used to produce manifests in OSGi bundles.
+        -->
+        <plugin>
+          <groupId>biz.aQute.bnd</groupId>
+          <artifactId>bnd-maven-plugin</artifactId>
+          <version>${io7m.bnd-maven-plugin.version}</version>
+          <configuration>
+            <bnd><![CDATA[
+              Specification-Title: ${project.name}
+              Specification-Version: ${project.version}
+              Specification-Vendor: ${io7m.jar.vendor}
+              Implementation-Title: ${project.name}
+              Implementation-Version: ${project.version}
+              Implementation-Vendor: ${io7m.jar.vendor}
+              Implementation-Vendor-Id: ${project.groupId}
+              Implementation-Build: ${buildNumber}
+              Bundle-DocURL: ${project.distributionManagement.site.url}
+              Bundle-Name: ${project.name} ${project.version} - ${project.description}
+              Bundle-Description: ${project.description}
+              Bundle-Vendor: ${io7m.jar.vendor}
+              Bundle-SCM: ${project.scm.url}
+              Built-By: ${io7m.jar.built_by}
+              Sealed: true
+
+              -removeheaders: Bnd-LastModified, Tool, Private-Package
+]]></bnd>
+          </configuration>
+        </plugin>
+
+        <!--
+          BND Baseline Maven plugin.
+          https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin
+
+          Used to check that code obeys semantic versioning rules.
+        -->
+        <plugin>
+          <groupId>biz.aQute.bnd</groupId>
+          <artifactId>bnd-baseline-maven-plugin</artifactId>
+          <version>${io7m.bnd-baseline-maven-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>analyze-semantic-versioning</id>
+              <goals>
+                <goal>baseline</goal>
+              </goals>
+              <phase>process-classes</phase>
+              <configuration>
+                <base>
+                  <groupId>${io7m.api.previousGroupId}</groupId>
+                  <artifactId>${io7m.api.previousArtifactId}</artifactId>
+                  <version>${io7m.api.previousVersion}</version>
+                </base>
+                <failOnMissing>true</failOnMissing>
+                <fullReport>true</fullReport>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
+        <!--
+          SpotBugs Maven Plugin
+          https://spotbugs.github.io/spotbugs-maven-plugin/
+
+          Used to locate probable bugs in code.
+        -->
+        <plugin>
+          <groupId>com.github.spotbugs</groupId>
+          <artifactId>spotbugs-maven-plugin</artifactId>
+          <version>${io7m.spotbugs-maven-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>analyze-bugs</id>
+              <goals>
+                <goal>check</goal>
+              </goals>
+              <phase>process-classes</phase>
+              <configuration>
+                <fork>false</fork>
+                <effort>Max</effort>
+                <threshold>Low</threshold>
+                <xmlOutput>true</xmlOutput>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
+        <!--
           Jar plugin.
           https://maven.apache.org/plugins/maven-jar-plugin/
         -->
@@ -394,18 +490,7 @@
               <id>default-jar</id>
               <configuration>
                 <archive>
-                  <manifestEntries>
-                    <Specification-Title>${project.name}</Specification-Title>
-                    <Specification-Version>${project.version}</Specification-Version>
-                    <Specification-Vendor>${io7m.jar.vendor}</Specification-Vendor>
-                    <Implementation-Title>${project.name}</Implementation-Title>
-                    <Implementation-Version>${project.version}</Implementation-Version>
-                    <Implementation-Vendor>${io7m.jar.vendor}</Implementation-Vendor>
-                    <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
-                    <Implementation-Build>${buildNumber}</Implementation-Build>
-                    <Built-By>${io7m.jar.built_by}</Built-By>
-                    <Sealed>true</Sealed>
-                  </manifestEntries>
+                  <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
                 </archive>
               </configuration>
               <goals>
@@ -436,35 +521,6 @@
               </configuration>
             </execution>
           </executions>
-        </plugin>
-
-        <!--
-          Bundle plugin.
-          https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html
-
-          Used to produce OSGi bundles.
-        -->
-        <plugin>
-          <groupId>org.apache.felix</groupId>
-          <artifactId>maven-bundle-plugin</artifactId>
-          <version>${io7m.maven-bundle-plugin.version}</version>
-          <extensions>true</extensions>
-          <configuration>
-            <instructions>
-              <Specification-Title>${project.name}</Specification-Title>
-              <Specification-Version>${project.version}</Specification-Version>
-              <Specification-Vendor>${io7m.jar.vendor}</Specification-Vendor>
-              <Implementation-Title>${project.name}</Implementation-Title>
-              <Implementation-Version>${project.version}</Implementation-Version>
-              <Implementation-Vendor>${io7m.jar.vendor}</Implementation-Vendor>
-              <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
-              <Implementation-Build>${buildNumber}</Implementation-Build>
-              <Bundle-DocURL>${project.url}</Bundle-DocURL>
-              <Built-By>${io7m.jar.built_by}</Built-By>
-              <Sealed>true</Sealed>
-              <_removeheaders>Bnd-LastModified, Tool, Private-Package</_removeheaders>
-            </instructions>
-          </configuration>
         </plugin>
 
         <!--
@@ -719,6 +775,21 @@
         </executions>
       </plugin>
 
+      <!-- Produce a manifest for OSGi bundles -->
+      <plugin>
+        <groupId>biz.aQute.bnd</groupId>
+        <artifactId>bnd-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>generate-osgi-manifest</id>
+            <goals>
+              <goal>bnd-process</goal>
+            </goals>
+            <phase>process-classes</phase>
+          </execution>
+        </executions>
+      </plugin>
+
       <!-- Insert the build number into jar files -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
@@ -738,12 +809,6 @@
       <!-- Run tests -->
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
-      </plugin>
-
-      <!-- Produce an OSGi bundle -->
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
       </plugin>
 
       <!-- Process jar files for reproducible builds -->
@@ -774,9 +839,7 @@
             <goals>
               <goal>analyze-only</goal>
             </goals>
-            <phase>
-              verify
-            </phase>
+            <phase>verify</phase>
             <configuration>
               <failOnWarning>true</failOnWarning>
             </configuration>
@@ -812,7 +875,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
-            <version>1.6</version>
+            <version>${io7m.maven-gpg-plugin.version}</version>
             <executions>
               <execution>
                 <id>sign-artifacts</id>
@@ -853,6 +916,29 @@
           </plugin>
         </plugins>
       </build>
+    </profile>
+
+    <!-- Enable the quickest possible build -->
+    <profile>
+      <id>io7m-quick-build</id>
+      <activation>
+        <property>
+          <name>io7m.quick_build</name>
+        </property>
+      </activation>
+      <properties>
+        <assembly.skipAssembly>true</assembly.skipAssembly>
+        <bnd.baseline.skip>true</bnd.baseline.skip>
+        <checkstyle.skip>true</checkstyle.skip>
+        <enforcer.skip>true</enforcer.skip>
+        <jacoco.skip>true</jacoco.skip>
+        <kstructural.skip>true</kstructural.skip>
+        <maven.buildNumber.skip>true</maven.buildNumber.skip>
+        <maven.javadoc.skip>true</maven.javadoc.skip>
+        <maven.source.skip>true</maven.source.skip>
+        <skipTests>true</skipTests>
+        <spotbugs.skip>true</spotbugs.skip>
+      </properties>
     </profile>
   </profiles>
 
