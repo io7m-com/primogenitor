@@ -74,13 +74,7 @@
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
     <io7m.bnd-maven-plugin.version>4.0.0</io7m.bnd-maven-plugin.version>
     <io7m.bnd-baseline-maven-plugin.version>4.0.0</io7m.bnd-baseline-maven-plugin.version>
-
-    <!--
-      Temporarily disable baseline checks.
-
-      See: https://github.com/bndtools/bnd/issues/2451
-    -->
-    <bnd.baseline.skip>true</bnd.baseline.skip>
+    <io7m.spotbugs-maven-plugin.version>3.1.3.1</io7m.spotbugs-maven-plugin.version>
 
     <!-- Strings that appear in jars -->
     <io7m.jar.vendor>io7m.com</io7m.jar.vendor>
@@ -434,15 +428,51 @@
           <groupId>biz.aQute.bnd</groupId>
           <artifactId>bnd-baseline-maven-plugin</artifactId>
           <version>${io7m.bnd-baseline-maven-plugin.version}</version>
-          <configuration>
-            <base>
-              <groupId>${io7m.api.previousGroupId}</groupId>
-              <artifactId>${io7m.api.previousArtifactId}</artifactId>
-              <version>${io7m.api.previousVersion}</version>
-            </base>
-            <failOnMissing>true</failOnMissing>
-            <fullReport>true</fullReport>
-          </configuration>
+          <executions>
+            <execution>
+              <id>analyze-semantic-versioning</id>
+              <goals>
+                <goal>baseline</goal>
+              </goals>
+              <phase>process-classes</phase>
+              <configuration>
+                <base>
+                  <groupId>${io7m.api.previousGroupId}</groupId>
+                  <artifactId>${io7m.api.previousArtifactId}</artifactId>
+                  <version>${io7m.api.previousVersion}</version>
+                </base>
+                <failOnMissing>true</failOnMissing>
+                <fullReport>true</fullReport>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
+        <!--
+          SpotBugs Maven Plugin
+          https://spotbugs.github.io/spotbugs-maven-plugin/
+
+          Used to locate probable bugs in code.
+        -->
+        <plugin>
+          <groupId>com.github.spotbugs</groupId>
+          <artifactId>spotbugs-maven-plugin</artifactId>
+          <version>${io7m.spotbugs-maven-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>analyze-bugs</id>
+              <goals>
+                <goal>check</goal>
+              </goals>
+              <phase>process-classes</phase>
+              <configuration>
+                <fork>false</fork>
+                <effort>Max</effort>
+                <threshold>Low</threshold>
+                <xmlOutput>true</xmlOutput>
+              </configuration>
+            </execution>
+          </executions>
         </plugin>
 
         <!--
@@ -760,21 +790,6 @@
         </executions>
       </plugin>
 
-      <!-- Analyze semantic versioning -->
-      <plugin>
-        <groupId>biz.aQute.bnd</groupId>
-        <artifactId>bnd-baseline-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>analyze-semantic-versioning</id>
-            <goals>
-              <goal>baseline</goal>
-            </goals>
-            <phase>process-classes</phase>
-          </execution>
-        </executions>
-      </plugin>
-
       <!-- Insert the build number into jar files -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
@@ -824,9 +839,7 @@
             <goals>
               <goal>analyze-only</goal>
             </goals>
-            <phase>
-              verify
-            </phase>
+            <phase>verify</phase>
             <configuration>
               <failOnWarning>true</failOnWarning>
             </configuration>
@@ -903,6 +916,29 @@
           </plugin>
         </plugins>
       </build>
+    </profile>
+
+    <!-- Enable the quickest possible build -->
+    <profile>
+      <id>io7m-quick-build</id>
+      <activation>
+        <property>
+          <name>io7m.quick_build</name>
+        </property>
+      </activation>
+      <properties>
+        <assembly.skipAssembly>true</assembly.skipAssembly>
+        <bnd.baseline.skip>true</bnd.baseline.skip>
+        <checkstyle.skip>true</checkstyle.skip>
+        <enforcer.skip>true</enforcer.skip>
+        <jacoco.skip>true</jacoco.skip>
+        <kstructural.skip>true</kstructural.skip>
+        <maven.buildNumber.skip>true</maven.buildNumber.skip>
+        <maven.javadoc.skip>true</maven.javadoc.skip>
+        <maven.source.skip>true</maven.source.skip>
+        <skipTests>true</skipTests>
+        <spotbugs.skip>true</spotbugs.skip>
+      </properties>
     </profile>
   </profiles>
 
