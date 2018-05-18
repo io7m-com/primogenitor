@@ -411,10 +411,14 @@
               Implementation-Vendor: ${io7m.jar.vendor}
               Implementation-Vendor-Id: ${project.groupId}
               Implementation-Build: ${buildNumber}
-              Bundle-DocURL: ${project.url}
+              Bundle-DocURL: ${project.distributionManagement.site.url}
               Bundle-Name: ${project.name} ${project.version} - ${project.description}
+              Bundle-Description: ${project.description}
+              Bundle-Vendor: ${io7m.jar.vendor}
+              Bundle-SCM: ${project.scm.url}
               Built-By: ${io7m.jar.built_by}
               Sealed: true
+
               -removeheaders: Bnd-LastModified, Tool, Private-Package
 ]]></bnd>
           </configuration>
