@@ -30,6 +30,9 @@ allows the root POM to be installed and deployed to repositories.
 
 The `primogenitor` POM builds on existing Maven conventions and enforces stricter conventions of its own. The POM is heavily commented and exposes several configurable properties. See the `properties` section in the POM for details.
 
+The `primogenitor` POM is heavily biased towards extensive static checking, and the production of byte-for-byte
+[reproducible builds](https://reproducible-builds.org/).
+
 By setting the parent of a project's POM file to `com.io7m.primogenitor`, the project receives the following services:
 
 * Enforcement of the presence of POM properties required for Maven Central: Descendant POMs are required to provide `description`, `url`, and `name` elements.
@@ -39,7 +42,7 @@ By setting the parent of a project's POM file to `com.io7m.primogenitor`, the pr
 * Enforcement of reproducible builds: No (transitive) dependency may depend on a `SNAPSHOT` version.
 * Enforcement of plugin versioning: No plugin may be added without an explicit version number.
 * Insertion of [Git](http://www.git-scm.com) commit identifiers into the produced Jar file `Implementation-Build` manifest field with the [buildnumber-maven-plugin](http://www.mojohaus.org/buildnumber-maven-plugin/). This assists with tracing exactly which artifacts were used to produce an application.
-* Byte-for-byte reproducible Jar files with the [reproducible-build-maven-plugin](http://zlika.github.io/reproducible-build-maven-plugin/index.html).
+* Byte-for-byte reproducible Jar files with the [reproducible-build-maven-plugin](http://zlika.github.io/reproducible-build-maven-plugin/index.html). Note: This may fail for JavaDoc jars (as the output of the `javadoc` tool is not deterministic), and it may fail if the project adds extra plugins that insert non-reproducible content into Jar files.
 * Automatic insertion of [OSGi](http://www.osgi.org) metadata into the produced Jar files using the [bnd-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-maven-plugin). Sensible default values are chosen based on metadata given in the POM file, and this can be overridden on a per-module basis.
 * Automatic checking of [semantic versioning](https://semver.org/) using the [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin). Bytecode is analyzed and the build fails if, for example, binary incompatible changes have been made without incrementing the project's major version number.
 * Automatic source style checks using [Checkstyle](https://maven.apache.org/plugins/maven-checkstyle-plugin/). Rules are consulted from external Maven artifacts in order to facilitate sharing rules across large numbers of projects and enforcing a consistent style everywhere.
