@@ -75,6 +75,8 @@
     <io7m.bnd-maven-plugin.version>4.0.0</io7m.bnd-maven-plugin.version>
     <io7m.bnd-baseline-maven-plugin.version>4.0.0</io7m.bnd-baseline-maven-plugin.version>
     <io7m.spotbugs-maven-plugin.version>3.1.3.1</io7m.spotbugs-maven-plugin.version>
+    <io7m.fb-contrib-plugin.version>7.4.0.sb</io7m.fb-contrib-plugin.version>
+    <io7m.findsecbugs-plugin.version>1.7.1</io7m.findsecbugs-plugin.version>
 
     <!-- Strings that appear in jars -->
     <io7m.jar.vendor>io7m.com</io7m.jar.vendor>
@@ -464,10 +466,29 @@
             <threshold>Low</threshold>
             <xmlOutput>true</xmlOutput>
             <plugins>
+
+              <!--
+                Security-related rules.
+
+                https://find-sec-bugs.github.io/bugs.htm
+              -->
+
               <dependency>
                 <groupId>com.h3xstream.findsecbugs</groupId>
                 <artifactId>findsecbugs-plugin</artifactId>
-                <version>1.7.1</version>
+                <version>${io7m.findsecbugs-plugin.version}</version>
+              </dependency>
+
+              <!--
+                Extra contributed rules.
+
+                http://fb-contrib.sourceforge.net/bugdescriptions.html
+              -->
+
+              <dependency>
+                <groupId>com.mebigfatguy.fb-contrib</groupId>
+                <artifactId>fb-contrib</artifactId>
+                <version>${io7m.fb-contrib-plugin.version}</version>
               </dependency>
             </plugins>
           </configuration>
