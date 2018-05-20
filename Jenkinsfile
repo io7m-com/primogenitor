@@ -8,7 +8,7 @@ pipeline {
   agent none
 
   stages {
-    stage('Build') {
+    stage('BuildAndTest') {
       parallel {
         stage('macOS:openjdk-9-hotspot') {
           agent { label 'macOS' }
@@ -17,7 +17,11 @@ pipeline {
             maven 'maven-3.5.3'
           }
           steps {
-            sh 'mvn -e -Denforcer.skip=true clean install'
+            withMaven(
+              maven: 'maven-3.5.3',
+              mavenLocalRepo: '.repository') {
+              sh 'mvn -Denforcer.skip=true -C -e -U clean install'
+            }
           }
         }
         stage('macOS:openjdk-10-hotspot') {
@@ -27,10 +31,13 @@ pipeline {
             maven 'maven-3.5.3'
           }
           steps {
-            sh 'mvn -e -Denforcer.skip=true clean install'
+            withMaven(
+              maven: 'maven-3.5.3',
+              mavenLocalRepo: '.repository') {
+              sh 'mvn -Denforcer.skip=true -C -e -U clean install'
+            }
           }
         }
-
         stage('linux:openjdk-9-hotspot') {
           agent { label 'linux' }
           tools {
@@ -38,7 +45,11 @@ pipeline {
             maven 'maven-3.5.3'
           }
           steps {
-            sh 'mvn -e -Denforcer.skip=true clean install'
+            withMaven(
+              maven: 'maven-3.5.3',
+              mavenLocalRepo: '.repository') {
+              sh 'mvn -Denforcer.skip=true -C -e -U clean install'
+            }
           }
         }
         stage('linux:openjdk-10-hotspot') {
@@ -48,17 +59,11 @@ pipeline {
             maven 'maven-3.5.3'
           }
           steps {
-            sh 'mvn -e -Denforcer.skip=true clean install'
-          }
-        }
-        stage('linux:openjdk-11-hotspot') {
-          agent { label 'linux' }
-          tools {
-            jdk   'openjdk-11-hotspot'
-            maven 'maven-3.5.3'
-          }
-          steps {
-            sh 'mvn -e -Denforcer.skip=true clean install'
+            withMaven(
+              maven: 'maven-3.5.3',
+              mavenLocalRepo: '.repository') {
+              sh 'mvn -Denforcer.skip=true -C -e -U clean install'
+            }
           }
         }
       }
