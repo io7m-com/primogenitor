@@ -997,6 +997,7 @@
         <maven.buildNumber.skip>true</maven.buildNumber.skip>
         <maven.javadoc.skip>true</maven.javadoc.skip>
         <maven.source.skip>true</maven.source.skip>
+        <mdep.analyze.skip>true</mdep.analyze.skip>
         <skipTests>true</skipTests>
         <spotbugs.skip>true</spotbugs.skip>
       </properties>
