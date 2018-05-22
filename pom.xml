@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>3.0.0-beta0004</version>
+  <version>3.0.0-beta0005</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -48,7 +48,7 @@
     <!-- The versions of all plugins used -->
     <io7m.build-helper-maven-plugin.version>3.0.0</io7m.build-helper-maven-plugin.version>
     <io7m.buildnumber-maven-plugin.version>1.4</io7m.buildnumber-maven-plugin.version>
-    <io7m.com.io7m.minisite.maven_plugin.version>0.0.9</io7m.com.io7m.minisite.maven_plugin.version>
+    <io7m.com.io7m.minisite.maven_plugin.version>0.0.10</io7m.com.io7m.minisite.maven_plugin.version>
     <io7m.extra-enforcer-rules.version>1.0-beta-6</io7m.extra-enforcer-rules.version>
     <io7m.jacoco-maven-plugin.version>0.8.1</io7m.jacoco-maven-plugin.version>
     <io7m.maven-assembly-plugin.version>3.1.0</io7m.maven-assembly-plugin.version>
