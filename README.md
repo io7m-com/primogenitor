@@ -53,7 +53,7 @@ By setting the parent of a project's POM file to `com.io7m.primogenitor`, the pr
 * Automatic production of JavaDoc and `-sources` Jar files, sufficient for publishing to Maven Central.
 * Automatic signing of artifacts with the [maven-gpg-plugin](https://maven.apache.org/plugins/maven-gpg-plugin/), sufficient for publishing to Maven Central.
 * Incorporation of the [nexus-staging-maven-plugin](https://github.com/sonatype/nexus-maven-plugins/tree/master/staging/maven-plugin) for publishing releases to Maven Central with a single `mvn clean deploy` command.
-* Analysis of dependency issues (unused dependencies, undeclared but used transient dependencies) with the [maven-dependency-plugin](https://maven.apache.org/plugins/maven-dependency-plugin/). The build fails if any dependency issues are discovered.
+* Analysis of dependency issues (unused dependencies, undeclared but used transitive dependencies) with the [maven-dependency-plugin](https://maven.apache.org/plugins/maven-dependency-plugin/). The build fails if any dependency issues are discovered.
 * Generation of minimalist single page sites with [minisite](https://io7m.github.io/minisite/).
 * Automatic collection of code coverage information with [JaCoCo](http://www.jacoco.org/).
 * All plugin versions are specified with Maven properties, and can therefore be overridden in the (unfortunate) case of a plugin being buggy, and can be efficiently updated with the [versions-maven-plugin](http://www.mojohaus.org/versions-maven-plugin/).
