@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
@@ -118,9 +114,9 @@
 
   <distributionManagement>
     <site>
-      <id>GitHub</id>
-      <name>GitHub</name>
-      <url>https://github.com/io7m/primogenitor</url>
+      <id>io7m.com</id>
+      <name>io7m.com</name>
+      <url>https://www.io7m.com/software/primogenitor</url>
     </site>
     <repository>
       <id>sonatype-nexus-staging</id>
@@ -409,7 +405,7 @@
           <artifactId>bnd-maven-plugin</artifactId>
           <version>${io7m.bnd-maven-plugin.version}</version>
           <configuration>
-            <bnd><![CDATA[
+            <bnd>
               Specification-Title: ${project.name}
               Specification-Version: ${project.version}
               Specification-Vendor: ${io7m.jar.vendor}
@@ -427,7 +423,7 @@
               Sealed: true
 
               -removeheaders: Bnd-LastModified, Tool, Private-Package
-]]></bnd>
+</bnd>
           </configuration>
         </plugin>
 
@@ -578,7 +574,7 @@
                 <goal>jar</goal>
               </goals>
               <configuration>
-                <bottom><![CDATA[Copyright &#169; {currentYear} &lt;code@io7m.com&gt; http://io7m.com]]></bottom>
+                <bottom>Copyright &amp;#169; {currentYear} &amp;lt;code@io7m.com&amp;gt; http://io7m.com</bottom>
                 <archive>
                   <manifestEntries>
                     <Specification-Title>${project.name} (JavaDoc)</Specification-Title>
@@ -767,7 +763,7 @@
                   Do not allow circular dependencies.
                   Mostly impossible anyway, but... just in case.
                 -->
-                <banCircularDependencies />
+                <banCircularDependencies/>
 
                 <!--
                   Require that the previous version number be correctly defined.
