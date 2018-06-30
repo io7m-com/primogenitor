@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>3.0.0-beta0006</version>
+  <version>3.0.0-beta0007</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -31,7 +28,7 @@
     <io7m.checkstyle.path>com/io7m/checkstyle_rules/checkstyle.xml</io7m.checkstyle.path>
 
     <!-- The version of the checkstyle tools used -->
-    <io7m.checkstyle.tools.version>8.10</io7m.checkstyle.tools.version>
+    <io7m.checkstyle.tools.version>8.10.1</io7m.checkstyle.tools.version>
 
     <!-- The previous groupId of the API. Used to enforce semantic versioning. -->
     <io7m.api.previousGroupId>${project.groupId}</io7m.api.previousGroupId>
@@ -49,7 +46,7 @@
     <io7m.build-helper-maven-plugin.version>3.0.0</io7m.build-helper-maven-plugin.version>
     <io7m.buildnumber-maven-plugin.version>1.4</io7m.buildnumber-maven-plugin.version>
     <io7m.com.io7m.minisite.maven_plugin.version>0.0.11</io7m.com.io7m.minisite.maven_plugin.version>
-    <io7m.extra-enforcer-rules.version>1.0-beta-6</io7m.extra-enforcer-rules.version>
+    <io7m.extra-enforcer-rules.version>1.0-beta-9</io7m.extra-enforcer-rules.version>
     <io7m.jacoco-maven-plugin.version>0.8.1</io7m.jacoco-maven-plugin.version>
     <io7m.maven-assembly-plugin.version>3.1.0</io7m.maven-assembly-plugin.version>
     <io7m.maven-bundle-plugin.version>3.5.0</io7m.maven-bundle-plugin.version>
@@ -67,7 +64,7 @@
     <io7m.maven-shade-plugin.version>3.1.1</io7m.maven-shade-plugin.version>
     <io7m.maven-site-plugin.version>3.7.1</io7m.maven-site-plugin.version>
     <io7m.maven-source-plugin.version>3.0.1</io7m.maven-source-plugin.version>
-    <io7m.maven-surefire-plugin.version>2.21.0</io7m.maven-surefire-plugin.version>
+    <io7m.maven-surefire-plugin.version>2.22.0</io7m.maven-surefire-plugin.version>
     <io7m.nexus-staging-maven-plugin.version>1.6.8</io7m.nexus-staging-maven-plugin.version>
     <io7m.reproducible-build-maven-plugin.version>0.6</io7m.reproducible-build-maven-plugin.version>
     <io7m.scijava-maven-plugin.version>1.0.0</io7m.scijava-maven-plugin.version>
@@ -118,9 +115,9 @@
 
   <distributionManagement>
     <site>
-      <id>GitHub</id>
-      <name>GitHub</name>
-      <url>https://github.com/io7m/primogenitor</url>
+      <id>io7m.com</id>
+      <name>io7m.com</name>
+      <url>https://www.io7m.com/software/primogenitor</url>
     </site>
     <repository>
       <id>sonatype-nexus-staging</id>
@@ -409,7 +406,7 @@
           <artifactId>bnd-maven-plugin</artifactId>
           <version>${io7m.bnd-maven-plugin.version}</version>
           <configuration>
-            <bnd><![CDATA[
+            <bnd>
               Specification-Title: ${project.name}
               Specification-Version: ${project.version}
               Specification-Vendor: ${io7m.jar.vendor}
@@ -427,7 +424,7 @@
               Sealed: true
 
               -removeheaders: Bnd-LastModified, Tool, Private-Package
-]]></bnd>
+</bnd>
           </configuration>
         </plugin>
 
@@ -578,7 +575,7 @@
                 <goal>jar</goal>
               </goals>
               <configuration>
-                <bottom><![CDATA[Copyright &#169; {currentYear} &lt;code@io7m.com&gt; http://io7m.com]]></bottom>
+                <bottom>Copyright &amp;#169; {currentYear} &amp;lt;code@io7m.com&amp;gt; http://io7m.com</bottom>
                 <archive>
                   <manifestEntries>
                     <Specification-Title>${project.name} (JavaDoc)</Specification-Title>
@@ -767,7 +764,7 @@
                   Do not allow circular dependencies.
                   Mostly impossible anyway, but... just in case.
                 -->
-                <banCircularDependencies />
+                <banCircularDependencies/>
 
                 <!--
                   Require that the previous version number be correctly defined.
