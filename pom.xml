@@ -416,7 +416,7 @@
               Implementation-Vendor-Id: ${project.groupId}
               Implementation-Build: ${buildNumber}
               Bundle-DocURL: ${project.distributionManagement.site.url}
-              Bundle-Name: ${project.name} ${project.version} - ${project.description}
+              Bundle-Name: ${project.artifactId} ${project.version} - ${project.description}
               Bundle-Description: ${project.description}
               Bundle-Vendor: ${io7m.jar.vendor}
               Bundle-SCM: ${project.scm.url}
