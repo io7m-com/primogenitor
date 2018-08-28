@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>3.0.0-beta0008</version>
+  <version>3.0.0-beta0008-minisite</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
