@@ -406,7 +406,7 @@
           <artifactId>bnd-maven-plugin</artifactId>
           <version>${io7m.bnd-maven-plugin.version}</version>
           <configuration>
-            <bnd>
+            <bnd><![CDATA[
               Specification-Title: ${project.name}
               Specification-Version: ${project.version}
               Specification-Vendor: ${io7m.jar.vendor}
@@ -424,7 +424,7 @@
               Sealed: true
 
               -removeheaders: Bnd-LastModified, Tool, Private-Package
-</bnd>
+]]></bnd>
           </configuration>
         </plugin>
 
