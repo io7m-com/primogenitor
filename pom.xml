@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>3.0.0-beta0009</version>
+  <version>3.0.0-beta0010</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -399,31 +399,37 @@
           BND Maven plugin.
           https://github.com/bndtools/bnd/tree/master/maven/bnd-maven-plugin
 
-          Used to produce manifests in OSGi bundles.
+          Used to produce manifests in OSGi bundles. Note that we use the $[...]
+          syntax in order to defer evaluation of properties to bnd. This ensures
+          that the properties get evaluated at the latest possible moment (in the
+          context of child projects) as opposed to being evaluated eagerly within
+          the context of the primogenitor (and, as a result, assigning the same
+          values to all child projects).
         -->
         <plugin>
           <groupId>biz.aQute.bnd</groupId>
           <artifactId>bnd-maven-plugin</artifactId>
           <version>${io7m.bnd-maven-plugin.version}</version>
           <configuration>
-            <bnd><![CDATA[
-              Specification-Title: ${project.name}
-              Specification-Version: ${project.version}
-              Specification-Vendor: ${io7m.jar.vendor}
-              Implementation-Title: ${project.name}
-              Implementation-Version: ${project.version}
-              Implementation-Vendor: ${io7m.jar.vendor}
-              Implementation-Vendor-Id: ${project.groupId}
-              Implementation-Build: ${buildNumber}
-              Bundle-DocURL: ${project.distributionManagement.site.url}
-              Bundle-Name: ${project.artifactId} ${project.version} - ${project.description}
-              Bundle-Description: ${project.description}
-              Bundle-Vendor: ${io7m.jar.vendor}
-              Bundle-SCM: ${project.scm.url}
-              Built-By: ${io7m.jar.built_by}
-              Sealed: true
+            <bnd>
+<![CDATA[
+  Specification-Title:      $[project.name]
+  Specification-Version:    $[project.version]
+  Specification-Vendor:     $[io7m.jar.vendor]
+  Implementation-Title:     $[project.name]
+  Implementation-Version:   $[project.version]
+  Implementation-Vendor:    $[io7m.jar.vendor]
+  Implementation-Vendor-Id: $[project.groupId]
+  Implementation-Build:     $[buildNumber]
+  Bundle-DocURL:            $[project.distributionManagement.site.url]
+  Bundle-Name:              $[project.artifactId] $[project.version] - $[project.description]
+  Bundle-Description:       $[project.description]
+  Bundle-Vendor:            $[io7m.jar.vendor]
+  Bundle-SCM:               $[project.scm.url]
+  Built-By:                 $[io7m.jar.built_by]
+  Sealed:                   true
 
-              -removeheaders: Bnd-LastModified, Tool, Private-Package
+  -removeheaders: Bnd-LastModified, Tool, Private-Package
 ]]></bnd>
           </configuration>
         </plugin>
