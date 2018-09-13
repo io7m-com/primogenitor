@@ -54,7 +54,7 @@ By setting the parent of a project's POM file to `com.io7m.primogenitor`, the pr
 * Automatic signing of artifacts with the [maven-gpg-plugin](https://maven.apache.org/plugins/maven-gpg-plugin/), sufficient for publishing to Maven Central.
 * Incorporation of the [nexus-staging-maven-plugin](https://github.com/sonatype/nexus-maven-plugins/tree/master/staging/maven-plugin) for publishing releases to Maven Central with a single `mvn clean deploy` command.
 * Analysis of dependency issues (unused dependencies, undeclared but used transitive dependencies) with the [maven-dependency-plugin](https://maven.apache.org/plugins/maven-dependency-plugin/). The build fails if any dependency issues are discovered.
-* Generation of minimalist single page sites with [minisite](https://io7m.github.io/minisite/).
+* Generation of minimalist single page sites with [minisite](https://www.io7m.com/software/minisite/).
 * Automatic collection of code coverage information with [JaCoCo](http://www.jacoco.org/).
 * All plugin versions are specified with Maven properties, and can therefore be overridden in the (unfortunate) case of a plugin being buggy, and can be efficiently updated with the [versions-maven-plugin](http://www.mojohaus.org/versions-maven-plugin/).
 * The ability to turn off all optional features and produce a build as quickly as possible by setting the property `io7m.quick_build` to `true` on the command line: `$ mvn -Dio7m.quick_build=true clean package`.
