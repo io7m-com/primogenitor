@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>3.0.0-beta0011</version>
+  <version>3.0.0-beta0012</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -696,12 +696,13 @@
                 <goal>generateSite</goal>
               </goals>
               <configuration>
-                <documentationFile>src/site/resources/documentation.xml</documentationFile>
-                <overviewFile>src/site/resources/overview.xml</overviewFile>
-                <featuresFile>src/site/resources/features.xml</featuresFile>
-                <changelogFile>README-CHANGES.xml</changelogFile>
                 <changelogFeedEmail>${io7m.changelog.feed_email}</changelogFeedEmail>
+                <changelogFile>README-CHANGES.xml</changelogFile>
+                <documentationFile>src/site/resources/documentation.xml</documentationFile>
+                <featuresFile>src/site/resources/features.xml</featuresFile>
+                <headerFile>src/site/resources/header.xml</headerFile>
                 <outputDirectory>${project.build.directory}/minisite</outputDirectory>
+                <overviewFile>src/site/resources/overview.xml</overviewFile>
                 <resourceDirectory>${project.basedir}/src/site/resources</resourceDirectory>
               </configuration>
             </execution>
