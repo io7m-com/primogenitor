@@ -71,6 +71,9 @@
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
     <io7m.bnd-maven-plugin.version>4.0.0</io7m.bnd-maven-plugin.version>
     <io7m.bnd-baseline-maven-plugin.version>4.0.0</io7m.bnd-baseline-maven-plugin.version>
+    <io7m.bnd-indexer-maven-plugin.version>4.0.0</io7m.bnd-indexer-maven-plugin.version>
+    <io7m.bnd-export-maven-plugin.version>4.0.0</io7m.bnd-export-maven-plugin.version>
+    <io7m.bnd-resolver-maven-plugin.version>4.0.0</io7m.bnd-resolver-maven-plugin.version>
     <io7m.spotbugs-maven-plugin.version>3.1.3.1</io7m.spotbugs-maven-plugin.version>
     <io7m.fb-contrib-plugin.version>7.4.0.sb</io7m.fb-contrib-plugin.version>
     <io7m.findsecbugs-plugin.version>1.7.1</io7m.findsecbugs-plugin.version>
@@ -462,6 +465,42 @@
               </configuration>
             </execution>
           </executions>
+        </plugin>
+
+        <!--
+          BND Indexer Maven plugin.
+          https://github.com/bndtools/bnd/tree/master/maven/bnd-indexer-maven-plugin
+
+          Used to create OSGi indices of bundles.
+        -->
+        <plugin>
+          <groupId>biz.aQute.bnd</groupId>
+          <artifactId>bnd-indexer-maven-plugin</artifactId>
+          <version>${io7m.bnd-indexer-maven-plugin.version}</version>
+        </plugin>
+
+        <!--
+          BND Resolver Maven plugin.
+          https://github.com/bndtools/bnd/tree/master/maven/bnd-resolver-maven-plugin
+
+          Used to resolve bundles from bndrun files.
+        -->
+        <plugin>
+          <groupId>biz.aQute.bnd</groupId>
+          <artifactId>bnd-resolver-maven-plugin</artifactId>
+          <version>${io7m.bnd-resolver-maven-plugin.version}</version>
+        </plugin>
+
+        <!--
+          BND Resolver Maven plugin.
+          https://github.com/bndtools/bnd/tree/master/maven/bnd-export-maven-plugin
+
+          Used to export bndrun files.
+        -->
+        <plugin>
+          <groupId>biz.aQute.bnd</groupId>
+          <artifactId>bnd-export-maven-plugin</artifactId>
+          <version>${io7m.bnd-export-maven-plugin.version}</version>
         </plugin>
 
         <!--
