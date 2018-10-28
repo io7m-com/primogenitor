@@ -786,9 +786,9 @@
                   <version>[3.5.0,)</version>
                 </requireMavenVersion>
 
-                <!-- Require JDK 9+ -->
+                <!-- Require JDK 11+ -->
                 <requireJavaVersion>
-                  <version>[9,)</version>
+                  <version>[11,)</version>
                 </requireJavaVersion>
 
                 <!--
