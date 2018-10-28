@@ -786,9 +786,11 @@
                   Standard Rules
                   http://maven.apache.org/enforcer/enforcer-rules/
                 -->
+                <!--
                 <requirePluginVersions>
                   <message>Plugins need to be versioned!</message>
                 </requirePluginVersions>
+                -->
 
                 <!-- Require Maven 3.5.0+ -->
                 <requireMavenVersion>
