@@ -69,11 +69,11 @@
     <io7m.reproducible-build-maven-plugin.version>0.6</io7m.reproducible-build-maven-plugin.version>
     <io7m.scijava-maven-plugin.version>1.0.0</io7m.scijava-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
-    <io7m.bnd-maven-plugin.version>4.0.0</io7m.bnd-maven-plugin.version>
-    <io7m.bnd-baseline-maven-plugin.version>4.0.0</io7m.bnd-baseline-maven-plugin.version>
-    <io7m.bnd-indexer-maven-plugin.version>4.0.0</io7m.bnd-indexer-maven-plugin.version>
-    <io7m.bnd-export-maven-plugin.version>4.0.0</io7m.bnd-export-maven-plugin.version>
-    <io7m.bnd-resolver-maven-plugin.version>4.0.0</io7m.bnd-resolver-maven-plugin.version>
+    <io7m.bnd-maven-plugin.version>4.1.0</io7m.bnd-maven-plugin.version>
+    <io7m.bnd-baseline-maven-plugin.version>4.1.0</io7m.bnd-baseline-maven-plugin.version>
+    <io7m.bnd-indexer-maven-plugin.version>4.1.0</io7m.bnd-indexer-maven-plugin.version>
+    <io7m.bnd-export-maven-plugin.version>4.1.0</io7m.bnd-export-maven-plugin.version>
+    <io7m.bnd-resolver-maven-plugin.version>4.1.0</io7m.bnd-resolver-maven-plugin.version>
     <io7m.spotbugs-maven-plugin.version>3.1.3.1</io7m.spotbugs-maven-plugin.version>
     <io7m.fb-contrib-plugin.version>7.4.0.sb</io7m.fb-contrib-plugin.version>
     <io7m.findsecbugs-plugin.version>1.7.1</io7m.findsecbugs-plugin.version>
