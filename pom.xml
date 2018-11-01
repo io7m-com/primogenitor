@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>3.0.0-beta0016</version>
+  <version>3.0.0-beta0017</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -138,7 +138,7 @@
   </ciManagement>
 
   <prerequisites>
-    <maven>3.5.0</maven>
+    <maven>3.6.0</maven>
   </prerequisites>
 
   <build>
@@ -792,9 +792,9 @@
                 </requirePluginVersions>
                 -->
 
-                <!-- Require Maven 3.5.0+ -->
+                <!-- Require Maven 3.6.0+ -->
                 <requireMavenVersion>
-                  <version>[3.5.0,)</version>
+                  <version>[3.6.0,)</version>
                 </requireMavenVersion>
 
                 <!-- Require JDK 11+ -->
