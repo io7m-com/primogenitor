@@ -1,7 +1,8 @@
 language: java
 
 jdk:
-  - oraclejdk9
+  - oraclejdk11
+  - openjdk11
 
 install: true
 
