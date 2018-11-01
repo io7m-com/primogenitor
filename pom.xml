@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  child.inherit.append.path="false">
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>3.0.0-beta0017</version>
+  <version>3.0.0-beta0018</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -96,7 +100,7 @@
     </license>
   </licenses>
 
-  <scm>
+  <scm child.inherit.append.path="false">
     <url>https://github.com/io7m/primogenitor</url>
     <connection>scm:git:https://github.com/io7m/primogenitor</connection>
     <developerConnection>scm:git:https://github.com/io7m/primogenitor</developerConnection>
@@ -117,7 +121,7 @@
   </issueManagement>
 
   <distributionManagement>
-    <site>
+    <site child.inherit.append.path="false">
       <id>io7m.com</id>
       <name>io7m.com</name>
       <url>https://www.io7m.com/software/primogenitor</url>
