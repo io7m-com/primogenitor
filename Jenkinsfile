@@ -14,7 +14,7 @@ pipeline {
           agent { label 'linux' }
           tools {
             jdk   'openjdk-11-hotspot'
-            maven 'maven-3.5.3'
+            maven 'maven-3.6.0'
           }
           steps {
             withMaven(
@@ -33,7 +33,7 @@ pipeline {
         withMaven(
           maven: 'maven-3.6.0',
           mavenLocalRepo: '.repository') {
-          sh 'mvn -C -e deploy'
+          sh 'mvn -P arc7-deploy -C -e deploy'
         }
       }
     }
