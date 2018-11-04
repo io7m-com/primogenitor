@@ -1044,7 +1044,7 @@
       <id>io7m-quick-build</id>
       <activation>
         <property>
-          <name>io7m.quick_build</name>
+          <name>io7m.quickBuild</name>
         </property>
       </activation>
       <properties>
@@ -1061,6 +1061,26 @@
         <skipTests>true</skipTests>
         <spotbugs.skip>true</spotbugs.skip>
       </properties>
+    </profile>
+
+    <!-- Allow deploying to an alternate repository -->
+    <profile>
+      <id>io7m-alternate-repository</id>
+      <activation>
+        <property>
+          <name>io7m.useAlternateRepository</name>
+        </property>
+      </activation>
+      <distributionManagement>
+        <repository>
+          <id>${io7m.repository.releases.id}</id>
+          <url>${io7m.repository.releases.url}</url>
+        </repository>
+        <snapshotRepository>
+          <id>${io7m.repository.snapshots.id}</id>
+          <url>${io7m.repository.snapshots.url}</url>
+        </snapshotRepository>
+      </distributionManagement>
     </profile>
   </profiles>
 
