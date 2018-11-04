@@ -33,7 +33,7 @@ pipeline {
         withMaven(
           maven: 'maven-3.6.0',
           mavenLocalRepo: '.repository') {
-          sh 'mvn -P arc7-deploy -C -e deploy'
+          sh 'mvn -P arc7-deploy -Denforcer.skip=true -C -e deploy'
         }
       }
     }
