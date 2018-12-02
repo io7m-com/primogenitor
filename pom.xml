@@ -422,21 +422,22 @@
           <configuration>
             <bnd>
 <![CDATA[
-  Specification-Title:      $[project.name]
-  Specification-Version:    $[project.version]
-  Specification-Vendor:     $[io7m.jar.vendor]
-  Implementation-Title:     $[project.name]
-  Implementation-Version:   $[project.version]
-  Implementation-Vendor:    $[io7m.jar.vendor]
-  Implementation-Vendor-Id: $[project.groupId]
-  Implementation-Build:     $[buildNumber]
+  Automatic-Module-Name:    $[project.artifactId]
+  Built-By:                 $[io7m.jar.built_by]
+  Bundle-Description:       $[project.description]
   Bundle-DocURL:            $[project.distributionManagement.site.url]
   Bundle-Name:              $[project.artifactId] $[project.version] - $[project.description]
-  Bundle-Description:       $[project.description]
-  Bundle-Vendor:            $[io7m.jar.vendor]
   Bundle-SCM:               $[project.scm.url]
-  Built-By:                 $[io7m.jar.built_by]
+  Bundle-Vendor:            $[io7m.jar.vendor]
+  Implementation-Build:     $[buildNumber]
+  Implementation-Title:     $[project.name]
+  Implementation-Vendor:    $[io7m.jar.vendor]
+  Implementation-Vendor-Id: $[project.groupId]
+  Implementation-Version:   $[project.version]
   Sealed:                   true
+  Specification-Title:      $[project.name]
+  Specification-Vendor:     $[io7m.jar.vendor]
+  Specification-Version:    $[project.version]
 
   -removeheaders: Bnd-LastModified, Tool, Private-Package
 ]]></bnd>
