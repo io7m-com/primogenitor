@@ -57,5 +57,6 @@ By setting the parent of a project's POM file to `com.io7m.primogenitor`, the pr
 * Generation of minimalist single page sites with [minisite](https://www.io7m.com/software/minisite/).
 * Automatic collection of code coverage information with [JaCoCo](http://www.jacoco.org/).
 * All plugin versions are specified with Maven properties, and can therefore be overridden in the (unfortunate) case of a plugin being buggy, and can be efficiently updated with the [versions-maven-plugin](http://www.mojohaus.org/versions-maven-plugin/).
-* The ability to turn off all optional features and produce a build as quickly as possible by setting the property `io7m.quick_build` to `true` on the command line: `$ mvn -Dio7m.quick_build=true clean package`.
+* The ability to turn off all optional features and produce a build as quickly as possible by setting the property `io7m.quickBuild` to `true` on the command line: `$ mvn -Dio7m.quickBuild=true clean package`.
+* The ability to conveniently deploy to an alternate repository using properties. If the `io7m.useAlternateRepository` property is set, then deployment of releases will use a repository with id `${io7m.repository.releases.id}` and URL `${io7m.repository.releases.url}`, and deployment of snapshots will use a repository with id `${io7m.repository.snapshots.id}` and URL `${io7m.repository.snapshots.url}`. The intention is that these properties will be set within a profile in the user's `~/.m2/settings.xml` file, or passed on the command line.
 
