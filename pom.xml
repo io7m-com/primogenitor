@@ -2,13 +2,12 @@
 <project
   xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-  child.project.url.inherit.append.path="false">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>3.0.0-beta0018</version>
+  <version>3.0.0-beta0019</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -32,7 +31,7 @@
     <io7m.checkstyle.path>com/io7m/checkstyle_rules/checkstyle.xml</io7m.checkstyle.path>
 
     <!-- The version of the checkstyle tools used -->
-    <io7m.checkstyle.tools.version>8.14</io7m.checkstyle.tools.version>
+    <io7m.checkstyle.tools.version>8.17</io7m.checkstyle.tools.version>
 
     <!-- The previous groupId of the API. Used to enforce semantic versioning. -->
     <io7m.api.previousGroupId>${project.groupId}</io7m.api.previousGroupId>
@@ -50,9 +49,9 @@
     <io7m.build-helper-maven-plugin.version>3.0.0</io7m.build-helper-maven-plugin.version>
     <io7m.buildnumber-maven-plugin.version>1.4</io7m.buildnumber-maven-plugin.version>
     <io7m.com.io7m.minisite.maven_plugin.version>2.0.1</io7m.com.io7m.minisite.maven_plugin.version>
-    <io7m.extra-enforcer-rules.version>1.0-beta-9</io7m.extra-enforcer-rules.version>
-    <io7m.jacoco-maven-plugin.version>0.8.2</io7m.jacoco-maven-plugin.version>
-    <io7m.maven-assembly-plugin.version>3.1.0</io7m.maven-assembly-plugin.version>
+    <io7m.extra-enforcer-rules.version>1.1</io7m.extra-enforcer-rules.version>
+    <io7m.jacoco-maven-plugin.version>0.8.3</io7m.jacoco-maven-plugin.version>
+    <io7m.maven-assembly-plugin.version>3.1.1</io7m.maven-assembly-plugin.version>
     <io7m.maven-bundle-plugin.version>3.5.0</io7m.maven-bundle-plugin.version>
     <io7m.maven-checkstyle-plugin.version>3.0.0</io7m.maven-checkstyle-plugin.version>
     <io7m.maven-clean-plugin.version>3.1.0</io7m.maven-clean-plugin.version>
@@ -62,15 +61,15 @@
     <io7m.maven-enforcer-plugin.version>3.0.0-M2</io7m.maven-enforcer-plugin.version>
     <io7m.maven-gpg-plugin.version>1.6</io7m.maven-gpg-plugin.version>
     <io7m.maven-install-plugin.version>3.0.0-M1</io7m.maven-install-plugin.version>
-    <io7m.maven-jar-plugin.version>3.1.0</io7m.maven-jar-plugin.version>
+    <io7m.maven-jar-plugin.version>3.1.1</io7m.maven-jar-plugin.version>
     <io7m.maven-javadoc-plugin.version>3.0.1</io7m.maven-javadoc-plugin.version>
     <io7m.maven-resources-plugin.version>3.1.0</io7m.maven-resources-plugin.version>
-    <io7m.maven-shade-plugin.version>3.2.0</io7m.maven-shade-plugin.version>
+    <io7m.maven-shade-plugin.version>3.2.1</io7m.maven-shade-plugin.version>
     <io7m.maven-site-plugin.version>3.7.1</io7m.maven-site-plugin.version>
     <io7m.maven-source-plugin.version>3.0.1</io7m.maven-source-plugin.version>
-    <io7m.maven-surefire-plugin.version>2.22.1</io7m.maven-surefire-plugin.version>
+    <io7m.maven-surefire-plugin.version>3.0.0-M3</io7m.maven-surefire-plugin.version>
     <io7m.nexus-staging-maven-plugin.version>1.6.8</io7m.nexus-staging-maven-plugin.version>
-    <io7m.reproducible-build-maven-plugin.version>0.7</io7m.reproducible-build-maven-plugin.version>
+    <io7m.reproducible-build-maven-plugin.version>0.8</io7m.reproducible-build-maven-plugin.version>
     <io7m.scijava-maven-plugin.version>1.1.0</io7m.scijava-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
     <io7m.bnd-maven-plugin.version>4.1.0</io7m.bnd-maven-plugin.version>
@@ -78,7 +77,7 @@
     <io7m.bnd-indexer-maven-plugin.version>4.1.0</io7m.bnd-indexer-maven-plugin.version>
     <io7m.bnd-export-maven-plugin.version>4.1.0</io7m.bnd-export-maven-plugin.version>
     <io7m.bnd-resolver-maven-plugin.version>4.1.0</io7m.bnd-resolver-maven-plugin.version>
-    <io7m.spotbugs-maven-plugin.version>3.1.7</io7m.spotbugs-maven-plugin.version>
+    <io7m.spotbugs-maven-plugin.version>3.1.10</io7m.spotbugs-maven-plugin.version>
     <io7m.fb-contrib-plugin.version>7.4.0.sb</io7m.fb-contrib-plugin.version>
     <io7m.findsecbugs-plugin.version>1.7.1</io7m.findsecbugs-plugin.version>
     <io7m.checksum-maven-plugin.version>1.8</io7m.checksum-maven-plugin.version>
@@ -100,9 +99,7 @@
     </license>
   </licenses>
 
-  <scm child.scm.connection.inherit.append.path="false"
-       child.scm.developerConnection.inherit.append.path="false"
-       child.scm.url.inherit.append.path="false">
+  <scm>
     <url>https://github.com/io7m/primogenitor</url>
     <connection>scm:git:https://github.com/io7m/primogenitor</connection>
     <developerConnection>scm:git:https://github.com/io7m/primogenitor</developerConnection>
@@ -123,7 +120,7 @@
   </issueManagement>
 
   <distributionManagement>
-    <site child.site.url.inherit.append.path="false">
+    <site>
       <id>io7m.com</id>
       <name>io7m.com</name>
       <url>https://www.io7m.com/software/primogenitor</url>
@@ -422,21 +419,22 @@
           <configuration>
             <bnd>
 <![CDATA[
-  Specification-Title:      $[project.name]
-  Specification-Version:    $[project.version]
-  Specification-Vendor:     $[io7m.jar.vendor]
-  Implementation-Title:     $[project.name]
-  Implementation-Version:   $[project.version]
-  Implementation-Vendor:    $[io7m.jar.vendor]
-  Implementation-Vendor-Id: $[project.groupId]
-  Implementation-Build:     $[buildNumber]
+  Automatic-Module-Name:    $[project.artifactId]
+  Built-By:                 $[io7m.jar.built_by]
+  Bundle-Description:       $[project.description]
   Bundle-DocURL:            $[project.distributionManagement.site.url]
   Bundle-Name:              $[project.artifactId] $[project.version] - $[project.description]
-  Bundle-Description:       $[project.description]
-  Bundle-Vendor:            $[io7m.jar.vendor]
   Bundle-SCM:               $[project.scm.url]
-  Built-By:                 $[io7m.jar.built_by]
+  Bundle-Vendor:            $[io7m.jar.vendor]
+  Implementation-Build:     $[buildNumber]
+  Implementation-Title:     $[project.name]
+  Implementation-Vendor:    $[io7m.jar.vendor]
+  Implementation-Vendor-Id: $[project.groupId]
+  Implementation-Version:   $[project.version]
   Sealed:                   true
+  Specification-Title:      $[project.name]
+  Specification-Vendor:     $[io7m.jar.vendor]
+  Specification-Version:    $[project.version]
 
   -removeheaders: Bnd-LastModified, Tool, Private-Package
 ]]></bnd>
@@ -682,9 +680,9 @@
 
             <!-- https://issues.apache.org/jira/browse/MDEP-613 -->
             <dependency>
-              <groupId>org.ow2.asm</groupId>
-              <artifactId>asm</artifactId>
-              <version>7.0</version>
+              <groupId>org.apache.maven.shared</groupId>
+              <artifactId>maven-dependency-analyzer</artifactId>
+              <version>1.11.1</version>
             </dependency>
           </dependencies>
         </plugin>
@@ -791,6 +789,8 @@
                 <!--
                   Standard Rules
                   http://maven.apache.org/enforcer/enforcer-rules/
+
+                  XXX: Disabled due to an apparent bug.
                 -->
                 <!--
                 <requirePluginVersions>
@@ -1044,7 +1044,7 @@
       <id>io7m-quick-build</id>
       <activation>
         <property>
-          <name>io7m.quick_build</name>
+          <name>io7m.quickBuild</name>
         </property>
       </activation>
       <properties>
@@ -1061,6 +1061,26 @@
         <skipTests>true</skipTests>
         <spotbugs.skip>true</spotbugs.skip>
       </properties>
+    </profile>
+
+    <!-- Allow deploying to an alternate repository -->
+    <profile>
+      <id>io7m-alternate-repository</id>
+      <activation>
+        <property>
+          <name>io7m.useAlternateRepository</name>
+        </property>
+      </activation>
+      <distributionManagement>
+        <repository>
+          <id>${io7m.repository.releases.id}</id>
+          <url>${io7m.repository.releases.url}</url>
+        </repository>
+        <snapshotRepository>
+          <id>${io7m.repository.snapshots.id}</id>
+          <url>${io7m.repository.snapshots.url}</url>
+        </snapshotRepository>
+      </distributionManagement>
     </profile>
   </profiles>
 
