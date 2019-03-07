@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>3.0.0-beta0019</version>
+  <version>3.0.0-beta0020</version>
   <packaging>pom</packaging>
 
   <name>com.io7m.primogenitor</name>
@@ -31,7 +31,7 @@
     <io7m.checkstyle.path>com/io7m/checkstyle_rules/checkstyle.xml</io7m.checkstyle.path>
 
     <!-- The version of the checkstyle tools used -->
-    <io7m.checkstyle.tools.version>8.17</io7m.checkstyle.tools.version>
+    <io7m.checkstyle.tools.version>8.18</io7m.checkstyle.tools.version>
 
     <!-- The previous groupId of the API. Used to enforce semantic versioning. -->
     <io7m.api.previousGroupId>${project.groupId}</io7m.api.previousGroupId>
@@ -62,7 +62,7 @@
     <io7m.maven-gpg-plugin.version>1.6</io7m.maven-gpg-plugin.version>
     <io7m.maven-install-plugin.version>3.0.0-M1</io7m.maven-install-plugin.version>
     <io7m.maven-jar-plugin.version>3.1.1</io7m.maven-jar-plugin.version>
-    <io7m.maven-javadoc-plugin.version>3.0.1</io7m.maven-javadoc-plugin.version>
+    <io7m.maven-javadoc-plugin.version>3.1.0</io7m.maven-javadoc-plugin.version>
     <io7m.maven-resources-plugin.version>3.1.0</io7m.maven-resources-plugin.version>
     <io7m.maven-shade-plugin.version>3.2.1</io7m.maven-shade-plugin.version>
     <io7m.maven-site-plugin.version>3.7.1</io7m.maven-site-plugin.version>
@@ -77,7 +77,7 @@
     <io7m.bnd-indexer-maven-plugin.version>4.1.0</io7m.bnd-indexer-maven-plugin.version>
     <io7m.bnd-export-maven-plugin.version>4.1.0</io7m.bnd-export-maven-plugin.version>
     <io7m.bnd-resolver-maven-plugin.version>4.1.0</io7m.bnd-resolver-maven-plugin.version>
-    <io7m.spotbugs-maven-plugin.version>3.1.10</io7m.spotbugs-maven-plugin.version>
+    <io7m.spotbugs-maven-plugin.version>3.1.11</io7m.spotbugs-maven-plugin.version>
     <io7m.fb-contrib-plugin.version>7.4.0.sb</io7m.fb-contrib-plugin.version>
     <io7m.findsecbugs-plugin.version>1.7.1</io7m.findsecbugs-plugin.version>
     <io7m.checksum-maven-plugin.version>1.8</io7m.checksum-maven-plugin.version>
