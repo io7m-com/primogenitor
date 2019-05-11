@@ -147,10 +147,10 @@
   <build>
     <pluginManagement>
       <plugins>
+
         <!--
           Well-known core plugins used everywhere.
         -->
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-clean-plugin</artifactId>
@@ -254,6 +254,20 @@
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>build-helper-maven-plugin</artifactId>
           <version>${io7m.build-helper-maven-plugin.version}</version>
+
+          <!-- Parse the project version information and declare properties -->
+          <executions>
+            <execution>
+              <id>insert-version</id>
+              <phase>initialize</phase>
+              <goals>
+                <goal>parse-version</goal>
+              </goals>
+              <configuration>
+                <propertyPrefix>${project.artifactId}</propertyPrefix>
+              </configuration>
+            </execution>
+          </executions>
         </plugin>
 
         <!--
@@ -278,6 +292,94 @@
               <version>${io7m.scijava-maven-plugin.version}</version>
             </dependency>
           </dependencies>
+
+          <!-- Perform checks during build -->
+          <executions>
+            <execution>
+              <id>enforce-rules</id>
+              <phase>validate</phase>
+              <goals>
+                <goal>enforce</goal>
+              </goals>
+              <configuration>
+                <rules>
+                  <!--
+                    Standard Rules
+                    http://maven.apache.org/enforcer/enforcer-rules/
+
+                    XXX: Disabled due to an apparent bug.
+                  -->
+                  <!--
+                  <requirePluginVersions>
+                    <message>Plugins need to be versioned!</message>
+                  </requirePluginVersions>
+                  -->
+
+                  <!-- Require Maven 3.6.0+ -->
+                  <requireMavenVersion>
+                    <version>[3.6.0,)</version>
+                  </requireMavenVersion>
+
+                  <!-- Require JDK 11+ -->
+                  <requireJavaVersion>
+                    <version>[11,)</version>
+                  </requireJavaVersion>
+
+                  <!--
+                    Extra Enforcer Rules
+                    org.codehaus.mojo:extra-enforcer-rules
+                    http://www.mojohaus.org/extra-enforcer-rules/
+                  -->
+
+                  <!--
+                    Do not allow circular dependencies.
+                    Mostly impossible anyway, but... just in case.
+                  -->
+                  <banCircularDependencies/>
+
+                  <!--
+                    Require that the previous version number be correctly defined.
+                  -->
+                  <requireProperty>
+                    <property>io7m.api.previousVersion</property>
+                    <regex>[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9]+)?</regex>
+                  </requireProperty>
+
+                  <!--
+                    Require that the checkstyle artifact be correctly defined.
+                  -->
+                  <requireProperty>
+                    <property>io7m.checkstyle.artifact</property>
+                    <regex>[a-zA-Z0-9\-_\.]+</regex>
+                  </requireProperty>
+
+                  <!--
+                    Require that the checkstyle path be correctly defined.
+                  -->
+                  <requireProperty>
+                    <property>io7m.checkstyle.path</property>
+                    <regex>[a-zA-Z0-9/\-\._]+</regex>
+                  </requireProperty>
+
+                  <!-- Require inheriting POMs to populate key elements. -->
+                  <requireElements implementation="org.scijava.maven.plugin.enforcer.RequireElements">
+                    <elements>
+                      <element>description</element>
+                      <element>name</element>
+                      <element>url</element>
+                    </elements>
+                  </requireElements>
+
+                  <!--
+                    Require builds to be reproducible.
+                    This means no snapshot dependencies!
+                  -->
+                  <requireReproducibleBuilds implementation="org.scijava.maven.plugin.enforcer.RequireReproducibleBuilds"/>
+                </rules>
+                <fail>true</fail>
+              </configuration>
+            </execution>
+          </executions>
         </plugin>
 
         <!--
@@ -355,6 +457,20 @@
           <groupId>io.github.zlika</groupId>
           <artifactId>reproducible-build-maven-plugin</artifactId>
           <version>${io7m.reproducible-build-maven-plugin.version}</version>
+
+          <!-- Attempt to strip artifacts for reproducibility -->
+          <executions>
+            <execution>
+              <id>reproducible-jar</id>
+              <phase>package</phase>
+              <goals>
+                <goal>strip-jar</goal>
+              </goals>
+              <configuration>
+                <overwrite>true</overwrite>
+              </configuration>
+            </execution>
+          </executions>
         </plugin>
 
         <!--
@@ -365,6 +481,23 @@
           <groupId>net.nicoulaj.maven.plugins</groupId>
           <artifactId>checksum-maven-plugin</artifactId>
           <version>${io7m.checksum-maven-plugin.version}</version>
+
+          <!-- Show checksums during the build -->
+          <executions>
+            <execution>
+              <id>checksum-artifacts</id>
+              <goals>
+                <goal>artifacts</goal>
+              </goals>
+              <phase>verify</phase>
+              <configuration>
+                <algorithms>
+                  <algorithm>SHA-256</algorithm>
+                </algorithms>
+                <individualFiles>false</individualFiles>
+              </configuration>
+            </execution>
+          </executions>
         </plugin>
 
         <!--
@@ -439,6 +572,15 @@
   -removeheaders: Bnd-LastModified, Tool, Private-Package
 ]]></bnd>
           </configuration>
+          <executions>
+            <execution>
+              <id>generate-osgi-manifest</id>
+              <goals>
+                <goal>bnd-process</goal>
+              </goals>
+              <phase>process-classes</phase>
+            </execution>
+          </executions>
         </plugin>
 
         <!--
@@ -616,6 +758,8 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>${io7m.maven-javadoc-plugin.version}</version>
+
+          <!-- Produce a Javadoc jar -->
           <executions>
             <execution>
               <id>attach-javadocs</id>
@@ -642,6 +786,15 @@
               </configuration>
             </execution>
           </executions>
+
+          <!-- https://issues.apache.org/jira/browse/MJAVADOC-542 -->
+          <dependencies>
+            <dependency>
+              <groupId>org.ow2.asm</groupId>
+              <artifactId>asm</artifactId>
+              <version>7.0</version>
+            </dependency>
+          </dependencies>
         </plugin>
 
         <!--
@@ -685,6 +838,20 @@
               <version>1.11.1</version>
             </dependency>
           </dependencies>
+
+          <!-- Analyze dependencies -->
+          <executions>
+            <execution>
+              <id>analyze</id>
+              <goals>
+                <goal>analyze-only</goal>
+              </goals>
+              <phase>process-classes</phase>
+              <configuration>
+                <failOnWarning>true</failOnWarning>
+              </configuration>
+            </execution>
+          </executions>
         </plugin>
 
         <!--
@@ -756,216 +923,55 @@
 
     <plugins>
 
-      <!-- Parse the project version -->
+      <!--
+        The series of plugins executed for all builds.
+      -->
+
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>insert-version</id>
-            <phase>initialize</phase>
-            <goals>
-              <goal>parse-version</goal>
-            </goals>
-            <configuration>
-              <propertyPrefix>${project.artifactId}</propertyPrefix>
-            </configuration>
-          </execution>
-        </executions>
       </plugin>
 
-      <!-- Check desired rules during maven lifecycle. -->
       <plugin>
         <artifactId>maven-enforcer-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>enforce-rules</id>
-            <phase>validate</phase>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <rules>
-                <!--
-                  Standard Rules
-                  http://maven.apache.org/enforcer/enforcer-rules/
-
-                  XXX: Disabled due to an apparent bug.
-                -->
-                <!--
-                <requirePluginVersions>
-                  <message>Plugins need to be versioned!</message>
-                </requirePluginVersions>
-                -->
-
-                <!-- Require Maven 3.6.0+ -->
-                <requireMavenVersion>
-                  <version>[3.6.0,)</version>
-                </requireMavenVersion>
-
-                <!-- Require JDK 11+ -->
-                <requireJavaVersion>
-                  <version>[11,)</version>
-                </requireJavaVersion>
-
-                <!--
-                  Extra Enforcer Rules
-                  org.codehaus.mojo:extra-enforcer-rules
-                  http://www.mojohaus.org/extra-enforcer-rules/
-                -->
-
-                <!--
-                  Do not allow circular dependencies.
-                  Mostly impossible anyway, but... just in case.
-                -->
-                <banCircularDependencies/>
-
-                <!--
-                  Require that the previous version number be correctly defined.
-                -->
-                <requireProperty>
-                  <property>io7m.api.previousVersion</property>
-                  <regex>[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9]+)?</regex>
-                </requireProperty>
-
-                <!--
-                  Require that the checkstyle artifact be correctly defined.
-                -->
-                <requireProperty>
-                  <property>io7m.checkstyle.artifact</property>
-                  <regex>[a-zA-Z0-9\-_\.]+</regex>
-                </requireProperty>
-
-                <!--
-                  Require that the checkstyle path be correctly defined.
-                -->
-                <requireProperty>
-                  <property>io7m.checkstyle.path</property>
-                  <regex>[a-zA-Z0-9/\-\._]+</regex>
-                </requireProperty>
-
-                <!-- Require inheriting POMs to populate key elements. -->
-                <requireElements implementation="org.scijava.maven.plugin.enforcer.RequireElements">
-                  <elements>
-                    <element>description</element>
-                    <element>name</element>
-                    <element>url</element>
-                  </elements>
-                </requireElements>
-
-                <!--
-                  Require builds to be reproducible.
-                  This means no snapshot dependencies!
-                -->
-                <requireReproducibleBuilds implementation="org.scijava.maven.plugin.enforcer.RequireReproducibleBuilds"/>
-              </rules>
-              <fail>true</fail>
-            </configuration>
-          </execution>
-        </executions>
       </plugin>
 
-      <!-- Produce a manifest for OSGi bundles -->
       <plugin>
         <groupId>biz.aQute.bnd</groupId>
         <artifactId>bnd-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>generate-osgi-manifest</id>
-            <goals>
-              <goal>bnd-process</goal>
-            </goals>
-            <phase>process-classes</phase>
-          </execution>
-        </executions>
       </plugin>
 
-      <!-- Analyze dependencies -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>analyze</id>
-            <goals>
-              <goal>analyze-only</goal>
-            </goals>
-            <phase>process-classes</phase>
-            <configuration>
-              <failOnWarning>true</failOnWarning>
-            </configuration>
-          </execution>
-        </executions>
       </plugin>
 
-      <!-- Insert the build number into jar files -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>buildnumber-maven-plugin</artifactId>
       </plugin>
 
-      <!-- Produce a source jar -->
       <plugin>
         <artifactId>maven-source-plugin</artifactId>
       </plugin>
 
-      <!-- Produce a javadoc jar -->
       <plugin>
         <artifactId>maven-javadoc-plugin</artifactId>
-
-        <!-- https://issues.apache.org/jira/browse/MJAVADOC-542 -->
-        <dependencies>
-          <dependency>
-            <groupId>org.ow2.asm</groupId>
-            <artifactId>asm</artifactId>
-            <version>7.0</version>
-          </dependency>
-        </dependencies>
       </plugin>
 
-      <!-- Run tests -->
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
       </plugin>
 
-      <!-- Process jar files for reproducible builds -->
       <plugin>
         <groupId>io.github.zlika</groupId>
         <artifactId>reproducible-build-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>reproducible-jar</id>
-            <phase>package</phase>
-            <goals>
-              <goal>strip-jar</goal>
-            </goals>
-            <configuration>
-              <overwrite>true</overwrite>
-            </configuration>
-          </execution>
-        </executions>
       </plugin>
 
-      <!-- Checksum everything -->
       <plugin>
         <groupId>net.nicoulaj.maven.plugins</groupId>
         <artifactId>checksum-maven-plugin</artifactId>
         <inherited>true</inherited>
-        <executions>
-          <execution>
-            <id>checksum-artifacts</id>
-            <goals>
-              <goal>artifacts</goal>
-            </goals>
-            <phase>verify</phase>
-            <configuration>
-              <algorithms>
-                <algorithm>SHA-256</algorithm>
-              </algorithms>
-              <individualFiles>false</individualFiles>
-            </configuration>
-          </execution>
-        </executions>
       </plugin>
 
       <!-- Disable the site plugin -->
