@@ -31,7 +31,7 @@
     <io7m.checkstyle.path>com/io7m/checkstyle_rules/checkstyle.xml</io7m.checkstyle.path>
 
     <!-- The version of the checkstyle tools used -->
-    <io7m.checkstyle.tools.version>8.18</io7m.checkstyle.tools.version>
+    <io7m.checkstyle.tools.version>8.21</io7m.checkstyle.tools.version>
 
     <!-- The previous groupId of the API. Used to enforce semantic versioning. -->
     <io7m.api.previousGroupId>${project.groupId}</io7m.api.previousGroupId>
@@ -49,35 +49,35 @@
     <io7m.build-helper-maven-plugin.version>3.0.0</io7m.build-helper-maven-plugin.version>
     <io7m.buildnumber-maven-plugin.version>1.4</io7m.buildnumber-maven-plugin.version>
     <io7m.com.io7m.minisite.maven_plugin.version>2.0.1</io7m.com.io7m.minisite.maven_plugin.version>
-    <io7m.extra-enforcer-rules.version>1.1</io7m.extra-enforcer-rules.version>
-    <io7m.jacoco-maven-plugin.version>0.8.3</io7m.jacoco-maven-plugin.version>
+    <io7m.extra-enforcer-rules.version>1.2</io7m.extra-enforcer-rules.version>
+    <io7m.jacoco-maven-plugin.version>0.8.4</io7m.jacoco-maven-plugin.version>
     <io7m.maven-assembly-plugin.version>3.1.1</io7m.maven-assembly-plugin.version>
     <io7m.maven-bundle-plugin.version>3.5.0</io7m.maven-bundle-plugin.version>
-    <io7m.maven-checkstyle-plugin.version>3.0.0</io7m.maven-checkstyle-plugin.version>
+    <io7m.maven-checkstyle-plugin.version>3.1.0</io7m.maven-checkstyle-plugin.version>
     <io7m.maven-clean-plugin.version>3.1.0</io7m.maven-clean-plugin.version>
-    <io7m.maven-compiler-plugin.version>3.8.0</io7m.maven-compiler-plugin.version>
+    <io7m.maven-compiler-plugin.version>3.8.1</io7m.maven-compiler-plugin.version>
     <io7m.maven-dependency-plugin.version>3.1.1</io7m.maven-dependency-plugin.version>
     <io7m.maven-deploy-plugin.version>3.0.0-M1</io7m.maven-deploy-plugin.version>
     <io7m.maven-enforcer-plugin.version>3.0.0-M2</io7m.maven-enforcer-plugin.version>
     <io7m.maven-gpg-plugin.version>1.6</io7m.maven-gpg-plugin.version>
     <io7m.maven-install-plugin.version>3.0.0-M1</io7m.maven-install-plugin.version>
-    <io7m.maven-jar-plugin.version>3.1.1</io7m.maven-jar-plugin.version>
+    <io7m.maven-jar-plugin.version>3.1.2</io7m.maven-jar-plugin.version>
     <io7m.maven-javadoc-plugin.version>3.1.0</io7m.maven-javadoc-plugin.version>
     <io7m.maven-resources-plugin.version>3.1.0</io7m.maven-resources-plugin.version>
     <io7m.maven-shade-plugin.version>3.2.1</io7m.maven-shade-plugin.version>
     <io7m.maven-site-plugin.version>3.7.1</io7m.maven-site-plugin.version>
-    <io7m.maven-source-plugin.version>3.0.1</io7m.maven-source-plugin.version>
+    <io7m.maven-source-plugin.version>3.1.0</io7m.maven-source-plugin.version>
     <io7m.maven-surefire-plugin.version>3.0.0-M3</io7m.maven-surefire-plugin.version>
     <io7m.nexus-staging-maven-plugin.version>1.6.8</io7m.nexus-staging-maven-plugin.version>
-    <io7m.reproducible-build-maven-plugin.version>0.8</io7m.reproducible-build-maven-plugin.version>
+    <io7m.reproducible-build-maven-plugin.version>0.10</io7m.reproducible-build-maven-plugin.version>
     <io7m.scijava-maven-plugin.version>1.1.0</io7m.scijava-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
-    <io7m.bnd-maven-plugin.version>4.1.0</io7m.bnd-maven-plugin.version>
-    <io7m.bnd-baseline-maven-plugin.version>4.1.0</io7m.bnd-baseline-maven-plugin.version>
-    <io7m.bnd-indexer-maven-plugin.version>4.1.0</io7m.bnd-indexer-maven-plugin.version>
-    <io7m.bnd-export-maven-plugin.version>4.1.0</io7m.bnd-export-maven-plugin.version>
-    <io7m.bnd-resolver-maven-plugin.version>4.1.0</io7m.bnd-resolver-maven-plugin.version>
-    <io7m.spotbugs-maven-plugin.version>3.1.11</io7m.spotbugs-maven-plugin.version>
+    <io7m.bnd-maven-plugin.version>4.2.0</io7m.bnd-maven-plugin.version>
+    <io7m.bnd-baseline-maven-plugin.version>4.2.0</io7m.bnd-baseline-maven-plugin.version>
+    <io7m.bnd-indexer-maven-plugin.version>4.2.0</io7m.bnd-indexer-maven-plugin.version>
+    <io7m.bnd-export-maven-plugin.version>4.2.0</io7m.bnd-export-maven-plugin.version>
+    <io7m.bnd-resolver-maven-plugin.version>4.2.0</io7m.bnd-resolver-maven-plugin.version>
+    <io7m.spotbugs-maven-plugin.version>3.1.12</io7m.spotbugs-maven-plugin.version>
     <io7m.fb-contrib-plugin.version>7.4.0.sb</io7m.fb-contrib-plugin.version>
     <io7m.findsecbugs-plugin.version>1.7.1</io7m.findsecbugs-plugin.version>
     <io7m.checksum-maven-plugin.version>1.8</io7m.checksum-maven-plugin.version>
