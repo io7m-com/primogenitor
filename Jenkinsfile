@@ -42,14 +42,14 @@ pipeline {
         providerName: 'default', \
         messageContent: 'Build failed', \
         messageProperties: 'CI_STATUS = failed', \
-        messageType: 'custom'
+        messageType: 'Custom'
     }
     success {
       sendCIMessage \
         providerName: 'default', \
         messageContent: 'Build succeeded', \
         messageProperties: 'CI_STATUS = passed', \
-        messageType: 'custom'
+        messageType: 'Custom'
     }
   }
 }
