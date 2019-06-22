@@ -20,6 +20,7 @@ pipeline {
             withMaven(
               maven: 'maven-3.6.0',
               mavenLocalRepo: '.repository') {
+              sh 'env | sort'
               sh 'mvn -Denforcer.skip=true -C -e -U clean install'
             }
           }
@@ -34,6 +35,64 @@ pipeline {
           maven: 'maven-3.6.0',
           mavenLocalRepo: '.repository') {
           sh 'mvn -P arc7-deploy -Denforcer.skip=true -C -e deploy'
+        }
+      }
+    }
+  }
+
+  post {
+    success {
+      node('mustard') {
+        script {
+          withMaven(
+            maven: 'maven-3.6.0',
+            mavenLocalRepo: '.repository') {
+            withCredentials([
+              usernamePassword(
+                credentialsId: 'arc7-jms-credentials',
+                passwordVariable: 'JENKINS_JMS_PASSWORD',
+                usernameVariable: 'JENKINS_JMS_USER'
+              ),
+              file(
+                credentialsId: 'arc7-jenkins-trust-store',
+                variable: 'JENKINS_JMS_TRUST_STORE'
+              ),
+              string(
+                credentialsId: 'arc7-jenkins-trust-store-password',
+                variable: 'JENKINS_JMS_TRUST_STORE_PASSWORD'
+              )
+            ]) {
+              sh "./Jenkins-notify.sh success"
+            }
+          }
+        }
+      }
+    }
+
+    failure {
+      node('mustard') {
+        script {
+          withMaven(
+            maven: 'maven-3.6.0',
+            mavenLocalRepo: '.repository') {
+            withCredentials([
+              usernamePassword(
+                credentialsId: 'arc7-jms-credentials',
+                passwordVariable: 'JENKINS_JMS_PASSWORD',
+                usernameVariable: 'JENKINS_JMS_USER'
+              ),
+              file(
+                credentialsId: 'arc7-jenkins-trust-store',
+                variable: 'JENKINS_JMS_TRUST_STORE'
+              ),
+              string(
+                credentialsId: 'arc7-jenkins-trust-store-password',
+                variable: 'JENKINS_JMS_TRUST_STORE_PASSWORD'
+              )
+            ]) {
+              sh "./Jenkins-notify.sh success"
+            }
+          }
         }
       }
     }
