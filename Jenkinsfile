@@ -48,15 +48,27 @@ pipeline {
             maven: 'maven-3.6.0',
             mavenLocalRepo: '.repository') {
             withCredentials([
-              usernamePassword(credentialsId: 'arc7-jms-credentials',
-                               passwordVariable: 'JENKINS_JMS_PASSWORD',
-                               usernameVariable: 'JENKINS_JMS_USER')]) {
+              usernamePassword(
+                credentialsId: 'arc7-jms-credentials',
+                passwordVariable: 'JENKINS_JMS_PASSWORD',
+                usernameVariable: 'JENKINS_JMS_USER'
+              ),
+              file(
+                credentialsId: 'arc7-jenkins-trust-store',
+                variable: 'JENKINS_JMS_TRUST_STORE'
+              ),
+              string(
+                credentialsId: 'arc7-jenkins-trust-store-password',
+                variable: 'JENKINS_JMS_TRUST_STORE_PASSWORD'
+              )
+            ]) {
               sh "./Jenkins-notify.sh success"
             }
           }
         }
       }
     }
+
     failure {
       node('mustard') {
         script {
@@ -64,10 +76,21 @@ pipeline {
             maven: 'maven-3.6.0',
             mavenLocalRepo: '.repository') {
             withCredentials([
-              usernamePassword(credentialsId: 'arc7-jms-credentials',
-                               passwordVariable: 'JENKINS_JMS_PASSWORD',
-                               usernameVariable: 'JENKINS_JMS_USER')]) {
-              sh "./Jenkins-notify.sh failure"
+              usernamePassword(
+                credentialsId: 'arc7-jms-credentials',
+                passwordVariable: 'JENKINS_JMS_PASSWORD',
+                usernameVariable: 'JENKINS_JMS_USER'
+              ),
+              file(
+                credentialsId: 'arc7-jenkins-trust-store',
+                variable: 'JENKINS_JMS_TRUST_STORE'
+              ),
+              string(
+                credentialsId: 'arc7-jenkins-trust-store-password',
+                variable: 'JENKINS_JMS_TRUST_STORE_PASSWORD'
+              )
+            ]) {
+              sh "./Jenkins-notify.sh success"
             }
           }
         }

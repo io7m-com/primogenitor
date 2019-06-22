@@ -30,6 +30,14 @@ if [ -z "${JENKINS_JMS_QUEUE}" ]
 then
   fatal "JENKINS_JMS_QUEUE not set"
 fi
+if [ -z "${JENKINS_JMS_TRUST_STORE}" ]
+then
+  fatal "JENKINS_JMS_TRUST_STORE not set"
+fi
+if [ -z "${JENKINS_JMS_TRUST_STORE_PASSWORD}" ]
+then
+  fatal "JENKINS_JMS_TRUST_STORE_PASSWORD not set"
+fi
 
 mvn \
   -U \
@@ -68,4 +76,8 @@ ${JENKINS_JMS_QUEUE}
 build.txt
 EOF
 
-exec java -jar jsay.jar @args.txt
+exec java \
+  -Djavax.net.ssl.trustStore="${JENKINS_JMS_TRUST_STORE}" \
+  -Djavax.net.ssl.trustStorePassword="${JENKINS_JMS_TRUST_STORE_PASSWORD}" \
+  -jar jsay.jar \
+  @args.txt
