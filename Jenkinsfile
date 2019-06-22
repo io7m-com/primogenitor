@@ -47,7 +47,12 @@ pipeline {
           withMaven(
             maven: 'maven-3.6.0',
             mavenLocalRepo: '.repository') {
-            sh "./Jenkins-notify.sh success" 
+            withCredentials([
+              usernamePassword(credentialsId: 'jms-credentials',
+                               passwordVariable: 'JENKINS_JMS_PASSWORD',
+                               usernameVariable: 'JENKINS_JMS_USER')]) {
+              sh "./Jenkins-notify.sh success"
+            }
           }
         }
       }
@@ -58,7 +63,12 @@ pipeline {
           withMaven(
             maven: 'maven-3.6.0',
             mavenLocalRepo: '.repository') {
-            sh "./Jenkins-notify.sh failed" 
+            withCredentials([
+              usernamePassword(credentialsId: 'jms-credentials',
+                               passwordVariable: 'JENKINS_JMS_PASSWORD',
+                               usernameVariable: 'JENKINS_JMS_USER')]) {
+              sh "./Jenkins-notify.sh failure"
+            }
           }
         }
       }
