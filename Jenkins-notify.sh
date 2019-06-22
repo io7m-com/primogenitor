@@ -8,10 +8,10 @@ fatal()
 
 if [ $# -ne 1 ]
 then
-  fatal "usage: message"
+  fatal "usage: status"
 fi
 
-MESSAGE="$1"
+STATUS="$1"
 shift
 
 if [ -z "${JENKINS_JMS_BROKER}" ]
@@ -42,9 +42,18 @@ mvn \
 
 cp .repository/com/io7m/jsay/com.io7m.jsay/0.0.1/com.io7m.jsay-0.0.1-main.jar jsay.jar
 
+case ${STATUS} in
+  success)
 cat >build.txt <<EOF
-${MESSAGE}
+Build ${JOB_NAME} ${BUILD_DISPLAY_NAME} succeeded
 EOF
+    ;;
+  *)
+cat >build.txt <<EOF
+Build ${JOB_NAME} ${BUILD_DISPLAY_NAME} failed
+EOF
+    ;;
+esac
 
 cat >args.txt <<EOF
 --broker-uri

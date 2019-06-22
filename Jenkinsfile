@@ -47,7 +47,18 @@ pipeline {
           withMaven(
             maven: 'maven-3.6.0',
             mavenLocalRepo: '.repository') {
-            sh './Jenkins-notify.sh '
+            sh "./Jenkins-notify.sh success" 
+          }
+        }
+      }
+    }
+    failed {
+      node('mustard') {
+        script {
+          withMaven(
+            maven: 'maven-3.6.0',
+            mavenLocalRepo: '.repository') {
+            sh "./Jenkins-notify.sh failed" 
           }
         }
       }
