@@ -38,4 +38,21 @@ pipeline {
       }
     }
   }
+
+  post {
+    failure {
+      withMaven(
+        maven: 'maven-3.6.0',
+        mavenLocalRepo: '.repository') {
+        sh 'echo failed'
+      }
+    }
+    success {
+      withMaven(
+        maven: 'maven-3.6.0',
+        mavenLocalRepo: '.repository') {
+        sh 'echo success'
+      }
+    }
+  }
 }
