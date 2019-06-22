@@ -20,6 +20,7 @@ pipeline {
             withMaven(
               maven: 'maven-3.6.0',
               mavenLocalRepo: '.repository') {
+              sh 'env | sort'
               sh 'mvn -Denforcer.skip=true -C -e -U clean install'
             }
           }
@@ -40,13 +41,13 @@ pipeline {
   }
 
   post {
-    always {
+    success {
       node('mustard') {
         script {
           withMaven(
             maven: 'maven-3.6.0',
             mavenLocalRepo: '.repository') {
-            sh './Jenkins-notify.sh'
+            sh './Jenkins-notify.sh '
           }
         }
       }
