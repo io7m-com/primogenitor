@@ -52,7 +52,7 @@ pipeline {
         }
       }
     }
-    failed {
+    failure {
       node('mustard') {
         script {
           withMaven(
