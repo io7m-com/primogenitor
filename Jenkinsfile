@@ -35,7 +35,7 @@ pipeline {
       }
     }
 
-    # Requires JMS Messaging plugin
+    // Requires JMS Messaging plugin
     stage('Notify') {
       steps {
         def sendResult = sendCIMessage \
