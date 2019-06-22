@@ -37,5 +37,19 @@ pipeline {
         }
       }
     }
+
+    # Requires JMS Messaging plugin
+    stage('Notify') {
+      steps {
+        def sendResult = sendCIMessage \
+          providerName: 'default', \
+          messageContent: 'some content', \
+          messageProperties: 'CI_STATUS = passed', \
+          messageType: 'CodeQualityChecksDone'
+
+	echo sendResult.getMessageId()
+	echo sendResult.getMessageContent()
+      }
+    }
   }
 }
