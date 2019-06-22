@@ -34,19 +34,22 @@ pipeline {
         }
       }
     }
+  }
 
-    // Requires JMS Messaging plugin
-    stage('Notify') {
-      steps {
-        def sendResult = sendCIMessage \
-          providerName: 'default', \
-          messageContent: 'some content', \
-          messageProperties: 'CI_STATUS = passed', \
-          messageType: 'CodeQualityChecksDone'
-
-        echo sendResult.getMessageId()
-        echo sendResult.getMessageContent()
-      }
+  post {
+    failure {
+      sendCIMessage \
+        providerName: 'default', \
+        messageContent: 'Build failed', \
+        messageProperties: 'CI_STATUS = failed', \
+        messageType: 'custom'
+    }
+    success {
+      sendCIMessage \
+        providerName: 'default', \
+        messageContent: 'Build succeeded', \
+        messageProperties: 'CI_STATUS = passed', \
+        messageType: 'custom'
     }
   }
 }
