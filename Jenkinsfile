@@ -42,33 +42,39 @@ pipeline {
   post {
     failure {
       node('master') {
-        tools {
-          jdk   'openjdk-11-hotspot'
-          maven 'maven-3.6.0'
-        }
-
-        withMaven(
-          maven: 'maven-3.6.0',
-          mavenLocalRepo: '.repository') {
-          sh 'mvn -U org.apache.maven.plugins:maven-dependency-plugin:3.1.1:get -DgroupId=com.io7m.jsay -DartifactId=com.io7m.jsay -Dversion=0.0.1 -Dclassifier=main'
-          sh 'cp .repository/com/io7m/jsay/com.io7m.jsay/0.0.1/com.io7m.jsay-0.0.1-main.jar jsay.jar'
-          sh 'java -jar jsay.jar'
+        stage('report-failure') {
+          tools {
+            jdk   'openjdk-11-hotspot'
+            maven 'maven-3.6.0'
+          }
+          steps {
+            withMaven(
+                    maven: 'maven-3.6.0',
+                    mavenLocalRepo: '.repository') {
+              sh 'mvn -U org.apache.maven.plugins:maven-dependency-plugin:3.1.1:get -DgroupId=com.io7m.jsay -DartifactId=com.io7m.jsay -Dversion=0.0.1 -Dclassifier=main'
+              sh 'cp .repository/com/io7m/jsay/com.io7m.jsay/0.0.1/com.io7m.jsay-0.0.1-main.jar jsay.jar'
+              sh 'java -jar jsay.jar'
+            }
+          }
         }
       }
     }
     success {
       node('master') {
-        tools {
-          jdk   'openjdk-11-hotspot'
-          maven 'maven-3.6.0'
-        }
-
-        withMaven(
-          maven: 'maven-3.6.0',
-          mavenLocalRepo: '.repository') {
-          sh 'mvn -U org.apache.maven.plugins:maven-dependency-plugin:3.1.1:get -DgroupId=com.io7m.jsay -DartifactId=com.io7m.jsay -Dversion=0.0.1 -Dclassifier=main'
-          sh 'cp .repository/com/io7m/jsay/com.io7m.jsay/0.0.1/com.io7m.jsay-0.0.1-main.jar jsay.jar'
-          sh 'java -jar jsay.jar'
+        stage('report-success') {
+          tools {
+            jdk   'openjdk-11-hotspot'
+            maven 'maven-3.6.0'
+          }
+          steps {
+            withMaven(
+                    maven: 'maven-3.6.0',
+                    mavenLocalRepo: '.repository') {
+              sh 'mvn -U org.apache.maven.plugins:maven-dependency-plugin:3.1.1:get -DgroupId=com.io7m.jsay -DartifactId=com.io7m.jsay -Dversion=0.0.1 -Dclassifier=main'
+              sh 'cp .repository/com/io7m/jsay/com.io7m.jsay/0.0.1/com.io7m.jsay-0.0.1-main.jar jsay.jar'
+              sh 'java -jar jsay.jar'
+            }
+          }
         }
       }
     }
