@@ -1,9 +1,6 @@
 #!groovy
 
 pipeline {
-  options {
-    timeout time: 60, unit: 'MINUTES'
-  }
 
   agent none
 
@@ -20,7 +17,7 @@ pipeline {
             withMaven(
               maven: 'maven-3.6.0',
               mavenLocalRepo: '.repository') {
-              sh 'mvn -Denforcer.skip=true -C -e -U clean install'
+              sh 'mvn -C -e -Denforcer.skip=true -U clean install'
             }
           }
         }
@@ -47,9 +44,10 @@ pipeline {
           messageProperties: 'CI_STATUS = passed', \
           messageType: 'CodeQualityChecksDone'
 
-	echo sendResult.getMessageId()
-	echo sendResult.getMessageContent()
+        echo sendResult.getMessageId()
+        echo sendResult.getMessageContent()
       }
     }
   }
 }
+
