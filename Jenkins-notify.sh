@@ -53,12 +53,12 @@ cp .repository/com/io7m/jsay/com.io7m.jsay/0.0.1/com.io7m.jsay-0.0.1-main.jar js
 case ${STATUS} in
   success)
 cat >build.txt <<EOF
-Build ${JOB_NAME} ${BUILD_DISPLAY_NAME} succeeded
+Build ${JOB_NAME} ${BUILD_DISPLAY_NAME} on ${NODE_NAME} succeeded
 EOF
     ;;
   *)
 cat >build.txt <<EOF
-Build ${JOB_NAME} ${BUILD_DISPLAY_NAME} failed
+Build ${JOB_NAME} ${BUILD_DISPLAY_NAME} on ${NODE_NAME} failed
 EOF
     ;;
 esac
