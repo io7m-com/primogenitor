@@ -570,7 +570,7 @@
   Specification-Vendor:     $[io7m.jar.vendor]
   Specification-Version:    $[project.version]
 
-  -removeheaders: Bnd-LastModified, Tool, Private-Package
+  -removeheaders: Bnd-LastModified, Tool, Private-Package, Build-Jdk-Spec
 ]]></bnd>
           </configuration>
           <executions>
