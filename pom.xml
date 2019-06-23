@@ -23,6 +23,12 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+    <!-- The version of the JDK required to _build_ the code. -->
+    <io7m.java.requiredSDKBuildVersion>[11,12)</io7m.java.requiredSDKBuildVersion>
+
+    <!-- The version of Java targeted by the code. -->
+    <io7m.java.targetJavaVersion>11</io7m.java.targetJavaVersion>
+
     <!-- The groupId of the artifact that contains checkstyle rules for the project. -->
     <io7m.checkstyle.groupId>com.io7m.checkstyle_rules</io7m.checkstyle.groupId>
 
@@ -182,6 +188,11 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>${io7m.maven-compiler-plugin.version}</version>
+          <configuration>
+            <source>${io7m.java.targetJavaVersion}</source>
+            <target>${io7m.java.targetJavaVersion}</target>
+            <release>${io7m.java.targetJavaVersion}</release>
+          </configuration>
         </plugin>
 
         <!--
@@ -321,9 +332,9 @@
                     <version>[3.6.0,)</version>
                   </requireMavenVersion>
 
-                  <!-- Require JDK 11+ -->
+                  <!-- Require JDK version -->
                   <requireJavaVersion>
-                    <version>[11,)</version>
+                    <version>${io7m.java.requiredSDKBuildVersion}</version>
                   </requireJavaVersion>
 
                   <!--
