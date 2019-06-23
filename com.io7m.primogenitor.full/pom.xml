@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>com.io7m.primogenitor</artifactId>
+    <groupId>com.io7m.primogenitor</groupId>
+    <version>3.0.0-beta0023</version>
+  </parent>
+
+  <artifactId>com.io7m.primogenitor.full</artifactId>
+  <packaging>pom</packaging>
+
+  <name>com.io7m.primogenitor.full</name>
+  <description>The initial ancestor pom for io7m.com projects (Full module)</description>
+  <url>http://www.io7m.com/</url>
+
+  <properties>
+    <io7m.com.io7m.minisite.maven_plugin.version>2.0.1</io7m.com.io7m.minisite.maven_plugin.version>
+
+    <!-- Strings that appear in generated sites -->
+    <io7m.changelog.feed_email>contact@io7m.com</io7m.changelog.feed_email>
+  </properties>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <!--
+          Maven minisite plugin.
+          https://github.com/io7m/minisite
+
+          Replaces the site plugin with something minimal.
+        -->
+        <plugin>
+          <groupId>com.io7m.minisite</groupId>
+          <artifactId>com.io7m.minisite.maven_plugin</artifactId>
+          <version>${io7m.com.io7m.minisite.maven_plugin.version}</version>
+          <executions>
+            <execution>
+              <id>minisite</id>
+              <phase>site</phase>
+              <goals>
+                <goal>generateSite</goal>
+              </goals>
+              <configuration>
+                <changelogFeedEmail>${io7m.changelog.feed_email}</changelogFeedEmail>
+                <changelogFile>README-CHANGES.xml</changelogFile>
+                <documentationFile>src/site/resources/documentation.xml</documentationFile>
+                <featuresFile>src/site/resources/features.xml</featuresFile>
+                <headerFile>src/site/resources/header.xml</headerFile>
+                <outputDirectory>${project.build.directory}/minisite</outputDirectory>
+                <overviewFile>src/site/resources/overview.xml</overviewFile>
+                <resourceDirectory>${project.basedir}/src/site/resources</resourceDirectory>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+</project>
