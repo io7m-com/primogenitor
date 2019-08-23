@@ -2,12 +2,13 @@
 <project
   xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  child.project.url.inherit.append.path="false">
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>3.0.0-beta0023</version>
+  <version>3.0.0-beta0024</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -42,7 +43,7 @@
     <io7m.checkstyle.path>com/io7m/checkstyle_rules/checkstyle.xml</io7m.checkstyle.path>
 
     <!-- The version of the checkstyle tools used -->
-    <io7m.checkstyle.tools.version>8.21</io7m.checkstyle.tools.version>
+    <io7m.checkstyle.tools.version>8.22</io7m.checkstyle.tools.version>
 
     <!-- The previous groupId of the API. Used to enforce semantic versioning. -->
     <io7m.api.previousGroupId>${project.groupId}</io7m.api.previousGroupId>
@@ -106,7 +107,9 @@
     </license>
   </licenses>
 
-  <scm>
+  <scm child.scm.connection.inherit.append.path="false"
+       child.scm.developerConnection.inherit.append.path="false"
+       child.scm.url.inherit.append.path="false">
     <url>https://github.com/io7m/primogenitor</url>
     <connection>scm:git:https://github.com/io7m/primogenitor</connection>
     <developerConnection>scm:git:https://github.com/io7m/primogenitor</developerConnection>
@@ -127,7 +130,7 @@
   </issueManagement>
 
   <distributionManagement>
-    <site>
+    <site child.site.url.inherit.append.path="false">
       <id>io7m.com</id>
       <name>io7m.com</name>
       <url>https://www.io7m.com/software/primogenitor</url>
