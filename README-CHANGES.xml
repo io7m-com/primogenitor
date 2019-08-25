@@ -208,10 +208,11 @@
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2019-08-25T13:13:32+00:00" ticket-system="com.github.io7m.primogenitor" version="3.1.0">
+    <c:release date="2019-08-25T13:14:24+00:00" ticket-system="com.github.io7m.primogenitor" version="3.1.0">
       <c:changes>
         <c:change date="2019-08-24T00:00:00+00:00" summary="Increase default JDK range to [11,14)"/>
-        <c:change date="2019-08-25T13:13:32+00:00" summary="Update maven-javadoc-plugin to 3.1.1"/>
+        <c:change date="2019-08-25T00:00:00+00:00" summary="Update maven-javadoc-plugin to 3.1.1"/>
+        <c:change date="2019-08-25T13:14:24+00:00" summary="Update spotbugs-maven-plugin to 3.1.12.2"/>
       </c:changes>
     </c:release>
   </c:releases>
