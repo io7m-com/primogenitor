@@ -11,11 +11,11 @@
     <version>3.3.0</version>
   </parent>
 
-  <artifactId>com.io7m.primogenitor.lite</artifactId>
-  <packaging>pom</packaging>
+  <artifactId>com.io7m.primogenitor.support</artifactId>
+  <packaging>jar</packaging>
 
-  <name>com.io7m.primogenitor.lite</name>
-  <description>The initial ancestor pom for io7m.com projects (Lite module)</description>
+  <name>com.io7m.primogenitor.support</name>
+  <description>The initial ancestor pom for io7m.com projects (Support module)</description>
   <url>http://www.io7m.com/</url>
 
 </project>

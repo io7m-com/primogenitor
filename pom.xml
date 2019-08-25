@@ -8,12 +8,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>3.2.0</version>
+  <version>3.3.0</version>
   <packaging>pom</packaging>
 
   <modules>
     <module>com.io7m.primogenitor.lite</module>
     <module>com.io7m.primogenitor.full</module>
+    <module>com.io7m.primogenitor.support</module>
   </modules>
 
   <name>com.io7m.primogenitor</name>
@@ -465,30 +466,6 @@
         </plugin>
 
         <!--
-          Reproducible Build plugin
-          http://zlika.github.io/reproducible-build-maven-plugin/index.html
-        -->
-        <plugin>
-          <groupId>io.github.zlika</groupId>
-          <artifactId>reproducible-build-maven-plugin</artifactId>
-          <version>${io7m.reproducible-build-maven-plugin.version}</version>
-
-          <!-- Attempt to strip artifacts for reproducibility -->
-          <executions>
-            <execution>
-              <id>reproducible-jar</id>
-              <phase>package</phase>
-              <goals>
-                <goal>strip-jar</goal>
-              </goals>
-              <configuration>
-                <overwrite>true</overwrite>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
-
-        <!--
           Checksum plugin
           https://checksum-maven-plugin.nicoulaj.net
         -->
@@ -718,6 +695,16 @@
         </plugin>
 
         <!--
+          JavaDoc plugin.
+          https://maven.apache.org/plugins/maven-javadoc-plugin/
+        -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>${io7m.maven-javadoc-plugin.version}</version>
+        </plugin>
+
+        <!--
           Jar plugin.
           https://maven.apache.org/plugins/maven-jar-plugin/
         -->
@@ -730,24 +717,30 @@
             <!-- Produce jar file with custom manifest -->
             <execution>
               <id>default-jar</id>
+              <phase>package</phase>
+              <goals>
+                <goal>jar</goal>
+              </goals>
               <configuration>
                 <archive>
                   <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
                 </archive>
               </configuration>
-              <goals>
-                <goal>jar</goal>
-              </goals>
             </execution>
 
             <!-- Produce jar file of tests -->
             <execution>
               <id>test-jar</id>
+              <phase>package</phase>
               <goals>
                 <goal>test-jar</goal>
               </goals>
               <configuration>
                 <archive>
+                  <addMavenDescriptor>false</addMavenDescriptor>
+                  <manifest>
+                    <addDefaultEntries>false</addDefaultEntries>
+                  </manifest>
                   <manifestEntries>
                     <Specification-Title>${project.name} (Tests)</Specification-Title>
                     <Specification-Version>${project.version}</Specification-Version>
@@ -762,54 +755,55 @@
                 </archive>
               </configuration>
             </execution>
-          </executions>
-        </plugin>
 
-        <!--
-          Maven Javadoc plugin.
-          https://maven.apache.org/plugins/maven-javadoc-plugin/
-        -->
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-javadoc-plugin</artifactId>
-          <version>${io7m.maven-javadoc-plugin.version}</version>
-
-          <!-- Produce a Javadoc jar -->
-          <executions>
+            <!-- Produce an empty JavaDoc jar. -->
             <execution>
-              <id>attach-javadocs</id>
+              <id>empty-javadoc-jar</id>
               <phase>package</phase>
               <goals>
                 <goal>jar</goal>
               </goals>
               <configuration>
-                <bottom>Copyright &amp;#169; {currentYear} &amp;lt;code@io7m.com&amp;gt; http://io7m.com</bottom>
+                <classifier>javadoc</classifier>
+                <excludes>
+                  <exclude>**/**</exclude>
+                </excludes>
                 <archive>
+                  <addMavenDescriptor>false</addMavenDescriptor>
+                  <manifest>
+                    <addDefaultEntries>false</addDefaultEntries>
+                  </manifest>
                   <manifestEntries>
-                    <Specification-Title>${project.name} (JavaDoc)</Specification-Title>
-                    <Specification-Version>${project.version}</Specification-Version>
-                    <Specification-Vendor>${io7m.jar.vendor}</Specification-Vendor>
-                    <Implementation-Title>${project.name} (JavaDoc)</Implementation-Title>
-                    <Implementation-Version>${project.version}</Implementation-Version>
-                    <Implementation-Vendor>${io7m.jar.vendor}</Implementation-Vendor>
-                    <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
-                    <Implementation-Build>${buildNumber}</Implementation-Build>
                     <Built-By>${io7m.jar.built_by}</Built-By>
                   </manifestEntries>
                 </archive>
-                <additionalparam>${io7m.javadoc.docLint}</additionalparam>
               </configuration>
             </execution>
           </executions>
+        </plugin>
 
-          <!-- https://issues.apache.org/jira/browse/MJAVADOC-542 -->
-          <dependencies>
-            <dependency>
-              <groupId>org.ow2.asm</groupId>
-              <artifactId>asm</artifactId>
-              <version>7.0</version>
-            </dependency>
-          </dependencies>
+        <!--
+          Reproducible Build plugin
+          http://zlika.github.io/reproducible-build-maven-plugin/index.html
+        -->
+        <plugin>
+          <groupId>io.github.zlika</groupId>
+          <artifactId>reproducible-build-maven-plugin</artifactId>
+          <version>${io7m.reproducible-build-maven-plugin.version}</version>
+
+          <!-- Attempt to strip artifacts for reproducibility -->
+          <executions>
+            <execution>
+              <id>reproducible-jar</id>
+              <phase>package</phase>
+              <goals>
+                <goal>strip-jar</goal>
+              </goals>
+              <configuration>
+                <overwrite>true</overwrite>
+              </configuration>
+            </execution>
+          </executions>
         </plugin>
 
         <!--
@@ -902,6 +896,18 @@
             </execution>
           </executions>
         </plugin>
+
+        <!--
+          Exec Maven plugin.
+          http://www.mojohaus.org/exec-maven-plugin/
+
+          Used for general Java/Executable calls.
+        -->
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>1.6.0</version>
+        </plugin>
       </plugins>
     </pluginManagement>
 
@@ -937,10 +943,6 @@
 
       <plugin>
         <artifactId>maven-source-plugin</artifactId>
-      </plugin>
-
-      <plugin>
-        <artifactId>maven-javadoc-plugin</artifactId>
       </plugin>
 
       <plugin>
