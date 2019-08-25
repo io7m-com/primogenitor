@@ -14,6 +14,7 @@
   <modules>
     <module>com.io7m.primogenitor.lite</module>
     <module>com.io7m.primogenitor.full</module>
+    <module>com.io7m.primogenitor.support</module>
   </modules>
 
   <name>com.io7m.primogenitor</name>
@@ -894,6 +895,18 @@
               </goals>
             </execution>
           </executions>
+        </plugin>
+
+        <!--
+          Exec Maven plugin.
+          http://www.mojohaus.org/exec-maven-plugin/
+
+          Used for general Java/Executable calls.
+        -->
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>1.6.0</version>
         </plugin>
       </plugins>
     </pluginManagement>
