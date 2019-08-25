@@ -801,15 +801,6 @@
               </configuration>
             </execution>
           </executions>
-
-          <!-- https://issues.apache.org/jira/browse/MJAVADOC-542 -->
-          <dependencies>
-            <dependency>
-              <groupId>org.ow2.asm</groupId>
-              <artifactId>asm</artifactId>
-              <version>7.0</version>
-            </dependency>
-          </dependencies>
         </plugin>
 
         <!--
