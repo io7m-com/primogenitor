@@ -598,7 +598,7 @@
                   <artifactId>${io7m.api.previousArtifactId}</artifactId>
                   <version>${io7m.api.previousVersion}</version>
                 </base>
-                <failOnMissing>true</failOnMissing>
+                <failOnMissing>false</failOnMissing>
                 <fullReport>true</fullReport>
               </configuration>
             </execution>

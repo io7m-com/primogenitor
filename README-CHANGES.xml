@@ -215,13 +215,14 @@
         <c:change date="2019-08-25T00:00:00+00:00" summary="Update spotbugs-maven-plugin to 3.1.12.2"/>
       </c:changes>
     </c:release>
-    <c:release date="2019-08-25T18:36:35+00:00" ticket-system="com.github.io7m.primogenitor" version="3.3.0">
+    <c:release date="2019-08-25T20:29:53+00:00" ticket-system="com.github.io7m.primogenitor" version="3.3.0">
       <c:changes>
-        <c:change date="2019-08-25T18:36:35+00:00" summary="Add a support module to help projects produce JavaDoc">
+        <c:change date="2019-08-25T00:00:00+00:00" summary="Add a support module to help projects produce JavaDoc">
           <c:tickets>
             <c:ticket id="46"/>
           </c:tickets>
         </c:change>
+        <c:change date="2019-08-25T20:29:53+00:00" summary="Do not fail on missing Bnd baselines"/>
       </c:changes>
     </c:release>
   </c:releases>
