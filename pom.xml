@@ -8,7 +8,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>3.3.0</version>
+  <version>3.4.0</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -598,7 +598,7 @@
                   <artifactId>${io7m.api.previousArtifactId}</artifactId>
                   <version>${io7m.api.previousVersion}</version>
                 </base>
-                <failOnMissing>true</failOnMissing>
+                <failOnMissing>false</failOnMissing>
                 <fullReport>true</fullReport>
               </configuration>
             </execution>
