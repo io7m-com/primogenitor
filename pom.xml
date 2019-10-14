@@ -153,7 +153,7 @@
   </ciManagement>
 
   <prerequisites>
-    <maven>3.6.1</maven>
+    <maven>3.6.2</maven>
   </prerequisites>
 
   <build>
@@ -332,9 +332,9 @@
                   </requirePluginVersions>
                   -->
 
-                  <!-- Require Maven [3.6.1, 4.0.0) -->
+                  <!-- Require Maven [3.6.2, 4.0.0) -->
                   <requireMavenVersion>
-                    <version>[3.6.1, 4.0.0)</version>
+                    <version>[3.6.2, 4.0.0)</version>
                   </requireMavenVersion>
 
                   <!-- Require JDK version -->
