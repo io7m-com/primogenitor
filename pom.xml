@@ -8,7 +8,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>3.4.0</version>
+  <version>3.5.0</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -84,11 +84,12 @@
     <io7m.reproducible-build-maven-plugin.version>0.10</io7m.reproducible-build-maven-plugin.version>
     <io7m.scijava-maven-plugin.version>1.1.0</io7m.scijava-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
-    <io7m.bnd-maven-plugin.version>4.2.0</io7m.bnd-maven-plugin.version>
-    <io7m.bnd-baseline-maven-plugin.version>4.2.0</io7m.bnd-baseline-maven-plugin.version>
-    <io7m.bnd-indexer-maven-plugin.version>4.2.0</io7m.bnd-indexer-maven-plugin.version>
-    <io7m.bnd-export-maven-plugin.version>4.2.0</io7m.bnd-export-maven-plugin.version>
-    <io7m.bnd-resolver-maven-plugin.version>4.2.0</io7m.bnd-resolver-maven-plugin.version>
+    <io7m.bnd.plugins.version>4.3.0</io7m.bnd.plugins.version>
+    <io7m.bnd-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-maven-plugin.version>
+    <io7m.bnd-baseline-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-baseline-maven-plugin.version>
+    <io7m.bnd-indexer-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-indexer-maven-plugin.version>
+    <io7m.bnd-export-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-export-maven-plugin.version>
+    <io7m.bnd-resolver-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-resolver-maven-plugin.version>
     <io7m.spotbugs-maven-plugin.version>3.1.12.2</io7m.spotbugs-maven-plugin.version>
     <io7m.fb-contrib-plugin.version>7.4.0.sb</io7m.fb-contrib-plugin.version>
     <io7m.findsecbugs-plugin.version>1.7.1</io7m.findsecbugs-plugin.version>
@@ -152,7 +153,7 @@
   </ciManagement>
 
   <prerequisites>
-    <maven>3.6.1</maven>
+    <maven>3.6.2</maven>
   </prerequisites>
 
   <build>
@@ -331,9 +332,9 @@
                   </requirePluginVersions>
                   -->
 
-                  <!-- Require Maven [3.6.1, 4.0.0) -->
+                  <!-- Require Maven [3.6.2, 4.0.0) -->
                   <requireMavenVersion>
-                    <version>[3.6.1, 4.0.0)</version>
+                    <version>[3.6.2, 4.0.0)</version>
                   </requireMavenVersion>
 
                   <!-- Require JDK version -->
