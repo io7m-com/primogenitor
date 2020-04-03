@@ -76,6 +76,8 @@ public final class TrivialJavadoc
     }
 
     try (var writer = Files.newBufferedWriter(optionsFile, UTF_8)) {
+      writer.append("-notimestamp");
+      writer.newLine();
       writer.append("-d");
       writer.newLine();
       writer.append(outputDirectory.toAbsolutePath().toString());
