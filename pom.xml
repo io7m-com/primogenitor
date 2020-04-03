@@ -60,7 +60,7 @@
     <io7m.javadoc.docLint>-Xdoclint:all</io7m.javadoc.docLint>
 
     <!-- The versions of all plugins used -->
-    <io7m.build-helper-maven-plugin.version>3.0.0</io7m.build-helper-maven-plugin.version>
+    <io7m.build-helper-maven-plugin.version>3.1.0</io7m.build-helper-maven-plugin.version>
     <io7m.buildnumber-maven-plugin.version>1.4</io7m.buildnumber-maven-plugin.version>
     <io7m.extra-enforcer-rules.version>1.2</io7m.extra-enforcer-rules.version>
     <io7m.jacoco-maven-plugin.version>0.8.4</io7m.jacoco-maven-plugin.version>
