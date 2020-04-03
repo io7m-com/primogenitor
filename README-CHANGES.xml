@@ -235,9 +235,10 @@
         <c:change date="2019-10-14T00:00:00+00:00" summary="Require Maven 3.6.2 instead of 3.6.1"/>
       </c:changes>
     </c:release>
-    <c:release date="2020-04-03T09:03:07+00:00" ticket-system="com.github.io7m.primogenitor" version="3.6.0">
+    <c:release date="2020-04-03T09:04:52+00:00" ticket-system="com.github.io7m.primogenitor" version="3.6.0">
       <c:changes>
-        <c:change date="2020-04-03T09:03:07+00:00" summary="Upgrade maven-assembly-plugin to 3.2.0"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-assembly-plugin to 3.2.0"/>
+        <c:change date="2020-04-03T09:04:52+00:00" summary="Upgrade checkstyle to 8.31"/>
       </c:changes>
     </c:release>
   </c:releases>
