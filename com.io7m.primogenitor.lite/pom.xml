@@ -8,7 +8,7 @@
   <parent>
     <artifactId>com.io7m.primogenitor</artifactId>
     <groupId>com.io7m.primogenitor</groupId>
-    <version>3.5.0</version>
+    <version>3.6.0</version>
   </parent>
 
   <artifactId>com.io7m.primogenitor.lite</artifactId>

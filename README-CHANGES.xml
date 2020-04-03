@@ -229,10 +229,30 @@
         <c:change date="2019-08-25T00:00:00+00:00" summary="Do not fail on missing Bnd baselines"/>
       </c:changes>
     </c:release>
-    <c:release date="2019-10-14T20:54:29+00:00" ticket-system="com.github.io7m.primogenitor" version="3.5.0">
+    <c:release date="2019-10-14T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="3.5.0">
       <c:changes>
         <c:change date="2019-10-14T00:00:00+00:00" summary="Upgrade Bnd plugin suite to 4.3.0"/>
-        <c:change date="2019-10-14T20:54:29+00:00" summary="Require Maven 3.6.2 instead of 3.6.1"/>
+        <c:change date="2019-10-14T00:00:00+00:00" summary="Require Maven 3.6.2 instead of 3.6.1"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2020-04-03T09:38:09+00:00" ticket-system="com.github.io7m.primogenitor" version="3.6.0">
+      <c:changes>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-assembly-plugin to 3.2.0"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade checkstyle to 8.31"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-dependency-plugin to 3.1.2"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-enforcer-plugin to 3.0.0-M3"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-jar-plugin to 3.2.0"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-javadoc-plugin to 3.2.0"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-shade-plugin to 3.2.2"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-site-plugin to 3.9.0"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-source-plugin to 3.2.1"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-surefire-plugin to 3.0.0-M4"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade reproducible-build-maven-plugin to 0.11"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade spotbugs-maven-plugin to 4.0.0"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade build-helper-maven-plugin to 3.1.0"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade jacoco-maven-plugin to 0.8.5"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade bnd plugin suite to 5.0.1"/>
+        <c:change date="2020-04-03T09:38:09+00:00" summary="Use checkstyle_rules 1.0.0"/>
       </c:changes>
     </c:release>
   </c:releases>
