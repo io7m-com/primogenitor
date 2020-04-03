@@ -235,7 +235,7 @@
         <c:change date="2019-10-14T00:00:00+00:00" summary="Require Maven 3.6.2 instead of 3.6.1"/>
       </c:changes>
     </c:release>
-    <c:release date="2020-04-03T09:09:48+00:00" ticket-system="com.github.io7m.primogenitor" version="3.6.0">
+    <c:release date="2020-04-03T09:10:30+00:00" ticket-system="com.github.io7m.primogenitor" version="3.6.0">
       <c:changes>
         <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-assembly-plugin to 3.2.0"/>
         <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade checkstyle to 8.31"/>
@@ -246,7 +246,8 @@
         <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-shade-plugin to 3.2.2"/>
         <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-site-plugin to 3.9.0"/>
         <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-source-plugin to 3.2.1"/>
-        <c:change date="2020-04-03T09:09:48+00:00" summary="Upgrade maven-surefire-plugin to 3.0.0-M4"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-surefire-plugin to 3.0.0-M4"/>
+        <c:change date="2020-04-03T09:10:30+00:00" summary="Upgrade reproducible-build-maven-plugin to 0.11"/>
       </c:changes>
     </c:release>
   </c:releases>
