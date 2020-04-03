@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -110,6 +111,53 @@ public final class TrivialJavadoc
       Files.readAllLines(logFile).forEach(System.err::println);
       throw new IOException("JavaDoc command exited with status " + status);
     }
+
+    applyOverviewWorkaround(outputDirectory);
+    applySearchIndicesWorkaround(outputDirectory);
+  }
+
+  /**
+   * The following files are produced by the JavaDoc tool, and it produces
+   * non-reproducible archives.
+   */
+
+  private static void applySearchIndicesWorkaround(
+    final Path outputDirectory)
+    throws IOException
+  {
+    final var problematicFiles =
+      List.of(
+        "member-search-index.zip",
+        "package-search-index.zip",
+        "type-search-index.zip"
+      );
+
+    for (final var file : problematicFiles) {
+      final Path outputFile =
+        outputDirectory.toAbsolutePath().resolve(file);
+      final Path outputFileTmp =
+        outputDirectory.toAbsolutePath().resolve(file + ".tmp");
+
+      LOG.info("strip " + outputFile);
+      ReproducibleZip.makeReproducible(outputFile, outputFileTmp);
+    }
+  }
+
+  /**
+   * The overview-summary file is just a redirect to the index.html file,
+   * but unfortunately ignores the -notimestamp flag, causing the output
+   * to be non-reproducible.
+   */
+
+  private static void applyOverviewWorkaround(
+    final Path outputDirectory)
+    throws IOException
+  {
+    Files.copy(
+      outputDirectory.toAbsolutePath().resolve("index.html"),
+      outputDirectory.toAbsolutePath().resolve("overview-summary.html"),
+      StandardCopyOption.REPLACE_EXISTING
+    );
   }
 
   private static boolean isJavaSourceFile(
