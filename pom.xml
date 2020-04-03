@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>3.6.0</version>
+  <version>3.7.0</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -58,6 +58,9 @@
 
     <!-- The default doclint configuration to use for JavaDoc (may be empty) -->
     <io7m.javadoc.docLint>-Xdoclint:all</io7m.javadoc.docLint>
+
+    <!-- The timestamp used for all outputs, for reproducibility. -->
+    <project.build.outputTimestamp>2020-01-01T00:00:00Z</project.build.outputTimestamp>
 
     <!-- The versions of all plugins used -->
     <io7m.build-helper-maven-plugin.version>3.1.0</io7m.build-helper-maven-plugin.version>
