@@ -37,7 +37,7 @@ By setting the parent of a project's POM file to `com.io7m.primogenitor`, the pr
 
 * Enforcement of the presence of POM properties required for Maven Central: Descendant POMs are required to provide `description`, `url`, and `name` elements.
 * Enforcement of a minimum Java version (currently `11`) with a friendly error message if the project is built on a JDK that is too old.
-* Enforcement of a minimum Maven version (currently `3.6.1`) with a friendly error message if the project is built with a version of Maven that is too old.
+* Enforcement of a minimum Maven version (currently `3.6.2`) with a friendly error message if the project is built with a version of Maven that is too old.
 * The immediate rejection of circular dependencies.
 * Enforcement of reproducible builds: No (transitive) dependency may depend on a `SNAPSHOT` version.
 * Enforcement of plugin versioning: No plugin may be added without an explicit version number.
