@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>4.0.0</version>
+  <version>4.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -745,6 +745,9 @@
               <configuration>
                 <archive>
                   <addMavenDescriptor>false</addMavenDescriptor>
+                  <excludes>
+                    <exclude>META-INF/jpms.args</exclude>
+                  </excludes>
                   <manifest>
                     <addDefaultEntries>false</addDefaultEntries>
                   </manifest>
