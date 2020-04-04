@@ -743,11 +743,13 @@
                 <goal>test-jar</goal>
               </goals>
               <configuration>
+                <!-- https://issues.apache.org/jira/browse/MCOMPILER-296 -->
+                <excludes>
+                  <exclude>META-INF/jpms.args</exclude>
+                </excludes>
+
                 <archive>
                   <addMavenDescriptor>false</addMavenDescriptor>
-                  <excludes>
-                    <exclude>META-INF/jpms.args</exclude>
-                  </excludes>
                   <manifest>
                     <addDefaultEntries>false</addDefaultEntries>
                   </manifest>
