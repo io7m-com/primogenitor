@@ -604,6 +604,7 @@
                   <artifactId>${io7m.api.previousArtifactId}</artifactId>
                   <version>${io7m.api.previousVersion}</version>
                 </base>
+                <includeDistributionManagement>false</includeDistributionManagement>
                 <failOnMissing>false</failOnMissing>
                 <fullReport>true</fullReport>
               </configuration>
