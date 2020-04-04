@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>3.9.0</version>
+  <version>4.0.0</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -604,6 +604,7 @@
                   <artifactId>${io7m.api.previousArtifactId}</artifactId>
                   <version>${io7m.api.previousVersion}</version>
                 </base>
+                <includeDistributionManagement>false</includeDistributionManagement>
                 <failOnMissing>false</failOnMissing>
                 <fullReport>true</fullReport>
               </configuration>
@@ -958,6 +959,11 @@
       <plugin>
         <groupId>io.github.zlika</groupId>
         <artifactId>reproducible-build-maven-plugin</artifactId>
+      </plugin>
+
+      <plugin>
+        <groupId>biz.aQute.bnd</groupId>
+        <artifactId>bnd-baseline-maven-plugin</artifactId>
       </plugin>
 
       <plugin>
