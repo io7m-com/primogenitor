@@ -38,10 +38,12 @@ public final class TrivialJavadoc
 
   }
 
+  // CHECKSTYLE:OFF
   public static void main(
     final String[] args)
     throws Exception
   {
+    // CHECKSTYLE:ON
     if (args.length != 5) {
       throw new IOException(
         "usage: source-directory classpath-file output-directory log-file options-file");
