@@ -397,6 +397,13 @@
                     This means no snapshot dependencies!
                   -->
                   <requireReproducibleBuilds implementation="org.scijava.maven.plugin.enforcer.RequireReproducibleBuilds"/>
+
+                  <!--
+                    Require that bytecode is at most ${io7m.java.targetJavaVersion}.
+                  -->
+                  <enforceBytecodeVersion>
+                    <maxJdkVersion>${io7m.java.targetJavaVersion}</maxJdkVersion>
+                  </enforceBytecodeVersion>
                 </rules>
                 <fail>true</fail>
               </configuration>
