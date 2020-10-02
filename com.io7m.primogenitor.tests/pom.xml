@@ -9,7 +9,7 @@
   <parent>
     <artifactId>com.io7m.primogenitor</artifactId>
     <groupId>com.io7m.primogenitor</groupId>
-    <version>5.0.0</version>
+    <version>6.0.0-beta0001</version>
   </parent>
 
   <artifactId>com.io7m.primogenitor.tests</artifactId>
@@ -19,7 +19,7 @@
   <url>http://www.io7m.com/</url>
 
   <properties>
-    <junit.version>5.6.1</junit.version>
+    <junit.version>5.7.0</junit.version>
     <mdep.analyze.skip>true</mdep.analyze.skip>
   </properties>
 
