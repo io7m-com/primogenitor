@@ -86,7 +86,7 @@
     <io7m.maven-source-plugin.version>3.2.1</io7m.maven-source-plugin.version>
     <io7m.maven-surefire-plugin.version>3.0.0-M5</io7m.maven-surefire-plugin.version>
     <io7m.nexus-staging-maven-plugin.version>1.6.8</io7m.nexus-staging-maven-plugin.version>
-    <io7m.reproducible-build-maven-plugin.version>0.11</io7m.reproducible-build-maven-plugin.version>
+    <io7m.reproducible-build-maven-plugin.version>0.12</io7m.reproducible-build-maven-plugin.version>
     <io7m.scijava-maven-plugin.version>1.1.0</io7m.scijava-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
     <io7m.bnd.plugins.version>5.1.2</io7m.bnd.plugins.version>
