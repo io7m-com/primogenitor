@@ -89,7 +89,7 @@
     <io7m.reproducible-build-maven-plugin.version>0.11</io7m.reproducible-build-maven-plugin.version>
     <io7m.scijava-maven-plugin.version>1.1.0</io7m.scijava-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
-    <io7m.bnd.plugins.version>5.0.1</io7m.bnd.plugins.version>
+    <io7m.bnd.plugins.version>5.1.2</io7m.bnd.plugins.version>
     <io7m.bnd-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-maven-plugin.version>
     <io7m.bnd-baseline-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-baseline-maven-plugin.version>
     <io7m.bnd-indexer-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-indexer-maven-plugin.version>
