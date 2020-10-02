@@ -16,8 +16,10 @@
 
 package com.io7m.primogenitor.support;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
@@ -141,8 +143,10 @@ public final class TrivialJavadoc
         outputDirectory.toAbsolutePath().resolve(file + ".tmp");
 
       LOG.info("strip " + outputFile);
-      if (Files.isRegularFile(outputFile)) {
+      try {
         ReproducibleZip.makeReproducible(outputFile, outputFileTmp);
+      } catch (final NoSuchFileException e) {
+        LOG.info("no such file: " + outputFile);
       }
     }
   }
