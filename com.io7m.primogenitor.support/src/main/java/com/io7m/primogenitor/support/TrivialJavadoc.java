@@ -141,7 +141,9 @@ public final class TrivialJavadoc
         outputDirectory.toAbsolutePath().resolve(file + ".tmp");
 
       LOG.info("strip " + outputFile);
-      ReproducibleZip.makeReproducible(outputFile, outputFileTmp);
+      if (Files.isRegularFile(outputFile)) {
+        ReproducibleZip.makeReproducible(outputFile, outputFileTmp);
+      }
     }
   }
 
