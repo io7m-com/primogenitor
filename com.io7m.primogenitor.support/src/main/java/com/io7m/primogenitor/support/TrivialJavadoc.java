@@ -16,7 +16,6 @@
 
 package com.io7m.primogenitor.support;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
