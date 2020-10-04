@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>6.0.0-beta0004</version>
+  <version>6.0.0</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -153,8 +153,8 @@
   </distributionManagement>
 
   <ciManagement>
-    <system>Travis CI</system>
-    <url>https://travis-ci.org/io7m/primogenitor</url>
+    <system>GitHub Actions</system>
+    <url>https://github.com/primogenitor/actions</url>
   </ciManagement>
 
   <prerequisites>
