@@ -21,7 +21,7 @@ pipeline {
               maven: 'maven-3.6.3',
               mavenLocalRepo: '.repository') {
               sh 'env | sort'
-              sh 'mvn -Denforcer.skip=true -C -e -U clean install'
+              sh 'mvn -Denforcer.skip=true -Dbnd.baseline.skip=true -C -e -U clean install'
             }
           }
         }
@@ -34,7 +34,7 @@ pipeline {
         withMaven(
           maven: 'maven-3.6.3',
           mavenLocalRepo: '.repository') {
-          sh 'mvn -P arc7-deploy -Denforcer.skip=true -C -e deploy'
+          sh 'mvn -P arc7-deploy -Denforcer.skip=true -Dbnd.baseline.skip=true -C -e deploy'
         }
       }
     }

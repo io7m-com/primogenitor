@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>6.0.0</version>
+  <version>6.1.0</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -89,7 +89,7 @@
     <io7m.reproducible-build-maven-plugin.version>0.13</io7m.reproducible-build-maven-plugin.version>
     <io7m.scijava-maven-plugin.version>2.0.1</io7m.scijava-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
-    <io7m.bnd.plugins.version>5.1.2</io7m.bnd.plugins.version>
+    <io7m.bnd.plugins.version>5.2.0</io7m.bnd.plugins.version>
     <io7m.bnd-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-maven-plugin.version>
     <io7m.bnd-baseline-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-baseline-maven-plugin.version>
     <io7m.bnd-indexer-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-indexer-maven-plugin.version>
