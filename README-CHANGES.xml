@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <c:changelog project="com.io7m.primogenitor" xmlns:c="urn:com.io7m.changelog:4.0">
   <c:releases>
-    <c:release date="2017-03-03T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="0.0.1">
+    <c:release date="2017-03-03T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="0.0.1">
       <c:changes>
         <c:change date="2017-03-03T00:00:00+00:00" summary="Initial release."/>
       </c:changes>
     </c:release>
-    <c:release date="2017-03-08T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="0.0.6">
+    <c:release date="2017-03-08T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="0.0.6">
       <c:changes>
         <c:change date="2017-03-08T00:00:00+00:00" summary="Correctly execute both the JavaDoc and Surefire plugins."/>
       </c:changes>
     </c:release>
-    <c:release date="2017-03-13T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="0.0.7">
+    <c:release date="2017-03-13T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="0.0.7">
       <c:changes>
         <c:change date="2017-03-13T00:00:00+00:00" summary="Disable duplicate class enforcement.">
           <c:tickets>
@@ -30,7 +30,7 @@
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2017-04-02T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="1.0.0">
+    <c:release date="2017-04-02T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="1.0.0">
       <c:changes>
         <c:change date="2017-04-02T00:00:00+00:00" summary="Use japicmp 0.10.0.">
           <c:tickets>
@@ -60,7 +60,7 @@
         <c:change date="2017-03-14T00:00:00+00:00" summary="Only break builds on semantic versioning violations."/>
       </c:changes>
     </c:release>
-    <c:release date="2017-04-02T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="1.0.1">
+    <c:release date="2017-04-02T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="1.0.1">
       <c:changes>
         <c:change date="2017-04-02T00:00:00+00:00" summary="Allow skipping japicmp via the io7m.api.japicmp.skip property."/>
         <c:change date="2017-04-02T00:00:00+00:00" summary="Ignore missing classes.">
@@ -70,7 +70,7 @@
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2017-04-03T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="1.0.2">
+    <c:release date="2017-04-03T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="1.0.2">
       <c:changes>
         <c:change date="2017-04-03T00:00:00+00:00" summary="Fix an excessively strong version pattern restriction.">
           <c:tickets>
@@ -79,7 +79,7 @@
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2017-06-17T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="1.1.0">
+    <c:release date="2017-06-17T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="1.1.0">
       <c:changes>
         <c:change date="2017-04-05T00:00:00+00:00" summary="Add the Sonatype snapshots repository.">
           <c:tickets>
@@ -94,7 +94,7 @@
         <c:change date="2017-06-17T00:00:00+00:00" summary="Add explicit control over the groupId and version of the checkstyle rules artifact."/>
       </c:changes>
     </c:release>
-    <c:release date="2017-06-30T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="1.2.0">
+    <c:release date="2017-06-30T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="1.2.0">
       <c:changes>
         <c:change date="2017-06-30T00:00:00+00:00" summary="Always provide a parsed version for each module.">
           <c:tickets>
@@ -103,7 +103,7 @@
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2017-12-07T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="2.0.0">
+    <c:release date="2017-12-07T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="2.0.0">
       <c:changes>
         <c:change compatible="false" date="2017-10-25T00:00:00+00:00" summary="Disable japicmp due to problems with JDK 9.">
           <c:tickets>
@@ -140,7 +140,7 @@
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2018-05-13T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="2.1.0">
+    <c:release date="2018-05-13T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="2.1.0">
       <c:changes>
         <c:change date="2018-03-06T00:00:00+00:00" summary="Make most constants into properties that can be overridden.">
           <c:tickets>
@@ -160,7 +160,7 @@
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2018-05-17T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="2.1.1">
+    <c:release date="2018-05-17T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="2.1.1">
       <c:changes>
         <c:change date="2018-05-17T00:00:00+00:00" summary="Add a workaround for MJAVADOC-524">
           <c:tickets>
@@ -169,7 +169,7 @@
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2019-08-24T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="3.0.0">
+    <c:release date="2019-08-24T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.0.0">
       <c:changes>
         <c:change compatible="false" date="2018-05-18T00:00:00+00:00" summary="Switch to bnd-maven-plugin instead of maven-bundle-plugin">
           <c:tickets>
@@ -208,14 +208,14 @@
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2019-08-25T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="3.2.0">
+    <c:release date="2019-08-25T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.2.0">
       <c:changes>
         <c:change date="2019-08-24T00:00:00+00:00" summary="Increase default JDK range to [11,14)"/>
         <c:change date="2019-08-25T00:00:00+00:00" summary="Update maven-javadoc-plugin to 3.1.1"/>
         <c:change date="2019-08-25T00:00:00+00:00" summary="Update spotbugs-maven-plugin to 3.1.12.2"/>
       </c:changes>
     </c:release>
-    <c:release date="2019-08-25T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="3.3.0">
+    <c:release date="2019-08-25T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.3.0">
       <c:changes>
         <c:change date="2019-08-25T00:00:00+00:00" summary="Add a support module to help projects produce JavaDoc">
           <c:tickets>
@@ -224,18 +224,18 @@
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2019-08-25T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="3.4.0">
+    <c:release date="2019-08-25T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.4.0">
       <c:changes>
         <c:change date="2019-08-25T00:00:00+00:00" summary="Do not fail on missing Bnd baselines"/>
       </c:changes>
     </c:release>
-    <c:release date="2019-10-14T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="3.5.0">
+    <c:release date="2019-10-14T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.5.0">
       <c:changes>
         <c:change date="2019-10-14T00:00:00+00:00" summary="Upgrade Bnd plugin suite to 4.3.0"/>
         <c:change date="2019-10-14T00:00:00+00:00" summary="Require Maven 3.6.2 instead of 3.6.1"/>
       </c:changes>
     </c:release>
-    <c:release date="2020-04-03T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="3.6.0">
+    <c:release date="2020-04-03T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.6.0">
       <c:changes>
         <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-assembly-plugin to 3.2.0"/>
         <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade checkstyle to 8.31"/>
@@ -255,37 +255,37 @@
         <c:change date="2020-04-03T00:00:00+00:00" summary="Use checkstyle_rules 1.0.0"/>
       </c:changes>
     </c:release>
-    <c:release date="2020-04-03T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="3.7.0">
+    <c:release date="2020-04-03T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.7.0">
       <c:changes>
         <c:change date="2020-04-03T00:00:00+00:00" summary="Add a project.build.outputTimestamp property to assist with reproducible builds"/>
       </c:changes>
     </c:release>
-    <c:release date="2020-04-03T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="3.8.0">
+    <c:release date="2020-04-03T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.8.0">
       <c:changes>
         <c:change date="2020-04-03T00:00:00+00:00" summary="Added the -notimestamp option to JavaDoc, for reproducibility"/>
       </c:changes>
     </c:release>
-    <c:release date="2020-04-03T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="3.9.0">
+    <c:release date="2020-04-03T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.9.0">
       <c:changes>
         <c:change date="2020-04-03T00:00:00+00:00" summary="Add reproducibility workarounds for JavaDoc"/>
       </c:changes>
     </c:release>
-    <c:release date="2020-04-04T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="4.0.0">
+    <c:release date="2020-04-04T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="4.0.0">
       <c:changes>
         <c:change compatible="false" date="2020-04-04T00:00:00+00:00" summary="Enable Bnd baselining by default"/>
       </c:changes>
     </c:release>
-    <c:release date="2020-04-04T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="4.0.1">
+    <c:release date="2020-04-04T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="4.0.1">
       <c:changes>
         <c:change date="2020-04-04T00:00:00+00:00" summary="Add workaround for https://issues.apache.org/jira/browse/MCOMPILER-296; exclude jpms.args files"/>
       </c:changes>
     </c:release>
-    <c:release date="2020-04-10T00:00:00+00:00" ticket-system="com.github.io7m.primogenitor" version="5.0.0">
+    <c:release date="2020-04-10T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="5.0.0">
       <c:changes>
         <c:change compatible="false" date="2020-04-10T00:00:00+00:00" summary="Enable CheckStyle by default for all builds"/>
       </c:changes>
     </c:release>
-    <c:release date="2020-10-02T18:26:36+00:00" ticket-system="com.github.io7m.primogenitor" version="6.0.0">
+    <c:release date="2020-10-02T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="6.0.0">
       <c:changes>
         <c:change date="2020-10-02T00:00:00+00:00" summary="Update bnd to 5.1.2"/>
         <c:change date="2020-10-02T00:00:00+00:00" summary="Update build-helper-maven-plugin to 3.2.0"/>
@@ -307,11 +307,16 @@
             <c:ticket id="50"/>
           </c:tickets>
         </c:change>
-        <c:change date="2020-10-02T18:26:36+00:00" summary="Enforce bytecode versions.">
+        <c:change date="2020-10-02T00:00:00+00:00" summary="Enforce bytecode versions.">
           <c:tickets>
             <c:ticket id="49"/>
           </c:tickets>
         </c:change>
+      </c:changes>
+    </c:release>
+    <c:release date="2020-12-11T14:23:07+00:00" is-open="true" ticket-system="com.github.io7m.primogenitor" version="6.1.0">
+      <c:changes>
+        <c:change date="2020-12-11T14:23:07+00:00" summary="Update bnd to 5.2.0"/>
       </c:changes>
     </c:release>
   </c:releases>
