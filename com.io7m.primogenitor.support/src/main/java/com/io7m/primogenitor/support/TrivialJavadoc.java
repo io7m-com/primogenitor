@@ -80,6 +80,22 @@ public final class TrivialJavadoc
     }
 
     try (var writer = Files.newBufferedWriter(optionsFile, UTF_8)) {
+      writer.append("-encoding");
+      writer.newLine();
+      writer.append("UTF-8");
+      writer.newLine();
+      writer.append("-locale");
+      writer.newLine();
+      writer.append("en_US");
+      writer.newLine();
+      writer.append("-charset");
+      writer.newLine();
+      writer.append("UTF-8");
+      writer.newLine();
+      writer.append("-docencoding");
+      writer.newLine();
+      writer.append("UTF-8");
+      writer.newLine();
       writer.append("-notimestamp");
       writer.newLine();
       writer.append("-d");
