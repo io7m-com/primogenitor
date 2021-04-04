@@ -823,6 +823,9 @@
                 <includes>
                   <include>${project.artifactId}-${project.version}.*\.jar</include>
                 </includes>
+                <manifestAttributes>
+                  <manifestAttribute>Build-Jdk-Spec</manifestAttribute>
+                </manifestAttributes>
               </configuration>
             </execution>
           </executions>
