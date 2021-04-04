@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>6.2.0</version>
+  <version>6.3.0</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -46,7 +46,7 @@
     <io7m.checkstyle.path>com/io7m/checkstyle_rules/checkstyle.xml</io7m.checkstyle.path>
 
     <!-- The version of the checkstyle tools used -->
-    <io7m.checkstyle.tools.version>8.36.2</io7m.checkstyle.tools.version>
+    <io7m.checkstyle.tools.version>8.41.1</io7m.checkstyle.tools.version>
 
     <!-- The previous groupId of the API. Used to enforce semantic versioning. -->
     <io7m.api.previousGroupId>${project.groupId}</io7m.api.previousGroupId>
@@ -70,7 +70,7 @@
     <io7m.jacoco-maven-plugin.version>0.8.6</io7m.jacoco-maven-plugin.version>
     <io7m.maven-assembly-plugin.version>3.3.0</io7m.maven-assembly-plugin.version>
     <io7m.maven-bundle-plugin.version>3.5.0</io7m.maven-bundle-plugin.version>
-    <io7m.maven-checkstyle-plugin.version>3.1.1</io7m.maven-checkstyle-plugin.version>
+    <io7m.maven-checkstyle-plugin.version>3.1.2</io7m.maven-checkstyle-plugin.version>
     <io7m.maven-clean-plugin.version>3.1.0</io7m.maven-clean-plugin.version>
     <io7m.maven-compiler-plugin.version>3.8.1</io7m.maven-compiler-plugin.version>
     <io7m.maven-dependency-plugin.version>3.1.2</io7m.maven-dependency-plugin.version>
@@ -87,15 +87,15 @@
     <io7m.maven-surefire-plugin.version>3.0.0-M5</io7m.maven-surefire-plugin.version>
     <io7m.nexus-staging-maven-plugin.version>1.6.8</io7m.nexus-staging-maven-plugin.version>
     <io7m.reproducible-build-maven-plugin.version>0.13</io7m.reproducible-build-maven-plugin.version>
-    <io7m.scijava-maven-plugin.version>2.0.1</io7m.scijava-maven-plugin.version>
+    <io7m.scijava-maven-plugin.version>2.1.0</io7m.scijava-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
-    <io7m.bnd.plugins.version>5.2.0</io7m.bnd.plugins.version>
+    <io7m.bnd.plugins.version>5.3.0</io7m.bnd.plugins.version>
     <io7m.bnd-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-maven-plugin.version>
     <io7m.bnd-baseline-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-baseline-maven-plugin.version>
     <io7m.bnd-indexer-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-indexer-maven-plugin.version>
     <io7m.bnd-export-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-export-maven-plugin.version>
     <io7m.bnd-resolver-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-resolver-maven-plugin.version>
-    <io7m.spotbugs-maven-plugin.version>4.1.3</io7m.spotbugs-maven-plugin.version>
+    <io7m.spotbugs-maven-plugin.version>4.2.2</io7m.spotbugs-maven-plugin.version>
     <io7m.fb-contrib-plugin.version>7.4.0.sb</io7m.fb-contrib-plugin.version>
     <io7m.findsecbugs-plugin.version>1.7.1</io7m.findsecbugs-plugin.version>
     <io7m.checksum-maven-plugin.version>1.9</io7m.checksum-maven-plugin.version>
@@ -823,6 +823,9 @@
                 <includes>
                   <include>${project.artifactId}-${project.version}.*\.jar</include>
                 </includes>
+                <manifestAttributes>
+                  <manifestAttribute>Build-Jdk-Spec</manifestAttribute>
+                </manifestAttributes>
               </configuration>
             </execution>
           </executions>
@@ -919,7 +922,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>exec-maven-plugin</artifactId>
-          <version>1.6.0</version>
+          <version>3.0.0</version>
         </plugin>
       </plugins>
     </pluginManagement>
