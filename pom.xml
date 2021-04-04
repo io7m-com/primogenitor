@@ -87,7 +87,7 @@
     <io7m.maven-surefire-plugin.version>3.0.0-M5</io7m.maven-surefire-plugin.version>
     <io7m.nexus-staging-maven-plugin.version>1.6.8</io7m.nexus-staging-maven-plugin.version>
     <io7m.reproducible-build-maven-plugin.version>0.13</io7m.reproducible-build-maven-plugin.version>
-    <io7m.scijava-maven-plugin.version>2.0.1</io7m.scijava-maven-plugin.version>
+    <io7m.scijava-maven-plugin.version>2.1.0</io7m.scijava-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
     <io7m.bnd.plugins.version>5.3.0</io7m.bnd.plugins.version>
     <io7m.bnd-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-maven-plugin.version>
@@ -95,7 +95,7 @@
     <io7m.bnd-indexer-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-indexer-maven-plugin.version>
     <io7m.bnd-export-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-export-maven-plugin.version>
     <io7m.bnd-resolver-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-resolver-maven-plugin.version>
-    <io7m.spotbugs-maven-plugin.version>4.1.4</io7m.spotbugs-maven-plugin.version>
+    <io7m.spotbugs-maven-plugin.version>4.2.2</io7m.spotbugs-maven-plugin.version>
     <io7m.fb-contrib-plugin.version>7.4.0.sb</io7m.fb-contrib-plugin.version>
     <io7m.findsecbugs-plugin.version>1.7.1</io7m.findsecbugs-plugin.version>
     <io7m.checksum-maven-plugin.version>1.9</io7m.checksum-maven-plugin.version>
