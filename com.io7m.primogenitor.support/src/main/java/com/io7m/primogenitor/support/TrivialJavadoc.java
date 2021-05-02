@@ -30,6 +30,10 @@ import java.util.stream.Stream;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 
+/**
+ * A drastically simplified JavaDoc interface.
+ */
+
 public final class TrivialJavadoc
 {
   private static final Logger LOG = Logger.getLogger(TrivialJavadoc.class.getCanonicalName());

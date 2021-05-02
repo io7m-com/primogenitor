@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>6.3.0</version>
+  <version>6.4.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -28,7 +28,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- The version of the JDK required to _build_ the code. -->
-    <io7m.java.requiredSDKBuildVersion>11,[15,16)</io7m.java.requiredSDKBuildVersion>
+    <io7m.java.requiredSDKBuildVersion>11,[16,17)</io7m.java.requiredSDKBuildVersion>
 
     <!-- The version of Java targeted by the code. -->
     <io7m.java.targetJavaVersion>11</io7m.java.targetJavaVersion>
@@ -40,13 +40,13 @@
     <io7m.checkstyle.artifact>com.io7m.checkstyle_rules</io7m.checkstyle.artifact>
 
     <!-- The version of the artifact that contains checkstyle rules for the project. -->
-    <io7m.checkstyle.version>1.0.0</io7m.checkstyle.version>
+    <io7m.checkstyle.version>1.2.0</io7m.checkstyle.version>
 
     <!-- The path to the checkstyle configuration inside the checkstyle package. -->
     <io7m.checkstyle.path>com/io7m/checkstyle_rules/checkstyle.xml</io7m.checkstyle.path>
 
     <!-- The version of the checkstyle tools used -->
-    <io7m.checkstyle.tools.version>8.41.1</io7m.checkstyle.tools.version>
+    <io7m.checkstyle.tools.version>8.42</io7m.checkstyle.tools.version>
 
     <!-- The previous groupId of the API. Used to enforce semantic versioning. -->
     <io7m.api.previousGroupId>${project.groupId}</io7m.api.previousGroupId>
@@ -95,7 +95,7 @@
     <io7m.bnd-indexer-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-indexer-maven-plugin.version>
     <io7m.bnd-export-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-export-maven-plugin.version>
     <io7m.bnd-resolver-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-resolver-maven-plugin.version>
-    <io7m.spotbugs-maven-plugin.version>4.2.2</io7m.spotbugs-maven-plugin.version>
+    <io7m.spotbugs-maven-plugin.version>4.2.3</io7m.spotbugs-maven-plugin.version>
     <io7m.fb-contrib-plugin.version>7.4.0.sb</io7m.fb-contrib-plugin.version>
     <io7m.findsecbugs-plugin.version>1.7.1</io7m.findsecbugs-plugin.version>
     <io7m.checksum-maven-plugin.version>1.9</io7m.checksum-maven-plugin.version>
