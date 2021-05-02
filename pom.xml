@@ -28,7 +28,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- The version of the JDK required to _build_ the code. -->
-    <io7m.java.requiredSDKBuildVersion>11,[15,16)</io7m.java.requiredSDKBuildVersion>
+    <io7m.java.requiredSDKBuildVersion>11,[16,17)</io7m.java.requiredSDKBuildVersion>
 
     <!-- The version of Java targeted by the code. -->
     <io7m.java.targetJavaVersion>11</io7m.java.targetJavaVersion>
