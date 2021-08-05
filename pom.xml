@@ -313,6 +313,13 @@
               <artifactId>scijava-maven-plugin</artifactId>
               <version>${io7m.scijava-maven-plugin.version}</version>
             </dependency>
+
+            <!-- https://github.com/mojohaus/extra-enforcer-rules/issues/131#issuecomment-890329715 -->
+            <dependency>
+              <groupId>org.apache.maven.shared</groupId>
+              <artifactId>maven-dependency-tree</artifactId>
+              <version>2.2</version>
+            </dependency>
           </dependencies>
 
           <!-- Perform checks during build -->
