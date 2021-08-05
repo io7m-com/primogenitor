@@ -98,7 +98,7 @@
     <io7m.spotbugs-maven-plugin.version>4.3.0</io7m.spotbugs-maven-plugin.version>
     <io7m.fb-contrib-plugin.version>7.4.0.sb</io7m.fb-contrib-plugin.version>
     <io7m.findsecbugs-plugin.version>1.7.1</io7m.findsecbugs-plugin.version>
-    <io7m.checksum-maven-plugin.version>1.9</io7m.checksum-maven-plugin.version>
+    <io7m.checksum-maven-plugin.version>1.11</io7m.checksum-maven-plugin.version>
 
     <!-- Strings that appear in jars -->
     <io7m.jar.vendor>io7m.com</io7m.jar.vendor>
