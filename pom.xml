@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>6.4.3-SNAPSHOT</version>
+  <version>7.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -28,10 +28,10 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- The version of the JDK required to _build_ the code. -->
-    <io7m.java.requiredSDKBuildVersion>11,[16,17)</io7m.java.requiredSDKBuildVersion>
+    <io7m.java.requiredSDKBuildVersion>[17,18)</io7m.java.requiredSDKBuildVersion>
 
     <!-- The version of Java targeted by the code. -->
-    <io7m.java.targetJavaVersion>11</io7m.java.targetJavaVersion>
+    <io7m.java.targetJavaVersion>17</io7m.java.targetJavaVersion>
 
     <!-- The groupId of the artifact that contains checkstyle rules for the project. -->
     <io7m.checkstyle.groupId>com.io7m.checkstyle_rules</io7m.checkstyle.groupId>
