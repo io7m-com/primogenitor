@@ -389,7 +389,9 @@
                     Require builds to be reproducible.
                     This means no snapshot dependencies!
                   -->
-                  <requireReproducibleBuilds implementation="org.scijava.maven.plugin.enforcer.RequireReproducibleBuilds"/>
+                  <requireReleaseDeps>
+                    <message>No snapshot dependencies are allowed.</message>
+                  </requireReleaseDeps>
 
                   <!--
                     Require that bytecode is at most ${io7m.java.targetJavaVersion}.
