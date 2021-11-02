@@ -14,6 +14,6 @@ jobs:
       - name: JDK
         uses: actions/setup-java@v1
         with:
-          java-version: 15
+          java-version: 17
       - name: Build
-        run: mvn --errors -Dbnd.baseline.skip=true -Denforcer.skip=true clean verify
+        run: .github/workflows/run.bat

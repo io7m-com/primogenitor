@@ -10,15 +10,15 @@ pipeline {
   stages {
     stage('BuildAndTest') {
       parallel {
-        stage('linux:openjdk-11-hotspot') {
+        stage('linux:openjdk-17-hotspot') {
           agent { label 'linux' }
           tools {
-            jdk   'openjdk-11-hotspot'
-            maven 'maven-3.6.3'
+            jdk   'openjdk-17-hotspot'
+            maven 'maven-3.8.3'
           }
           steps {
             withMaven(
-              maven: 'maven-3.6.3',
+              maven: 'maven-3.8.3',
               mavenLocalRepo: '.repository') {
               sh 'env | sort'
               sh 'mvn -Denforcer.skip=true -Dbnd.baseline.skip=true -C -e -U clean install'
@@ -32,7 +32,7 @@ pipeline {
       when { buildingTag() }
       steps {
         withMaven(
-          maven: 'maven-3.6.3',
+          maven: 'maven-3.8.3',
           mavenLocalRepo: '.repository') {
           sh 'mvn -P arc7-deploy -Denforcer.skip=true -Dbnd.baseline.skip=true -C -e deploy'
         }
@@ -45,7 +45,7 @@ pipeline {
       node('starfruit-mq') {
         script {
           withMaven(
-            maven: 'maven-3.6.3',
+            maven: 'maven-3.8.3',
             mavenLocalRepo: '.repository') {
             withCredentials([
               usernamePassword(
@@ -73,7 +73,7 @@ pipeline {
       node('starfruit-mq') {
         script {
           withMaven(
-            maven: 'maven-3.6.3',
+            maven: 'maven-3.8.3',
             mavenLocalRepo: '.repository') {
             withCredentials([
               usernamePassword(
