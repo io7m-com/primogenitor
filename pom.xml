@@ -391,6 +391,7 @@
                   -->
                   <requireReleaseDeps>
                     <message>No snapshot dependencies are allowed.</message>
+                    <onlyWhenRelease>true</onlyWhenRelease>
                   </requireReleaseDeps>
 
                   <!--
