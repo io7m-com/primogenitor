@@ -328,18 +328,11 @@
                   <!--
                     Standard Rules
                     http://maven.apache.org/enforcer/enforcer-rules/
-
-                    XXX: Disabled due to an apparent bug.
-                  -->
-                  <!--
-                  <requirePluginVersions>
-                    <message>Plugins need to be versioned!</message>
-                  </requirePluginVersions>
                   -->
 
-                  <!-- Require Maven [3.6.2, 4.0.0) -->
+                  <!-- Require Maven [3.8.2, 4.0.0) -->
                   <requireMavenVersion>
-                    <version>[3.6.2, 4.0.0)</version>
+                    <version>[3.8.2, 4.0.0)</version>
                   </requireMavenVersion>
 
                   <!-- Require JDK version -->
