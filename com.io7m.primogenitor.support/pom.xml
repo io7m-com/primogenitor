@@ -8,7 +8,7 @@
   <parent>
     <artifactId>com.io7m.primogenitor</artifactId>
     <groupId>com.io7m.primogenitor</groupId>
-    <version>7.0.0-beta0002</version>
+    <version>7.0.0-beta0003</version>
   </parent>
 
   <artifactId>com.io7m.primogenitor.support</artifactId>
@@ -17,5 +17,9 @@
   <name>com.io7m.primogenitor.support</name>
   <description>The initial ancestor pom for io7m.com projects (Support module)</description>
   <url>http://www.io7m.com/</url>
+
+  <properties>
+    <io7m.java.targetJavaVersion>11</io7m.java.targetJavaVersion>
+  </properties>
 
 </project>
