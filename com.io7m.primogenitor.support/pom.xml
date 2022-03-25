@@ -16,7 +16,7 @@
 
   <name>com.io7m.primogenitor.support</name>
   <description>The initial ancestor pom for io7m.com projects (Support module)</description>
-  <url>http://www.io7m.com/</url>
+  <url>https://www.io7m.com/</url>
 
   <properties>
     <io7m.java.targetJavaVersion>11</io7m.java.targetJavaVersion>
