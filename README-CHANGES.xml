@@ -357,7 +357,7 @@
         <c:change date="2021-05-02T00:00:00+00:00" summary="Upgrade to minisite 4.0.0"/>
       </c:changes>
     </c:release>
-    <c:release date="2021-11-02T20:41:48+00:00" is-open="true" ticket-system="com.github.io7m.primogenitor" version="7.0.0">
+    <c:release date="2022-03-25T21:15:59+00:00" is-open="true" ticket-system="com.github.io7m.primogenitor" version="7.0.0">
       <c:changes>
         <c:change date="2021-08-05T00:00:00+00:00" summary="Upgrade spotbugs to 4.3.0"/>
         <c:change date="2021-08-05T00:00:00+00:00" summary="Upgrade maven-dependency-plugin to 3.2.0"/>
@@ -373,7 +373,19 @@
         <c:change date="2021-11-02T00:00:00+00:00" summary="Upgrade extra-enforcer-rules to 1.4."/>
         <c:change date="2021-11-02T00:00:00+00:00" summary="Upgrade reproducible-build-maven-plugin to 0.14."/>
         <c:change date="2021-11-02T00:00:00+00:00" summary="Upgrade spotbugs to 4.4.2.2."/>
-        <c:change compatible="false" date="2021-11-02T20:41:48+00:00" summary="Start requiring JDK 17 everywhere."/>
+        <c:change compatible="false" date="2021-11-02T00:00:00+00:00" summary="Start requiring JDK 17 everywhere."/>
+        <c:change date="2022-03-12T00:00:00+00:00" summary="Update bnd to 6.2.0"/>
+        <c:change date="2022-03-12T00:00:00+00:00" summary="Update spotbugs to 4.5.3.0"/>
+        <c:change date="2022-03-12T00:00:00+00:00" summary="Update reproducible-build to 0.15"/>
+        <c:change date="2022-03-12T00:00:00+00:00" summary="Update maven compiler plugin to 3.10.1"/>
+        <c:change date="2022-03-12T00:00:00+00:00" summary="Update maven dependency plugin to 3.3.0"/>
+        <c:change date="2022-03-12T00:00:00+00:00" summary="Update maven deploy/javadoc/jar/site plugins"/>
+        <c:change date="2022-03-12T00:00:00+00:00" summary="Update build number and build helper plugins"/>
+        <c:change date="2022-03-12T00:00:00+00:00" summary="Update nexus staging plugin"/>
+        <c:change date="2022-03-25T00:00:00+00:00" summary="Update scijava maven plugin to 2.2.0"/>
+        <c:change date="2022-03-25T00:00:00+00:00" summary="Update extra enforcer rules to 1.5.1"/>
+        <c:change date="2022-03-25T00:00:00+00:00" summary="Update checkstyle tools to 10.0"/>
+        <c:change date="2022-03-25T21:15:59+00:00" summary="Update spotbugs maven plugin to 4.6.0.0"/>
       </c:changes>
     </c:release>
   </c:releases>

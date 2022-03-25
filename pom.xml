@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>7.0.0-beta0003</version>
+  <version>7.0.0-beta0005</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -21,7 +21,7 @@
 
   <name>com.io7m.primogenitor</name>
   <description>The initial ancestor pom for io7m.com projects</description>
-  <url>http://www.io7m.com/</url>
+  <url>https://www.io7m.com/</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -46,7 +46,7 @@
     <io7m.checkstyle.path>com/io7m/checkstyle_rules/checkstyle.xml</io7m.checkstyle.path>
 
     <!-- The version of the checkstyle tools used -->
-    <io7m.checkstyle.tools.version>9.1</io7m.checkstyle.tools.version>
+    <io7m.checkstyle.tools.version>10.0</io7m.checkstyle.tools.version>
 
     <!-- The previous groupId of the API. Used to enforce semantic versioning. -->
     <io7m.api.previousGroupId>${project.groupId}</io7m.api.previousGroupId>
@@ -64,38 +64,38 @@
     <project.build.outputTimestamp>2020-01-01T00:00:00Z</project.build.outputTimestamp>
 
     <!-- The versions of all plugins used -->
-    <io7m.build-helper-maven-plugin.version>3.2.0</io7m.build-helper-maven-plugin.version>
-    <io7m.buildnumber-maven-plugin.version>1.4</io7m.buildnumber-maven-plugin.version>
-    <io7m.extra-enforcer-rules.version>1.4</io7m.extra-enforcer-rules.version>
+    <io7m.build-helper-maven-plugin.version>3.3.0</io7m.build-helper-maven-plugin.version>
+    <io7m.buildnumber-maven-plugin.version>3.0.0</io7m.buildnumber-maven-plugin.version>
+    <io7m.extra-enforcer-rules.version>1.5.1</io7m.extra-enforcer-rules.version>
     <io7m.jacoco-maven-plugin.version>0.8.7</io7m.jacoco-maven-plugin.version>
     <io7m.maven-assembly-plugin.version>3.3.0</io7m.maven-assembly-plugin.version>
     <io7m.maven-bundle-plugin.version>3.5.0</io7m.maven-bundle-plugin.version>
     <io7m.maven-checkstyle-plugin.version>3.1.2</io7m.maven-checkstyle-plugin.version>
     <io7m.maven-clean-plugin.version>3.1.0</io7m.maven-clean-plugin.version>
-    <io7m.maven-compiler-plugin.version>3.8.1</io7m.maven-compiler-plugin.version>
-    <io7m.maven-dependency-plugin.version>3.2.0</io7m.maven-dependency-plugin.version>
-    <io7m.maven-deploy-plugin.version>3.0.0-M1</io7m.maven-deploy-plugin.version>
+    <io7m.maven-compiler-plugin.version>3.10.1</io7m.maven-compiler-plugin.version>
+    <io7m.maven-dependency-plugin.version>3.3.0</io7m.maven-dependency-plugin.version>
+    <io7m.maven-deploy-plugin.version>3.0.0-M2</io7m.maven-deploy-plugin.version>
     <io7m.maven-enforcer-plugin.version>3.0.0</io7m.maven-enforcer-plugin.version>
     <io7m.maven-gpg-plugin.version>3.0.1</io7m.maven-gpg-plugin.version>
     <io7m.maven-install-plugin.version>3.0.0-M1</io7m.maven-install-plugin.version>
-    <io7m.maven-jar-plugin.version>3.2.0</io7m.maven-jar-plugin.version>
-    <io7m.maven-javadoc-plugin.version>3.3.1</io7m.maven-javadoc-plugin.version>
+    <io7m.maven-jar-plugin.version>3.2.2</io7m.maven-jar-plugin.version>
+    <io7m.maven-javadoc-plugin.version>3.3.2</io7m.maven-javadoc-plugin.version>
     <io7m.maven-resources-plugin.version>3.2.0</io7m.maven-resources-plugin.version>
     <io7m.maven-shade-plugin.version>3.2.4</io7m.maven-shade-plugin.version>
-    <io7m.maven-site-plugin.version>3.9.1</io7m.maven-site-plugin.version>
+    <io7m.maven-site-plugin.version>3.11.0</io7m.maven-site-plugin.version>
     <io7m.maven-source-plugin.version>3.2.1</io7m.maven-source-plugin.version>
     <io7m.maven-surefire-plugin.version>3.0.0-M5</io7m.maven-surefire-plugin.version>
-    <io7m.nexus-staging-maven-plugin.version>1.6.8</io7m.nexus-staging-maven-plugin.version>
-    <io7m.reproducible-build-maven-plugin.version>0.14</io7m.reproducible-build-maven-plugin.version>
-    <io7m.scijava-maven-plugin.version>2.1.0</io7m.scijava-maven-plugin.version>
+    <io7m.nexus-staging-maven-plugin.version>1.6.12</io7m.nexus-staging-maven-plugin.version>
+    <io7m.reproducible-build-maven-plugin.version>0.15</io7m.reproducible-build-maven-plugin.version>
+    <io7m.scijava-maven-plugin.version>2.2.0</io7m.scijava-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
-    <io7m.bnd.plugins.version>6.0.0</io7m.bnd.plugins.version>
+    <io7m.bnd.plugins.version>6.2.0</io7m.bnd.plugins.version>
     <io7m.bnd-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-maven-plugin.version>
     <io7m.bnd-baseline-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-baseline-maven-plugin.version>
     <io7m.bnd-indexer-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-indexer-maven-plugin.version>
     <io7m.bnd-export-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-export-maven-plugin.version>
     <io7m.bnd-resolver-maven-plugin.version>${io7m.bnd.plugins.version}</io7m.bnd-resolver-maven-plugin.version>
-    <io7m.spotbugs-maven-plugin.version>4.4.2.2</io7m.spotbugs-maven-plugin.version>
+    <io7m.spotbugs-maven-plugin.version>4.6.0.0</io7m.spotbugs-maven-plugin.version>
     <io7m.fb-contrib-plugin.version>7.4.0.sb</io7m.fb-contrib-plugin.version>
     <io7m.findsecbugs-plugin.version>1.7.1</io7m.findsecbugs-plugin.version>
     <io7m.checksum-maven-plugin.version>1.11</io7m.checksum-maven-plugin.version>
@@ -110,7 +110,7 @@
   <licenses>
     <license>
       <name>ISC License</name>
-      <url>http://io7m.com/license/isc.txt</url>
+      <url>https://io7m.com/license/isc.txt</url>
     </license>
   </licenses>
 
@@ -127,12 +127,12 @@
       <id>io7m</id>
       <name>io7m</name>
       <email>code@io7m.com</email>
-      <url>http://io7m.com</url>
+      <url>https://io7m.com</url>
     </developer>
   </developers>
 
   <issueManagement>
-    <url>http://github.com/io7m/primogenitor/issues</url>
+    <url>https://github.com/io7m/primogenitor/issues</url>
     <system>GitHub Issues</system>
   </issueManagement>
 
@@ -244,7 +244,7 @@
 
         <!--
           Truezip plugin.
-          http://www.mojohaus.org/truezip/truezip-maven-plugin/
+          https://www.mojohaus.org/truezip/truezip-maven-plugin/
 
           Used to pack and unpack zip files during the build.
         -->
@@ -268,7 +268,7 @@
 
         <!--
           Build Helper plugin.
-          http://www.mojohaus.org/build-helper-maven-plugin/
+          https://www.mojohaus.org/build-helper-maven-plugin/
 
           Used to add source directories and other project-specific tasks.
         -->
@@ -327,7 +327,7 @@
                 <rules>
                   <!--
                     Standard Rules
-                    http://maven.apache.org/enforcer/enforcer-rules/
+                    https://maven.apache.org/enforcer/enforcer-rules/
                   -->
 
                   <!-- Require Maven [3.8.2, 4.0.0) -->
@@ -343,7 +343,7 @@
                   <!--
                     Extra Enforcer Rules
                     org.codehaus.mojo:extra-enforcer-rules
-                    http://www.mojohaus.org/extra-enforcer-rules/
+                    https://www.mojohaus.org/extra-enforcer-rules/
                   -->
 
                   <!--
@@ -409,7 +409,7 @@
 
         <!--
           Build Number Maven plugin
-          http://www.mojohaus.org/buildnumber-maven-plugin/
+          https://www.mojohaus.org/buildnumber-maven-plugin/
           This plugin embeds a build number in the JAR manifest.
         -->
         <plugin>
@@ -683,7 +683,7 @@
               <!--
                 Extra contributed rules.
 
-                http://fb-contrib.sourceforge.net/bugdescriptions.html
+                https://fb-contrib.sourceforge.net/bugdescriptions.html
               -->
 
               <dependency>
@@ -799,7 +799,7 @@
 
         <!--
           Reproducible Build plugin
-          http://zlika.github.io/reproducible-build-maven-plugin/index.html
+          https://zlika.github.io/reproducible-build-maven-plugin/index.html
         -->
         <plugin>
           <groupId>io.github.zlika</groupId>
@@ -877,7 +877,7 @@
 
         <!--
           Maven JaCoCo plugin.
-          http://www.jacoco.org/
+          https://www.jacoco.org/
 
           This collects code coverage data for publication.
         -->
@@ -911,7 +911,7 @@
 
         <!--
           Exec Maven plugin.
-          http://www.mojohaus.org/exec-maven-plugin/
+          https://www.mojohaus.org/exec-maven-plugin/
 
           Used for general Java/Executable calls.
         -->
@@ -937,6 +937,14 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
+        <inherited>false</inherited>
+          <!-- Skip checks for parent -->
+          <executions>
+            <execution>
+              <id>enforce-rules</id>
+              <phase>none</phase>
+            </execution>
+          </executions>
       </plugin>
 
       <plugin>
