@@ -66,7 +66,7 @@
     <!-- The versions of all plugins used -->
     <io7m.build-helper-maven-plugin.version>3.3.0</io7m.build-helper-maven-plugin.version>
     <io7m.buildnumber-maven-plugin.version>3.0.0</io7m.buildnumber-maven-plugin.version>
-    <io7m.extra-enforcer-rules.version>1.4</io7m.extra-enforcer-rules.version>
+    <io7m.extra-enforcer-rules.version>1.5.1</io7m.extra-enforcer-rules.version>
     <io7m.jacoco-maven-plugin.version>0.8.7</io7m.jacoco-maven-plugin.version>
     <io7m.maven-assembly-plugin.version>3.3.0</io7m.maven-assembly-plugin.version>
     <io7m.maven-bundle-plugin.version>3.5.0</io7m.maven-bundle-plugin.version>
