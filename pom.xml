@@ -21,7 +21,7 @@
 
   <name>com.io7m.primogenitor</name>
   <description>The initial ancestor pom for io7m.com projects</description>
-  <url>http://www.io7m.com/</url>
+  <url>https://www.io7m.com/</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -110,7 +110,7 @@
   <licenses>
     <license>
       <name>ISC License</name>
-      <url>http://io7m.com/license/isc.txt</url>
+      <url>https://io7m.com/license/isc.txt</url>
     </license>
   </licenses>
 
@@ -127,12 +127,12 @@
       <id>io7m</id>
       <name>io7m</name>
       <email>code@io7m.com</email>
-      <url>http://io7m.com</url>
+      <url>https://io7m.com</url>
     </developer>
   </developers>
 
   <issueManagement>
-    <url>http://github.com/io7m/primogenitor/issues</url>
+    <url>https://github.com/io7m/primogenitor/issues</url>
     <system>GitHub Issues</system>
   </issueManagement>
 
@@ -244,7 +244,7 @@
 
         <!--
           Truezip plugin.
-          http://www.mojohaus.org/truezip/truezip-maven-plugin/
+          https://www.mojohaus.org/truezip/truezip-maven-plugin/
 
           Used to pack and unpack zip files during the build.
         -->
@@ -268,7 +268,7 @@
 
         <!--
           Build Helper plugin.
-          http://www.mojohaus.org/build-helper-maven-plugin/
+          https://www.mojohaus.org/build-helper-maven-plugin/
 
           Used to add source directories and other project-specific tasks.
         -->
@@ -327,7 +327,7 @@
                 <rules>
                   <!--
                     Standard Rules
-                    http://maven.apache.org/enforcer/enforcer-rules/
+                    https://maven.apache.org/enforcer/enforcer-rules/
                   -->
 
                   <!-- Require Maven [3.8.2, 4.0.0) -->
@@ -343,7 +343,7 @@
                   <!--
                     Extra Enforcer Rules
                     org.codehaus.mojo:extra-enforcer-rules
-                    http://www.mojohaus.org/extra-enforcer-rules/
+                    https://www.mojohaus.org/extra-enforcer-rules/
                   -->
 
                   <!--
@@ -409,7 +409,7 @@
 
         <!--
           Build Number Maven plugin
-          http://www.mojohaus.org/buildnumber-maven-plugin/
+          https://www.mojohaus.org/buildnumber-maven-plugin/
           This plugin embeds a build number in the JAR manifest.
         -->
         <plugin>
@@ -683,7 +683,7 @@
               <!--
                 Extra contributed rules.
 
-                http://fb-contrib.sourceforge.net/bugdescriptions.html
+                https://fb-contrib.sourceforge.net/bugdescriptions.html
               -->
 
               <dependency>
@@ -799,7 +799,7 @@
 
         <!--
           Reproducible Build plugin
-          http://zlika.github.io/reproducible-build-maven-plugin/index.html
+          https://zlika.github.io/reproducible-build-maven-plugin/index.html
         -->
         <plugin>
           <groupId>io.github.zlika</groupId>
@@ -877,7 +877,7 @@
 
         <!--
           Maven JaCoCo plugin.
-          http://www.jacoco.org/
+          https://www.jacoco.org/
 
           This collects code coverage data for publication.
         -->
@@ -911,7 +911,7 @@
 
         <!--
           Exec Maven plugin.
-          http://www.mojohaus.org/exec-maven-plugin/
+          https://www.mojohaus.org/exec-maven-plugin/
 
           Used for general Java/Executable calls.
         -->
