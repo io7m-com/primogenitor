@@ -937,14 +937,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
-        <inherited>false</inherited>
-          <!-- Skip checks for parent -->
-          <executions>
-            <execution>
-              <id>enforce-rules</id>
-              <phase>none</phase>
-            </execution>
-          </executions>
       </plugin>
 
       <plugin>
