@@ -18,8 +18,17 @@ primogenitor
 To build this project, you must use:
 
 ```
-$ mvn clean package
+$ mvn -Denforcer.skip=true clean package
 ```
+
+The reason for this is that this POM file is intended to be the
+root POM for [io7m](http://io7m.com) projects and uses the [Maven
+Enforcer](https://maven.apache.org/enforcer/maven-enforcer-plugin/)
+plugin to require that descendant projects define values for certain
+properties that this root POM leaves empty. Because there is no way
+in Maven to have a plugin applied only to descendants, the root POM
+actually cannot pass its own checks! Using the `enforcer.skip` property
+allows the root POM to be installed and deployed to repositories.
 
 ## Features
 
@@ -31,8 +40,8 @@ The `primogenitor` POM is heavily biased towards extensive static checking, and 
 By setting the parent of a project's POM file to `com.io7m.primogenitor`, the project receives the following services:
 
 * Enforcement of the presence of POM properties required for Maven Central: Descendant POMs are required to provide `description`, `url`, and `name` elements.
-* Enforcement of a minimum Java version (currently `11`) with a friendly error message if the project is built on a JDK that is too old.
-* Enforcement of a minimum Maven version (currently `3.6.2`) with a friendly error message if the project is built with a version of Maven that is too old.
+* Enforcement of a minimum Java version (currently `17`) with a friendly error message if the project is built on a JDK that is too old.
+* Enforcement of a minimum Maven version (currently `3.8.2`) with a friendly error message if the project is built with a version of Maven that is too old.
 * The immediate rejection of circular dependencies.
 * Enforcement of reproducible builds: No (transitive) dependency may depend on a `SNAPSHOT` version.
 * Enforcement of plugin versioning: No plugin may be added without an explicit version number.
