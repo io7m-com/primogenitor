@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>7.1.0</version>
+  <version>7.1.1</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -61,13 +61,13 @@
     <io7m.javadoc.docLint>-Xdoclint:all</io7m.javadoc.docLint>
 
     <!-- The timestamp used for all outputs, for reproducibility. -->
-    <project.build.outputTimestamp>2020-01-01T00:00:00Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2022-09-21T21:22:13Z</project.build.outputTimestamp>
 
     <!-- The versions of all plugins used -->
     <io7m.build-helper-maven-plugin.version>3.3.0</io7m.build-helper-maven-plugin.version>
     <io7m.buildnumber-maven-plugin.version>3.0.0</io7m.buildnumber-maven-plugin.version>
     <io7m.extra-enforcer-rules.version>1.5.1</io7m.extra-enforcer-rules.version>
-    <io7m.jacoco-maven-plugin.version>0.8.7</io7m.jacoco-maven-plugin.version>
+    <io7m.jacoco-maven-plugin.version>0.8.8</io7m.jacoco-maven-plugin.version>
     <io7m.maven-assembly-plugin.version>3.3.0</io7m.maven-assembly-plugin.version>
     <io7m.maven-bundle-plugin.version>3.5.0</io7m.maven-bundle-plugin.version>
     <io7m.maven-checkstyle-plugin.version>3.1.2</io7m.maven-checkstyle-plugin.version>
@@ -144,11 +144,11 @@
     </site>
     <repository>
       <id>sonatype-nexus-staging</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
     <snapshotRepository>
       <id>sonatype-nexus-snapshots</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 
@@ -840,7 +840,7 @@
           <extensions>true</extensions>
           <configuration>
             <serverId>sonatype-nexus-staging</serverId>
-            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+            <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
             <description>${project.groupId}:${project.artifactId}:${project.version}</description>
             <autoReleaseAfterClose>true</autoReleaseAfterClose>
           </configuration>
@@ -937,14 +937,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
-        <inherited>false</inherited>
-          <!-- Skip checks for parent -->
-          <executions>
-            <execution>
-              <id>enforce-rules</id>
-              <phase>none</phase>
-            </execution>
-          </executions>
       </plugin>
 
       <plugin>
