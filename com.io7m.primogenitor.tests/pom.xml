@@ -9,7 +9,7 @@
   <parent>
     <artifactId>com.io7m.primogenitor</artifactId>
     <groupId>com.io7m.primogenitor</groupId>
-    <version>7.1.1-SNAPSHOT</version>
+    <version>7.1.1</version>
   </parent>
 
   <artifactId>com.io7m.primogenitor.tests</artifactId>
