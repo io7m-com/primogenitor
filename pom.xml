@@ -573,7 +573,6 @@ Specification-Version:    $[project.version]
 -noextraheaders: true
 -snapshot:       SNAPSHOT
 -removeheaders:  Bnd-LastModified, Tool, Private-Package, Build-Jdk-Spec
--include:        -src/main/resources/META-INF/MANIFEST.MF
 ]]></bnd>
           </configuration>
           <executions>
