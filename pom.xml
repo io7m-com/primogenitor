@@ -553,24 +553,27 @@
           <configuration>
             <bnd>
 <![CDATA[
-  Automatic-Module-Name:    $[project.artifactId]
-  Built-By:                 $[io7m.jar.built_by]
-  Bundle-Description:       $[project.description]
-  Bundle-DocURL:            $[project.distributionManagement.site.url]
-  Bundle-Name:              $[project.artifactId] $[project.version] - $[project.description]
-  Bundle-SCM:               $[project.scm.url]
-  Bundle-Vendor:            $[io7m.jar.vendor]
-  Implementation-Build:     $[buildNumber]
-  Implementation-Title:     $[project.name]
-  Implementation-Vendor:    $[io7m.jar.vendor]
-  Implementation-Vendor-Id: $[project.groupId]
-  Implementation-Version:   $[project.version]
-  Sealed:                   true
-  Specification-Title:      $[project.name]
-  Specification-Vendor:     $[io7m.jar.vendor]
-  Specification-Version:    $[project.version]
+Automatic-Module-Name:    $[project.artifactId]
+Built-By:                 $[io7m.jar.built_by]
+Bundle-Description:       $[project.description]
+Bundle-DocURL:            $[project.distributionManagement.site.url]
+Bundle-Name:              $[project.artifactId] $[project.version] - $[project.description]
+Bundle-SCM:               $[project.scm.url]
+Bundle-Vendor:            $[io7m.jar.vendor]
+Implementation-Build:     $[buildNumber]
+Implementation-Title:     $[project.name]
+Implementation-Vendor:    $[io7m.jar.vendor]
+Implementation-Vendor-Id: $[project.groupId]
+Implementation-Version:   $[project.version]
+Sealed:                   true
+Specification-Title:      $[project.name]
+Specification-Vendor:     $[io7m.jar.vendor]
+Specification-Version:    $[project.version]
 
-  -removeheaders: Bnd-LastModified, Tool, Private-Package, Build-Jdk-Spec
+-noextraheaders: true
+-snapshot:       SNAPSHOT
+-removeheaders:  Bnd-LastModified, Tool, Private-Package, Build-Jdk-Spec
+-include:        -src/main/resources/META-INF/MANIFEST.MF
 ]]></bnd>
           </configuration>
           <executions>
