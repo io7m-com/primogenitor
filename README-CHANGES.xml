@@ -394,9 +394,14 @@
         <c:change date="2022-04-11T00:00:00+00:00" summary="Upgrade maven-shade-plugin to 3.3.0"/>
       </c:changes>
     </c:release>
-    <c:release date="2022-09-21T21:22:24+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.1.1">
+    <c:release date="2022-09-21T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.1.1">
       <c:changes>
         <c:change date="2022-09-21T00:00:00+00:00" summary="Upgrade jacoco maven plugin to 0.8.8"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2022-11-04T19:03:17+00:00" is-open="true" ticket-system="com.github.io7m.primogenitor" version="7.2.0">
+      <c:changes>
+        <c:change date="2022-11-04T00:00:00+00:00" summary="Adjust bnd settings for more reproducibility."/>
       </c:changes>
     </c:release>
   </c:releases>

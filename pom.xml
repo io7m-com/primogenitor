@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>7.1.1</version>
+  <version>7.2.0</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -61,7 +61,7 @@
     <io7m.javadoc.docLint>-Xdoclint:all</io7m.javadoc.docLint>
 
     <!-- The timestamp used for all outputs, for reproducibility. -->
-    <project.build.outputTimestamp>2022-09-21T21:22:13Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2022-11-11T11:29:35Z</project.build.outputTimestamp>
 
     <!-- The versions of all plugins used -->
     <io7m.build-helper-maven-plugin.version>3.3.0</io7m.build-helper-maven-plugin.version>
@@ -553,24 +553,26 @@
           <configuration>
             <bnd>
 <![CDATA[
-  Automatic-Module-Name:    $[project.artifactId]
-  Built-By:                 $[io7m.jar.built_by]
-  Bundle-Description:       $[project.description]
-  Bundle-DocURL:            $[project.distributionManagement.site.url]
-  Bundle-Name:              $[project.artifactId] $[project.version] - $[project.description]
-  Bundle-SCM:               $[project.scm.url]
-  Bundle-Vendor:            $[io7m.jar.vendor]
-  Implementation-Build:     $[buildNumber]
-  Implementation-Title:     $[project.name]
-  Implementation-Vendor:    $[io7m.jar.vendor]
-  Implementation-Vendor-Id: $[project.groupId]
-  Implementation-Version:   $[project.version]
-  Sealed:                   true
-  Specification-Title:      $[project.name]
-  Specification-Vendor:     $[io7m.jar.vendor]
-  Specification-Version:    $[project.version]
+Automatic-Module-Name:    $[project.artifactId]
+Built-By:                 $[io7m.jar.built_by]
+Bundle-Description:       $[project.description]
+Bundle-DocURL:            $[project.distributionManagement.site.url]
+Bundle-Name:              $[project.artifactId] $[project.version] - $[project.description]
+Bundle-SCM:               $[project.scm.url]
+Bundle-Vendor:            $[io7m.jar.vendor]
+Implementation-Build:     $[buildNumber]
+Implementation-Title:     $[project.name]
+Implementation-Vendor:    $[io7m.jar.vendor]
+Implementation-Vendor-Id: $[project.groupId]
+Implementation-Version:   $[project.version]
+Sealed:                   true
+Specification-Title:      $[project.name]
+Specification-Vendor:     $[io7m.jar.vendor]
+Specification-Version:    $[project.version]
 
-  -removeheaders: Bnd-LastModified, Tool, Private-Package, Build-Jdk-Spec
+-noextraheaders: true
+-snapshot:       SNAPSHOT
+-removeheaders:  Bnd-LastModified, Tool, Private-Package, Build-Jdk-Spec
 ]]></bnd>
           </configuration>
           <executions>
