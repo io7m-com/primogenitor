@@ -17,4 +17,4 @@ jobs:
           java-version: 17
           distribution: 'temurin'
       - name: Build
-        run: .github/workflows/run.bat
+        run: .\.github\workflows\run.bat
