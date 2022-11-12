@@ -7,13 +7,12 @@ primogenitor
 
 ![primogenitor](./src/site/resources/primogenitor.jpg?raw=true)
 
-| JVM                       | Platform | Status                                                                                                                                                                                                                                     |
-|---------------------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| OpenJDK (Temurin) LTS     | Linux    | [![Build (OpenJDK (Temurin) LTS, Linux)](https://img.shields.io/github/workflow/status/io7m/primogenitor/main.linux.temurin.lts)](https://github.com/io7m/primogenitor/actions?query=workflow%3Amain.linux.temurin.lts)                    |
-| OpenJDK (Temurin) Current | Linux    | [![Build (OpenJDK (Temurin) Current, Linux)](https://img.shields.io/github/workflow/status/io7m/primogenitor/main.linux.temurin.current)](https://github.com/io7m/primogenitor/actions?query=workflow%3Amain.linux.temurin.current)        |
-| OpenJDK (Temurin) LTS     | Windows  | [![Build (OpenJDK (Temurin) LTS, Windows)](https://img.shields.io/github/workflow/status/io7m/primogenitor/main.windows.temurin.lts)](https://github.com/io7m/primogenitor/actions?query=workflow%3Amain.windows.temurin.lts)              |
-| OpenJDK (Temurin) Current | Windows  | [![Build (OpenJDK (Temurin) Current, Windows)](https://img.shields.io/github/workflow/status/io7m/primogenitor/main.windows.temurin.current)](https://github.com/io7m/primogenitor/actions?query=workflow%3Amain.windows.temurin.current)  |
-
+| JVM | Platform | Status |
+|-----|----------|--------|
+| OpenJDK (Temurin) Current | Linux | [![Build (OpenJDK (Temurin) Current, Linux)](https://img.shields.io/github/workflow/status/io7m/primogenitor/main.linux.temurin.current)](https://github.com/io7m/primogenitor/actions?query=workflow%3Amain.linux.temurin.current)|
+| OpenJDK (Temurin) LTS | Linux | [![Build (OpenJDK (Temurin) LTS, Linux)](https://img.shields.io/github/workflow/status/io7m/primogenitor/main.linux.temurin.lts)](https://github.com/io7m/primogenitor/actions?query=workflow%3Amain.linux.temurin.lts)|
+| OpenJDK (Temurin) Current | Windows | [![Build (OpenJDK (Temurin) Current, Windows)](https://img.shields.io/github/workflow/status/io7m/primogenitor/main.windows.temurin.current)](https://github.com/io7m/primogenitor/actions?query=workflow%3Amain.windows.temurin.current)|
+| OpenJDK (Temurin) LTS | Windows | [![Build (OpenJDK (Temurin) LTS, Windows)](https://img.shields.io/github/workflow/status/io7m/primogenitor/main.windows.temurin.lts)](https://github.com/io7m/primogenitor/actions?query=workflow%3Amain.windows.temurin.lts)|
 ## Building
 
 To build this project, you must use:
