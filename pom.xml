@@ -64,9 +64,19 @@
     <project.build.outputTimestamp>2022-11-12T21:03:20Z</project.build.outputTimestamp>
 
     <!-- The versions of all plugins used -->
+    <io7m.bnd-baseline-maven-plugin.version>6.3.1</io7m.bnd-baseline-maven-plugin.version>
+    <io7m.bnd-export-maven-plugin.version>6.3.1</io7m.bnd-export-maven-plugin.version>
+    <io7m.bnd-indexer-maven-plugin.version>6.3.1</io7m.bnd-indexer-maven-plugin.version>
+    <io7m.bnd-maven-plugin.version>6.3.1</io7m.bnd-maven-plugin.version>
+    <io7m.bnd-resolver-maven-plugin.version>6.3.1</io7m.bnd-resolver-maven-plugin.version>
+    <io7m.bnd.plugins.version>6.2.0</io7m.bnd.plugins.version>
     <io7m.build-helper-maven-plugin.version>3.3.0</io7m.build-helper-maven-plugin.version>
     <io7m.buildnumber-maven-plugin.version>3.0.0</io7m.buildnumber-maven-plugin.version>
+    <io7m.checksum-maven-plugin.version>1.11</io7m.checksum-maven-plugin.version>
+    <io7m.exec-maven-plugin.version>3.0.0</io7m.exec-maven-plugin.version>
     <io7m.extra-enforcer-rules.version>1.6.1</io7m.extra-enforcer-rules.version>
+    <io7m.fb-contrib-plugin.version>7.4.0.sb</io7m.fb-contrib-plugin.version>
+    <io7m.findsecbugs-plugin.version>1.7.1</io7m.findsecbugs-plugin.version>
     <io7m.jacoco-maven-plugin.version>0.8.8</io7m.jacoco-maven-plugin.version>
     <io7m.maven-assembly-plugin.version>3.4.2</io7m.maven-assembly-plugin.version>
     <io7m.maven-bundle-plugin.version>3.5.0</io7m.maven-bundle-plugin.version>
@@ -88,17 +98,8 @@
     <io7m.nexus-staging-maven-plugin.version>1.6.13</io7m.nexus-staging-maven-plugin.version>
     <io7m.reproducible-build-maven-plugin.version>0.16</io7m.reproducible-build-maven-plugin.version>
     <io7m.scijava-maven-plugin.version>2.2.0</io7m.scijava-maven-plugin.version>
-    <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
-    <io7m.bnd.plugins.version>6.2.0</io7m.bnd.plugins.version>
-    <io7m.bnd-maven-plugin.version>6.3.1</io7m.bnd-maven-plugin.version>
-    <io7m.bnd-baseline-maven-plugin.version>6.3.1</io7m.bnd-baseline-maven-plugin.version>
-    <io7m.bnd-indexer-maven-plugin.version>6.3.1</io7m.bnd-indexer-maven-plugin.version>
-    <io7m.bnd-export-maven-plugin.version>6.3.1</io7m.bnd-export-maven-plugin.version>
-    <io7m.bnd-resolver-maven-plugin.version>6.3.1</io7m.bnd-resolver-maven-plugin.version>
     <io7m.spotbugs-maven-plugin.version>4.7.3.0</io7m.spotbugs-maven-plugin.version>
-    <io7m.fb-contrib-plugin.version>7.4.0.sb</io7m.fb-contrib-plugin.version>
-    <io7m.findsecbugs-plugin.version>1.7.1</io7m.findsecbugs-plugin.version>
-    <io7m.checksum-maven-plugin.version>1.11</io7m.checksum-maven-plugin.version>
+    <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
 
     <!-- Strings that appear in jars -->
     <io7m.jar.vendor>io7m.com</io7m.jar.vendor>
@@ -920,7 +921,7 @@ Specification-Version:    $[project.version]
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>exec-maven-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>${io7m.exec-maven-plugin.version}</version>
         </plugin>
       </plugins>
     </pluginManagement>
