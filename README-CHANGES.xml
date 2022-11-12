@@ -399,9 +399,14 @@
         <c:change date="2022-09-21T00:00:00+00:00" summary="Upgrade jacoco maven plugin to 0.8.8"/>
       </c:changes>
     </c:release>
-    <c:release date="2022-11-11T11:30:38+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.2.0">
+    <c:release date="2022-11-11T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.2.0">
       <c:changes>
         <c:change date="2022-11-04T00:00:00+00:00" summary="Adjust bnd settings for more reproducibility."/>
+      </c:changes>
+    </c:release>
+    <c:release date="2022-11-12T17:46:20+00:00" is-open="true" ticket-system="com.github.io7m.primogenitor" version="7.2.1">
+      <c:changes>
+        <c:change date="2022-11-12T17:46:20+00:00" summary="Allow building on JDK [17,20)."/>
       </c:changes>
     </c:release>
   </c:releases>

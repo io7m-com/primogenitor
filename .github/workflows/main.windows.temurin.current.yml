@@ -1,4 +1,4 @@
-name: main-openjdk_current-windows
+name: main.windows.temurin.current
 
 on:
   push:
@@ -12,8 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: JDK
-        uses: actions/setup-java@v1
+        uses: actions/setup-java@v2
         with:
-          java-version: 17
+          java-version: 19
+          distribution: 'temurin'
       - name: Build
         run: .github/workflows/run.bat
