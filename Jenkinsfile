@@ -42,7 +42,7 @@ pipeline {
 
   post {
     success {
-      node('starfruit-mq') {
+      node('jenkinsnode01-mq') {
         script {
           withMaven(
             maven: 'maven-3.8.3',
@@ -70,7 +70,7 @@ pipeline {
     }
 
     failure {
-      node('starfruit-mq') {
+      node('jenkinsnode01-mq') {
         script {
           withMaven(
             maven: 'maven-3.8.3',
