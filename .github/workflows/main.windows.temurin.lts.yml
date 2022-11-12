@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: JDK
@@ -17,4 +17,4 @@ jobs:
           java-version: 17
           distribution: 'temurin'
       - name: Build
-        run: .github/workflows/run.bat
+        run: mvn --errors clean verify site
