@@ -402,7 +402,7 @@
         <c:change compatible="false" date="2020-04-04T00:00:00+00:00" summary="Enable Bnd baselining by default"/>
       </c:changes>
     </c:release>
-    <c:release date="2023-05-18T15:35:06+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.6.0">
+    <c:release date="2023-05-18T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.6.0">
       <c:changes>
         <c:change date="2023-05-18T00:00:00+00:00" summary="Update org.codehaus.mojo:buildnumber-maven-plugin 3.0.0 → 3.1.0."/>
         <c:change date="2023-05-18T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-assembly-plugin 3.5.0 → 3.6.0."/>
@@ -452,6 +452,12 @@
     <c:release date="2021-05-02T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="6.4.2">
       <c:changes>
         <c:change date="2021-05-02T00:00:00+00:00" summary="Upgrade to minisite 4.0.0"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2023-05-18T16:43:37+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.7.0">
+      <c:changes>
+        <c:change date="2023-05-18T00:00:00+00:00" summary="Allow JDK 21 as a build JDK."/>
+        <c:change date="2023-05-18T00:00:00+00:00" summary="Make spotbugs fork as a workaround for a Groovy issue."/>
       </c:changes>
     </c:release>
   </c:releases>

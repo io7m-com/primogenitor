@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>7.6.0</version>
+  <version>7.7.0</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -28,7 +28,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- The version of the JDK required to _build_ the code. -->
-    <io7m.java.requiredSDKBuildVersion>[17,20)</io7m.java.requiredSDKBuildVersion>
+    <io7m.java.requiredSDKBuildVersion>[17,21)</io7m.java.requiredSDKBuildVersion>
 
     <!-- The version of Java targeted by the code. -->
     <io7m.java.targetJavaVersion>17</io7m.java.targetJavaVersion>
@@ -61,7 +61,7 @@
     <io7m.javadoc.docLint>-Xdoclint:all</io7m.javadoc.docLint>
 
     <!-- The timestamp used for all outputs, for reproducibility. -->
-    <project.build.outputTimestamp>2023-05-18T15:34:55Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2023-05-18T16:43:44Z</project.build.outputTimestamp>
 
     <!-- The versions of all plugins used -->
     <io7m.bnd-baseline-maven-plugin.version>6.4.0</io7m.bnd-baseline-maven-plugin.version>
@@ -681,7 +681,8 @@ Specification-Version:    $[project.version]
           <artifactId>spotbugs-maven-plugin</artifactId>
           <version>${io7m.spotbugs-maven-plugin.version}</version>
           <configuration>
-            <fork>false</fork>
+            <!-- https://github.com/spotbugs/spotbugs-maven-plugin/issues/423 -->
+            <fork>true</fork>
             <effort>Max</effort>
             <threshold>Low</threshold>
             <xmlOutput>true</xmlOutput>
