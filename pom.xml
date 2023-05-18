@@ -28,7 +28,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- The version of the JDK required to _build_ the code. -->
-    <io7m.java.requiredSDKBuildVersion>[17,20)</io7m.java.requiredSDKBuildVersion>
+    <io7m.java.requiredSDKBuildVersion>[17,21)</io7m.java.requiredSDKBuildVersion>
 
     <!-- The version of Java targeted by the code. -->
     <io7m.java.targetJavaVersion>17</io7m.java.targetJavaVersion>
@@ -681,7 +681,8 @@ Specification-Version:    $[project.version]
           <artifactId>spotbugs-maven-plugin</artifactId>
           <version>${io7m.spotbugs-maven-plugin.version}</version>
           <configuration>
-            <fork>false</fork>
+            <!-- https://github.com/spotbugs/spotbugs-maven-plugin/issues/423 -->
+            <fork>true</fork>
             <effort>Max</effort>
             <threshold>Low</threshold>
             <xmlOutput>true</xmlOutput>
