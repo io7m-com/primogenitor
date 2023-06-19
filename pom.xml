@@ -73,6 +73,7 @@
     <io7m.build-helper-maven-plugin.version>3.4.0</io7m.build-helper-maven-plugin.version>
     <io7m.buildnumber-maven-plugin.version>3.2.0</io7m.buildnumber-maven-plugin.version>
     <io7m.checksum-maven-plugin.version>1.11</io7m.checksum-maven-plugin.version>
+    <io7m.cyclonedx-maven-plugin.version>2.7.9</io7m.cyclonedx-maven-plugin.version>
     <io7m.exec-maven-plugin.version>3.1.0</io7m.exec-maven-plugin.version>
     <io7m.extra-enforcer-rules.version>1.7.0</io7m.extra-enforcer-rules.version>
     <io7m.fb-contrib-plugin.version>7.4.0.sb</io7m.fb-contrib-plugin.version>
@@ -946,6 +947,42 @@ Specification-Version:    $[project.version]
           <artifactId>exec-maven-plugin</artifactId>
           <version>${io7m.exec-maven-plugin.version}</version>
         </plugin>
+
+        <!--
+          CycloneDX Maven plugin.
+          https://github.com/CycloneDX/cyclonedx-maven-plugin
+
+          Used to produce an SBOM.
+        -->
+        <plugin>
+          <groupId>org.cyclonedx</groupId>
+          <artifactId>cyclonedx-maven-plugin</artifactId>
+          <version>${io7m.cyclonedx-maven-plugin.version}</version>
+          <executions>
+            <execution>
+              <phase>package</phase>
+              <goals>
+                <goal>makeAggregateBom</goal>
+              </goals>
+              <configuration>
+                <projectType>library</projectType>
+                <schemaVersion>1.4</schemaVersion>
+                <includeBomSerialNumber>true</includeBomSerialNumber>
+                <includeCompileScope>true</includeCompileScope>
+                <includeProvidedScope>true</includeProvidedScope>
+                <includeRuntimeScope>true</includeRuntimeScope>
+                <includeSystemScope>true</includeSystemScope>
+                <includeTestScope>false</includeTestScope>
+                <includeLicenseText>true</includeLicenseText>
+                <outputReactorProjects>true</outputReactorProjects>
+                <outputFormat>xml</outputFormat>
+                <outputName>bom</outputName>
+                <outputDirectory>${project.build.directory}</outputDirectory>
+                <verbose>false</verbose>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
       </plugins>
     </pluginManagement>
 
@@ -1003,6 +1040,11 @@ Specification-Version:    $[project.version]
       <plugin>
         <groupId>io.github.zlika</groupId>
         <artifactId>reproducible-build-maven-plugin</artifactId>
+      </plugin>
+
+      <plugin>
+        <groupId>org.cyclonedx</groupId>
+        <artifactId>cyclonedx-maven-plugin</artifactId>
       </plugin>
 
       <plugin>
