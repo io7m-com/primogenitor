@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>7.7.0</version>
+  <version>8.0.0-beta0001</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -46,7 +46,7 @@
     <io7m.checkstyle.path>com/io7m/checkstyle_rules/checkstyle.xml</io7m.checkstyle.path>
 
     <!-- The version of the checkstyle tools used -->
-    <io7m.checkstyle.tools.version>10.11.0</io7m.checkstyle.tools.version>
+    <io7m.checkstyle.tools.version>10.12.1</io7m.checkstyle.tools.version>
 
     <!-- The previous groupId of the API. Used to enforce semantic versioning. -->
     <io7m.api.previousGroupId>${project.groupId}</io7m.api.previousGroupId>
@@ -61,7 +61,7 @@
     <io7m.javadoc.docLint>-Xdoclint:all</io7m.javadoc.docLint>
 
     <!-- The timestamp used for all outputs, for reproducibility. -->
-    <project.build.outputTimestamp>2023-05-18T16:43:44Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2023-06-30T12:09:33Z</project.build.outputTimestamp>
 
     <!-- The versions of all plugins used -->
     <io7m.bnd-baseline-maven-plugin.version>6.4.0</io7m.bnd-baseline-maven-plugin.version>
@@ -71,35 +71,36 @@
     <io7m.bnd-resolver-maven-plugin.version>6.4.0</io7m.bnd-resolver-maven-plugin.version>
     <io7m.bnd.plugins.version>6.2.0</io7m.bnd.plugins.version>
     <io7m.build-helper-maven-plugin.version>3.4.0</io7m.build-helper-maven-plugin.version>
-    <io7m.buildnumber-maven-plugin.version>3.1.0</io7m.buildnumber-maven-plugin.version>
+    <io7m.buildnumber-maven-plugin.version>3.2.0</io7m.buildnumber-maven-plugin.version>
     <io7m.checksum-maven-plugin.version>1.11</io7m.checksum-maven-plugin.version>
+    <io7m.cyclonedx-maven-plugin.version>2.7.9</io7m.cyclonedx-maven-plugin.version>
     <io7m.exec-maven-plugin.version>3.1.0</io7m.exec-maven-plugin.version>
-    <io7m.extra-enforcer-rules.version>1.6.2</io7m.extra-enforcer-rules.version>
+    <io7m.extra-enforcer-rules.version>1.7.0</io7m.extra-enforcer-rules.version>
     <io7m.fb-contrib-plugin.version>7.4.0.sb</io7m.fb-contrib-plugin.version>
     <io7m.findsecbugs-plugin.version>1.7.1</io7m.findsecbugs-plugin.version>
     <io7m.jacoco-maven-plugin.version>0.8.10</io7m.jacoco-maven-plugin.version>
     <io7m.maven-assembly-plugin.version>3.6.0</io7m.maven-assembly-plugin.version>
     <io7m.maven-bundle-plugin.version>3.5.0</io7m.maven-bundle-plugin.version>
-    <io7m.maven-checkstyle-plugin.version>3.2.2</io7m.maven-checkstyle-plugin.version>
-    <io7m.maven-clean-plugin.version>3.2.0</io7m.maven-clean-plugin.version>
+    <io7m.maven-checkstyle-plugin.version>3.3.0</io7m.maven-checkstyle-plugin.version>
+    <io7m.maven-clean-plugin.version>3.3.1</io7m.maven-clean-plugin.version>
     <io7m.maven-compiler-plugin.version>3.11.0</io7m.maven-compiler-plugin.version>
-    <io7m.maven-dependency-plugin.version>3.5.0</io7m.maven-dependency-plugin.version>
+    <io7m.maven-dependency-plugin.version>3.6.0</io7m.maven-dependency-plugin.version>
     <io7m.maven-deploy-plugin.version>3.1.1</io7m.maven-deploy-plugin.version>
     <io7m.maven-enforcer-plugin.version>3.3.0</io7m.maven-enforcer-plugin.version>
-    <io7m.maven-failsafe-plugin.version>3.1.0</io7m.maven-failsafe-plugin.version>
+    <io7m.maven-failsafe-plugin.version>3.1.2</io7m.maven-failsafe-plugin.version>
     <io7m.maven-gpg-plugin.version>3.1.0</io7m.maven-gpg-plugin.version>
     <io7m.maven-install-plugin.version>3.1.1</io7m.maven-install-plugin.version>
     <io7m.maven-jar-plugin.version>3.3.0</io7m.maven-jar-plugin.version>
     <io7m.maven-javadoc-plugin.version>3.5.0</io7m.maven-javadoc-plugin.version>
     <io7m.maven-resources-plugin.version>3.3.1</io7m.maven-resources-plugin.version>
-    <io7m.maven-shade-plugin.version>3.4.1</io7m.maven-shade-plugin.version>
+    <io7m.maven-shade-plugin.version>3.5.0</io7m.maven-shade-plugin.version>
     <io7m.maven-site-plugin.version>4.0.0-M3</io7m.maven-site-plugin.version>
-    <io7m.maven-source-plugin.version>3.2.1</io7m.maven-source-plugin.version>
-    <io7m.maven-surefire-plugin.version>3.1.0</io7m.maven-surefire-plugin.version>
+    <io7m.maven-source-plugin.version>3.3.0</io7m.maven-source-plugin.version>
+    <io7m.maven-surefire-plugin.version>3.1.2</io7m.maven-surefire-plugin.version>
     <io7m.nexus-staging-maven-plugin.version>1.6.13</io7m.nexus-staging-maven-plugin.version>
     <io7m.reproducible-build-maven-plugin.version>0.16</io7m.reproducible-build-maven-plugin.version>
     <io7m.scijava-maven-plugin.version>2.2.0</io7m.scijava-maven-plugin.version>
-    <io7m.spotbugs-maven-plugin.version>4.7.3.4</io7m.spotbugs-maven-plugin.version>
+    <io7m.spotbugs-maven-plugin.version>4.7.3.5</io7m.spotbugs-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
 
     <!-- Strings that appear in jars -->
@@ -222,12 +223,26 @@
           https://maven.apache.org/surefire/maven-surefire-plugin/
 
           Used to execute unit tests.
+
+          Note: We do not use the src/test/java source root for tests, as
+          we expect to have a single module containing all tests in
+          src/main/java that are executed on the module path. Using a single
+          source root at this location avoids having to have duplicate module
+          descriptors (one in src/main/java, and one in src/test/java).
         -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>${io7m.maven-surefire-plugin.version}</version>
           <configuration>
+            <!--
+              This "argLine" property is generated by the
+              jacoco-maven-plugin below. It is necessary to ensure that tests
+              are executed with the proper agent to measure coverage.
+            -->
+            <argLine>@{argLine}</argLine>
+            <testSourceDirectory>${project.build.sourceDirectory}</testSourceDirectory>
+            <testClassesDirectory>${project.build.outputDirectory}</testClassesDirectory>
             <redirectTestOutputToFile>true</redirectTestOutputToFile>
           </configuration>
         </plugin>
@@ -237,14 +252,38 @@
           https://maven.apache.org/surefire/maven-failsafe-plugin/
 
           Used to execute integration tests.
+
+          Note: We do not use the src/test/java source root for tests, as
+          we expect to have a single module containing all tests in
+          src/main/java that are executed on the module path. Using a single
+          source root at this location avoids having to have duplicate module
+          descriptors (one in src/main/java, and one in src/test/java).
         -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-failsafe-plugin</artifactId>
           <version>${io7m.maven-failsafe-plugin.version}</version>
           <configuration>
+            <!--
+              This "argLine" property is generated by the
+              jacoco-maven-plugin below. It is necessary to ensure that tests
+              are executed with the proper agent to measure coverage.
+            -->
+            <argLine>@{argLine}</argLine>
+            <testSourceDirectory>${project.build.sourceDirectory}</testSourceDirectory>
+            <testClassesDirectory>${project.build.outputDirectory}</testClassesDirectory>
             <redirectTestOutputToFile>true</redirectTestOutputToFile>
           </configuration>
+
+          <executions>
+            <execution>
+              <id>failsafe-integration-tests</id>
+              <goals>
+                <goal>integration-test</goal>
+              </goals>
+              <phase>integration-test</phase>
+            </execution>
+          </executions>
         </plugin>
 
         <!--
@@ -906,31 +945,49 @@ Specification-Version:    $[project.version]
           <artifactId>jacoco-maven-plugin</artifactId>
           <version>${io7m.jacoco-maven-plugin.version}</version>
           <executions>
+            <!--
+              The prepare-agent goals define an @argLine property
+              that is later passed to the Surefire and Failsafe plugins.
+              The @argLine property essentially contains the fully-qualified
+              path of the agent that will be run in the VM to measure code
+              coverage. These goals can be run at any point in the build as
+              long as it's before the test executions.
+
+              The same jacoco.exec file is used for ordinary tests and for
+              integration tests, so the 'append' flag is needed in order to
+              avoid having the agent overwrite the file when the integration
+              tests are run after the unit tests.
+            -->
             <execution>
               <id>jacoco-agent</id>
               <goals>
                 <goal>prepare-agent</goal>
               </goals>
+              <phase>validate</phase>
+              <configuration>
+                <destFile>${project.build.directory}/jacoco.exec</destFile>
+                <append>true</append>
+              </configuration>
             </execution>
+
+            <!--
+              The report-aggregate goal produces a single aggregate report
+              that is then uploaded to coverage services, or used to produce
+              a full HTML report. It uses the file created in the merge
+              goal above.
+            -->
             <execution>
-              <id>jacoco-agent-integration</id>
-              <goals>
-                <goal>prepare-agent-integration</goal>
-              </goals>
-            </execution>
-            <execution>
-              <id>jacoco-report</id>
-              <phase>test</phase>
-              <goals>
-                <goal>report</goal>
-              </goals>
-            </execution>
-            <execution>
-              <id>jacoco-report-aggregate</id>
-              <phase>test</phase>
+              <id>jacoco-report-merged</id>
+              <phase>post-integration-test</phase>
               <goals>
                 <goal>report-aggregate</goal>
               </goals>
+              <configuration>
+                <includeCurrentProject>true</includeCurrentProject>
+                <dataFileIncludes>
+                  <dataFileInclude>**/jacoco.exec</dataFileInclude>
+                </dataFileIncludes>
+              </configuration>
             </execution>
           </executions>
         </plugin>
@@ -945,6 +1002,42 @@ Specification-Version:    $[project.version]
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>exec-maven-plugin</artifactId>
           <version>${io7m.exec-maven-plugin.version}</version>
+        </plugin>
+
+        <!--
+          CycloneDX Maven plugin.
+          https://github.com/CycloneDX/cyclonedx-maven-plugin
+
+          Used to produce an SBOM.
+        -->
+        <plugin>
+          <groupId>org.cyclonedx</groupId>
+          <artifactId>cyclonedx-maven-plugin</artifactId>
+          <version>${io7m.cyclonedx-maven-plugin.version}</version>
+          <executions>
+            <execution>
+              <phase>package</phase>
+              <goals>
+                <goal>makeAggregateBom</goal>
+              </goals>
+              <configuration>
+                <projectType>library</projectType>
+                <schemaVersion>1.4</schemaVersion>
+                <includeBomSerialNumber>true</includeBomSerialNumber>
+                <includeCompileScope>true</includeCompileScope>
+                <includeProvidedScope>true</includeProvidedScope>
+                <includeRuntimeScope>true</includeRuntimeScope>
+                <includeSystemScope>true</includeSystemScope>
+                <includeTestScope>false</includeTestScope>
+                <includeLicenseText>true</includeLicenseText>
+                <outputReactorProjects>true</outputReactorProjects>
+                <outputFormat>xml</outputFormat>
+                <outputName>bom</outputName>
+                <outputDirectory>${project.build.directory}</outputDirectory>
+                <verbose>false</verbose>
+              </configuration>
+            </execution>
+          </executions>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -991,6 +1084,11 @@ Specification-Version:    $[project.version]
       </plugin>
 
       <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+      </plugin>
+
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
       </plugin>
@@ -1003,6 +1101,11 @@ Specification-Version:    $[project.version]
       <plugin>
         <groupId>io.github.zlika</groupId>
         <artifactId>reproducible-build-maven-plugin</artifactId>
+      </plugin>
+
+      <plugin>
+        <groupId>org.cyclonedx</groupId>
+        <artifactId>cyclonedx-maven-plugin</artifactId>
       </plugin>
 
       <plugin>

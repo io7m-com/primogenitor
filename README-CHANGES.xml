@@ -454,10 +454,27 @@
         <c:change date="2021-05-02T00:00:00+00:00" summary="Upgrade to minisite 4.0.0"/>
       </c:changes>
     </c:release>
-    <c:release date="2023-05-18T16:43:37+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.7.0">
+    <c:release date="2023-05-18T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.7.0">
       <c:changes>
         <c:change date="2023-05-18T00:00:00+00:00" summary="Allow JDK 21 as a build JDK."/>
         <c:change date="2023-05-18T00:00:00+00:00" summary="Make spotbugs fork as a workaround for a Groovy issue."/>
+      </c:changes>
+    </c:release>
+    <c:release date="2023-06-30T12:08:31+00:00" is-open="true" ticket-system="com.github.io7m.primogenitor" version="8.0.0">
+      <c:changes>
+        <c:change date="2023-06-29T00:00:00+00:00" summary="Update com.puppycrawl.tools:checkstyle 10.12.0 → 10.12.1."/>
+        <c:change date="2023-06-29T00:00:00+00:00" summary="Update com.github.spotbugs:spotbugs-maven-plugin 4.7.3.4 → 4.7.3.5."/>
+        <c:change date="2023-06-29T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-clean-plugin 3.2.0 → 3.3.1."/>
+        <c:change compatible="false" date="2023-06-30T00:00:00+00:00" summary="Use src/main/java for tests.">
+          <c:tickets>
+            <c:ticket id="57"/>
+          </c:tickets>
+        </c:change>
+        <c:change date="2023-06-30T12:08:31+00:00" summary="Add CycloneDX.">
+          <c:tickets>
+            <c:ticket id="56"/>
+          </c:tickets>
+        </c:change>
       </c:changes>
     </c:release>
   </c:releases>
