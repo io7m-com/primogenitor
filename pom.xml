@@ -103,6 +103,10 @@
     <io7m.spotbugs-maven-plugin.version>4.7.3.6</io7m.spotbugs-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
 
+    <!-- The latest version of asm. Overriding this is often necessary
+         when using Maven plugins with new Java bytecode versions. -->
+    <io7m.asm.version>9.6</io7m.asm.version>
+
     <!-- Strings that appear in jars -->
     <io7m.jar.vendor>io7m.com</io7m.jar.vendor>
     <io7m.jar.built_by>io7m</io7m.jar.built_by>
@@ -245,6 +249,13 @@
             <testClassesDirectory>${project.build.outputDirectory}</testClassesDirectory>
             <redirectTestOutputToFile>true</redirectTestOutputToFile>
           </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.ow2.asm</groupId>
+              <artifactId>asm</artifactId>
+              <version>${io7m.asm.version}</version>
+            </dependency>
+          </dependencies>
         </plugin>
 
         <!--
