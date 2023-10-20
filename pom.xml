@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>8.0.0-beta0001</version>
+  <version>8.0.0</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -28,10 +28,10 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- The version of the JDK required to _build_ the code. -->
-    <io7m.java.requiredSDKBuildVersion>[17,21)</io7m.java.requiredSDKBuildVersion>
+    <io7m.java.requiredSDKBuildVersion>[21,22)</io7m.java.requiredSDKBuildVersion>
 
     <!-- The version of Java targeted by the code. -->
-    <io7m.java.targetJavaVersion>17</io7m.java.targetJavaVersion>
+    <io7m.java.targetJavaVersion>21</io7m.java.targetJavaVersion>
 
     <!-- The groupId of the artifact that contains checkstyle rules for the project. -->
     <io7m.checkstyle.groupId>com.io7m.checkstyle_rules</io7m.checkstyle.groupId>
@@ -46,7 +46,7 @@
     <io7m.checkstyle.path>com/io7m/checkstyle_rules/checkstyle.xml</io7m.checkstyle.path>
 
     <!-- The version of the checkstyle tools used -->
-    <io7m.checkstyle.tools.version>10.12.1</io7m.checkstyle.tools.version>
+    <io7m.checkstyle.tools.version>10.12.4</io7m.checkstyle.tools.version>
 
     <!-- The previous groupId of the API. Used to enforce semantic versioning. -->
     <io7m.api.previousGroupId>${project.groupId}</io7m.api.previousGroupId>
@@ -61,14 +61,14 @@
     <io7m.javadoc.docLint>-Xdoclint:all</io7m.javadoc.docLint>
 
     <!-- The timestamp used for all outputs, for reproducibility. -->
-    <project.build.outputTimestamp>2023-06-30T12:09:33Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2023-10-20T10:48:31Z</project.build.outputTimestamp>
 
     <!-- The versions of all plugins used -->
-    <io7m.bnd-baseline-maven-plugin.version>6.4.0</io7m.bnd-baseline-maven-plugin.version>
-    <io7m.bnd-export-maven-plugin.version>6.4.0</io7m.bnd-export-maven-plugin.version>
-    <io7m.bnd-indexer-maven-plugin.version>6.4.0</io7m.bnd-indexer-maven-plugin.version>
-    <io7m.bnd-maven-plugin.version>6.4.0</io7m.bnd-maven-plugin.version>
-    <io7m.bnd-resolver-maven-plugin.version>6.4.0</io7m.bnd-resolver-maven-plugin.version>
+    <io7m.bnd-baseline-maven-plugin.version>7.0.0</io7m.bnd-baseline-maven-plugin.version>
+    <io7m.bnd-export-maven-plugin.version>7.0.0</io7m.bnd-export-maven-plugin.version>
+    <io7m.bnd-indexer-maven-plugin.version>7.0.0</io7m.bnd-indexer-maven-plugin.version>
+    <io7m.bnd-maven-plugin.version>7.0.0</io7m.bnd-maven-plugin.version>
+    <io7m.bnd-resolver-maven-plugin.version>7.0.0</io7m.bnd-resolver-maven-plugin.version>
     <io7m.bnd.plugins.version>6.2.0</io7m.bnd.plugins.version>
     <io7m.build-helper-maven-plugin.version>3.4.0</io7m.build-helper-maven-plugin.version>
     <io7m.buildnumber-maven-plugin.version>3.2.0</io7m.buildnumber-maven-plugin.version>
@@ -86,22 +86,26 @@
     <io7m.maven-compiler-plugin.version>3.11.0</io7m.maven-compiler-plugin.version>
     <io7m.maven-dependency-plugin.version>3.6.0</io7m.maven-dependency-plugin.version>
     <io7m.maven-deploy-plugin.version>3.1.1</io7m.maven-deploy-plugin.version>
-    <io7m.maven-enforcer-plugin.version>3.3.0</io7m.maven-enforcer-plugin.version>
+    <io7m.maven-enforcer-plugin.version>3.4.1</io7m.maven-enforcer-plugin.version>
     <io7m.maven-failsafe-plugin.version>3.1.2</io7m.maven-failsafe-plugin.version>
     <io7m.maven-gpg-plugin.version>3.1.0</io7m.maven-gpg-plugin.version>
     <io7m.maven-install-plugin.version>3.1.1</io7m.maven-install-plugin.version>
     <io7m.maven-jar-plugin.version>3.3.0</io7m.maven-jar-plugin.version>
-    <io7m.maven-javadoc-plugin.version>3.5.0</io7m.maven-javadoc-plugin.version>
+    <io7m.maven-javadoc-plugin.version>3.6.0</io7m.maven-javadoc-plugin.version>
     <io7m.maven-resources-plugin.version>3.3.1</io7m.maven-resources-plugin.version>
-    <io7m.maven-shade-plugin.version>3.5.0</io7m.maven-shade-plugin.version>
+    <io7m.maven-shade-plugin.version>3.5.1</io7m.maven-shade-plugin.version>
     <io7m.maven-site-plugin.version>4.0.0-M3</io7m.maven-site-plugin.version>
     <io7m.maven-source-plugin.version>3.3.0</io7m.maven-source-plugin.version>
     <io7m.maven-surefire-plugin.version>3.1.2</io7m.maven-surefire-plugin.version>
     <io7m.nexus-staging-maven-plugin.version>1.6.13</io7m.nexus-staging-maven-plugin.version>
     <io7m.reproducible-build-maven-plugin.version>0.16</io7m.reproducible-build-maven-plugin.version>
     <io7m.scijava-maven-plugin.version>2.2.0</io7m.scijava-maven-plugin.version>
-    <io7m.spotbugs-maven-plugin.version>4.7.3.5</io7m.spotbugs-maven-plugin.version>
+    <io7m.spotbugs-maven-plugin.version>4.7.3.6</io7m.spotbugs-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
+
+    <!-- The latest version of asm. Overriding this is often necessary
+         when using Maven plugins with new Java bytecode versions. -->
+    <io7m.asm.version>9.6</io7m.asm.version>
 
     <!-- Strings that appear in jars -->
     <io7m.jar.vendor>io7m.com</io7m.jar.vendor>
@@ -245,6 +249,13 @@
             <testClassesDirectory>${project.build.outputDirectory}</testClassesDirectory>
             <redirectTestOutputToFile>true</redirectTestOutputToFile>
           </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.ow2.asm</groupId>
+              <artifactId>asm</artifactId>
+              <version>${io7m.asm.version}</version>
+            </dependency>
+          </dependencies>
         </plugin>
 
         <!--
