@@ -19,7 +19,7 @@
   <url>https://www.io7m.com/</url>
 
   <properties>
-    <junit.version>5.10.0</junit.version>
+    <junit.version>5.10.1</junit.version>
     <mdep.analyze.skip>true</mdep.analyze.skip>
     <checkstyle.skip>true</checkstyle.skip>
   </properties>
