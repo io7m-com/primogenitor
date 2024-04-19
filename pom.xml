@@ -78,7 +78,7 @@
     <io7m.extra-enforcer-rules.version>1.7.0</io7m.extra-enforcer-rules.version>
     <io7m.fb-contrib-plugin.version>7.4.0.sb</io7m.fb-contrib-plugin.version>
     <io7m.findsecbugs-plugin.version>1.7.1</io7m.findsecbugs-plugin.version>
-    <io7m.jacoco-maven-plugin.version>0.8.11</io7m.jacoco-maven-plugin.version>
+    <io7m.jacoco-maven-plugin.version>0.8.12</io7m.jacoco-maven-plugin.version>
     <io7m.maven-assembly-plugin.version>3.6.0</io7m.maven-assembly-plugin.version>
     <io7m.maven-bundle-plugin.version>3.5.0</io7m.maven-bundle-plugin.version>
     <io7m.maven-checkstyle-plugin.version>3.3.1</io7m.maven-checkstyle-plugin.version>
