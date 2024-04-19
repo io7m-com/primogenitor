@@ -19,6 +19,6 @@ jobs:
       - name: Build
         run: mvn --errors -Dbnd.baseline.skip=true -Denforcer.skip=true clean verify
       - name: Coverage
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v4
         with:
           file: com.io7m.primogenitor.tests/target/site/jacoco-aggregate/jacoco.xml
