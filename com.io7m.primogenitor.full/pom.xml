@@ -30,7 +30,7 @@
       <plugins>
         <!--
           Maven minisite plugin.
-          https://github.com/io7m/minisite
+          https://www.github.com/io7m-com/minisite
 
           Replaces the site plugin with something minimal.
         -->
