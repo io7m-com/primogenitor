@@ -105,7 +105,7 @@
 
     <!-- The latest version of asm. Overriding this is often necessary
          when using Maven plugins with new Java bytecode versions. -->
-    <io7m.asm.version>9.6</io7m.asm.version>
+    <io7m.asm.version>9.7</io7m.asm.version>
 
     <!-- Strings that appear in jars -->
     <io7m.jar.vendor>io7m.com</io7m.jar.vendor>
