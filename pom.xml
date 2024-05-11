@@ -93,7 +93,7 @@
     <io7m.maven-jar-plugin.version>3.4.1</io7m.maven-jar-plugin.version>
     <io7m.maven-javadoc-plugin.version>3.6.3</io7m.maven-javadoc-plugin.version>
     <io7m.maven-resources-plugin.version>3.3.1</io7m.maven-resources-plugin.version>
-    <io7m.maven-shade-plugin.version>3.5.1</io7m.maven-shade-plugin.version>
+    <io7m.maven-shade-plugin.version>3.5.3</io7m.maven-shade-plugin.version>
     <io7m.maven-site-plugin.version>4.0.0-M14</io7m.maven-site-plugin.version>
     <io7m.maven-source-plugin.version>3.3.1</io7m.maven-source-plugin.version>
     <io7m.maven-surefire-plugin.version>3.2.5</io7m.maven-surefire-plugin.version>
