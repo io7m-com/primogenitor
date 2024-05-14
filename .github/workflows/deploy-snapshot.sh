@@ -51,5 +51,6 @@ EOF
 exec mvn \
 --batch-mode \
 --strict-checksums \
+-Denforcer.skip=true \
 -DskipTests=true \
 -DskipITs=true deploy

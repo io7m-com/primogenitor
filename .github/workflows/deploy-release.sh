@@ -59,5 +59,6 @@ exec mvn \
 -Dio7m.deployment=true \
 --batch-mode \
 --strict-checksums \
+-Denforcer.skip=true \
 -DskipTests=true \
 -DskipITs=true deploy
