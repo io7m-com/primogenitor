@@ -1,118 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <c:changelog project="com.io7m.primogenitor" xmlns:c="urn:com.io7m.changelog:4.0">
   <c:releases>
-    <c:release date="2017-06-17T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="1.1.0">
-      <c:changes>
-        <c:change date="2017-04-05T00:00:00+00:00" summary="Add the Sonatype snapshots repository.">
-          <c:tickets>
-            <c:ticket id="17"/>
-          </c:tickets>
-        </c:change>
-        <c:change date="2017-04-09T00:00:00+00:00" summary="Update to maven-bundle-plugin 3.3.0">
-          <c:tickets>
-            <c:ticket id="18"/>
-          </c:tickets>
-        </c:change>
-        <c:change date="2017-06-17T00:00:00+00:00" summary="Add explicit control over the groupId and version of the checkstyle rules artifact."/>
-      </c:changes>
-    </c:release>
-    <c:release date="2021-04-04T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="6.3.0">
-      <c:changes>
-        <c:change date="2021-04-04T00:00:00+00:00" summary="Upgrade to exec-maven-plugin 3.0.0"/>
-        <c:change date="2021-04-04T00:00:00+00:00" summary="Upgrade to spotbugs-maven-plugin 4.1.4"/>
-        <c:change date="2021-04-04T00:00:00+00:00" summary="Upgrade to bnd 5.3.0"/>
-        <c:change date="2021-04-04T00:00:00+00:00" summary="Upgrade checkstyle to 8.41.1"/>
-        <c:change date="2021-04-04T00:00:00+00:00" summary="Upgrade maven-checkstyle-plugin to 3.1.2"/>
-        <c:change date="2021-04-04T00:00:00+00:00" summary="Upgrade spotbugs-maven-plugin to 4.2.2"/>
-        <c:change date="2021-04-04T00:00:00+00:00" summary="Upgrade scijava-maven-plugin to 2.1.0"/>
-        <c:change date="2021-04-04T00:00:00+00:00" summary="Ensure Build-Jdk-Spec jar attribute is removed"/>
-      </c:changes>
-    </c:release>
-    <c:release date="2022-09-21T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.1.1">
-      <c:changes>
-        <c:change date="2022-09-21T00:00:00+00:00" summary="Upgrade jacoco maven plugin to 0.8.8"/>
-      </c:changes>
-    </c:release>
-    <c:release date="2020-04-03T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.7.0">
-      <c:changes>
-        <c:change date="2020-04-03T00:00:00+00:00" summary="Add a project.build.outputTimestamp property to assist with reproducible builds"/>
-      </c:changes>
-    </c:release>
-    <c:release date="2022-11-12T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.3.0">
-      <c:changes>
-        <c:change date="2022-11-12T00:00:00+00:00" summary="Allow building on JDK [17,20)."/>
-      </c:changes>
-    </c:release>
-    <c:release date="2020-12-11T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="6.1.0">
-      <c:changes>
-        <c:change date="2020-12-11T00:00:00+00:00" summary="Update bnd to 5.2.0"/>
-        <c:change date="2020-12-11T00:00:00+00:00" summary="Update minisite to 3.0.0"/>
-      </c:changes>
-    </c:release>
-    <c:release date="2019-10-14T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.5.0">
-      <c:changes>
-        <c:change date="2019-10-14T00:00:00+00:00" summary="Upgrade Bnd plugin suite to 4.3.0"/>
-        <c:change date="2019-10-14T00:00:00+00:00" summary="Require Maven 3.6.2 instead of 3.6.1"/>
-      </c:changes>
-    </c:release>
-    <c:release date="2022-04-11T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.1.0">
-      <c:changes>
-        <c:change date="2022-04-11T00:00:00+00:00" summary="Upgrade maven-clean-plugin to 3.2.0"/>
-        <c:change date="2022-04-11T00:00:00+00:00" summary="Upgrade maven-shade-plugin to 3.3.0"/>
-      </c:changes>
-    </c:release>
-    <c:release date="2019-08-25T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.3.0">
-      <c:changes>
-        <c:change date="2019-08-25T00:00:00+00:00" summary="Add a support module to help projects produce JavaDoc">
-          <c:tickets>
-            <c:ticket id="46"/>
-          </c:tickets>
-        </c:change>
-      </c:changes>
-    </c:release>
-    <c:release date="2018-05-13T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="2.1.0">
-      <c:changes>
-        <c:change date="2018-03-06T00:00:00+00:00" summary="Make most constants into properties that can be overridden.">
-          <c:tickets>
-            <c:ticket id="25"/>
-          </c:tickets>
-        </c:change>
-        <c:change date="2018-05-13T00:00:00+00:00" summary="Upgrade Maven Surefire to 2.21.0">
-          <c:tickets>
-            <c:ticket id="26"/>
-          </c:tickets>
-        </c:change>
-        <c:change date="2018-05-13T00:00:00+00:00" summary="Upgrade JaCoCo plugin to 0.8.1"/>
-        <c:change date="2018-05-13T00:00:00+00:00" summary="Upgrade Checkstyle to 8.10 and use new io7m checkstyle_rules">
-          <c:tickets>
-            <c:ticket id="30"/>
-          </c:tickets>
-        </c:change>
-      </c:changes>
-    </c:release>
-    <c:release date="2018-05-17T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="2.1.1">
-      <c:changes>
-        <c:change date="2018-05-17T00:00:00+00:00" summary="Add a workaround for MJAVADOC-524">
-          <c:tickets>
-            <c:ticket id="31"/>
-          </c:tickets>
-        </c:change>
-      </c:changes>
-    </c:release>
-    <c:release date="2020-04-03T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.9.0">
-      <c:changes>
-        <c:change date="2020-04-03T00:00:00+00:00" summary="Add reproducibility workarounds for JavaDoc"/>
-      </c:changes>
-    </c:release>
-    <c:release date="2022-11-26T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.5.0">
-      <c:changes>
-        <c:change date="2022-11-26T00:00:00+00:00" summary="Add Maven Failsafe plugin."/>
-        <c:change date="2022-11-26T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-install-plugin 3.0.1 → 3.1.0."/>
-      </c:changes>
-    </c:release>
     <c:release date="2017-03-03T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="0.0.1">
       <c:changes>
         <c:change date="2017-03-03T00:00:00+00:00" summary="Initial release."/>
+      </c:changes>
+    </c:release>
+    <c:release date="2017-03-08T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="0.0.6">
+      <c:changes>
+        <c:change date="2017-03-08T00:00:00+00:00" summary="Correctly execute both the JavaDoc and Surefire plugins."/>
+      </c:changes>
+    </c:release>
+    <c:release date="2017-03-13T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="0.0.7">
+      <c:changes>
+        <c:change date="2017-03-13T00:00:00+00:00" summary="Disable duplicate class enforcement.">
+          <c:tickets>
+            <c:ticket id="8"/>
+          </c:tickets>
+        </c:change>
+        <c:change date="2017-03-13T00:00:00+00:00" summary="Enable dependency analysis.">
+          <c:tickets>
+            <c:ticket id="7"/>
+          </c:tickets>
+        </c:change>
+        <c:change date="2017-03-13T00:00:00+00:00" summary="Enable japicmp reporting.">
+          <c:tickets>
+            <c:ticket id="6"/>
+          </c:tickets>
+        </c:change>
       </c:changes>
     </c:release>
     <c:release date="2017-04-02T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="1.0.0">
@@ -155,6 +70,39 @@
         </c:change>
       </c:changes>
     </c:release>
+    <c:release date="2017-04-03T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="1.0.2">
+      <c:changes>
+        <c:change date="2017-04-03T00:00:00+00:00" summary="Fix an excessively strong version pattern restriction.">
+          <c:tickets>
+            <c:ticket id="16"/>
+          </c:tickets>
+        </c:change>
+      </c:changes>
+    </c:release>
+    <c:release date="2017-06-17T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="1.1.0">
+      <c:changes>
+        <c:change date="2017-04-05T00:00:00+00:00" summary="Add the Sonatype snapshots repository.">
+          <c:tickets>
+            <c:ticket id="17"/>
+          </c:tickets>
+        </c:change>
+        <c:change date="2017-04-09T00:00:00+00:00" summary="Update to maven-bundle-plugin 3.3.0">
+          <c:tickets>
+            <c:ticket id="18"/>
+          </c:tickets>
+        </c:change>
+        <c:change date="2017-06-17T00:00:00+00:00" summary="Add explicit control over the groupId and version of the checkstyle rules artifact."/>
+      </c:changes>
+    </c:release>
+    <c:release date="2017-06-30T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="1.2.0">
+      <c:changes>
+        <c:change date="2017-06-30T00:00:00+00:00" summary="Always provide a parsed version for each module.">
+          <c:tickets>
+            <c:ticket id="19"/>
+          </c:tickets>
+        </c:change>
+      </c:changes>
+    </c:release>
     <c:release date="2017-12-07T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="2.0.0">
       <c:changes>
         <c:change compatible="false" date="2017-10-25T00:00:00+00:00" summary="Disable japicmp due to problems with JDK 9.">
@@ -192,168 +140,31 @@
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2020-04-03T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.6.0">
+    <c:release date="2018-05-13T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="2.1.0">
       <c:changes>
-        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-assembly-plugin to 3.2.0"/>
-        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade checkstyle to 8.31"/>
-        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-dependency-plugin to 3.1.2"/>
-        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-enforcer-plugin to 3.0.0-M3"/>
-        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-jar-plugin to 3.2.0"/>
-        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-javadoc-plugin to 3.2.0"/>
-        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-shade-plugin to 3.2.2"/>
-        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-site-plugin to 3.9.0"/>
-        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-source-plugin to 3.2.1"/>
-        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-surefire-plugin to 3.0.0-M4"/>
-        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade reproducible-build-maven-plugin to 0.11"/>
-        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade spotbugs-maven-plugin to 4.0.0"/>
-        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade build-helper-maven-plugin to 3.1.0"/>
-        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade jacoco-maven-plugin to 0.8.5"/>
-        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade bnd plugin suite to 5.0.1"/>
-        <c:change date="2020-04-03T00:00:00+00:00" summary="Use checkstyle_rules 1.0.0"/>
-      </c:changes>
-    </c:release>
-    <c:release date="2022-11-11T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.2.0">
-      <c:changes>
-        <c:change date="2022-11-04T00:00:00+00:00" summary="Adjust bnd settings for more reproducibility."/>
-      </c:changes>
-    </c:release>
-    <c:release date="2021-05-02T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="6.4.0">
-      <c:changes>
-        <c:change date="2021-05-02T00:00:00+00:00" summary="Upgrade checkstyle to 8.42"/>
-        <c:change date="2021-05-02T00:00:00+00:00" summary="Upgrade spotbugs to 4.2.3"/>
-        <c:change date="2021-05-02T00:00:00+00:00" summary="Require JDK 16 instead of JDK 15">
+        <c:change date="2018-03-06T00:00:00+00:00" summary="Make most constants into properties that can be overridden.">
           <c:tickets>
-            <c:ticket id="52"/>
+            <c:ticket id="25"/>
           </c:tickets>
         </c:change>
-        <c:change date="2021-05-02T00:00:00+00:00" summary="Upgrade to checkstyle_rules 1.2.0"/>
-      </c:changes>
-    </c:release>
-    <c:release date="2017-03-13T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="0.0.7">
-      <c:changes>
-        <c:change date="2017-03-13T00:00:00+00:00" summary="Disable duplicate class enforcement.">
+        <c:change date="2018-05-13T00:00:00+00:00" summary="Upgrade Maven Surefire to 2.21.0">
           <c:tickets>
-            <c:ticket id="8"/>
+            <c:ticket id="26"/>
           </c:tickets>
         </c:change>
-        <c:change date="2017-03-13T00:00:00+00:00" summary="Enable dependency analysis.">
+        <c:change date="2018-05-13T00:00:00+00:00" summary="Upgrade JaCoCo plugin to 0.8.1"/>
+        <c:change date="2018-05-13T00:00:00+00:00" summary="Upgrade Checkstyle to 8.10 and use new io7m checkstyle_rules">
           <c:tickets>
-            <c:ticket id="7"/>
-          </c:tickets>
-        </c:change>
-        <c:change date="2017-03-13T00:00:00+00:00" summary="Enable japicmp reporting.">
-          <c:tickets>
-            <c:ticket id="6"/>
+            <c:ticket id="30"/>
           </c:tickets>
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2019-08-25T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.4.0">
+    <c:release date="2018-05-17T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="2.1.1">
       <c:changes>
-        <c:change date="2019-08-25T00:00:00+00:00" summary="Do not fail on missing Bnd baselines"/>
-      </c:changes>
-    </c:release>
-    <c:release date="2022-03-26T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.0.0">
-      <c:changes>
-        <c:change date="2021-08-05T00:00:00+00:00" summary="Upgrade spotbugs to 4.3.0"/>
-        <c:change date="2021-08-05T00:00:00+00:00" summary="Upgrade maven-dependency-plugin to 3.2.0"/>
-        <c:change date="2021-08-05T00:00:00+00:00" summary="Upgrade maven-enforcer-plugin to 3.0.0"/>
-        <c:change date="2021-08-05T00:00:00+00:00" summary="Upgrade maven-gpg-plugin to 3.0.1"/>
-        <c:change date="2021-08-05T00:00:00+00:00" summary="Upgrade maven-javadoc-plugin to 3.3.0"/>
-        <c:change date="2021-08-05T00:00:00+00:00" summary="Update checksum plugin to 1.11"/>
-        <c:change date="2021-08-05T00:00:00+00:00" summary="Upgrade jacoco-maven-plugin to 0.8.7"/>
-        <c:change date="2021-08-05T00:00:00+00:00" summary="Upgrade checkstyle tools to 8.45"/>
-        <c:change date="2021-11-02T00:00:00+00:00" summary="Upgrade checkstyle to 9.1"/>
-        <c:change date="2021-11-02T00:00:00+00:00" summary="Upgrade bnd to 6.0.0."/>
-        <c:change date="2021-11-02T00:00:00+00:00" summary="Upgrade javadoc to 3.3.1."/>
-        <c:change date="2021-11-02T00:00:00+00:00" summary="Upgrade extra-enforcer-rules to 1.4."/>
-        <c:change date="2021-11-02T00:00:00+00:00" summary="Upgrade reproducible-build-maven-plugin to 0.14."/>
-        <c:change date="2021-11-02T00:00:00+00:00" summary="Upgrade spotbugs to 4.4.2.2."/>
-        <c:change compatible="false" date="2021-11-02T00:00:00+00:00" summary="Start requiring JDK 17 everywhere."/>
-        <c:change date="2022-03-12T00:00:00+00:00" summary="Update bnd to 6.2.0"/>
-        <c:change date="2022-03-12T00:00:00+00:00" summary="Update spotbugs to 4.5.3.0"/>
-        <c:change date="2022-03-12T00:00:00+00:00" summary="Update reproducible-build to 0.15"/>
-        <c:change date="2022-03-12T00:00:00+00:00" summary="Update maven compiler plugin to 3.10.1"/>
-        <c:change date="2022-03-12T00:00:00+00:00" summary="Update maven dependency plugin to 3.3.0"/>
-        <c:change date="2022-03-12T00:00:00+00:00" summary="Update maven deploy/javadoc/jar/site plugins"/>
-        <c:change date="2022-03-12T00:00:00+00:00" summary="Update build number and build helper plugins"/>
-        <c:change date="2022-03-12T00:00:00+00:00" summary="Update nexus staging plugin"/>
-        <c:change date="2022-03-25T00:00:00+00:00" summary="Update scijava maven plugin to 2.2.0"/>
-        <c:change date="2022-03-25T00:00:00+00:00" summary="Update extra enforcer rules to 1.5.1"/>
-        <c:change date="2022-03-25T00:00:00+00:00" summary="Update checkstyle tools to 10.0"/>
-        <c:change date="2022-03-25T00:00:00+00:00" summary="Update spotbugs maven plugin to 4.6.0.0"/>
-      </c:changes>
-    </c:release>
-    <c:release date="2020-12-28T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="6.2.0">
-      <c:changes>
-        <c:change date="2020-12-28T00:00:00+00:00" summary="Add extra TrivialJavadoc options for better build reproducibility"/>
-      </c:changes>
-    </c:release>
-    <c:release date="2019-08-25T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.2.0">
-      <c:changes>
-        <c:change date="2019-08-24T00:00:00+00:00" summary="Increase default JDK range to [11,14)"/>
-        <c:change date="2019-08-25T00:00:00+00:00" summary="Update maven-javadoc-plugin to 3.1.1"/>
-        <c:change date="2019-08-25T00:00:00+00:00" summary="Update spotbugs-maven-plugin to 3.1.12.2"/>
-      </c:changes>
-    </c:release>
-    <c:release date="2020-04-04T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="4.0.1">
-      <c:changes>
-        <c:change date="2020-04-04T00:00:00+00:00" summary="Add workaround for https://issues.apache.org/jira/browse/MCOMPILER-296; exclude jpms.args files"/>
-      </c:changes>
-    </c:release>
-    <c:release date="2020-04-10T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="5.0.0">
-      <c:changes>
-        <c:change compatible="false" date="2020-04-10T00:00:00+00:00" summary="Enable CheckStyle by default for all builds"/>
-      </c:changes>
-    </c:release>
-    <c:release date="2017-03-08T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="0.0.6">
-      <c:changes>
-        <c:change date="2017-03-08T00:00:00+00:00" summary="Correctly execute both the JavaDoc and Surefire plugins."/>
-      </c:changes>
-    </c:release>
-    <c:release date="2020-10-02T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="6.0.0">
-      <c:changes>
-        <c:change date="2020-10-02T00:00:00+00:00" summary="Update bnd to 5.1.2"/>
-        <c:change date="2020-10-02T00:00:00+00:00" summary="Update build-helper-maven-plugin to 3.2.0"/>
-        <c:change date="2020-10-02T00:00:00+00:00" summary="Update checkstyle tools to 8.36.2"/>
-        <c:change date="2020-10-02T00:00:00+00:00" summary="Update checksum plugin to 1.9"/>
-        <c:change date="2020-10-02T00:00:00+00:00" summary="Update extra enforcer rules to 1.3"/>
-        <c:change date="2020-10-02T00:00:00+00:00" summary="Update jacoco maven plugin to 0.8.6"/>
-        <c:change date="2020-10-02T00:00:00+00:00" summary="Update maven assembly plugin to 3.3.0"/>
-        <c:change date="2020-10-02T00:00:00+00:00" summary="Update maven-resources-plugin to 3.2.0"/>
-        <c:change date="2020-10-02T00:00:00+00:00" summary="Update maven-shade-plugin to 3.2.4"/>
-        <c:change date="2020-10-02T00:00:00+00:00" summary="Update maven-site-plugin to 3.9.1"/>
-        <c:change date="2020-10-02T00:00:00+00:00" summary="Update maven-surefire-plugin to 3.0.0-M5"/>
-        <c:change date="2020-10-02T00:00:00+00:00" summary="Update reproducible-build-maven-plugin to 0.13"/>
-        <c:change date="2020-10-02T00:00:00+00:00" summary="Update scijava-maven-plugin to 2.0.1"/>
-        <c:change date="2020-10-02T00:00:00+00:00" summary="Update spotbugs-maven-plugin to 4.1.3"/>
-        <c:change date="2020-10-02T00:00:00+00:00" summary="Update maven-dependency-analyzer to 1.11.3"/>
-        <c:change date="2020-10-02T00:00:00+00:00" summary="Set required JDK to 11,[15,16]">
+        <c:change date="2018-05-17T00:00:00+00:00" summary="Add a workaround for MJAVADOC-524">
           <c:tickets>
-            <c:ticket id="50"/>
-          </c:tickets>
-        </c:change>
-        <c:change date="2020-10-02T00:00:00+00:00" summary="Enforce bytecode versions.">
-          <c:tickets>
-            <c:ticket id="49"/>
-          </c:tickets>
-        </c:change>
-      </c:changes>
-    </c:release>
-    <c:release date="2017-04-03T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="1.0.2">
-      <c:changes>
-        <c:change date="2017-04-03T00:00:00+00:00" summary="Fix an excessively strong version pattern restriction.">
-          <c:tickets>
-            <c:ticket id="16"/>
-          </c:tickets>
-        </c:change>
-      </c:changes>
-    </c:release>
-    <c:release date="2017-06-30T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="1.2.0">
-      <c:changes>
-        <c:change date="2017-06-30T00:00:00+00:00" summary="Always provide a parsed version for each module.">
-          <c:tickets>
-            <c:ticket id="19"/>
+            <c:ticket id="31"/>
           </c:tickets>
         </c:change>
       </c:changes>
@@ -397,22 +208,56 @@
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2020-04-04T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="4.0.0">
+    <c:release date="2019-08-25T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.2.0">
       <c:changes>
-        <c:change compatible="false" date="2020-04-04T00:00:00+00:00" summary="Enable Bnd baselining by default"/>
+        <c:change date="2019-08-24T00:00:00+00:00" summary="Increase default JDK range to [11,14)"/>
+        <c:change date="2019-08-25T00:00:00+00:00" summary="Update maven-javadoc-plugin to 3.1.1"/>
+        <c:change date="2019-08-25T00:00:00+00:00" summary="Update spotbugs-maven-plugin to 3.1.12.2"/>
       </c:changes>
     </c:release>
-    <c:release date="2023-05-18T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.6.0">
+    <c:release date="2019-08-25T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.3.0">
       <c:changes>
-        <c:change date="2023-05-18T00:00:00+00:00" summary="Update org.codehaus.mojo:buildnumber-maven-plugin 3.0.0 → 3.1.0."/>
-        <c:change date="2023-05-18T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-assembly-plugin 3.5.0 → 3.6.0."/>
-        <c:change date="2023-05-13T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-gpg-plugin 3.0.1 → 3.1.0."/>
-        <c:change date="2023-05-13T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-surefire-plugin 3.0.0 → 3.1.0."/>
-        <c:change date="2023-05-13T00:00:00+00:00" summary="Update org.codehaus.mojo:build-helper-maven-plugin 3.3.0 → 3.4.0."/>
-        <c:change date="2023-05-13T00:00:00+00:00" summary="Update com.puppycrawl.tools:checkstyle 10.10.0 → 10.11.0."/>
-        <c:change date="2023-05-13T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-failsafe-plugin 3.0.0 → 3.1.0."/>
-        <c:change date="2023-05-04T00:00:00+00:00" summary="Update org.jacoco:jacoco-maven-plugin 0.8.9 → 0.8.10."/>
-        <c:change date="2023-05-04T00:00:00+00:00" summary="Update com.puppycrawl.tools:checkstyle 10.9.3 → 10.10.0."/>
+        <c:change date="2019-08-25T00:00:00+00:00" summary="Add a support module to help projects produce JavaDoc">
+          <c:tickets>
+            <c:ticket id="46"/>
+          </c:tickets>
+        </c:change>
+      </c:changes>
+    </c:release>
+    <c:release date="2019-08-25T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.4.0">
+      <c:changes>
+        <c:change date="2019-08-25T00:00:00+00:00" summary="Do not fail on missing Bnd baselines"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2019-10-14T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.5.0">
+      <c:changes>
+        <c:change date="2019-10-14T00:00:00+00:00" summary="Upgrade Bnd plugin suite to 4.3.0"/>
+        <c:change date="2019-10-14T00:00:00+00:00" summary="Require Maven 3.6.2 instead of 3.6.1"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2020-04-03T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.6.0">
+      <c:changes>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-assembly-plugin to 3.2.0"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade checkstyle to 8.31"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-dependency-plugin to 3.1.2"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-enforcer-plugin to 3.0.0-M3"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-jar-plugin to 3.2.0"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-javadoc-plugin to 3.2.0"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-shade-plugin to 3.2.2"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-site-plugin to 3.9.0"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-source-plugin to 3.2.1"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade maven-surefire-plugin to 3.0.0-M4"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade reproducible-build-maven-plugin to 0.11"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade spotbugs-maven-plugin to 4.0.0"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade build-helper-maven-plugin to 3.1.0"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade jacoco-maven-plugin to 0.8.5"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Upgrade bnd plugin suite to 5.0.1"/>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Use checkstyle_rules 1.0.0"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2020-04-03T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.7.0">
+      <c:changes>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Add a project.build.outputTimestamp property to assist with reproducible builds"/>
       </c:changes>
     </c:release>
     <c:release date="2020-04-03T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.8.0">
@@ -420,8 +265,149 @@
         <c:change date="2020-04-03T00:00:00+00:00" summary="Added the -notimestamp option to JavaDoc, for reproducibility"/>
       </c:changes>
     </c:release>
+    <c:release date="2020-04-03T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="3.9.0">
+      <c:changes>
+        <c:change date="2020-04-03T00:00:00+00:00" summary="Add reproducibility workarounds for JavaDoc"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2020-04-04T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="4.0.0">
+      <c:changes>
+        <c:change compatible="false" date="2020-04-04T00:00:00+00:00" summary="Enable Bnd baselining by default"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2020-04-04T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="4.0.1">
+      <c:changes>
+        <c:change date="2020-04-04T00:00:00+00:00" summary="Add workaround for https://issues.apache.org/jira/browse/MCOMPILER-296; exclude jpms.args files"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2020-04-10T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="5.0.0">
+      <c:changes>
+        <c:change compatible="false" date="2020-04-10T00:00:00+00:00" summary="Enable CheckStyle by default for all builds"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2020-10-02T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="6.0.0">
+      <c:changes>
+        <c:change date="2020-10-02T00:00:00+00:00" summary="Update bnd to 5.1.2"/>
+        <c:change date="2020-10-02T00:00:00+00:00" summary="Update build-helper-maven-plugin to 3.2.0"/>
+        <c:change date="2020-10-02T00:00:00+00:00" summary="Update checkstyle tools to 8.36.2"/>
+        <c:change date="2020-10-02T00:00:00+00:00" summary="Update checksum plugin to 1.9"/>
+        <c:change date="2020-10-02T00:00:00+00:00" summary="Update extra enforcer rules to 1.3"/>
+        <c:change date="2020-10-02T00:00:00+00:00" summary="Update jacoco maven plugin to 0.8.6"/>
+        <c:change date="2020-10-02T00:00:00+00:00" summary="Update maven assembly plugin to 3.3.0"/>
+        <c:change date="2020-10-02T00:00:00+00:00" summary="Update maven-resources-plugin to 3.2.0"/>
+        <c:change date="2020-10-02T00:00:00+00:00" summary="Update maven-shade-plugin to 3.2.4"/>
+        <c:change date="2020-10-02T00:00:00+00:00" summary="Update maven-site-plugin to 3.9.1"/>
+        <c:change date="2020-10-02T00:00:00+00:00" summary="Update maven-surefire-plugin to 3.0.0-M5"/>
+        <c:change date="2020-10-02T00:00:00+00:00" summary="Update reproducible-build-maven-plugin to 0.13"/>
+        <c:change date="2020-10-02T00:00:00+00:00" summary="Update scijava-maven-plugin to 2.0.1"/>
+        <c:change date="2020-10-02T00:00:00+00:00" summary="Update spotbugs-maven-plugin to 4.1.3"/>
+        <c:change date="2020-10-02T00:00:00+00:00" summary="Update maven-dependency-analyzer to 1.11.3"/>
+        <c:change date="2020-10-02T00:00:00+00:00" summary="Set required JDK to 11,[15,16]">
+          <c:tickets>
+            <c:ticket id="50"/>
+          </c:tickets>
+        </c:change>
+        <c:change date="2020-10-02T00:00:00+00:00" summary="Enforce bytecode versions.">
+          <c:tickets>
+            <c:ticket id="49"/>
+          </c:tickets>
+        </c:change>
+      </c:changes>
+    </c:release>
+    <c:release date="2020-12-11T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="6.1.0">
+      <c:changes>
+        <c:change date="2020-12-11T00:00:00+00:00" summary="Update bnd to 5.2.0"/>
+        <c:change date="2020-12-11T00:00:00+00:00" summary="Update minisite to 3.0.0"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2020-12-28T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="6.2.0">
+      <c:changes>
+        <c:change date="2020-12-28T00:00:00+00:00" summary="Add extra TrivialJavadoc options for better build reproducibility"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2021-04-04T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="6.3.0">
+      <c:changes>
+        <c:change date="2021-04-04T00:00:00+00:00" summary="Upgrade to exec-maven-plugin 3.0.0"/>
+        <c:change date="2021-04-04T00:00:00+00:00" summary="Upgrade to spotbugs-maven-plugin 4.1.4"/>
+        <c:change date="2021-04-04T00:00:00+00:00" summary="Upgrade to bnd 5.3.0"/>
+        <c:change date="2021-04-04T00:00:00+00:00" summary="Upgrade checkstyle to 8.41.1"/>
+        <c:change date="2021-04-04T00:00:00+00:00" summary="Upgrade maven-checkstyle-plugin to 3.1.2"/>
+        <c:change date="2021-04-04T00:00:00+00:00" summary="Upgrade spotbugs-maven-plugin to 4.2.2"/>
+        <c:change date="2021-04-04T00:00:00+00:00" summary="Upgrade scijava-maven-plugin to 2.1.0"/>
+        <c:change date="2021-04-04T00:00:00+00:00" summary="Ensure Build-Jdk-Spec jar attribute is removed"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2021-05-02T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="6.4.0">
+      <c:changes>
+        <c:change date="2021-05-02T00:00:00+00:00" summary="Upgrade checkstyle to 8.42"/>
+        <c:change date="2021-05-02T00:00:00+00:00" summary="Upgrade spotbugs to 4.2.3"/>
+        <c:change date="2021-05-02T00:00:00+00:00" summary="Require JDK 16 instead of JDK 15">
+          <c:tickets>
+            <c:ticket id="52"/>
+          </c:tickets>
+        </c:change>
+        <c:change date="2021-05-02T00:00:00+00:00" summary="Upgrade to checkstyle_rules 1.2.0"/>
+      </c:changes>
+    </c:release>
     <c:release date="2021-05-02T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="6.4.1">
       <c:changes/>
+    </c:release>
+    <c:release date="2021-05-02T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="6.4.2">
+      <c:changes>
+        <c:change date="2021-05-02T00:00:00+00:00" summary="Upgrade to minisite 4.0.0"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2022-03-26T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.0.0">
+      <c:changes>
+        <c:change date="2021-08-05T00:00:00+00:00" summary="Upgrade spotbugs to 4.3.0"/>
+        <c:change date="2021-08-05T00:00:00+00:00" summary="Upgrade maven-dependency-plugin to 3.2.0"/>
+        <c:change date="2021-08-05T00:00:00+00:00" summary="Upgrade maven-enforcer-plugin to 3.0.0"/>
+        <c:change date="2021-08-05T00:00:00+00:00" summary="Upgrade maven-gpg-plugin to 3.0.1"/>
+        <c:change date="2021-08-05T00:00:00+00:00" summary="Upgrade maven-javadoc-plugin to 3.3.0"/>
+        <c:change date="2021-08-05T00:00:00+00:00" summary="Update checksum plugin to 1.11"/>
+        <c:change date="2021-08-05T00:00:00+00:00" summary="Upgrade jacoco-maven-plugin to 0.8.7"/>
+        <c:change date="2021-08-05T00:00:00+00:00" summary="Upgrade checkstyle tools to 8.45"/>
+        <c:change date="2021-11-02T00:00:00+00:00" summary="Upgrade checkstyle to 9.1"/>
+        <c:change date="2021-11-02T00:00:00+00:00" summary="Upgrade bnd to 6.0.0."/>
+        <c:change date="2021-11-02T00:00:00+00:00" summary="Upgrade javadoc to 3.3.1."/>
+        <c:change date="2021-11-02T00:00:00+00:00" summary="Upgrade extra-enforcer-rules to 1.4."/>
+        <c:change date="2021-11-02T00:00:00+00:00" summary="Upgrade reproducible-build-maven-plugin to 0.14."/>
+        <c:change date="2021-11-02T00:00:00+00:00" summary="Upgrade spotbugs to 4.4.2.2."/>
+        <c:change compatible="false" date="2021-11-02T00:00:00+00:00" summary="Start requiring JDK 17 everywhere."/>
+        <c:change date="2022-03-12T00:00:00+00:00" summary="Update bnd to 6.2.0"/>
+        <c:change date="2022-03-12T00:00:00+00:00" summary="Update spotbugs to 4.5.3.0"/>
+        <c:change date="2022-03-12T00:00:00+00:00" summary="Update reproducible-build to 0.15"/>
+        <c:change date="2022-03-12T00:00:00+00:00" summary="Update maven compiler plugin to 3.10.1"/>
+        <c:change date="2022-03-12T00:00:00+00:00" summary="Update maven dependency plugin to 3.3.0"/>
+        <c:change date="2022-03-12T00:00:00+00:00" summary="Update maven deploy/javadoc/jar/site plugins"/>
+        <c:change date="2022-03-12T00:00:00+00:00" summary="Update build number and build helper plugins"/>
+        <c:change date="2022-03-12T00:00:00+00:00" summary="Update nexus staging plugin"/>
+        <c:change date="2022-03-25T00:00:00+00:00" summary="Update scijava maven plugin to 2.2.0"/>
+        <c:change date="2022-03-25T00:00:00+00:00" summary="Update extra enforcer rules to 1.5.1"/>
+        <c:change date="2022-03-25T00:00:00+00:00" summary="Update checkstyle tools to 10.0"/>
+        <c:change date="2022-03-25T00:00:00+00:00" summary="Update spotbugs maven plugin to 4.6.0.0"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2022-04-11T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.1.0">
+      <c:changes>
+        <c:change date="2022-04-11T00:00:00+00:00" summary="Upgrade maven-clean-plugin to 3.2.0"/>
+        <c:change date="2022-04-11T00:00:00+00:00" summary="Upgrade maven-shade-plugin to 3.3.0"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2022-09-21T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.1.1">
+      <c:changes>
+        <c:change date="2022-09-21T00:00:00+00:00" summary="Upgrade jacoco maven plugin to 0.8.8"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2022-11-11T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.2.0">
+      <c:changes>
+        <c:change date="2022-11-04T00:00:00+00:00" summary="Adjust bnd settings for more reproducibility."/>
+      </c:changes>
+    </c:release>
+    <c:release date="2022-11-12T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.3.0">
+      <c:changes>
+        <c:change date="2022-11-12T00:00:00+00:00" summary="Allow building on JDK [17,20)."/>
+      </c:changes>
     </c:release>
     <c:release date="2022-11-12T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.4.0">
       <c:changes>
@@ -449,9 +435,23 @@
         <c:change date="2022-11-12T00:00:00+00:00" summary="Update org.codehaus.mojo:exec-maven-plugin 3.0.0 → 3.1.0."/>
       </c:changes>
     </c:release>
-    <c:release date="2021-05-02T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="6.4.2">
+    <c:release date="2022-11-26T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.5.0">
       <c:changes>
-        <c:change date="2021-05-02T00:00:00+00:00" summary="Upgrade to minisite 4.0.0"/>
+        <c:change date="2022-11-26T00:00:00+00:00" summary="Add Maven Failsafe plugin."/>
+        <c:change date="2022-11-26T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-install-plugin 3.0.1 → 3.1.0."/>
+      </c:changes>
+    </c:release>
+    <c:release date="2023-05-18T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.6.0">
+      <c:changes>
+        <c:change date="2023-05-18T00:00:00+00:00" summary="Update org.codehaus.mojo:buildnumber-maven-plugin 3.0.0 → 3.1.0."/>
+        <c:change date="2023-05-18T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-assembly-plugin 3.5.0 → 3.6.0."/>
+        <c:change date="2023-05-13T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-gpg-plugin 3.0.1 → 3.1.0."/>
+        <c:change date="2023-05-13T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-surefire-plugin 3.0.0 → 3.1.0."/>
+        <c:change date="2023-05-13T00:00:00+00:00" summary="Update org.codehaus.mojo:build-helper-maven-plugin 3.3.0 → 3.4.0."/>
+        <c:change date="2023-05-13T00:00:00+00:00" summary="Update com.puppycrawl.tools:checkstyle 10.10.0 → 10.11.0."/>
+        <c:change date="2023-05-13T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-failsafe-plugin 3.0.0 → 3.1.0."/>
+        <c:change date="2023-05-04T00:00:00+00:00" summary="Update org.jacoco:jacoco-maven-plugin 0.8.9 → 0.8.10."/>
+        <c:change date="2023-05-04T00:00:00+00:00" summary="Update com.puppycrawl.tools:checkstyle 10.9.3 → 10.10.0."/>
       </c:changes>
     </c:release>
     <c:release date="2023-05-18T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="7.7.0">
@@ -498,9 +498,25 @@
         <c:change date="2023-10-27T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-dependency-plugin:3.6.0 → 3.6.1"/>
       </c:changes>
     </c:release>
-    <c:release date="2024-03-29T22:14:56+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="8.2.0">
+    <c:release date="2024-03-29T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="8.2.0">
       <c:changes>
         <c:change date="2024-03-29T00:00:00+00:00" summary="Allow JDK [21,23)."/>
+      </c:changes>
+    </c:release>
+    <c:release date="2024-07-09T12:23:30+00:00" is-open="true" ticket-system="com.github.io7m.primogenitor" version="8.3.0">
+      <c:changes>
+        <c:change date="2024-07-09T00:00:00+00:00" summary="Update plugins."/>
+        <c:change date="2024-07-09T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-checkstyle-plugin 3.3.1 → 3.4.0."/>
+        <c:change date="2024-07-09T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-surefire-plugin 3.2.5 → 3.3.0."/>
+        <c:change date="2024-07-09T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-enforcer-plugin 3.4.1 → 3.5.0."/>
+        <c:change date="2024-07-09T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-javadoc-plugin 3.6.3 → 3.7.0."/>
+        <c:change date="2024-07-09T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-shade-plugin 3.5.3 → 3.6.0."/>
+        <c:change date="2024-07-09T00:00:00+00:00" summary="Update com.github.spotbugs:spotbugs-maven-plugin 4.8.5.0 → 4.8.6.2."/>
+        <c:change date="2024-07-09T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-jar-plugin 3.4.1 → 3.4.2."/>
+        <c:change date="2024-07-09T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-clean-plugin 3.3.2 → 3.4.0."/>
+        <c:change date="2024-07-09T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-failsafe-plugin 3.2.5 → 3.3.0."/>
+        <c:change date="2024-07-09T00:00:00+00:00" summary="Update org.scijava:scijava-maven-plugin 2.2.0 → 3.0.0."/>
+        <c:change date="2024-07-09T12:23:30+00:00" summary="Update org.apache.maven.plugins:maven-dependency-plugin 3.6.1 → 3.7.1."/>
       </c:changes>
     </c:release>
   </c:releases>
