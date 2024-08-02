@@ -33,6 +33,7 @@ jobs:
         id: project_is_snapshot
         run: java .github/workflows/Tools.java ShowProjectIsSnapshot pom.xml >> "$GITHUB_OUTPUT"
 
+
       - name: Build
         run: ./.github/workflows/build.sh
 
