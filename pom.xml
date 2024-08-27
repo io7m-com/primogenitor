@@ -91,7 +91,7 @@
     <io7m.maven-gpg-plugin.version>3.2.5</io7m.maven-gpg-plugin.version>
     <io7m.maven-install-plugin.version>3.1.3</io7m.maven-install-plugin.version>
     <io7m.maven-jar-plugin.version>3.4.2</io7m.maven-jar-plugin.version>
-    <io7m.maven-javadoc-plugin.version>3.8.0</io7m.maven-javadoc-plugin.version>
+    <io7m.maven-javadoc-plugin.version>3.10.0</io7m.maven-javadoc-plugin.version>
     <io7m.maven-resources-plugin.version>3.3.1</io7m.maven-resources-plugin.version>
     <io7m.maven-shade-plugin.version>3.6.0</io7m.maven-shade-plugin.version>
     <io7m.maven-site-plugin.version>4.0.0-M16</io7m.maven-site-plugin.version>
