@@ -96,7 +96,7 @@
     <io7m.maven-shade-plugin.version>3.6.0</io7m.maven-shade-plugin.version>
     <io7m.maven-site-plugin.version>4.0.0-M16</io7m.maven-site-plugin.version>
     <io7m.maven-source-plugin.version>3.3.1</io7m.maven-source-plugin.version>
-    <io7m.maven-surefire-plugin.version>3.3.1</io7m.maven-surefire-plugin.version>
+    <io7m.maven-surefire-plugin.version>3.4.0</io7m.maven-surefire-plugin.version>
     <io7m.nexus-staging-maven-plugin.version>1.7.0</io7m.nexus-staging-maven-plugin.version>
     <io7m.reproducible-build-maven-plugin.version>0.16</io7m.reproducible-build-maven-plugin.version>
     <io7m.scijava-maven-plugin.version>3.0.0</io7m.scijava-maven-plugin.version>
