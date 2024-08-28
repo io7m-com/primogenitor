@@ -81,7 +81,7 @@
     <io7m.jacoco-maven-plugin.version>0.8.12</io7m.jacoco-maven-plugin.version>
     <io7m.maven-assembly-plugin.version>3.7.1</io7m.maven-assembly-plugin.version>
     <io7m.maven-bundle-plugin.version>3.5.0</io7m.maven-bundle-plugin.version>
-    <io7m.maven-checkstyle-plugin.version>3.4.0</io7m.maven-checkstyle-plugin.version>
+    <io7m.maven-checkstyle-plugin.version>3.5.0</io7m.maven-checkstyle-plugin.version>
     <io7m.maven-clean-plugin.version>3.4.0</io7m.maven-clean-plugin.version>
     <io7m.maven-compiler-plugin.version>3.13.0</io7m.maven-compiler-plugin.version>
     <io7m.maven-dependency-plugin.version>3.8.0</io7m.maven-dependency-plugin.version>
