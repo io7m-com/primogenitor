@@ -978,6 +978,9 @@ Specification-Version:    $[project.version]
               <configuration>
                 <destFile>${project.build.directory}/jacoco.exec</destFile>
                 <append>true</append>
+                <includes>
+                  <include>**/*.class</include>
+                </includes>
               </configuration>
             </execution>
 
@@ -998,6 +1001,9 @@ Specification-Version:    $[project.version]
                 <dataFileIncludes>
                   <dataFileInclude>**/jacoco.exec</dataFileInclude>
                 </dataFileIncludes>
+                <includes>
+                  <include>**/*.class</include>
+                </includes>
               </configuration>
             </execution>
           </executions>
