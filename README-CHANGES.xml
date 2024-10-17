@@ -503,8 +503,26 @@
         <c:change date="2024-03-29T00:00:00+00:00" summary="Allow JDK [21,23)."/>
       </c:changes>
     </c:release>
-    <c:release date="2024-07-09T12:23:30+00:00" is-open="true" ticket-system="com.github.io7m.primogenitor" version="8.3.0">
+    <c:release date="2024-10-17T21:35:57+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="8.3.0">
       <c:changes>
+        <c:change date="2024-04-19T00:00:00+00:00" summary="Update org.cyclonedx:cyclonedx-maven-plugin:2.7.10 → 2.8.0."/>
+        <c:change date="2024-04-19T00:00:00+00:00" summary="Update junit.version:5.10.1 → 5.10.2."/>
+        <c:change date="2024-04-19T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-source-plugin:3.3.0 → 3.3.1."/>
+        <c:change date="2024-04-19T00:00:00+00:00" summary="Update org.jacoco:jacoco-maven-plugin:0.8.11 → 0.8.12."/>
+        <c:change date="2024-05-07T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-surefire-plugin:3.2.3 → 3.2.5."/>
+        <c:change date="2024-05-07T00:00:00+00:00" summary="Update org.codehaus.mojo:exec-maven-plugin:3.1.1 → 3.2.0."/>
+        <c:change date="2024-05-07T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-install-plugin:3.1.1 → 3.1.2."/>
+        <c:change date="2024-05-07T00:00:00+00:00" summary="Update org.ow2.asm:asm:9.6 → 9.7."/>
+        <c:change date="2024-05-07T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-deploy-plugin:3.1.1 → 3.1.2."/>
+        <c:change date="2024-05-09T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-jar-plugin:3.3.0 → 3.4.1."/>
+        <c:change date="2024-05-09T00:00:00+00:00" summary="Update com.puppycrawl.tools:checkstyle:10.12.7 → 10.16.0."/>
+        <c:change date="2024-05-09T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-gpg-plugin:3.1.0 → 3.2.4."/>
+        <c:change date="2024-05-10T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-failsafe-plugin:3.2.3 → 3.2.5."/>
+        <c:change date="2024-05-10T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-assembly-plugin:3.6.0 → 3.7.1."/>
+        <c:change date="2024-05-10T00:00:00+00:00" summary="Update org.codehaus.mojo:extra-enforcer-rules:1.7.0 → 1.8.0."/>
+        <c:change date="2024-05-10T00:00:00+00:00" summary="Update com.github.spotbugs:spotbugs-maven-plugin:4.8.2.0 → 4.8.5.0."/>
+        <c:change date="2024-05-10T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-shade-plugin:3.5.1 → 3.5.3."/>
+        <c:change date="2024-05-27T00:00:00+00:00" summary="Update com.puppycrawl.tools:checkstyle:10.16.0 → 10.17.0."/>
         <c:change date="2024-07-09T00:00:00+00:00" summary="Update plugins."/>
         <c:change date="2024-07-09T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-checkstyle-plugin 3.3.1 → 3.4.0."/>
         <c:change date="2024-07-09T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-surefire-plugin 3.2.5 → 3.3.0."/>
@@ -516,7 +534,50 @@
         <c:change date="2024-07-09T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-clean-plugin 3.3.2 → 3.4.0."/>
         <c:change date="2024-07-09T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-failsafe-plugin 3.2.5 → 3.3.0."/>
         <c:change date="2024-07-09T00:00:00+00:00" summary="Update org.scijava:scijava-maven-plugin 2.2.0 → 3.0.0."/>
-        <c:change date="2024-07-09T12:23:30+00:00" summary="Update org.apache.maven.plugins:maven-dependency-plugin 3.6.1 → 3.7.1."/>
+        <c:change date="2024-07-09T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-dependency-plugin 3.6.1 → 3.7.1."/>
+        <c:change date="2024-07-10T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-failsafe-plugin:3.3.0 → 3.3.1."/>
+        <c:change date="2024-07-10T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-surefire-plugin:3.3.0 → 3.3.1."/>
+        <c:change date="2024-07-22T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-javadoc-plugin:3.7.0 → 3.8.0."/>
+        <c:change date="2024-08-05T00:00:00+00:00" summary="Update org.cyclonedx:cyclonedx-maven-plugin:2.8.0 → 2.8.1."/>
+        <c:change date="2024-08-06T00:00:00+00:00" summary="Update org.codehaus.mojo:exec-maven-plugin:3.3.0 → 3.4.0."/>
+        <c:change date="2024-08-12T00:00:00+00:00" summary="Update org.codehaus.mojo:exec-maven-plugin:3.4.0 → 3.4.1."/>
+        <c:change date="2024-08-12T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-gpg-plugin:3.2.4 → 3.2.5."/>
+        <c:change date="2024-08-14T00:00:00+00:00" summary="Update junit.version:5.10.3 → 5.11.0."/>
+        <c:change date="2024-08-19T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-failsafe-plugin:3.3.1 → 3.4.0."/>
+        <c:change date="2024-08-19T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-surefire-plugin:3.3.1 → 3.4.0."/>
+        <c:change date="2024-08-19T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-install-plugin:3.1.2 → 3.1.3."/>
+        <c:change date="2024-08-27T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-deploy-plugin:3.1.2 → 3.1.3."/>
+        <c:change date="2024-08-27T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-failsafe-plugin:3.4.0 → 3.5.0."/>
+        <c:change date="2024-08-27T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-surefire-plugin:3.4.0 → 3.5.0."/>
+        <c:change date="2024-08-27T00:00:00+00:00" summary="Update com.puppycrawl.tools:checkstyle:10.17.0 → 10.18.0."/>
+        <c:change date="2024-08-27T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-javadoc-plugin:3.8.0 → 3.10.0."/>
+        <c:change date="2024-08-30T00:00:00+00:00" summary="Update com.puppycrawl.tools:checkstyle:10.18.0 → 10.18.1."/>
+        <c:change date="2024-09-03T00:00:00+00:00" summary="Update org.codehaus.mojo:buildnumber-maven-plugin:3.2.0 → 3.2.1."/>
+        <c:change date="2024-09-05T00:00:00+00:00" summary="Update com.github.spotbugs:spotbugs-maven-plugin:4.8.6.2 → 4.8.6.3."/>
+        <c:change date="2024-09-06T00:00:00+00:00" summary="Update io.github.zlika:reproducible-build-maven-plugin:0.16 → 0.17."/>
+        <c:change date="2024-09-16T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-gpg-plugin:3.2.5 → 3.2.6."/>
+        <c:change date="2024-09-20T00:00:00+00:00" summary="Update org.codehaus.mojo:extra-enforcer-rules:1.8.0 → 1.9.0."/>
+        <c:change date="2024-09-23T00:00:00+00:00" summary="Update com.github.spotbugs:spotbugs-maven-plugin:4.8.6.3 → 4.8.6.4."/>
+        <c:change date="2024-09-25T00:00:00+00:00" summary="Update junit.version:5.11.0 → 5.11.1."/>
+        <c:change date="2024-09-25T00:00:00+00:00" summary="Update org.cyclonedx:cyclonedx-maven-plugin:2.8.1 → 2.8.2."/>
+        <c:change date="2024-09-27T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-gpg-plugin:3.2.6 → 3.2.7."/>
+        <c:change date="2024-09-30T00:00:00+00:00" summary="Update com.puppycrawl.tools:checkstyle:10.18.1 → 10.18.2."/>
+        <c:change date="2024-10-04T00:00:00+00:00" summary="Update junit.version:5.11.1 → 5.11.2."/>
+        <c:change date="2024-10-07T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-failsafe-plugin:3.5.0 → 3.5.1."/>
+        <c:change date="2024-10-07T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-surefire-plugin:3.5.0 → 3.5.1."/>
+        <c:change date="2024-10-07T00:00:00+00:00" summary="Update org.ow2.asm:asm:9.7 → 9.7.1."/>
+        <c:change date="2024-10-08T00:00:00+00:00" summary="Update org.cyclonedx:cyclonedx-maven-plugin:2.8.2 → 2.9.0."/>
+        <c:change date="2024-10-17T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-checkstyle-plugin:3.3.1 → 3.4.0"/>
+        <c:change date="2024-10-17T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-surefire-plugin:3.2.5 → 3.3.0"/>
+        <c:change date="2024-10-17T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-enforcer-plugin:3.4.1 → 3.5.0"/>
+        <c:change date="2024-10-17T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-javadoc-plugin:3.6.3 → 3.7.0"/>
+        <c:change date="2024-10-17T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-shade-plugin:3.5.3 → 3.6.0"/>
+        <c:change date="2024-10-17T00:00:00+00:00" summary="Update com.github.spotbugs:spotbugs-maven-plugin:4.8.5.0 → 4.8.6.2"/>
+        <c:change date="2024-10-17T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-jar-plugin:3.4.1 → 3.4.2"/>
+        <c:change date="2024-10-17T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-clean-plugin:3.3.2 → 3.4.0"/>
+        <c:change date="2024-10-17T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-failsafe-plugin:3.2.5 → 3.3.0"/>
+        <c:change date="2024-10-17T00:00:00+00:00" summary="Update org.scijava:scijava-maven-plugin:2.2.0 → 3.0.0"/>
+        <c:change date="2024-10-17T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-dependency-plugin:3.6.1 → 3.7.1"/>
       </c:changes>
     </c:release>
   </c:releases>
