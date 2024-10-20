@@ -580,8 +580,14 @@
         <c:change date="2024-10-17T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-dependency-plugin:3.6.1 → 3.7.1"/>
       </c:changes>
     </c:release>
-    <c:release date="2024-10-17T21:49:10+00:00" is-open="true" ticket-system="com.github.io7m.primogenitor" version="8.4.0">
-      <c:changes/>
+    <c:release date="2024-10-20T10:28:59+00:00" is-open="true" ticket-system="com.github.io7m.primogenitor" version="8.3.1">
+      <c:changes>
+        <c:change date="2024-10-20T10:28:59+00:00" summary="Fix coverage generation.">
+          <c:tickets>
+            <c:ticket id="128"/>
+          </c:tickets>
+        </c:change>
+      </c:changes>
     </c:release>
   </c:releases>
   <c:ticket-systems>
