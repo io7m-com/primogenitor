@@ -45,7 +45,7 @@ jobs:
           path: ./com.io7m.primogenitor.tests/target/surefire-reports
 
       - name: Coverage
-        uses: codecov/codecov-action@v5.0.5
+        uses: codecov/codecov-action@v5.0.6
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: com.io7m.primogenitor.tests/target/site/jacoco-aggregate/jacoco.xml
