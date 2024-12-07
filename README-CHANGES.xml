@@ -589,9 +589,43 @@
         </c:change>
       </c:changes>
     </c:release>
-    <c:release date="2024-12-07T18:55:47+00:00" is-open="true" ticket-system="com.github.io7m.primogenitor" version="8.4.0">
+    <c:release date="2024-12-07T19:29:38+00:00" is-open="true" ticket-system="com.github.io7m.primogenitor" version="8.4.0">
       <c:changes>
-        <c:change date="2024-12-07T18:55:47+00:00" summary="Upgrade com.io7m.minisite 5.0.0 → 5.1.0."/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade com.io7m.minisite 5.0.0 → 5.1.0."/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade biz.aQute.bnd:bnd-indexer-maven-plugin from 7.0.0 to 7.1.0"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade biz.aQute.bnd:bnd-indexer-maven-plugin from 7.0.0 to 7.1.0"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade biz.aQute.bnd:bnd-maven-plugin from 7.0.0 to 7.1.0"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade biz.aQute.bnd:bnd-baseline-maven-plugin from 7.0.0 to 7.1.0"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade biz.aQute.bnd:bnd-maven-plugin from 7.0.0 to 7.1.0"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade biz.aQute.bnd:bnd-baseline-maven-plugin from 7.0.0 to 7.1.0"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade biz.aQute.bnd:bnd-resolver-maven-plugin from 7.0.0 to 7.1.0"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade biz.aQute.bnd:bnd-export-maven-plugin from 7.0.0 to 7.1.0"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade biz.aQute.bnd:bnd-export-maven-plugin from 7.0.0 to 7.1.0"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade biz.aQute.bnd:bnd-resolver-maven-plugin from 7.0.0 to 7.1.0"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade com.github.spotbugs:spotbugs-maven-plugin from 4.8.6.5 to 4.8.6.6"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade com.github.spotbugs:spotbugs-maven-plugin from 4.8.6.5 to 4.8.6.6"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade com.puppycrawl.tools:checkstyle from 10.20.0 to 10.20.1"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade com.puppycrawl.tools:checkstyle from 10.20.0 to 10.20.1"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade org.apache.maven.plugins:maven-failsafe-plugin from 3.5.1 to 3.5.2"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade org.apache.maven.plugins:maven-surefire-plugin from 3.5.1 to 3.5.2"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade org.apache.maven.plugins:maven-javadoc-plugin from 3.10.1 to 3.11.1"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade org.apache.maven.plugins:maven-javadoc-plugin from 3.10.1 to 3.11.1"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade org.apache.maven.plugins:maven-surefire-plugin from 3.5.1 to 3.5.2"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade org.apache.maven.plugins:maven-failsafe-plugin from 3.5.1 to 3.5.2"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade com.puppycrawl.tools:checkstyle from 10.19.0 to 10.20.0"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade com.puppycrawl.tools:checkstyle from 10.19.0 to 10.20.0"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade com.puppycrawl.tools:checkstyle from 10.18.2 to 10.19.0"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade com.puppycrawl.tools:checkstyle from 10.18.2 to 10.19.0"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade org.apache.maven.plugins:maven-checkstyle-plugin from 3.5.0 to 3.6.0"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade org.apache.maven.plugins:maven-dependency-plugin from 3.8.0 to 3.8.1"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade org.apache.maven.plugins:maven-dependency-plugin"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade org.apache.maven.plugins:maven-checkstyle-plugin"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade com.github.spotbugs:spotbugs-maven-plugin from 4.8.6.4 to 4.8.6.5"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade junit.version from 5.11.2 to 5.11.3"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade org.codehaus.mojo:exec-maven-plugin from 3.4.1 to 3.5.0"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade org.codehaus.mojo:exec-maven-plugin from 3.4.1 to 3.5.0"/>
+        <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade junit.version from 5.11.2 to 5.11.3"/>
+        <c:change date="2024-12-07T19:29:38+00:00" summary="Upgrade com.github.spotbugs:spotbugs-maven-plugin from 4.8.6.4 to 4.8.6.5"/>
       </c:changes>
     </c:release>
   </c:releases>
