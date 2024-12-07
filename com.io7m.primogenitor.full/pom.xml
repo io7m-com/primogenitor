@@ -8,7 +8,7 @@
   <parent>
     <artifactId>com.io7m.primogenitor</artifactId>
     <groupId>com.io7m.primogenitor</groupId>
-    <version>8.3.1</version>
+    <version>8.4.0</version>
   </parent>
 
   <artifactId>com.io7m.primogenitor.full</artifactId>
@@ -19,7 +19,7 @@
   <url>https://www.io7m.com/</url>
 
   <properties>
-    <io7m.com.io7m.minisite.maven_plugin.version>5.0.0</io7m.com.io7m.minisite.maven_plugin.version>
+    <io7m.com.io7m.minisite.maven_plugin.version>5.1.0</io7m.com.io7m.minisite.maven_plugin.version>
 
     <!-- Strings that appear in generated sites -->
     <io7m.changelog.feed_email>contact@io7m.com</io7m.changelog.feed_email>
