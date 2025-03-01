@@ -85,7 +85,7 @@
     <io7m.maven-clean-plugin.version>3.4.0</io7m.maven-clean-plugin.version>
     <io7m.maven-compiler-plugin.version>3.13.0</io7m.maven-compiler-plugin.version>
     <io7m.maven-dependency-plugin.version>3.8.1</io7m.maven-dependency-plugin.version>
-    <io7m.maven-deploy-plugin.version>3.1.3</io7m.maven-deploy-plugin.version>
+    <io7m.maven-deploy-plugin.version>3.1.4</io7m.maven-deploy-plugin.version>
     <io7m.maven-enforcer-plugin.version>3.5.0</io7m.maven-enforcer-plugin.version>
     <io7m.maven-failsafe-plugin.version>3.5.2</io7m.maven-failsafe-plugin.version>
     <io7m.maven-gpg-plugin.version>3.2.7</io7m.maven-gpg-plugin.version>
