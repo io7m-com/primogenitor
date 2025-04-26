@@ -40,7 +40,7 @@
     <io7m.checkstyle.artifact>com.io7m.checkstyle_rules</io7m.checkstyle.artifact>
 
     <!-- The version of the artifact that contains checkstyle rules for the project. -->
-    <io7m.checkstyle.version>1.2.0</io7m.checkstyle.version>
+    <io7m.checkstyle.version>1.2.1</io7m.checkstyle.version>
 
     <!-- The path to the checkstyle configuration inside the checkstyle package. -->
     <io7m.checkstyle.path>com/io7m/checkstyle_rules/checkstyle.xml</io7m.checkstyle.path>
