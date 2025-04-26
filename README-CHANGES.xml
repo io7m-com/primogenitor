@@ -628,7 +628,7 @@
         <c:change date="2024-12-07T00:00:00+00:00" summary="Upgrade com.github.spotbugs:spotbugs-maven-plugin from 4.8.6.4 to 4.8.6.5"/>
       </c:changes>
     </c:release>
-    <c:release date="2025-04-26T17:37:31+00:00" is-open="true" ticket-system="com.github.io7m.primogenitor" version="8.5.0">
+    <c:release date="2025-04-26T18:21:13+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="8.5.0">
       <c:changes>
         <c:change date="2025-04-26T00:00:00+00:00" summary="Update org.codehaus.mojo:extra-enforcer-rules 1.9.0 → 1.10.0."/>
         <c:change date="2025-04-26T00:00:00+00:00" summary="Update org.jacoco:jacoco-maven-plugin 0.8.12 → 0.8.13."/>
@@ -637,7 +637,7 @@
         <c:change date="2025-04-26T00:00:00+00:00" summary="Update org.ow2.asm:asm 9.7.1 → 9.8."/>
         <c:change date="2025-04-26T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-clean-plugin 3.4.0 → 3.4.1."/>
         <c:change date="2025-04-26T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-failsafe-plugin 3.5.2 → 3.5.3."/>
-        <c:change date="2025-04-26T17:37:31+00:00" summary="Update org.scijava:scijava-maven-plugin 3.0.0 → 3.0.1."/>
+        <c:change date="2025-04-26T00:00:00+00:00" summary="Update org.scijava:scijava-maven-plugin 3.0.0 → 3.0.1."/>
       </c:changes>
     </c:release>
   </c:releases>
