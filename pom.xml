@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>8.5.0-SNAPSHOT</version>
+  <version>8.5.0</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -61,7 +61,7 @@
     <io7m.javadoc.docLint>-Xdoclint:all</io7m.javadoc.docLint>
 
     <!-- The timestamp used for all outputs, for reproducibility. -->
-    <project.build.outputTimestamp>2024-12-07T19:32:28Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2025-04-26T18:06:25Z</project.build.outputTimestamp>
 
     <!-- The versions of all plugins used -->
     <io7m.bnd-baseline-maven-plugin.version>7.1.0</io7m.bnd-baseline-maven-plugin.version>
