@@ -28,7 +28,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- The version of the JDK required to _build_ the code. -->
-    <io7m.java.requiredSDKBuildVersion>[21,24)</io7m.java.requiredSDKBuildVersion>
+    <io7m.java.requiredSDKBuildVersion>[21,25)</io7m.java.requiredSDKBuildVersion>
 
     <!-- The version of Java targeted by the code. -->
     <io7m.java.targetJavaVersion>21</io7m.java.targetJavaVersion>
@@ -1216,6 +1216,7 @@ Specification-Version:    $[project.version]
         <assembly.skipAssembly>true</assembly.skipAssembly>
         <bnd.baseline.skip>true</bnd.baseline.skip>
         <checkstyle.skip>true</checkstyle.skip>
+        <cyclonedx.skip>true</cyclonedx.skip>
         <enforcer.skip>true</enforcer.skip>
         <jacoco.skip>true</jacoco.skip>
         <kstructural.skip>true</kstructural.skip>
