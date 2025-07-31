@@ -100,7 +100,6 @@
     <io7m.nexus-staging-maven-plugin.version>1.7.0</io7m.nexus-staging-maven-plugin.version>
     <io7m.reproducible-build-maven-plugin.version>0.17</io7m.reproducible-build-maven-plugin.version>
     <io7m.scijava-maven-plugin.version>3.0.1</io7m.scijava-maven-plugin.version>
-    <io7m.spotbugs-maven-plugin.version>4.9.3.0</io7m.spotbugs-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
 
     <!-- The latest version of asm. Overriding this is often necessary
@@ -721,60 +720,6 @@ Specification-Version:    $[project.version]
         </plugin>
 
         <!--
-          SpotBugs Maven Plugin
-          https://spotbugs.github.io/spotbugs-maven-plugin/
-
-          Used to locate probable bugs in code.
-        -->
-        <plugin>
-          <groupId>com.github.spotbugs</groupId>
-          <artifactId>spotbugs-maven-plugin</artifactId>
-          <version>${io7m.spotbugs-maven-plugin.version}</version>
-          <configuration>
-            <!-- https://github.com/spotbugs/spotbugs-maven-plugin/issues/423 -->
-            <fork>true</fork>
-            <effort>Max</effort>
-            <threshold>Low</threshold>
-            <xmlOutput>true</xmlOutput>
-            <plugins>
-
-              <!--
-                Security-related rules.
-
-                https://find-sec-bugs.github.io/bugs.htm
-              -->
-
-              <dependency>
-                <groupId>com.h3xstream.findsecbugs</groupId>
-                <artifactId>findsecbugs-plugin</artifactId>
-                <version>${io7m.findsecbugs-plugin.version}</version>
-              </dependency>
-
-              <!--
-                Extra contributed rules.
-
-                https://fb-contrib.sourceforge.net/bugdescriptions.html
-              -->
-
-              <dependency>
-                <groupId>com.mebigfatguy.fb-contrib</groupId>
-                <artifactId>fb-contrib</artifactId>
-                <version>${io7m.fb-contrib-plugin.version}</version>
-              </dependency>
-            </plugins>
-          </configuration>
-          <executions>
-            <execution>
-              <id>analyze-bugs</id>
-              <goals>
-                <goal>check</goal>
-              </goals>
-              <phase>process-classes</phase>
-            </execution>
-          </executions>
-        </plugin>
-
-        <!--
           JavaDoc plugin.
           https://maven.apache.org/plugins/maven-javadoc-plugin/
         -->
@@ -1225,7 +1170,6 @@ Specification-Version:    $[project.version]
         <maven.source.skip>true</maven.source.skip>
         <mdep.analyze.skip>true</mdep.analyze.skip>
         <skipTests>true</skipTests>
-        <spotbugs.skip>true</spotbugs.skip>
       </properties>
     </profile>
 
