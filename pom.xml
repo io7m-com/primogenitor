@@ -149,7 +149,7 @@
       <url>https://www.io7m.com/software/primogenitor</url>
     </site>
     <snapshotRepository>
-      <id>central-snapshots</id>
+      <id>central</id>
       <url>https://central.sonatype.com/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
