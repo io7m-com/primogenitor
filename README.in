@@ -43,7 +43,7 @@ By setting the parent of a project's POM file to `com.io7m.primogenitor`, the pr
 * Automatic source style checks using [Checkstyle](https://maven.apache.org/plugins/maven-checkstyle-plugin/). Rules are consulted from external Maven artifacts in order to facilitate sharing rules across large numbers of projects and enforcing a consistent style everywhere.
 * Automatic production of JavaDoc and `-sources` Jar files, sufficient for publishing to Maven Central.
 * Automatic signing of artifacts with the [maven-gpg-plugin](https://maven.apache.org/plugins/maven-gpg-plugin/), sufficient for publishing to Maven Central.
-* Incorporation of the [nexus-staging-maven-plugin](https://github.com/sonatype/nexus-maven-plugins/tree/master/staging/maven-plugin) for publishing releases to Maven Central with a single `mvn clean deploy` command.
+* Incorporation of the [central-publishing-maven-plugin](https://mavenplugins.github.io/central-publishing-maven-plugin/index.html) for publishing releases to Maven Central with a single `mvn clean deploy` command.
 * Analysis of dependency issues (unused dependencies, undeclared but used transitive dependencies) with the [maven-dependency-plugin](https://maven.apache.org/plugins/maven-dependency-plugin/). The build fails if any dependency issues are discovered.
 * Generation of minimalist single page sites with [minisite](https://www.io7m.com/software/minisite/).
 * Automatic collection of code coverage information with [JaCoCo](http://www.jacoco.org/).
