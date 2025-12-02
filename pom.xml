@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-  child.project.url.inherit.append.path="false">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" child.project.url.inherit.append.path="false" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
@@ -24,6 +20,8 @@
   <url>https://www.io7m.com/</url>
 
   <properties>
+    <io7m.workID>66bc98d6-8c36-39cb-83c7-a4483e51e877</io7m.workID>
+
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -55,7 +53,7 @@
     <io7m.api.previousArtifactId>${project.artifactId}</io7m.api.previousArtifactId>
 
     <!-- The previous version of the API. Used to enforce semantic versioning. -->
-    <io7m.api.previousVersion/>
+    <io7m.api.previousVersion></io7m.api.previousVersion>
 
     <!-- The default doclint configuration to use for JavaDoc (may be empty) -->
     <io7m.javadoc.docLint>-Xdoclint:all</io7m.javadoc.docLint>
@@ -120,9 +118,7 @@
     </license>
   </licenses>
 
-  <scm child.scm.connection.inherit.append.path="false"
-       child.scm.developerConnection.inherit.append.path="false"
-       child.scm.url.inherit.append.path="false">
+  <scm child.scm.connection.inherit.append.path="false" child.scm.url.inherit.append.path="false" child.scm.developerConnection.inherit.append.path="false">
     <url>https://www.github.com/io7m-com/primogenitor</url>
     <connection>scm:git:https://www.github.com/io7m-com/primogenitor</connection>
     <developerConnection>scm:git:https://www.github.com/io7m-com/primogenitor</developerConnection>
@@ -412,7 +408,7 @@
                     Do not allow circular dependencies.
                     Mostly impossible anyway, but... just in case.
                   -->
-                  <banCircularDependencies/>
+                  <banCircularDependencies></banCircularDependencies>
 
                   <!--
                     Require that the previous version number be correctly defined.
@@ -613,7 +609,7 @@
           <version>${io7m.bnd-maven-plugin.version}</version>
           <configuration>
             <bnd>
-<![CDATA[
+
 Automatic-Module-Name:    $[project.artifactId]
 Built-By:                 $[io7m.jar.built_by]
 Bundle-Description:       $[project.description]
@@ -634,7 +630,7 @@ Specification-Version:    $[project.version]
 -noextraheaders: true
 -snapshot:       SNAPSHOT
 -removeheaders:  Bnd-LastModified, Tool, Private-Package, Build-Jdk-Spec
-]]></bnd>
+</bnd>
           </configuration>
           <executions>
             <execution>
@@ -1164,6 +1160,8 @@ Specification-Version:    $[project.version]
         </property>
       </activation>
       <properties>
+    <io7m.workID>66bc98d6-8c36-39cb-83c7-a4483e51e877</io7m.workID>
+
         <assembly.skipAssembly>true</assembly.skipAssembly>
         <bnd.baseline.skip>true</bnd.baseline.skip>
         <checkstyle.skip>true</checkstyle.skip>
