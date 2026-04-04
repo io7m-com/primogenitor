@@ -744,8 +744,10 @@
         <c:change date="2025-10-24T00:00:00+00:00" summary="Upgrade maven-dependency-plugin 3.8.1 -&gt; 3.9.0."/>
       </c:changes>
     </c:release>
-    <c:release date="2025-10-24T15:09:14+00:00" is-open="true" ticket-system="com.github.io7m.primogenitor" version="9.2.0">
-      <c:changes/>
+    <c:release date="2026-04-04T14:30:36+00:00" is-open="true" ticket-system="com.github.io7m.primogenitor" version="9.2.0">
+      <c:changes>
+        <c:change date="2026-04-04T14:30:36+00:00" summary="Add io7m.surefire.extraArguments and io7m.failsafe.extraArguments properties."/>
+      </c:changes>
     </c:release>
   </c:releases>
   <c:ticket-systems>

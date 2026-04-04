@@ -58,6 +58,12 @@
     <!-- The default doclint configuration to use for JavaDoc (may be empty) -->
     <io7m.javadoc.docLint>-Xdoclint:all</io7m.javadoc.docLint>
 
+    <!-- Extra arguments passed to the Maven Surefire plugin. -->
+    <io7m.surefire.extraArguments></io7m.surefire.extraArguments>
+
+    <!-- Extra arguments passed to the Maven Failsafe plugin. -->
+    <io7m.failsafe.extraArguments></io7m.failsafe.extraArguments>
+
     <!-- The timestamp used for all outputs, for reproducibility. -->
     <project.build.outputTimestamp>2025-10-24T15:09:06Z</project.build.outputTimestamp>
 
@@ -235,7 +241,7 @@
               jacoco-maven-plugin below. It is necessary to ensure that tests
               are executed with the proper agent to measure coverage.
             -->
-            <argLine>@{argLine}</argLine>
+            <argLine>@{argLine} ${io7m.surefire.extraArguments}</argLine>
             <testSourceDirectory>${project.build.sourceDirectory}</testSourceDirectory>
             <testClassesDirectory>${project.build.outputDirectory}</testClassesDirectory>
             <redirectTestOutputToFile>true</redirectTestOutputToFile>
@@ -271,7 +277,7 @@
               jacoco-maven-plugin below. It is necessary to ensure that tests
               are executed with the proper agent to measure coverage.
             -->
-            <argLine>@{argLine}</argLine>
+            <argLine>@{argLine} ${io7m.failsafe.extraArguments}</argLine>
             <testSourceDirectory>${project.build.sourceDirectory}</testSourceDirectory>
             <testClassesDirectory>${project.build.outputDirectory}</testClassesDirectory>
             <redirectTestOutputToFile>true</redirectTestOutputToFile>
