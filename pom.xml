@@ -608,8 +608,7 @@
           <artifactId>bnd-maven-plugin</artifactId>
           <version>${io7m.bnd-maven-plugin.version}</version>
           <configuration>
-            <bnd>
-
+            <bnd><![CDATA[
 Automatic-Module-Name:    $[project.artifactId]
 Built-By:                 $[io7m.jar.built_by]
 Bundle-Description:       $[project.description]
@@ -630,7 +629,7 @@ Specification-Version:    $[project.version]
 -noextraheaders: true
 -snapshot:       SNAPSHOT
 -removeheaders:  Bnd-LastModified, Tool, Private-Package, Build-Jdk-Spec
-</bnd>
+]]></bnd>
           </configuration>
           <executions>
             <execution>
@@ -1160,8 +1159,6 @@ Specification-Version:    $[project.version]
         </property>
       </activation>
       <properties>
-    <io7m.workID>66bc98d6-8c36-39cb-83c7-a4483e51e877</io7m.workID>
-
         <assembly.skipAssembly>true</assembly.skipAssembly>
         <bnd.baseline.skip>true</bnd.baseline.skip>
         <checkstyle.skip>true</checkstyle.skip>
