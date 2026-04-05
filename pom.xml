@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-  child.project.url.inherit.append.path="false">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" child.project.url.inherit.append.path="false" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>8.5.0</version>
+  <version>9.2.0</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -24,11 +20,13 @@
   <url>https://www.io7m.com/</url>
 
   <properties>
+    <io7m.workID>66bc98d6-8c36-39cb-83c7-a4483e51e877</io7m.workID>
+
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- The version of the JDK required to _build_ the code. -->
-    <io7m.java.requiredSDKBuildVersion>[21,25)</io7m.java.requiredSDKBuildVersion>
+    <io7m.java.requiredSDKBuildVersion>[21,26)</io7m.java.requiredSDKBuildVersion>
 
     <!-- The version of Java targeted by the code. -->
     <io7m.java.targetJavaVersion>21</io7m.java.targetJavaVersion>
@@ -46,7 +44,7 @@
     <io7m.checkstyle.path>com/io7m/checkstyle_rules/checkstyle.xml</io7m.checkstyle.path>
 
     <!-- The version of the checkstyle tools used -->
-    <io7m.checkstyle.tools.version>10.23.0</io7m.checkstyle.tools.version>
+    <io7m.checkstyle.tools.version>10.26.1</io7m.checkstyle.tools.version>
 
     <!-- The previous groupId of the API. Used to enforce semantic versioning. -->
     <io7m.api.previousGroupId>${project.groupId}</io7m.api.previousGroupId>
@@ -55,57 +53,62 @@
     <io7m.api.previousArtifactId>${project.artifactId}</io7m.api.previousArtifactId>
 
     <!-- The previous version of the API. Used to enforce semantic versioning. -->
-    <io7m.api.previousVersion/>
+    <io7m.api.previousVersion>9.1.0</io7m.api.previousVersion>
 
     <!-- The default doclint configuration to use for JavaDoc (may be empty) -->
     <io7m.javadoc.docLint>-Xdoclint:all</io7m.javadoc.docLint>
 
+    <!-- Extra arguments passed to the Maven Surefire plugin. -->
+    <io7m.surefire.extraArguments></io7m.surefire.extraArguments>
+
+    <!-- Extra arguments passed to the Maven Failsafe plugin. -->
+    <io7m.failsafe.extraArguments></io7m.failsafe.extraArguments>
+
     <!-- The timestamp used for all outputs, for reproducibility. -->
-    <project.build.outputTimestamp>2025-04-26T18:06:25Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2026-04-05T13:11:53Z</project.build.outputTimestamp>
 
     <!-- The versions of all plugins used -->
-    <io7m.bnd-baseline-maven-plugin.version>7.1.0</io7m.bnd-baseline-maven-plugin.version>
-    <io7m.bnd-export-maven-plugin.version>7.1.0</io7m.bnd-export-maven-plugin.version>
-    <io7m.bnd-indexer-maven-plugin.version>7.1.0</io7m.bnd-indexer-maven-plugin.version>
-    <io7m.bnd-maven-plugin.version>7.1.0</io7m.bnd-maven-plugin.version>
-    <io7m.bnd-resolver-maven-plugin.version>7.1.0</io7m.bnd-resolver-maven-plugin.version>
+    <io7m.bnd-baseline-maven-plugin.version>7.2.1</io7m.bnd-baseline-maven-plugin.version>
+    <io7m.bnd-export-maven-plugin.version>7.2.1</io7m.bnd-export-maven-plugin.version>
+    <io7m.bnd-indexer-maven-plugin.version>7.2.1</io7m.bnd-indexer-maven-plugin.version>
+    <io7m.bnd-maven-plugin.version>7.2.1</io7m.bnd-maven-plugin.version>
+    <io7m.bnd-resolver-maven-plugin.version>7.2.1</io7m.bnd-resolver-maven-plugin.version>
     <io7m.bnd.plugins.version>6.2.0</io7m.bnd.plugins.version>
-    <io7m.build-helper-maven-plugin.version>3.6.0</io7m.build-helper-maven-plugin.version>
-    <io7m.buildnumber-maven-plugin.version>3.2.1</io7m.buildnumber-maven-plugin.version>
+    <io7m.build-helper-maven-plugin.version>3.6.1</io7m.build-helper-maven-plugin.version>
+    <io7m.buildnumber-maven-plugin.version>3.3.0</io7m.buildnumber-maven-plugin.version>
+    <io7m.central-publishing-maven-plugin.version>0.10.0</io7m.central-publishing-maven-plugin.version>
     <io7m.checksum-maven-plugin.version>1.11</io7m.checksum-maven-plugin.version>
     <io7m.cyclonedx-maven-plugin.version>2.9.1</io7m.cyclonedx-maven-plugin.version>
-    <io7m.exec-maven-plugin.version>3.5.0</io7m.exec-maven-plugin.version>
-    <io7m.extra-enforcer-rules.version>1.10.0</io7m.extra-enforcer-rules.version>
+    <io7m.exec-maven-plugin.version>3.6.3</io7m.exec-maven-plugin.version>
+    <io7m.extra-enforcer-rules.version>1.11.0</io7m.extra-enforcer-rules.version>
     <io7m.fb-contrib-plugin.version>7.4.0.sb</io7m.fb-contrib-plugin.version>
     <io7m.findsecbugs-plugin.version>1.7.1</io7m.findsecbugs-plugin.version>
-    <io7m.jacoco-maven-plugin.version>0.8.13</io7m.jacoco-maven-plugin.version>
-    <io7m.maven-assembly-plugin.version>3.7.1</io7m.maven-assembly-plugin.version>
+    <io7m.jacoco-maven-plugin.version>0.8.14</io7m.jacoco-maven-plugin.version>
+    <io7m.maven-assembly-plugin.version>3.8.0</io7m.maven-assembly-plugin.version>
     <io7m.maven-bundle-plugin.version>3.5.0</io7m.maven-bundle-plugin.version>
     <io7m.maven-checkstyle-plugin.version>3.6.0</io7m.maven-checkstyle-plugin.version>
-    <io7m.maven-clean-plugin.version>3.4.1</io7m.maven-clean-plugin.version>
-    <io7m.maven-compiler-plugin.version>3.14.0</io7m.maven-compiler-plugin.version>
-    <io7m.maven-dependency-plugin.version>3.8.1</io7m.maven-dependency-plugin.version>
+    <io7m.maven-clean-plugin.version>3.5.0</io7m.maven-clean-plugin.version>
+    <io7m.maven-compiler-plugin.version>3.15.0</io7m.maven-compiler-plugin.version>
+    <io7m.maven-dependency-plugin.version>3.10.0</io7m.maven-dependency-plugin.version>
     <io7m.maven-deploy-plugin.version>3.1.4</io7m.maven-deploy-plugin.version>
-    <io7m.maven-enforcer-plugin.version>3.5.0</io7m.maven-enforcer-plugin.version>
-    <io7m.maven-failsafe-plugin.version>3.5.3</io7m.maven-failsafe-plugin.version>
-    <io7m.maven-gpg-plugin.version>3.2.7</io7m.maven-gpg-plugin.version>
+    <io7m.maven-enforcer-plugin.version>3.6.2</io7m.maven-enforcer-plugin.version>
+    <io7m.maven-failsafe-plugin.version>3.5.5</io7m.maven-failsafe-plugin.version>
+    <io7m.maven-gpg-plugin.version>3.2.8</io7m.maven-gpg-plugin.version>
     <io7m.maven-install-plugin.version>3.1.4</io7m.maven-install-plugin.version>
-    <io7m.maven-jar-plugin.version>3.4.2</io7m.maven-jar-plugin.version>
-    <io7m.maven-javadoc-plugin.version>3.11.2</io7m.maven-javadoc-plugin.version>
-    <io7m.maven-resources-plugin.version>3.3.1</io7m.maven-resources-plugin.version>
-    <io7m.maven-shade-plugin.version>3.6.0</io7m.maven-shade-plugin.version>
+    <io7m.maven-jar-plugin.version>3.5.0</io7m.maven-jar-plugin.version>
+    <io7m.maven-javadoc-plugin.version>3.12.0</io7m.maven-javadoc-plugin.version>
+    <io7m.maven-resources-plugin.version>3.5.0</io7m.maven-resources-plugin.version>
+    <io7m.maven-shade-plugin.version>3.6.2</io7m.maven-shade-plugin.version>
     <io7m.maven-site-plugin.version>4.0.0-M16</io7m.maven-site-plugin.version>
-    <io7m.maven-source-plugin.version>3.3.1</io7m.maven-source-plugin.version>
-    <io7m.maven-surefire-plugin.version>3.5.3</io7m.maven-surefire-plugin.version>
-    <io7m.nexus-staging-maven-plugin.version>1.7.0</io7m.nexus-staging-maven-plugin.version>
+    <io7m.maven-source-plugin.version>3.4.0</io7m.maven-source-plugin.version>
+    <io7m.maven-surefire-plugin.version>3.5.5</io7m.maven-surefire-plugin.version>
     <io7m.reproducible-build-maven-plugin.version>0.17</io7m.reproducible-build-maven-plugin.version>
     <io7m.scijava-maven-plugin.version>3.0.1</io7m.scijava-maven-plugin.version>
-    <io7m.spotbugs-maven-plugin.version>4.9.3.0</io7m.spotbugs-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
 
     <!-- The latest version of asm. Overriding this is often necessary
          when using Maven plugins with new Java bytecode versions. -->
-    <io7m.asm.version>9.8</io7m.asm.version>
+    <io7m.asm.version>9.9.1</io7m.asm.version>
 
     <!-- Strings that appear in jars -->
     <io7m.jar.vendor>io7m.com</io7m.jar.vendor>
@@ -121,9 +124,7 @@
     </license>
   </licenses>
 
-  <scm child.scm.connection.inherit.append.path="false"
-       child.scm.developerConnection.inherit.append.path="false"
-       child.scm.url.inherit.append.path="false">
+  <scm child.scm.connection.inherit.append.path="false" child.scm.url.inherit.append.path="false" child.scm.developerConnection.inherit.append.path="false">
     <url>https://www.github.com/io7m-com/primogenitor</url>
     <connection>scm:git:https://www.github.com/io7m-com/primogenitor</connection>
     <developerConnection>scm:git:https://www.github.com/io7m-com/primogenitor</developerConnection>
@@ -149,13 +150,9 @@
       <name>io7m.com</name>
       <url>https://www.io7m.com/software/primogenitor</url>
     </site>
-    <repository>
-      <id>sonatype-nexus-staging</id>
-      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
     <snapshotRepository>
-      <id>sonatype-nexus-snapshots</id>
-      <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+      <id>central</id>
+      <url>https://central.sonatype.com/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 
@@ -244,7 +241,7 @@
               jacoco-maven-plugin below. It is necessary to ensure that tests
               are executed with the proper agent to measure coverage.
             -->
-            <argLine>@{argLine}</argLine>
+            <argLine>@{argLine} ${io7m.surefire.extraArguments}</argLine>
             <testSourceDirectory>${project.build.sourceDirectory}</testSourceDirectory>
             <testClassesDirectory>${project.build.outputDirectory}</testClassesDirectory>
             <redirectTestOutputToFile>true</redirectTestOutputToFile>
@@ -280,7 +277,7 @@
               jacoco-maven-plugin below. It is necessary to ensure that tests
               are executed with the proper agent to measure coverage.
             -->
-            <argLine>@{argLine}</argLine>
+            <argLine>@{argLine} ${io7m.failsafe.extraArguments}</argLine>
             <testSourceDirectory>${project.build.sourceDirectory}</testSourceDirectory>
             <testClassesDirectory>${project.build.outputDirectory}</testClassesDirectory>
             <redirectTestOutputToFile>true</redirectTestOutputToFile>
@@ -417,7 +414,7 @@
                     Do not allow circular dependencies.
                     Mostly impossible anyway, but... just in case.
                   -->
-                  <banCircularDependencies/>
+                  <banCircularDependencies></banCircularDependencies>
 
                   <!--
                     Require that the previous version number be correctly defined.
@@ -527,7 +524,6 @@
               <phase>process-sources</phase>
               <configuration>
                 <configLocation>${io7m.checkstyle.path}</configLocation>
-                <encoding>UTF-8</encoding>
                 <consoleOutput>true</consoleOutput>
                 <failsOnError>true</failsOnError>
                 <sourceDirectories>
@@ -618,8 +614,7 @@
           <artifactId>bnd-maven-plugin</artifactId>
           <version>${io7m.bnd-maven-plugin.version}</version>
           <configuration>
-            <bnd>
-<![CDATA[
+            <bnd><![CDATA[
 Automatic-Module-Name:    $[project.artifactId]
 Built-By:                 $[io7m.jar.built_by]
 Bundle-Description:       $[project.description]
@@ -718,60 +713,6 @@ Specification-Version:    $[project.version]
           <groupId>biz.aQute.bnd</groupId>
           <artifactId>bnd-export-maven-plugin</artifactId>
           <version>${io7m.bnd-export-maven-plugin.version}</version>
-        </plugin>
-
-        <!--
-          SpotBugs Maven Plugin
-          https://spotbugs.github.io/spotbugs-maven-plugin/
-
-          Used to locate probable bugs in code.
-        -->
-        <plugin>
-          <groupId>com.github.spotbugs</groupId>
-          <artifactId>spotbugs-maven-plugin</artifactId>
-          <version>${io7m.spotbugs-maven-plugin.version}</version>
-          <configuration>
-            <!-- https://github.com/spotbugs/spotbugs-maven-plugin/issues/423 -->
-            <fork>true</fork>
-            <effort>Max</effort>
-            <threshold>Low</threshold>
-            <xmlOutput>true</xmlOutput>
-            <plugins>
-
-              <!--
-                Security-related rules.
-
-                https://find-sec-bugs.github.io/bugs.htm
-              -->
-
-              <dependency>
-                <groupId>com.h3xstream.findsecbugs</groupId>
-                <artifactId>findsecbugs-plugin</artifactId>
-                <version>${io7m.findsecbugs-plugin.version}</version>
-              </dependency>
-
-              <!--
-                Extra contributed rules.
-
-                https://fb-contrib.sourceforge.net/bugdescriptions.html
-              -->
-
-              <dependency>
-                <groupId>com.mebigfatguy.fb-contrib</groupId>
-                <artifactId>fb-contrib</artifactId>
-                <version>${io7m.fb-contrib-plugin.version}</version>
-              </dependency>
-            </plugins>
-          </configuration>
-          <executions>
-            <execution>
-              <id>analyze-bugs</id>
-              <goals>
-                <goal>check</goal>
-              </goals>
-              <phase>process-classes</phase>
-            </execution>
-          </executions>
         </plugin>
 
         <!--
@@ -898,21 +839,20 @@ Specification-Version:    $[project.version]
         </plugin>
 
         <!--
-          Nexus staging plugin.
-          https://github.com/sonatype/nexus-maven-plugins/tree/master/staging/maven-plugin
+          Central staging plugin.
+          https://central.sonatype.org/publish/publish-portal-maven/
 
           This allows for deployment to Maven Central via the command line.
         -->
         <plugin>
-          <groupId>org.sonatype.plugins</groupId>
-          <artifactId>nexus-staging-maven-plugin</artifactId>
-          <version>${io7m.nexus-staging-maven-plugin.version}</version>
+          <groupId>org.sonatype.central</groupId>
+          <artifactId>central-publishing-maven-plugin</artifactId>
+          <version>${io7m.central-publishing-maven-plugin.version}</version>
           <extensions>true</extensions>
           <configuration>
-            <serverId>sonatype-nexus-staging</serverId>
-            <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-            <description>${project.groupId}:${project.artifactId}:${project.version}</description>
-            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+            <publishingServerId>central</publishingServerId>
+            <autoPublish>true</autoPublish>
+            <waitUntil>published</waitUntil>
           </configuration>
         </plugin>
 
@@ -1187,15 +1127,27 @@ Specification-Version:    $[project.version]
       <build>
         <plugins>
           <plugin>
-            <groupId>org.sonatype.plugins</groupId>
-            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <version>${io7m.maven-deploy-plugin.version}</version>
+            <executions>
+              <execution>
+                <id>default-deploy</id>
+                <phase>none</phase>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.sonatype.central</groupId>
+            <artifactId>central-publishing-maven-plugin</artifactId>
+            <version>${io7m.central-publishing-maven-plugin.version}</version>
             <extensions>true</extensions>
             <executions>
               <execution>
                 <id>deploy-packages</id>
                 <phase>deploy</phase>
                 <goals>
-                  <goal>deploy</goal>
+                  <goal>publish</goal>
                 </goals>
               </execution>
             </executions>
@@ -1225,28 +1177,7 @@ Specification-Version:    $[project.version]
         <maven.source.skip>true</maven.source.skip>
         <mdep.analyze.skip>true</mdep.analyze.skip>
         <skipTests>true</skipTests>
-        <spotbugs.skip>true</spotbugs.skip>
       </properties>
-    </profile>
-
-    <!-- Allow deploying to an alternate repository -->
-    <profile>
-      <id>io7m-alternate-repository</id>
-      <activation>
-        <property>
-          <name>io7m.useAlternateRepository</name>
-        </property>
-      </activation>
-      <distributionManagement>
-        <repository>
-          <id>${io7m.repository.releases.id}</id>
-          <url>${io7m.repository.releases.url}</url>
-        </repository>
-        <snapshotRepository>
-          <id>${io7m.repository.snapshots.id}</id>
-          <url>${io7m.repository.snapshots.url}</url>
-        </snapshotRepository>
-      </distributionManagement>
     </profile>
   </profiles>
 
