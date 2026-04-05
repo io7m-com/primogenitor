@@ -744,9 +744,40 @@
         <c:change date="2025-10-24T00:00:00+00:00" summary="Upgrade maven-dependency-plugin 3.8.1 -&gt; 3.9.0."/>
       </c:changes>
     </c:release>
-    <c:release date="2026-04-04T14:30:36+00:00" is-open="true" ticket-system="com.github.io7m.primogenitor" version="9.2.0">
+    <c:release date="2026-04-05T13:11:54+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="9.2.0">
       <c:changes>
-        <c:change date="2026-04-04T14:30:36+00:00" summary="Add io7m.surefire.extraArguments and io7m.failsafe.extraArguments properties."/>
+        <c:change date="2025-11-01T00:00:00+00:00" summary="Update org.jacoco:jacoco-maven-plugin:0.8.13 → 0.8.14."/>
+        <c:change date="2025-11-01T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-shade-plugin:3.6.0 → 3.6.1."/>
+        <c:change date="2025-11-01T00:00:00+00:00" summary="Update org.codehaus.mojo:extra-enforcer-rules:1.10.0 → 1.11.0."/>
+        <c:change date="2025-11-01T00:00:00+00:00" summary="Update junit.version:5.14.0 → 5.14.1."/>
+        <c:change date="2025-11-01T00:00:00+00:00" summary="Update actions/upload-artifact:4.6.2 → 5.0.0."/>
+        <c:change date="2025-11-02T00:00:00+00:00" summary="Update org.codehaus.mojo:exec-maven-plugin:3.6.0 → 3.6.2."/>
+        <c:change date="2025-11-22T00:00:00+00:00" summary="Update org.ow2.asm:asm:9.8 → 9.9."/>
+        <c:change date="2025-11-22T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-enforcer-plugin:3.6.1 → 3.6.2."/>
+        <c:change date="2025-11-22T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-surefire-plugin:3.5.3 → 3.5.4."/>
+        <c:change date="2026-01-01T00:00:00+00:00" summary="Update org.ow2.asm:asm:9.9 → 9.9.1."/>
+        <c:change date="2026-01-01T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-jar-plugin:3.4.2 → 3.5.0."/>
+        <c:change date="2026-01-01T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-assembly-plugin:3.7.1 → 3.8.0."/>
+        <c:change date="2026-01-01T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-resources-plugin:3.3.1 → 3.4.0."/>
+        <c:change date="2026-01-01T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-source-plugin:3.3.1 → 3.4.0."/>
+        <c:change date="2026-02-01T00:00:00+00:00" summary="Update biz.aQute.bnd:bnd-maven-plugin:7.1.0 → 7.2.0."/>
+        <c:change date="2026-02-01T00:00:00+00:00" summary="Update biz.aQute.bnd:bnd-baseline-maven-plugin:7.1.0 → 7.2.0."/>
+        <c:change date="2026-02-01T00:00:00+00:00" summary="Update junit.version:5.14.1 → 5.14.2."/>
+        <c:change date="2026-02-01T00:00:00+00:00" summary="Update org.codehaus.mojo:exec-maven-plugin:3.6.2 → 3.6.3."/>
+        <c:change date="2026-02-01T00:00:00+00:00" summary="Update actions/checkout:6.0.1 → 6.0.2."/>
+        <c:change date="2026-02-20T00:00:00+00:00" summary="Update biz.aQute.bnd:bnd-export-maven-plugin:7.1.0 → 7.2.1."/>
+        <c:change date="2026-02-20T00:00:00+00:00" summary="Update biz.aQute.bnd:bnd-resolver-maven-plugin:7.1.0 → 7.2.1."/>
+        <c:change date="2026-02-20T00:00:00+00:00" summary="Update org.codehaus.mojo:buildnumber-maven-plugin:3.2.1 → 3.3.0."/>
+        <c:change date="2026-02-21T00:00:00+00:00" summary="Update biz.aQute.bnd:bnd-maven-plugin:7.2.0 → 7.2.1."/>
+        <c:change date="2026-02-21T00:00:00+00:00" summary="Update biz.aQute.bnd:bnd-baseline-maven-plugin:7.2.0 → 7.2.1."/>
+        <c:change date="2026-03-01T00:00:00+00:00" summary="Update biz.aQute.bnd:bnd-indexer-maven-plugin:7.1.0 → 7.2.1."/>
+        <c:change date="2026-03-01T00:00:00+00:00" summary="Update actions/setup-java:5.1.0 → 5.2.0."/>
+        <c:change date="2026-04-02T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-surefire-plugin:3.5.4 → 3.5.5."/>
+        <c:change date="2026-04-02T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-failsafe-plugin:3.5.4 → 3.5.5."/>
+        <c:change date="2026-04-02T00:00:00+00:00" summary="Update junit.version:5.14.2 → 5.14.3."/>
+        <c:change date="2026-04-02T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-resources-plugin:3.4.0 → 3.5.0."/>
+        <c:change date="2026-04-02T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-shade-plugin:3.6.1 → 3.6.2."/>
+        <c:change date="2026-04-04T00:00:00+00:00" summary="Add io7m.surefire.extraArguments and io7m.failsafe.extraArguments properties."/>
       </c:changes>
     </c:release>
   </c:releases>
