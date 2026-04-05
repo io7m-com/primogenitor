@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>9.2.0</version>
+  <version>9.3.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -53,7 +53,7 @@
     <io7m.api.previousArtifactId>${project.artifactId}</io7m.api.previousArtifactId>
 
     <!-- The previous version of the API. Used to enforce semantic versioning. -->
-    <io7m.api.previousVersion>9.1.0</io7m.api.previousVersion>
+    <io7m.api.previousVersion>9.2.0</io7m.api.previousVersion>
 
     <!-- The default doclint configuration to use for JavaDoc (may be empty) -->
     <io7m.javadoc.docLint>-Xdoclint:all</io7m.javadoc.docLint>
@@ -65,7 +65,7 @@
     <io7m.failsafe.extraArguments></io7m.failsafe.extraArguments>
 
     <!-- The timestamp used for all outputs, for reproducibility. -->
-    <project.build.outputTimestamp>2026-04-05T13:11:53Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2026-04-05T13:12:02Z</project.build.outputTimestamp>
 
     <!-- The versions of all plugins used -->
     <io7m.bnd-baseline-maven-plugin.version>7.2.1</io7m.bnd-baseline-maven-plugin.version>
