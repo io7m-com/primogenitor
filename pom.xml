@@ -72,7 +72,7 @@
     <io7m.bnd-export-maven-plugin.version>7.2.1</io7m.bnd-export-maven-plugin.version>
     <io7m.bnd-indexer-maven-plugin.version>7.2.1</io7m.bnd-indexer-maven-plugin.version>
     <io7m.bnd-maven-plugin.version>7.2.1</io7m.bnd-maven-plugin.version>
-    <io7m.bnd-resolver-maven-plugin.version>7.2.1</io7m.bnd-resolver-maven-plugin.version>
+    <io7m.bnd-resolver-maven-plugin.version>7.2.3</io7m.bnd-resolver-maven-plugin.version>
     <io7m.bnd.plugins.version>6.2.0</io7m.bnd.plugins.version>
     <io7m.build-helper-maven-plugin.version>3.6.1</io7m.build-helper-maven-plugin.version>
     <io7m.buildnumber-maven-plugin.version>3.3.0</io7m.buildnumber-maven-plugin.version>
