@@ -68,7 +68,7 @@
     <project.build.outputTimestamp>2026-04-05T13:12:02Z</project.build.outputTimestamp>
 
     <!-- The versions of all plugins used -->
-    <io7m.bnd-baseline-maven-plugin.version>7.2.1</io7m.bnd-baseline-maven-plugin.version>
+    <io7m.bnd-baseline-maven-plugin.version>7.2.3</io7m.bnd-baseline-maven-plugin.version>
     <io7m.bnd-export-maven-plugin.version>7.2.1</io7m.bnd-export-maven-plugin.version>
     <io7m.bnd-indexer-maven-plugin.version>7.2.1</io7m.bnd-indexer-maven-plugin.version>
     <io7m.bnd-maven-plugin.version>7.2.1</io7m.bnd-maven-plugin.version>
