@@ -744,7 +744,7 @@
         <c:change date="2025-10-24T00:00:00+00:00" summary="Upgrade maven-dependency-plugin 3.8.1 -&gt; 3.9.0."/>
       </c:changes>
     </c:release>
-    <c:release date="2026-04-05T13:11:54+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="9.2.0">
+    <c:release date="2026-04-05T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.primogenitor" version="9.2.0">
       <c:changes>
         <c:change date="2025-11-01T00:00:00+00:00" summary="Update org.jacoco:jacoco-maven-plugin:0.8.13 → 0.8.14."/>
         <c:change date="2025-11-01T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-shade-plugin:3.6.0 → 3.6.1."/>
@@ -778,6 +778,11 @@
         <c:change date="2026-04-02T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-resources-plugin:3.4.0 → 3.5.0."/>
         <c:change date="2026-04-02T00:00:00+00:00" summary="Update org.apache.maven.plugins:maven-shade-plugin:3.6.1 → 3.6.2."/>
         <c:change date="2026-04-04T00:00:00+00:00" summary="Add io7m.surefire.extraArguments and io7m.failsafe.extraArguments properties."/>
+      </c:changes>
+    </c:release>
+    <c:release date="2026-05-04T19:43:03+00:00" is-open="true" ticket-system="com.github.io7m.primogenitor" version="9.3.0">
+      <c:changes>
+        <c:change date="2026-05-04T19:43:03+00:00" summary="Include zip files in reproducible-build-maven-plugin."/>
       </c:changes>
     </c:release>
   </c:releases>
