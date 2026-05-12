@@ -8,7 +8,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>10.0.0-SNAPSHOT</version>
+  <version>10.0.0-beta0001</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -80,7 +80,7 @@
     <io7m.failsafe.extraArguments></io7m.failsafe.extraArguments>
 
     <!-- The timestamp used for all outputs, for reproducibility. -->
-    <project.build.outputTimestamp>2026-05-10T19:18:07Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2026-05-12T16:55:37Z</project.build.outputTimestamp>
 
     <!-- The versions of all plugins used -->
     <io7m.bnd-baseline-maven-plugin.version>7.2.3</io7m.bnd-baseline-maven-plugin.version>
