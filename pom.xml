@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" child.project.url.inherit.append.path="false" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         child.project.url.inherit.append.path="false"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.primogenitor</groupId>
   <artifactId>com.io7m.primogenitor</artifactId>
-  <version>9.2.0</version>
+  <version>10.0.0-beta0001</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -44,7 +47,19 @@
     <io7m.checkstyle.path>com/io7m/checkstyle_rules/checkstyle.xml</io7m.checkstyle.path>
 
     <!-- The version of the checkstyle tools used -->
-    <io7m.checkstyle.tools.version>10.26.1</io7m.checkstyle.tools.version>
+    <io7m.checkstyle.tools.version>13.4.2</io7m.checkstyle.tools.version>
+
+    <!-- The groupId of the artifact that contains spotless rules for the project. -->
+    <io7m.spotless.groupId>com.io7m.ejdt_format_rules</io7m.spotless.groupId>
+
+    <!-- The artifact that contains spotless rules for the project. -->
+    <io7m.spotless.artifact>com.io7m.ejdt_format_rules</io7m.spotless.artifact>
+
+    <!-- The version of the artifact that contains spotless rules for the project. -->
+    <io7m.spotless.version>1.0.1</io7m.spotless.version>
+
+    <!-- The path to the spotless configuration inside the spotless package. -->
+    <io7m.spotless.path>eclipse_formatter.xml</io7m.spotless.path>
 
     <!-- The previous groupId of the API. Used to enforce semantic versioning. -->
     <io7m.api.previousGroupId>${project.groupId}</io7m.api.previousGroupId>
@@ -53,7 +68,7 @@
     <io7m.api.previousArtifactId>${project.artifactId}</io7m.api.previousArtifactId>
 
     <!-- The previous version of the API. Used to enforce semantic versioning. -->
-    <io7m.api.previousVersion>9.1.0</io7m.api.previousVersion>
+    <io7m.api.previousVersion>9.2.0</io7m.api.previousVersion>
 
     <!-- The default doclint configuration to use for JavaDoc (may be empty) -->
     <io7m.javadoc.docLint>-Xdoclint:all</io7m.javadoc.docLint>
@@ -65,14 +80,14 @@
     <io7m.failsafe.extraArguments></io7m.failsafe.extraArguments>
 
     <!-- The timestamp used for all outputs, for reproducibility. -->
-    <project.build.outputTimestamp>2026-04-05T13:11:53Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2026-05-12T16:55:37Z</project.build.outputTimestamp>
 
     <!-- The versions of all plugins used -->
-    <io7m.bnd-baseline-maven-plugin.version>7.2.1</io7m.bnd-baseline-maven-plugin.version>
-    <io7m.bnd-export-maven-plugin.version>7.2.1</io7m.bnd-export-maven-plugin.version>
-    <io7m.bnd-indexer-maven-plugin.version>7.2.1</io7m.bnd-indexer-maven-plugin.version>
+    <io7m.bnd-baseline-maven-plugin.version>7.2.3</io7m.bnd-baseline-maven-plugin.version>
+    <io7m.bnd-export-maven-plugin.version>7.2.3</io7m.bnd-export-maven-plugin.version>
+    <io7m.bnd-indexer-maven-plugin.version>7.2.3</io7m.bnd-indexer-maven-plugin.version>
     <io7m.bnd-maven-plugin.version>7.2.1</io7m.bnd-maven-plugin.version>
-    <io7m.bnd-resolver-maven-plugin.version>7.2.1</io7m.bnd-resolver-maven-plugin.version>
+    <io7m.bnd-resolver-maven-plugin.version>7.2.3</io7m.bnd-resolver-maven-plugin.version>
     <io7m.bnd.plugins.version>6.2.0</io7m.bnd.plugins.version>
     <io7m.build-helper-maven-plugin.version>3.6.1</io7m.build-helper-maven-plugin.version>
     <io7m.buildnumber-maven-plugin.version>3.3.0</io7m.buildnumber-maven-plugin.version>
@@ -80,7 +95,7 @@
     <io7m.checksum-maven-plugin.version>1.11</io7m.checksum-maven-plugin.version>
     <io7m.cyclonedx-maven-plugin.version>2.9.1</io7m.cyclonedx-maven-plugin.version>
     <io7m.exec-maven-plugin.version>3.6.3</io7m.exec-maven-plugin.version>
-    <io7m.extra-enforcer-rules.version>1.11.0</io7m.extra-enforcer-rules.version>
+    <io7m.extra-enforcer-rules.version>1.12.0</io7m.extra-enforcer-rules.version>
     <io7m.fb-contrib-plugin.version>7.4.0.sb</io7m.fb-contrib-plugin.version>
     <io7m.findsecbugs-plugin.version>1.7.1</io7m.findsecbugs-plugin.version>
     <io7m.jacoco-maven-plugin.version>0.8.14</io7m.jacoco-maven-plugin.version>
@@ -104,6 +119,7 @@
     <io7m.maven-surefire-plugin.version>3.5.5</io7m.maven-surefire-plugin.version>
     <io7m.reproducible-build-maven-plugin.version>0.17</io7m.reproducible-build-maven-plugin.version>
     <io7m.scijava-maven-plugin.version>3.0.1</io7m.scijava-maven-plugin.version>
+    <io7m.spotless-maven-plugin.version>3.4.0</io7m.spotless-maven-plugin.version>
     <io7m.truezip-maven-plugin.version>1.2</io7m.truezip-maven-plugin.version>
 
     <!-- The latest version of asm. Overriding this is often necessary
@@ -829,6 +845,7 @@ Specification-Version:    $[project.version]
                 <overwrite>true</overwrite>
                 <includes>
                   <include>${project.artifactId}-${project.version}.*\.jar</include>
+                  <include>${project.artifactId}-${project.version}.*\.zip</include>
                 </includes>
                 <manifestAttributes>
                   <manifestAttribute>Build-Jdk-Spec</manifestAttribute>
@@ -993,6 +1010,42 @@ Specification-Version:    $[project.version]
             </execution>
           </executions>
         </plugin>
+
+        <!--
+          Spotless Maven plugin.
+          https://github.com/diffplug/spotless/
+
+          Used to format sources.
+        -->
+        <plugin>
+          <groupId>com.diffplug.spotless</groupId>
+          <artifactId>spotless-maven-plugin</artifactId>
+          <version>${io7m.spotless-maven-plugin.version}</version>
+          <dependencies>
+            <dependency>
+              <groupId>${io7m.spotless.groupId}</groupId>
+              <artifactId>${io7m.spotless.artifact}</artifactId>
+              <version>${io7m.spotless.version}</version>
+            </dependency>
+          </dependencies>
+          <executions>
+            <execution>
+              <id>format-sources</id>
+              <phase>process-sources</phase>
+              <goals>
+                <goal>apply</goal>
+              </goals>
+              <configuration>
+                <java>
+                  <eclipse>
+                    <file>eclipse_formatter.xml</file>
+                  </eclipse>
+                  <lineEndings>UNIX</lineEndings>
+                </java>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
       </plugins>
     </pluginManagement>
 
@@ -1025,6 +1078,11 @@ Specification-Version:    $[project.version]
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>buildnumber-maven-plugin</artifactId>
+      </plugin>
+
+      <plugin>
+        <groupId>com.diffplug.spotless</groupId>
+        <artifactId>spotless-maven-plugin</artifactId>
       </plugin>
 
       <plugin>

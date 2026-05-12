@@ -54,6 +54,7 @@ By setting the parent of a project's POM file to `com.io7m.primogenitor`, the pr
   * For JavaDoc jars, as the output of the `javadoc` tool is not deterministic.
   * If the project adds extra plugins that insert non-reproducible content into Jar files.
   * For `SNAPSHOT` versions of projects, as this will often result in various tools inserting the snapshot date and time into the Jar content.
+* Automatic formatting of source code to the `io7m` standards using [spotless](https://github.com/diffplug/spotless) and [ejdt_format_rules](https://github.com/io7m-com/ejdt_format_rules).
 * Automatic insertion of [OSGi](http://www.osgi.org) metadata into the produced Jar files using the [bnd-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-maven-plugin). Sensible default values are chosen based on metadata given in the POM file, and this can be overridden on a per-module basis.
 * Automatic checking of [semantic versioning](https://semver.org/) using the [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin). Bytecode is analyzed and the build fails if, for example, binary incompatible changes have been made without incrementing the project's major version number.
 * Automatic source style checks using [Checkstyle](https://maven.apache.org/plugins/maven-checkstyle-plugin/). Rules are consulted from external Maven artifacts in order to facilitate sharing rules across large numbers of projects and enforcing a consistent style everywhere.

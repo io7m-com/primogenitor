@@ -33,8 +33,8 @@ import static java.nio.file.StandardCopyOption.ATOMIC_MOVE;
 import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 
 /**
- * Functions to make zip files somewhat reproducible (assuming that the
- * contents of the entries are already reproducible).
+ * Functions to make zip files somewhat reproducible (assuming that the contents
+ * of the entries are already reproducible).
  */
 
 public final class ReproducibleZip
@@ -48,17 +48,7 @@ public final class ReproducibleZip
 
   private static FileTime fixedFileTime()
   {
-    final var time =
-      OffsetDateTime.of(
-        2020,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        ZoneOffset.UTC
-      );
+    final var time = OffsetDateTime.of(2020, 1, 1, 0, 0, 0, 0, ZoneOffset.UTC);
     return FileTime.from(time.toInstant());
   }
 

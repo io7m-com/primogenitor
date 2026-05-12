@@ -58,11 +58,8 @@ public final class ReproducibleZipTest
     final var fileTime =
       FileTime.from(expectedTime.toInstant());
 
-    TestDirectories.resourceOf(
-      ReproducibleZipTest.class,
-      this.directory,
-      "standard.epub"
-    );
+    TestDirectories
+      .resourceOf(ReproducibleZipTest.class, this.directory, "standard.epub");
 
     final var outputPath =
       this.directory.resolve("standard.epub");
