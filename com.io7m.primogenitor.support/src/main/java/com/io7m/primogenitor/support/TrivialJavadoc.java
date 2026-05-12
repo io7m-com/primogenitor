@@ -36,7 +36,8 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 
 public final class TrivialJavadoc
 {
-  private static final Logger LOG = Logger.getLogger(TrivialJavadoc.class.getCanonicalName());
+  private static final Logger LOG =
+    Logger.getLogger(TrivialJavadoc.class.getCanonicalName());
 
   private TrivialJavadoc()
   {
@@ -152,8 +153,7 @@ public final class TrivialJavadoc
       List.of(
         "member-search-index.zip",
         "package-search-index.zip",
-        "type-search-index.zip"
-      );
+        "type-search-index.zip");
 
     for (final var file : problematicFiles) {
       final Path outputFile =
@@ -171,9 +171,9 @@ public final class TrivialJavadoc
   }
 
   /**
-   * The overview-summary file is just a redirect to the index.html file,
-   * but unfortunately ignores the -notimestamp flag, causing the output
-   * to be non-reproducible.
+   * The overview-summary file is just a redirect to the index.html file, but
+   * unfortunately ignores the -notimestamp flag, causing the output to be
+   * non-reproducible.
    */
 
   private static void applyOverviewWorkaround(
@@ -183,8 +183,7 @@ public final class TrivialJavadoc
     Files.copy(
       outputDirectory.toAbsolutePath().resolve("index.html"),
       outputDirectory.toAbsolutePath().resolve("overview-summary.html"),
-      StandardCopyOption.REPLACE_EXISTING
-    );
+      StandardCopyOption.REPLACE_EXISTING);
   }
 
   private static boolean isJavaSourceFile(

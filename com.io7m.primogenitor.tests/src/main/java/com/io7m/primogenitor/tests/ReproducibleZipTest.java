@@ -46,7 +46,8 @@ public final class ReproducibleZipTest
   /**
    * Test that a zip file looks reproducible.
    *
-   * @throws IOException On I/O errors
+   * @throws IOException
+   *           On I/O errors
    */
 
   @Test
@@ -61,8 +62,7 @@ public final class ReproducibleZipTest
     TestDirectories.resourceOf(
       ReproducibleZipTest.class,
       this.directory,
-      "standard.epub"
-    );
+      "standard.epub");
 
     final var outputPath =
       this.directory.resolve("standard.epub");

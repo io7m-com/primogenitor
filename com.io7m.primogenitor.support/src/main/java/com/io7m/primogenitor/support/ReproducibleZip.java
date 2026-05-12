@@ -33,8 +33,8 @@ import static java.nio.file.StandardCopyOption.ATOMIC_MOVE;
 import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 
 /**
- * Functions to make zip files somewhat reproducible (assuming that the
- * contents of the entries are already reproducible).
+ * Functions to make zip files somewhat reproducible (assuming that the contents
+ * of the entries are already reproducible).
  */
 
 public final class ReproducibleZip
@@ -57,8 +57,7 @@ public final class ReproducibleZip
         0,
         0,
         0,
-        ZoneOffset.UTC
-      );
+        ZoneOffset.UTC);
     return FileTime.from(time.toInstant());
   }
 
@@ -85,10 +84,13 @@ public final class ReproducibleZip
    * Make the zip file at {@code zip} reproducible, temporarily storing the
    * contents in {@code zipTmp}.
    *
-   * @param zip    The output (and input) file
-   * @param zipTmp The temporary file
+   * @param zip
+   *          The output (and input) file
+   * @param zipTmp
+   *          The temporary file
    *
-   * @throws IOException On errors
+   * @throws IOException
+   *           On errors
    */
 
   public static void makeReproducible(
