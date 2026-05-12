@@ -56,7 +56,7 @@
     <io7m.spotless.artifact>com.io7m.ejdt_format_rules</io7m.spotless.artifact>
 
     <!-- The version of the artifact that contains spotless rules for the project. -->
-    <io7m.spotless.version>1.0.0</io7m.spotless.version>
+    <io7m.spotless.version>1.0.1</io7m.spotless.version>
 
     <!-- The path to the spotless configuration inside the spotless package. -->
     <io7m.spotless.path>eclipse_formatter.xml</io7m.spotless.path>

@@ -55,11 +55,16 @@ public final class TrivialJavadoc
         "usage: source-directory classpath-file output-directory log-file options-file");
     }
 
-    final var sources = Paths.get(args[0]).toAbsolutePath();
-    final var classpathFile = Paths.get(args[1]).toAbsolutePath();
-    final var outputDirectory = Paths.get(args[2]).toAbsolutePath();
-    final var logFile = Paths.get(args[3]).toAbsolutePath();
-    final var optionsFile = Paths.get(args[4]).toAbsolutePath();
+    final var sources =
+      Paths.get(args[0]).toAbsolutePath();
+    final var classpathFile =
+      Paths.get(args[1]).toAbsolutePath();
+    final var outputDirectory =
+      Paths.get(args[2]).toAbsolutePath();
+    final var logFile =
+      Paths.get(args[3]).toAbsolutePath();
+    final var optionsFile =
+      Paths.get(args[4]).toAbsolutePath();
 
     LOG.info("source-directory: " + sources);
     LOG.info("classpath-file:   " + classpathFile);
