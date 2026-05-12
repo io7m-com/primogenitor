@@ -55,16 +55,11 @@ public final class TrivialJavadoc
         "usage: source-directory classpath-file output-directory log-file options-file");
     }
 
-    final var sources =
-      Paths.get(args[0]).toAbsolutePath();
-    final var classpathFile =
-      Paths.get(args[1]).toAbsolutePath();
-    final var outputDirectory =
-      Paths.get(args[2]).toAbsolutePath();
-    final var logFile =
-      Paths.get(args[3]).toAbsolutePath();
-    final var optionsFile =
-      Paths.get(args[4]).toAbsolutePath();
+    final var sources = Paths.get(args[0]).toAbsolutePath();
+    final var classpathFile = Paths.get(args[1]).toAbsolutePath();
+    final var outputDirectory = Paths.get(args[2]).toAbsolutePath();
+    final var logFile = Paths.get(args[3]).toAbsolutePath();
+    final var optionsFile = Paths.get(args[4]).toAbsolutePath();
 
     LOG.info("source-directory: " + sources);
     LOG.info("classpath-file:   " + classpathFile);
@@ -75,8 +70,7 @@ public final class TrivialJavadoc
     final List<String> sourceFiles;
     try (Stream<Path> sourceStream = Files.walk(sources)) {
       sourceFiles =
-        sourceStream
-          .map(Path::toAbsolutePath)
+        sourceStream.map(Path::toAbsolutePath)
           .filter(Files::isRegularFile)
           .filter(TrivialJavadoc::isJavaSourceFile)
           .map(Path::toString)
@@ -125,8 +119,7 @@ public final class TrivialJavadoc
     LOG.info("exec " + String.join(" ", commandParameters));
 
     final var process =
-      new ProcessBuilder(commandParameters)
-        .redirectError(logFile.toFile())
+      new ProcessBuilder(commandParameters).redirectError(logFile.toFile())
         .redirectOutput(logFile.toFile())
         .start();
 
@@ -156,8 +149,7 @@ public final class TrivialJavadoc
         "type-search-index.zip");
 
     for (final var file : problematicFiles) {
-      final Path outputFile =
-        outputDirectory.toAbsolutePath().resolve(file);
+      final Path outputFile = outputDirectory.toAbsolutePath().resolve(file);
       final Path outputFileTmp =
         outputDirectory.toAbsolutePath().resolve(file + ".tmp");
 

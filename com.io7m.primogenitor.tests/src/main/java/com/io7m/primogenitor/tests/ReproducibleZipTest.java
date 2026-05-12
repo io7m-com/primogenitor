@@ -46,28 +46,21 @@ public final class ReproducibleZipTest
   /**
    * Test that a zip file looks reproducible.
    *
-   * @throws IOException
-   *           On I/O errors
+   * @throws IOException On I/O errors
    */
 
   @Test
   public void testReproduce()
     throws IOException
   {
-    final var expectedTime =
-      OffsetDateTime.parse("2020-01-01T00:00:00+00:00");
-    final var fileTime =
-      FileTime.from(expectedTime.toInstant());
+    final var expectedTime = OffsetDateTime.parse("2020-01-01T00:00:00+00:00");
+    final var fileTime = FileTime.from(expectedTime.toInstant());
 
-    TestDirectories.resourceOf(
-      ReproducibleZipTest.class,
-      this.directory,
-      "standard.epub");
+    TestDirectories
+      .resourceOf(ReproducibleZipTest.class, this.directory, "standard.epub");
 
-    final var outputPath =
-      this.directory.resolve("standard.epub");
-    final var outputTmp =
-      this.directory.resolve("standard.epub.tmp");
+    final var outputPath = this.directory.resolve("standard.epub");
+    final var outputTmp = this.directory.resolve("standard.epub.tmp");
 
     ReproducibleZip.makeReproducible(outputPath, outputTmp);
 

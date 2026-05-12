@@ -48,16 +48,7 @@ public final class ReproducibleZip
 
   private static FileTime fixedFileTime()
   {
-    final var time =
-      OffsetDateTime.of(
-        2020,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        ZoneOffset.UTC);
+    final var time = OffsetDateTime.of(2020, 1, 1, 0, 0, 0, 0, ZoneOffset.UTC);
     return FileTime.from(time.toInstant());
   }
 
@@ -84,13 +75,10 @@ public final class ReproducibleZip
    * Make the zip file at {@code zip} reproducible, temporarily storing the
    * contents in {@code zipTmp}.
    *
-   * @param zip
-   *          The output (and input) file
-   * @param zipTmp
-   *          The temporary file
+   * @param zip    The output (and input) file
+   * @param zipTmp The temporary file
    *
-   * @throws IOException
-   *           On errors
+   * @throws IOException On errors
    */
 
   public static void makeReproducible(
