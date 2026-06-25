@@ -15,6 +15,17 @@ primogenitor
 | OpenJDK (Temurin) Current | Windows | [![Build (OpenJDK (Temurin) Current, Windows)](https://img.shields.io/github/actions/workflow/status/io7m-com/primogenitor/main.windows.temurin.current.yml)](https://www.github.com/io7m-com/primogenitor/actions?query=workflow%3Amain.windows.temurin.current)|
 | OpenJDK (Temurin) LTS | Windows | [![Build (OpenJDK (Temurin) LTS, Windows)](https://img.shields.io/github/actions/workflow/status/io7m-com/primogenitor/main.windows.temurin.lts.yml)](https://www.github.com/io7m-com/primogenitor/actions?query=workflow%3Amain.windows.temurin.lts)|
 
+## Repository Relocation
+
+Development of this project has moved to an
+[open-source but not open-contribution](https://sqlite.org/copyright.html#notopencontrib)
+model.
+
+Source code and commits will remain publicly available perpetually, but issues
+and/or pull requests will be rejected and/or ignored. Additionally, this project
+will now only be available via a read-only mirror at:
+
+  https://codeberg.org/io7m-com/primogenitor
 
 ## Building
 
